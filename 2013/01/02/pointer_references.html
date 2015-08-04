@@ -1,0 +1,360 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>C++指针与引用小结 | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="概念引用引用就是某一对象（变量）的一个别名。举个例子更容易理解：
+12int m;int &amp;amp;n = m;
+这段程序中，n是m的一个引用（reference），m是被引用物（referent）。n相当于m的别名（绰号），对n的任何操作就是对m的操作。n既不是m的拷贝，也不是指向m的指针，其实n就是m它自己。
+指针
+指针用于指向对象（变量）。指针提供对其所指对象的间接访问。指针用于指向单个对象">
+<meta property="og:type" content="article">
+<meta property="og:title" content="C++指针与引用小结">
+<meta property="og:url" content="http://www.geekplux.com/2013/01/02/pointer_references.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="概念引用引用就是某一对象（变量）的一个别名。举个例子更容易理解：
+12int m;int &amp;amp;n = m;
+这段程序中，n是m的一个引用（reference），m是被引用物（referent）。n相当于m的别名（绰号），对n的任何操作就是对m的操作。n既不是m的拷贝，也不是指向m的指针，其实n就是m它自己。
+指针
+指针用于指向对象（变量）。指针提供对其所指对象的间接访问。指针用于指向单个对象">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CC++%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%B0%8F%E7%BB%93%5C%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8.jpg">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="C++指针与引用小结">
+<meta name="twitter:description" content="概念引用引用就是某一对象（变量）的一个别名。举个例子更容易理解：
+12int m;int &amp;amp;n = m;
+这段程序中，n是m的一个引用（reference），m是被引用物（referent）。n相当于m的别名（绰号），对n的任何操作就是对m的操作。n既不是m的拷贝，也不是指向m的指针，其实n就是m它自己。
+指针
+指针用于指向对象（变量）。指针提供对其所指对象的间接访问。指针用于指向单个对象">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  
+
+  
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+</head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">GeekPlux</a>
+      </h1>
+      
+        <h2 id="subtitle-wrap">
+          <a href="/" id="subtitle">知行合一</a>
+        </h2>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+          <a class="main-nav-link" href="/wiki">Wiki</a>
+        
+          <a class="main-nav-link" href="/aboutme">About</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="q" value="site:http://www.geekplux.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+      <div class="outer">
+        <section id="main"><article id="post-pointer_references" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2013/01/02/pointer_references.html" class="article-date">
+  <time datetime="2013-01-02T07:41:25.000Z" itemprop="datePublished">2013-01-02</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Code/">Code</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      C++指针与引用小结
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="概念"><strong>概念</strong></h2><h3 id="引用"><strong>引用</strong></h3><p><strong>引用</strong>就是某一对象（变量）的一个<strong>别名</strong>。举个例子更容易理解：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"><span class="keyword">int</span> &amp;n = m;</span><br></pre></td></tr></table></figure>
+<p>这段程序中，<code>n</code>是<code>m</code>的一个引用（reference），<code>m</code>是被引用物（referent）。<br><code>n</code>相当于<code>m</code>的<strong>别名</strong>（绰号），对<code>n</code>的任何操作就是对<code>m</code>的操作。<br><code>n</code>既不是<code>m</code>的拷贝，也不是指向<code>m</code>的指针，其实<code>n</code>就是<code>m</code>它自己。</p>
+<h3 id="指针"><strong>指针</strong></h3><blockquote>
+<p><strong>指针</strong>用于指向对象（变量）。指针提供对其所指对象的间接访问。指针用于指向单个对象。</p>
+</blockquote>
+<p>（这三句摘自《C++ Primer, Fourth Edition》）。再举个例子：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"><span class="keyword">int</span> *n = &amp;m;</span><br></pre></td></tr></table></figure>
+<p>第二条语句定义了一个指向<code>int</code>型的指针<code>n</code>，并初始化<code>n</code>使其指向<code>int</code>型的变量<code>m</code>。<br><code>*n</code>中的 <code>*</code> 操作符表明<code>n</code>是一个指针变量（<strong><code>n</code>本质上也是一个变量，只不过这个变量的存储内容是 地址</strong>）。<br><code>&amp;m</code>中的 <code>&amp;</code> 符号是<strong>取地址操作符</strong>，当此操作符用于一个对象上时，返回的是该对象的存储地址。</p>
+<a id="more"></a>
+<h2 id="联系"><strong>联系</strong></h2><ul>
+<li>都是有关地址的概念。<br>指针指向一块内存，它的内容是所指内存的地址；而引用则是某块内存的别名。</li>
+<li>都是间接访问其他对象。</li>
+<li>都能用于函数参数和返回值的传递。</li>
+</ul>
+<h2 id="区别"><strong>区别</strong></h2><ul>
+<li><strong>一、指针是一个实体（本质上就是存放变量地址的一个变量），而引用只是个别名。</strong></li>
+</ul>
+<p>这句话从内存分配的角度很好理解，程序会为指针变量分配内存区域，而引用不分配内存区域。</p>
+<ul>
+<li><strong>二、指针可变，引用不可变。</strong></li>
+</ul>
+<p>指针在逻辑上是独立的，它可以被改变，包括其所指向的地址的改变和其指向的地址中所存放的数据的改变。<br>引用在逻辑上不独立，具有依附性，所以引用必须在一开始就被初始化，而且引用一旦和某个对象绑定后就不能再改变（从一而终）。</p>
+<ul>
+<li><strong>三、指针可以为空，引用不能为空。</strong></li>
+</ul>
+<p>即指针可以为NULL，而引用必须与合法的存储单元关联。</p>
+<ul>
+<li><strong>四、传递方式不同。</strong></li>
+</ul>
+<p>首先，函数参数和返回值的传递方式大概可以理解为三种：</p>
+<ol>
+<li>值传递</li>
+<li>指针传递</li>
+<li>引用传递</li>
+</ol>
+<p>先理解<strong>值传递</strong>：值传递过程中，被调函数的形式参数作为被调函数的局部变量处理，即在栈中开辟了内存空间以存放由主调函数放进来的实参的值，从而成为了实参的一个拷贝。<em>值传递的特点是被调函数对形式参数的任何操作都是作为局部变量进行，不会影响主调函数的实参变量的值。</em></p>
+<p><strong>指针传递</strong>本质上值传递，只不过它所传递的是一个地址值。然后把上面那段话「翻译」一下：指针传递时，形参是一个指针变量，该变量拷贝了实参的地址值，然后作为被调函数的局部变量（传递过来的实参的地址值不会变），再然后我们可以用<code>*</code>操作符访问实参，从而对实参进行操作。很绕口，不如看个例子：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> *n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  *n = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> m = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line">  f(&amp;m);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>该程序输出结果为：1 5</p>
+<p>在函数<code>f</code>中，形参<code>n</code>是指向<code>int</code>型的指针变量，拷贝了实参<code>m</code>的地址，作为<code>f</code>函数的局部变量，然后通过<code>*n</code>改变实参<code>m</code>的值。</p>
+<p>而在<strong>引用传递</strong>过程中，被调函数的形式参数虽然也作为局部变量在栈中开辟了内存空间，但是这时存放的是<strong>由主调函数放进来的实参变量的地址</strong>。被调函数对形参的任何操作都被处理成间接寻址（不必通过*操作符），即通过栈中存放的地址访问主调函数中的实参变量。正因为如此，被调函数对形参做的任何操作都影响了主调函数中的实参变量（此时的形参其实就是实参）。再举个例子：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> &lt;iostream&gt;</span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> &amp;n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  n = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> m = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line">  f(m);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>输出结果为：1 5</p>
+<p><code>n</code>是<code>f</code>中的局部变量，同时<code>n</code>也是实参<code>m</code>的引用。此时<code>n</code>就为<code>m</code>，所以在<code>f</code>中对<code>n</code>的操作都会影响<code>m</code>，为<code>n</code>赋值5就是对<code>m</code>赋值5。</p>
+<p>还可以从编译角度理解（此处从网上摘录）：</p>
+<blockquote>
+<p>程序在编译时分别将指针和引用添加到符号表上，符号表上记录的是变量名及变量所对应地址。指针变量在符号表上对应的地址值为指针变量的地址值，而引用在符号表上对应的地址值为引用对象的地址值。符号表生成后就不会再改，因此指针可以改变其指向的对象（指针变量中的值可以改），而引用对象则不能修改。</p>
+</blockquote>
+<ul>
+<li><p><strong>五、引用不能const，指针能const，const的指针不可变。</strong><br>对于引用，具体指没有int&amp;const a这种形式，而const int&amp; a是有的，  前者指引用本身（即别名）不可以改变，这是理所当然的，所以不需要这种形式，后者指引用所指的值不可以改变）</p>
+</li>
+<li><p><strong>六、「sizeof 引用」得到的是所指向的变量(对象)的大小，而“sizeof 指针”得到的是指针本身的大小。</strong></p>
+</li>
+<li><p><strong>七、指针和引用的自增(++)运算意义不一样（很好理解）。</strong></p>
+</li>
+</ul>
+<p>要理解知识必须先建立知识的结构，就像盖楼房一样，必须先有框架，所以此处附上本人制作的一幅简单的思维导图：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CC++%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%B0%8F%E7%BB%93%5C%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8.jpg" alt=""></p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.geekplux.com/2013/01/02/pointer_references.html" data-id="cicx4cwbr0025ahf69bt8rqoe" class="article-share-link">Share</a>
+      
+        <a href="http://www.geekplux.com/2013/01/02/pointer_references.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/C-C/">C/C++</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Code/">Code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Summary/">Summary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/编程/">编程</a></li></ul>
+
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2013/01/03/os_introduction.html" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          操作系统总结——引论
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2012/10/25/plan_or_not.html" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">该不该制定计划</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<section id="comments">
+  <div id="disqus_thread">
+    <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+  </div>
+</section>
+</section>
+        
+          <aside id="sidebar">
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Categories</h3>
+    <div class="widget">
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Agile-Development/">Agile Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cocos2d-x/">Cocos2d-x</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Discovery/">Discovery</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">5</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thought/">Thought</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/FarBox/">FarBox</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/Mac/">Mac</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ukulele/">Ukulele</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CoffeeScript/">CoffeeScript</a><span class="category-list-count">2</span></li></ul></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tags</h3>
+    <div class="widget">
+      <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Agile-Development/">Agile Development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Android/">Android</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Backbone/">Backbone</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Blog/">Blog</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/C-C/">C/C++</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CSS/">CSS</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Cocos2d-x/">Cocos2d-x</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Code/">Code</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/CoffeeScript/">CoffeeScript</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Computer-Science/">Computer Science</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Development/">Development</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Development-Environment/">Development Environment</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Discovery/">Discovery</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Domain/">Domain</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Essay/">Essay</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/FarBox/">FarBox</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Game-Development/">Game Development</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Guide/">Guide</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/IDE/">IDE</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Instrument/">Instrument</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Life/">Life</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Love/">Love</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Mac/">Mac</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Note/">Note</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Responsive-Design/">Responsive Design</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Skill/">Skill</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Summary/">Summary</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Thought/">Thought</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Tool/">Tool</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Translation/">Translation</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Ukulele/">Ukulele</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Vim/">Vim</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Web/">Web</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/乐器/">乐器</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/入门/">入门</a><span class="tag-list-count">4</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/博客/">博客</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/域名/">域名</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/尝试/">尝试</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/工具/">工具</a><span class="tag-list-count">6</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/开发环境/">开发环境</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/微信公众平台/">微信公众平台</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/思考/">思考</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/总结/">总结</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/情感/">情感</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/感想/">感想</a><span class="tag-list-count">5</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/新技能/">新技能</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/游戏开发/">游戏开发</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/生活/">生活</a><span class="tag-list-count">7</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/笔记/">笔记</a><span class="tag-list-count">9</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/编程/">编程</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/计算机科学/">计算机科学</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/译文/">译文</a><span class="tag-list-count">3</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/运营/">运营</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/随笔/">随笔</a><span class="tag-list-count">4</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Tag Cloud</h3>
+    <div class="widget tagcloud">
+      <a href="/tags/Agile-Development/" style="font-size: 10px;">Agile Development</a><a href="/tags/Android/" style="font-size: 10px;">Android</a><a href="/tags/Backbone/" style="font-size: 10px;">Backbone</a><a href="/tags/Blog/" style="font-size: 11.43px;">Blog</a><a href="/tags/C-C/" style="font-size: 10px;">C/C++</a><a href="/tags/CSS/" style="font-size: 12.86px;">CSS</a><a href="/tags/Cocos2d-x/" style="font-size: 11.43px;">Cocos2d-x</a><a href="/tags/Code/" style="font-size: 10px;">Code</a><a href="/tags/CoffeeScript/" style="font-size: 11.43px;">CoffeeScript</a><a href="/tags/Computer-Science/" style="font-size: 12.86px;">Computer Science</a><a href="/tags/Development/" style="font-size: 10px;">Development</a><a href="/tags/Development-Environment/" style="font-size: 11.43px;">Development Environment</a><a href="/tags/Discovery/" style="font-size: 12.86px;">Discovery</a><a href="/tags/Domain/" style="font-size: 10px;">Domain</a><a href="/tags/Essay/" style="font-size: 14.29px;">Essay</a><a href="/tags/FarBox/" style="font-size: 11.43px;">FarBox</a><a href="/tags/Game-Development/" style="font-size: 11.43px;">Game Development</a><a href="/tags/Guide/" style="font-size: 14.29px;">Guide</a><a href="/tags/IDE/" style="font-size: 10px;">IDE</a><a href="/tags/Instrument/" style="font-size: 10px;">Instrument</a><a href="/tags/Life/" style="font-size: 18.57px;">Life</a><a href="/tags/Love/" style="font-size: 10px;">Love</a><a href="/tags/Mac/" style="font-size: 11.43px;">Mac</a><a href="/tags/Note/" style="font-size: 20px;">Note</a><a href="/tags/Responsive-Design/" style="font-size: 10px;">Responsive Design</a><a href="/tags/Skill/" style="font-size: 11.43px;">Skill</a><a href="/tags/Summary/" style="font-size: 18.57px;">Summary</a><a href="/tags/Thought/" style="font-size: 11.43px;">Thought</a><a href="/tags/Tool/" style="font-size: 17.14px;">Tool</a><a href="/tags/Translation/" style="font-size: 12.86px;">Translation</a><a href="/tags/Ukulele/" style="font-size: 10px;">Ukulele</a><a href="/tags/Vim/" style="font-size: 10px;">Vim</a><a href="/tags/Web/" style="font-size: 18.57px;">Web</a><a href="/tags/乐器/" style="font-size: 10px;">乐器</a><a href="/tags/入门/" style="font-size: 14.29px;">入门</a><a href="/tags/博客/" style="font-size: 11.43px;">博客</a><a href="/tags/域名/" style="font-size: 10px;">域名</a><a href="/tags/尝试/" style="font-size: 10px;">尝试</a><a href="/tags/工具/" style="font-size: 17.14px;">工具</a><a href="/tags/开发环境/" style="font-size: 11.43px;">开发环境</a><a href="/tags/微信公众平台/" style="font-size: 10px;">微信公众平台</a><a href="/tags/思考/" style="font-size: 11.43px;">思考</a><a href="/tags/总结/" style="font-size: 18.57px;">总结</a><a href="/tags/情感/" style="font-size: 10px;">情感</a><a href="/tags/感想/" style="font-size: 15.71px;">感想</a><a href="/tags/新技能/" style="font-size: 11.43px;">新技能</a><a href="/tags/游戏开发/" style="font-size: 11.43px;">游戏开发</a><a href="/tags/生活/" style="font-size: 18.57px;">生活</a><a href="/tags/笔记/" style="font-size: 20px;">笔记</a><a href="/tags/编程/" style="font-size: 10px;">编程</a><a href="/tags/计算机科学/" style="font-size: 12.86px;">计算机科学</a><a href="/tags/译文/" style="font-size: 12.86px;">译文</a><a href="/tags/运营/" style="font-size: 10px;">运营</a><a href="/tags/随笔/" style="font-size: 14.29px;">随笔</a>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/07/">July 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/06/">June 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2015/01/">January 2015</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/08/">August 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/07/">July 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/06/">June 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/05/">May 2014</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/04/">April 2014</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/03/">March 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2014/02/">February 2014</a><span class="archive-list-count">3</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/10/">October 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/09/">September 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/08/">August 2013</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/07/">July 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/04/">April 2013</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2013/01/">January 2013</a><span class="archive-list-count">4</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/10/">October 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/05/">May 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2012/01/">January 2012</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2011/10/">October 2011</a><span class="archive-list-count">1</span></li></ul>
+    </div>
+  </div>
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recents</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2015/07/04/communicating-between-views-in-backbone.html">Backbone View 之间通信的三种方式</a>
+          </li>
+        
+          <li>
+            <a href="/2015/06/06/vim-those-fit-yourself-are-the-best.html">Vim - 适合自己的，才是最好的</a>
+          </li>
+        
+          <li>
+            <a href="/2015/01/05/play-ukulele.html">轻松玩转 Ukulele</a>
+          </li>
+        
+          <li>
+            <a href="/2014/08/02/farewell_social_network.html">告别社交网络有多难</a>
+          </li>
+        
+          <li>
+            <a href="/2014/07/06/learn_shuangpin.html">双拼学习记</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2015
+      <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.geekplux.com/" property="cc:attributionName" rel="cc:attributionURL">GeekPlux</a>
+      本博客所有内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。
+      <br>
+      Contact me via <a href="mailto:geekplux@gmail.com">mail</a>,
+      <a href="http://twitter.com/geekplux">twitter</a>,
+      <a href="http://weibo.com/208886423">weibo</a> or
+      <a href="http://github.com/geekplux">github</a>
+      More info: <a href="/aboutme">About</a>.
+      ( <a href="/atom.xml" rel="rss" title="RSS feed">RSS feed</a> )
+      <br>
+      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+    <a href="/wiki" class="mobile-nav-link">Wiki</a>
+  
+    <a href="/aboutme" class="mobile-nav-link">About</a>
+  
+</nav>
+    
+<script>
+  var disqus_shortname = 'geekplux';
+  
+  var disqus_url = 'http://www.geekplux.com/2013/01/02/pointer_references.html';
+  
+  (function(){
+    var dsq = document.createElement('script');
+    dsq.type = 'text/javascript';
+    dsq.async = true;
+    dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+  })();
+</script>
+
+
+<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
+  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+
+
+<script src="/js/script.js" type="text/javascript"></script>
+
+  </div>
+</body>
+</html>
