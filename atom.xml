@@ -4,7 +4,7 @@
   <subtitle><![CDATA[知行合一]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.geekplux.com/"/>
-  <updated>2015-07-04T13:52:50.000Z</updated>
+  <updated>2015-09-24T11:40:28.000Z</updated>
   <id>http://www.geekplux.com/</id>
   
   <author>
@@ -13,6 +13,59 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[如何管理好自己的密码]]></title>
+    <link href="http://www.geekplux.com/2015/09/24/password-management.html"/>
+    <id>http://www.geekplux.com/2015/09/24/password-management.html</id>
+    <published>2015-09-24T09:08:59.000Z</published>
+    <updated>2015-09-24T11:40:28.000Z</updated>
+    <content type="html"><![CDATA[<p>最近 Xcode Ghost 席卷三大平台，有预谋有组织有纪律。很多人看到这个消息纷纷修改常用密码，但我觉得密码管理其实功在平时，一个好的密码可以大幅提升你账户的安全系数。</p>
+<p>而且，现在基本上每个网站都需要注册才能享用全部服务，我自己注册了上百个网站，意味者我有上百个账号密码需要记，用脑子记根本记不住（没办法，记忆力差）。后来我慢慢摸索出自己的一套策略用来管理密码，感觉实用且不算复杂。</p>
+<h2 id="设计方法">设计方法</h2><ol>
+<li>首先要对账号和密码进行<strong>分级分类</strong>。根据重要性、产品使用频率、产品应用场景来分。我自己分为五类：银行卡类、涉及支付类、社交账号、涉及数据存储类（各种云存储、云服务等）、其他。</li>
+<li>银行卡类：<strong>单独</strong>设6位数字，每张银行卡都有各自的密码（规则自己定：比如前三位是自己想的，后三位是卡号的某几位）。</li>
+<li>涉及支付类：<strong>单独</strong>设密码，方法参考5、6两点。</li>
+<li>社交账号类、涉及数据存储类：<strong>着重对待</strong>，方法同样参考5、6两点。</li>
+<li>密码设计方法：单独想出一句话，用这句话每个字的<strong>首字母</strong>构成密码最基本的部分。大小写和符号自己<strong>有规律</strong>地加。</li>
+<li><strong>排列组合</strong>：密码太多记不住很正常。可以用两组（或多组）短语排列组合成整套密码。</li>
+<li>银行、涉及支付类、重度使用产品均<strong>定期更换</strong>密码。一般密码位数不低于15位（不要以为15位很长）。</li>
+</ol>
+<a id="more"></a>
+<h2 id="密码存储">密码存储</h2><p>那么密码设计出来，要存到哪里去呢？</p>
+<ul>
+<li><strong>全部用脑子记住</strong>。这种最安全也是最高效的方法，但是需要记忆力。</li>
+<li>用 1Password, Lastpass 等密码管理软件记。我觉得这个适用于上文提到的「其他类」。</li>
+<li>用文本笔记、表格记录。这个也没什么不可以，但是你一定要保存好这份文件，否则后果很严重。这里有个小技巧，你可以把密码全记录到一个 excel 文件中，然后把文件后缀改为 <code>.avi</code>，以此类推。</li>
+</ul>
+<p>以上就是我全部的方法了。之所以分成五类主要是因为涉及钱的账号密码，一旦泄密损失的是自己，而社交账号和数据泄密损失的是他人。</p>
+<p>一般人可能会觉得自己的数据没什么价值，而且朋友们也都很机智。但是在特定情况下，你的数据会有可怕的功用。想象一下，一个人如果拥有你的绝大部分数据，同时又拥有你所有的人际关系。那么他就可以轻易的运用数据去模仿出你的样子，从而获取他人的信任。一旦获得对方的完全信任，注意，是完全信任，那对方就会沦为待宰的羔羊，任人摆布。</p>
+<p>总之，密码和我们的生活息息相关，管理好自己的密码说不定还会有意外的收获：<br><a href="http://www.jianshu.com/p/a1220fd27e2f" target="_blank" rel="external">一个密码改变了我的人生</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>最近 Xcode Ghost 席卷三大平台，有预谋有组织有纪律。很多人看到这个消息纷纷修改常用密码，但我觉得密码管理其实功在平时，一个好的密码可以大幅提升你账户的安全系数。</p>
+<p>而且，现在基本上每个网站都需要注册才能享用全部服务，我自己注册了上百个网站，意味者我有上百个账号密码需要记，用脑子记根本记不住（没办法，记忆力差）。后来我慢慢摸索出自己的一套策略用来管理密码，感觉实用且不算复杂。</p>
+<h2 id="设计方法">设计方法</h2><ol>
+<li>首先要对账号和密码进行<strong>分级分类</strong>。根据重要性、产品使用频率、产品应用场景来分。我自己分为五类：银行卡类、涉及支付类、社交账号、涉及数据存储类（各种云存储、云服务等）、其他。</li>
+<li>银行卡类：<strong>单独</strong>设6位数字，每张银行卡都有各自的密码（规则自己定：比如前三位是自己想的，后三位是卡号的某几位）。</li>
+<li>涉及支付类：<strong>单独</strong>设密码，方法参考5、6两点。</li>
+<li>社交账号类、涉及数据存储类：<strong>着重对待</strong>，方法同样参考5、6两点。</li>
+<li>密码设计方法：单独想出一句话，用这句话每个字的<strong>首字母</strong>构成密码最基本的部分。大小写和符号自己<strong>有规律</strong>地加。</li>
+<li><strong>排列组合</strong>：密码太多记不住很正常。可以用两组（或多组）短语排列组合成整套密码。</li>
+<li>银行、涉及支付类、重度使用产品均<strong>定期更换</strong>密码。一般密码位数不低于15位（不要以为15位很长）。</li>
+</ol>]]>
+    
+    </summary>
+    
+      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
+    
+      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="生活" scheme="http://www.geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="Life" scheme="http://www.geekplux.com/categories/Life/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Backbone View 之间通信的三种方式]]></title>
@@ -1983,75 +2036,6 @@
       <category term="博客" scheme="http://www.geekplux.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="域名" scheme="http://www.geekplux.com/tags/%E5%9F%9F%E5%90%8D/"/>
-    
-      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="Tool" scheme="http://www.geekplux.com/categories/Tool/"/>
-    
-      <category term="FarBox" scheme="http://www.geekplux.com/categories/Tool/FarBox/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[写博客就用FarBox]]></title>
-    <link href="http://www.geekplux.com/2013/08/08/write_blog_by_farbox.html"/>
-    <id>http://www.geekplux.com/2013/08/08/write_blog_by_farbox.html</id>
-    <published>2013-08-08T07:12:11.000Z</published>
-    <updated>2015-08-04T09:00:32.000Z</updated>
-    <content type="html"><![CDATA[<p>早就在V2EX上看到FarBox，之前一直没用，今天试了试，果然很清爽简洁，非常对我胃口，所以以后写文章，就靠你了！</p>
-<hr>
-<h2 id="FarBox是什么玩意"><strong>FarBox是什么玩意</strong></h2><p>FarBox可以理解为一个简单的博客搭建程序。一般我们搭建一个博客基本上要经历以下三个主要步骤：</p>
-<ul>
-<li>购买域名</li>
-<li>购买虚拟主机（或VPS）</li>
-<li>安装博客程序</li>
-</ul>
-<p>说着简单，做起来对于没有基础的人来说还是有点困难。而现在FarBox给你提供了一个非常简单的解决方案，你只需要：</p>
-<ul>
-<li>拥有一个Dropbox（Dropbox都没用过？赶紧注册吧，这个可是世界上最好的个人云存储服务。最好用上我的<a href="http://db.tt/yBybDNfd" target="_blank" rel="external">邀请码</a>，<strong>两人都可以获赠</strong>500M空间。）</li>
-<li>安装FarBox，将Dropbox与FarBox绑定，并授权FarBox权限。</li>
-</ul>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%86%99%E5%8D%9A%E5%AE%A2%E5%B0%B1%E7%94%A8FarBox%5CQQ%E5%9B%BE%E7%89%8720130810233938.jpg" alt=""></p>
-<p>具体怎么配置，很简单，请自行Google。配置好后，Dropbox仿佛成了你的虚拟主机，只需把写好的文章或照片同步进Dropbox就可以在你的博客显示了。如果你有独立域名，还可以进行绑定（<a href="http://www.geekplux.com/2013/08/10/如何绑定独立域名/" target="_blank" rel="external">如何绑定独立域名</a>）。</p>
-<a id="more"></a>
-<h2 id="装修你的博客"><strong>装修你的博客</strong></h2><p>爱美之心人皆有之，怎么说也得让自己的小窝卖相好点。这个简直不用担心。首先FarBox给你提供了简洁的默认模板。不满意？那就看看<a href="http://www.farbox.com/sites.md" target="_blank" rel="external">别人的博客</a>，看到下面有<code>Clone Template</code>或者<code>Clone Theme</code>等等，就说么你可以克隆他的模板，克隆完后你的博客和他一摸一样，只需要设置一些自己的资料就OK了。只要是托管于FarBox的博客你都可以克隆（仅限于使用，源码不可修改），而且被克隆的博客修改模板之后，你不会受到影响。具体参考<a href="http://help.farbox.com/post/about-template" target="_blank" rel="external">帮助</a>。</p>
-<h2 id="用Markdown来写作"><strong>用Markdown来写作</strong></h2><p>开始写吧。FarBox支持Markdown写作，Markdown语法简单，用其写出来的文章格式简洁，内容清晰。好的文章很多，但是能让人读下去的文章很少，很多都是因为格式太乱。但是你用Markdown的话就不用考虑那些，什么标题加粗缩进斜体引用完全不是事儿。你可以下载个FarBox Editor，操作简单易用，你专注于「写」这一动作就可以了，最后写完往FarBox里一托，OK。</p>
-<h2 id="文件夹管理"><strong>文件夹管理</strong></h2><p>文件夹管理很好理解，文章你想分几类，就在博客根目录下建几个文件夹，写的文章是哪一类就扔到哪一个文件夹里，比如我这篇文章就扔到了<strong>折腾</strong>这个文件夹里。相册同理，扔在哪个文件夹里，文件夹名即为相册名。</p>
-<h2 id="互动"><strong>互动</strong></h2><p>写了文章总想有人来评论。FarBox提供了默认的评论系统，但是觉得不太好用，于是用了<a href="http://duoshuo.com/" target="_blank" rel="external">多说</a>。如果你采用和我一样的模板，只需要在根目录下创建一个文件名为<code>comment_js</code>的文件，然后把多说的代码贴进去就行了。</p>
-<hr>
-<p>总算搭建完了。效果大家也看的到，很多都是模板里现成的，改改就行，在这里感谢模板的制作者。之前也尝试过GitHub+Jekyll的静态博客，但总觉得GitHub是放代码的地，放文章有点不太好。。。</p>
-<p>写博客的好处没必要赘述了，希望自己一直在进步。</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>早就在V2EX上看到FarBox，之前一直没用，今天试了试，果然很清爽简洁，非常对我胃口，所以以后写文章，就靠你了！</p>
-<hr>
-<h2 id="FarBox是什么玩意"><strong>FarBox是什么玩意</strong></h2><p>FarBox可以理解为一个简单的博客搭建程序。一般我们搭建一个博客基本上要经历以下三个主要步骤：</p>
-<ul>
-<li>购买域名</li>
-<li>购买虚拟主机（或VPS）</li>
-<li>安装博客程序</li>
-</ul>
-<p>说着简单，做起来对于没有基础的人来说还是有点困难。而现在FarBox给你提供了一个非常简单的解决方案，你只需要：</p>
-<ul>
-<li>拥有一个Dropbox（Dropbox都没用过？赶紧注册吧，这个可是世界上最好的个人云存储服务。最好用上我的<a href="http://db.tt/yBybDNfd">邀请码</a>，<strong>两人都可以获赠</strong>500M空间。）</li>
-<li>安装FarBox，将Dropbox与FarBox绑定，并授权FarBox权限。</li>
-</ul>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%86%99%E5%8D%9A%E5%AE%A2%E5%B0%B1%E7%94%A8FarBox%5CQQ%E5%9B%BE%E7%89%8720130810233938.jpg" alt=""></p>
-<p>具体怎么配置，很简单，请自行Google。配置好后，Dropbox仿佛成了你的虚拟主机，只需把写好的文章或照片同步进Dropbox就可以在你的博客显示了。如果你有独立域名，还可以进行绑定（<a href="http://www.geekplux.com/2013/08/10/如何绑定独立域名/">如何绑定独立域名</a>）。</p>]]>
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://www.geekplux.com/tags/Blog/"/>
-    
-      <category term="Discovery" scheme="http://www.geekplux.com/tags/Discovery/"/>
-    
-      <category term="FarBox" scheme="http://www.geekplux.com/tags/FarBox/"/>
-    
-      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
-    
-      <category term="博客" scheme="http://www.geekplux.com/tags/%E5%8D%9A%E5%AE%A2/"/>
     
       <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
