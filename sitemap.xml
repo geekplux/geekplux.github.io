@@ -1,174 +1,902 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  
-  <url>
-    <loc>http://www.geekplux.com/gab/index.html</loc>
-    <lastmod>2015-10-29T07:21:24.000Z</lastmod>
-  </url>
-  
+
+    
+    
   <url>
     <loc>http://www.geekplux.com/2015/09/24/password-management.html</loc>
     <lastmod>2015-09-24T11:40:28.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.geekplux.com/about/index.html</loc>
-    <lastmod>2015-08-04T09:03:47.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>如何管理好自己的密码</title>
+        <pubTime>2015-09-24T09:08:59.000Z</pubTime>
+        
+        <tag>Tool </tag>
+         
+        <tag>工具 </tag>
+         
+        <tag>生活 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://www.geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
   <url>
     <loc>http://www.geekplux.com/2013/08/08/write_blog_by_farbox.html</loc>
     <lastmod>2015-08-04T09:00:32.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>写博客就用FarBox</title>
+        <pubTime>2013-08-08T07:12:11.000Z</pubTime>
+        
+        <tag>Blog </tag>
+         
+        <tag>Discovery </tag>
+         
+        <tag>FarBox </tag>
+         
+        <tag>Tool </tag>
+         
+        <tag>博客 </tag>
+         
+        <tag>工具 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://www.geekplux.com/categories/Tool/"/>
+          
+             
+              <breadCrumb title="FarBox" url="http://www.geekplux.com/categories/Tool/FarBox/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/04/25/several_core_concepts_of_css.html</loc>
     <lastmod>2015-08-04T09:00:26.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>CSS 最核心的几个概念</title>
+        <pubTime>2014-04-25T12:28:33.000Z</pubTime>
+        
+        <tag>CSS </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Summary </tag>
+         
+        <tag>Web </tag>
+         
+        <tag>总结 </tag>
+         
+        <tag>笔记 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="http://www.geekplux.com/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/01/02/pointer_references.html</loc>
     <lastmod>2015-08-04T09:00:20.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>C++指针与引用小结</title>
+        <pubTime>2013-01-02T07:41:25.000Z</pubTime>
+        
+        <tag>C/C++ </tag>
+         
+        <tag>Code </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Summary </tag>
+         
+        <tag>总结 </tag>
+         
+        <tag>笔记 </tag>
+         
+        <tag>编程 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Code" url="http://www.geekplux.com/categories/Code/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2015/01/05/play-ukulele.html</loc>
     <lastmod>2015-08-04T09:00:13.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>轻松玩转 Ukulele</title>
+        <pubTime>2015-01-05T15:54:00.000Z</pubTime>
+        
+        <tag>Instrument </tag>
+         
+        <tag>Skill </tag>
+         
+        <tag>Ukulele </tag>
+         
+        <tag>乐器 </tag>
+         
+        <tag>新技能 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Ukulele" url="http://www.geekplux.com/categories/Ukulele/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/01/04/os_processor_management.html</loc>
     <lastmod>2015-08-04T09:00:04.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>操作系统总结——处理机管理</title>
+        <pubTime>2013-01-04T08:03:25.000Z</pubTime>
+        
+        <tag>Computer Science </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Summary </tag>
+         
+        <tag>总结 </tag>
+         
+        <tag>笔记 </tag>
+         
+        <tag>计算机科学 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Science" url="http://www.geekplux.com/categories/Computer-Science/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/01/05/os_memory_management.html</loc>
     <lastmod>2015-08-04T08:59:56.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>操作系统总结——存储器管理</title>
+        <pubTime>2013-01-05T11:53:25.000Z</pubTime>
+        
+        <tag>Computer Science </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Summary </tag>
+         
+        <tag>总结 </tag>
+         
+        <tag>笔记 </tag>
+         
+        <tag>计算机科学 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Science" url="http://www.geekplux.com/categories/Computer-Science/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/01/03/os_introduction.html</loc>
     <lastmod>2015-08-04T08:59:50.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>操作系统总结——引论</title>
+        <pubTime>2013-01-03T07:29:25.000Z</pubTime>
+        
+        <tag>Computer Science </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Summary </tag>
+         
+        <tag>总结 </tag>
+         
+        <tag>笔记 </tag>
+         
+        <tag>计算机科学 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Computer Science" url="http://www.geekplux.com/categories/Computer-Science/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/03/03/mac_configuration_2.html</loc>
     <lastmod>2015-08-04T08:59:44.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>菜鸟级 Mac 配置（二）</title>
+        <pubTime>2014-03-03T05:50:50.000Z</pubTime>
+        
+        <tag>Development Environment </tag>
+         
+        <tag>Mac </tag>
+         
+        <tag>Tool </tag>
+         
+        <tag>工具 </tag>
+         
+        <tag>开发环境 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://www.geekplux.com/categories/Tool/"/>
+          
+             
+              <breadCrumb title="Mac" url="http://www.geekplux.com/categories/Tool/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/02/26/mac_configuration_1.html</loc>
     <lastmod>2015-08-04T08:59:37.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>菜鸟级 Mac 配置（一）</title>
+        <pubTime>2014-02-26T13:14:15.000Z</pubTime>
+        
+        <tag>Mac </tag>
+         
+        <tag>Tool </tag>
+         
+        <tag>工具 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://www.geekplux.com/categories/Tool/"/>
+          
+             
+              <breadCrumb title="Mac" url="http://www.geekplux.com/categories/Tool/Mac/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/02/20/css_written_principles.html</loc>
     <lastmod>2015-08-04T08:59:28.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>CSS编写原则</title>
+        <pubTime>2014-02-20T05:57:32.000Z</pubTime>
+        
+        <tag>CSS </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Summary </tag>
+         
+        <tag>Web </tag>
+         
+        <tag>总结 </tag>
+         
+        <tag>笔记 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="http://www.geekplux.com/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/10/17/create_cocos2d-x_project.html</loc>
     <lastmod>2015-08-04T08:59:19.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>如何新建一个Cocos2d-x项目</title>
+        <pubTime>2013-10-17T08:43:30.000Z</pubTime>
+        
+        <tag>Cocos2d-x </tag>
+         
+        <tag>Game Development </tag>
+         
+        <tag>Guide </tag>
+         
+        <tag>入门 </tag>
+         
+        <tag>游戏开发 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Cocos2d-x" url="http://www.geekplux.com/categories/Cocos2d-x/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/03/14/collapsing_margins.html</loc>
     <lastmod>2015-08-04T08:59:10.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>Collapsing margins——合并的外边距</title>
+        <pubTime>2014-03-14T13:10:19.000Z</pubTime>
+        
+        <tag>CSS </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Web </tag>
+         
+        <tag>笔记 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="http://www.geekplux.com/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/05/15/coffeescript_note.html</loc>
     <lastmod>2015-08-04T08:59:03.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>CoffeeScript 笔记</title>
+        <pubTime>2014-05-15T11:06:09.000Z</pubTime>
+        
+        <tag>CoffeeScript </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>Web </tag>
+         
+        <tag>笔记 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CoffeeScript" url="http://www.geekplux.com/categories/Web/CoffeeScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/10/16/cocos2d-x_environment_build.html</loc>
     <lastmod>2015-08-04T08:58:46.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>Windows8.1下Cocos2d-x环境搭建</title>
+        <pubTime>2013-10-16T09:54:30.000Z</pubTime>
+        
+        <tag>Cocos2d-x </tag>
+         
+        <tag>Development Environment </tag>
+         
+        <tag>Game Development </tag>
+         
+        <tag>Guide </tag>
+         
+        <tag>入门 </tag>
+         
+        <tag>开发环境 </tag>
+         
+        <tag>游戏开发 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Cocos2d-x" url="http://www.geekplux.com/categories/Cocos2d-x/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/08/10/bind_domain.html</loc>
     <lastmod>2015-08-04T08:58:37.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>如何绑定独立域名</title>
+        <pubTime>2013-08-10T10:18:11.000Z</pubTime>
+        
+        <tag>Blog </tag>
+         
+        <tag>Discovery </tag>
+         
+        <tag>Domain </tag>
+         
+        <tag>FarBox </tag>
+         
+        <tag>Tool </tag>
+         
+        <tag>博客 </tag>
+         
+        <tag>域名 </tag>
+         
+        <tag>工具 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://www.geekplux.com/categories/Tool/"/>
+          
+             
+              <breadCrumb title="FarBox" url="http://www.geekplux.com/categories/Tool/FarBox/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/09/02/android_get_started.html</loc>
     <lastmod>2015-08-04T08:58:26.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>Android开发如何入门</title>
+        <pubTime>2013-09-02T08:34:30.000Z</pubTime>
+        
+        <tag>Android </tag>
+         
+        <tag>Development </tag>
+         
+        <tag>Guide </tag>
+         
+        <tag>入门 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Android" url="http://www.geekplux.com/categories/Android/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</loc>
     <lastmod>2015-07-04T13:52:50.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>Backbone View 之间通信的三种方式</title>
+        <pubTime>2015-07-04T12:49:33.000Z</pubTime>
+        
+        <tag>Backbone </tag>
+         
+        <tag>Translation </tag>
+         
+        <tag>Web </tag>
+         
+        <tag>译文 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.geekplux.com/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
     <lastmod>2015-06-06T12:59:55.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>Vim - 适合自己的，才是最好的</title>
+        <pubTime>2015-06-06T12:28:21.000Z</pubTime>
+        
+        <tag>IDE </tag>
+         
+        <tag>Tool </tag>
+         
+        <tag>Vim </tag>
+         
+        <tag>工具 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://www.geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2012/01/30/twenty_years_old_gab.html</loc>
     <lastmod>2015-02-08T05:09:45.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>弱冠，瞎扯</title>
+        <pubTime>2012-01-30T12:21:25.000Z</pubTime>
+        
+        <tag>Essay </tag>
+         
+        <tag>Life </tag>
+         
+        <tag>感想 </tag>
+         
+        <tag>生活 </tag>
+         
+        <tag>随笔 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://www.geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/03/21/understand_tdd.html</loc>
     <lastmod>2015-01-04T12:01:30.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>初识 TDD</title>
+        <pubTime>2014-03-20T16:20:09.000Z</pubTime>
+        
+        <tag>Agile Development </tag>
+         
+        <tag>Note </tag>
+         
+        <tag>笔记 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Agile Development" url="http://www.geekplux.com/categories/Agile-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</loc>
     <lastmod>2015-01-04T11:59:54.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>响应式设计简易指南（译）</title>
+        <pubTime>2014-04-06T14:54:42.000Z</pubTime>
+        
+        <tag>Guide </tag>
+         
+        <tag>Responsive Design </tag>
+         
+        <tag>Translation </tag>
+         
+        <tag>Web </tag>
+         
+        <tag>入门 </tag>
+         
+        <tag>译文 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.geekplux.com/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2012/05/18/happiness_is_capability.html</loc>
     <lastmod>2015-01-04T11:58:37.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>幸福，是一种能力</title>
+        <pubTime>2012-05-18T06:23:38.000Z</pubTime>
+        
+        <tag>Essay </tag>
+         
+        <tag>Life </tag>
+         
+        <tag>感想 </tag>
+         
+        <tag>生活 </tag>
+         
+        <tag>随笔 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://www.geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2011/10/18/do_not_care.html</loc>
     <lastmod>2015-01-04T11:58:26.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>别当回事儿</title>
+        <pubTime>2011-10-18T02:17:38.000Z</pubTime>
+        
+        <tag>Essay </tag>
+         
+        <tag>Life </tag>
+         
+        <tag>感想 </tag>
+         
+        <tag>生活 </tag>
+         
+        <tag>随笔 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://www.geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/08/02/farewell_social_network.html</loc>
     <lastmod>2015-01-04T11:58:13.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>告别社交网络有多难</title>
+        <pubTime>2014-08-02T12:50:46.000Z</pubTime>
+        
+        <tag>Life </tag>
+         
+        <tag>Thought </tag>
+         
+        <tag>思考 </tag>
+         
+        <tag>感想 </tag>
+         
+        <tag>生活 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://www.geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2012/10/25/plan_or_not.html</loc>
     <lastmod>2015-01-04T11:56:52.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>该不该制定计划</title>
+        <pubTime>2012-10-25T10:58:37.000Z</pubTime>
+        
+        <tag>Life </tag>
+         
+        <tag>Thought </tag>
+         
+        <tag>思考 </tag>
+         
+        <tag>感想 </tag>
+         
+        <tag>生活 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://www.geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/04/10/love_like_water.html</loc>
     <lastmod>2015-01-04T11:52:05.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>情似流水</title>
+        <pubTime>2013-04-10T02:36:38.000Z</pubTime>
+        
+        <tag>Essay </tag>
+         
+        <tag>Life </tag>
+         
+        <tag>Love </tag>
+         
+        <tag>情感 </tag>
+         
+        <tag>生活 </tag>
+         
+        <tag>随笔 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://www.geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/07/06/learn_shuangpin.html</loc>
     <lastmod>2015-01-04T11:51:30.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>双拼学习记</title>
+        <pubTime>2014-07-06T14:59:29.000Z</pubTime>
+        
+        <tag>Skill </tag>
+         
+        <tag>Tool </tag>
+         
+        <tag>工具 </tag>
+         
+        <tag>新技能 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://www.geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/02/02/goodbye_my_university.html</loc>
     <lastmod>2015-01-04T11:48:29.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>Goodbye，我的大学</title>
+        <pubTime>2014-02-02T12:22:22.000Z</pubTime>
+        
+        <tag>Life </tag>
+         
+        <tag>Summary </tag>
+         
+        <tag>总结 </tag>
+         
+        <tag>生活 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://www.geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2013/07/26/change_wechat_push_mode.html</loc>
     <lastmod>2015-01-04T11:45:22.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>尝试改变微信公众账号消息的推送方式</title>
+        <pubTime>2013-07-26T09:50:37.000Z</pubTime>
+        
+        <tag>Discovery </tag>
+         
+        <tag>尝试 </tag>
+         
+        <tag>微信公众平台 </tag>
+         
+        <tag>运营 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Discovery" url="http://www.geekplux.com/categories/Discovery/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://www.geekplux.com/2014/06/21/coffeescript_style_guide.html</loc>
     <lastmod>2015-01-04T11:41:59.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.geekplux.com/404.html</loc>
-    <lastmod>2014-01-02T09:59:12.000Z</lastmod>
-  </url>
-  
+    <data>
+        <display>
+        <title>CoffeeScript 编码风格指南（译）</title>
+        <pubTime>2014-06-21T15:47:32.000Z</pubTime>
+        
+        <tag>CoffeeScript </tag>
+         
+        <tag>Translation </tag>
+         
+        <tag>Web </tag>
+         
+        <tag>译文 </tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://www.geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CoffeeScript" url="http://www.geekplux.com/categories/Web/CoffeeScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
 </urlset>
