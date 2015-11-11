@@ -4,7 +4,7 @@
   <subtitle><![CDATA[知行合一]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.geekplux.com/"/>
-  <updated>2015-09-24T11:40:28.000Z</updated>
+  <updated>2015-11-11T10:58:19.000Z</updated>
   <id>http://www.geekplux.com/</id>
   
   <author>
@@ -13,6 +13,63 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[写文章的小技巧]]></title>
+    <link href="http://www.geekplux.com/2015/10/28/writing-skills.html"/>
+    <id>http://www.geekplux.com/2015/10/28/writing-skills.html</id>
+    <published>2015-10-28T10:24:11.000Z</published>
+    <updated>2015-11-11T10:58:19.000Z</updated>
+    <content type="html"><![CDATA[<p>既然是小技巧，那么就不敢班门弄斧，只简单说说自己平时遵循的几条写作原则：</p>
+<h2 id="尽量用短句">尽量用短句</h2><ul>
+<li>写作以表达清晰为首要宗旨，所以 <strong>尽量用短句</strong> 。长句会增加理解成本，尤其是对于中文来说。中文的定语是放在被修饰词前面的，不像英语通常放在后面，用从句很容易扩展。中文你要用从句，还 <strong>不如直接另起一句话</strong> 。</li>
+</ul>
+<p>而且能一句话说清楚的，不要绕来绕去解释。</p>
+<ul>
+<li>在句语句之间 <strong>多用连接词</strong> ，一方面表明其联系，一方面增强连贯性。</li>
+<li><strong>不要用晦涩难懂的词</strong> 。我们不是在写高考作文。</li>
+<li><strong>对标点的使用要尽量规范。</strong> 尽量少用感叹号。</li>
+</ul>
+<h2 id="文章逻辑要清晰">文章逻辑要清晰</h2><h3 id="分段、分点说明">分段、分点说明</h3><p>众所周知，我们现在看到长篇大论的文章都难以下咽。但如果在文中加几个段落标题，效果就大大不同。<br>同样的，在遇到排列句的时候，每句单独成行，比一整段要清晰的多。</p>
+<p>这些措施一方面是在排版上进行改进，提升了阅读体验。更重要的一方面是这样使你的文章逻辑更加清晰。<br><strong>写文章和做数学证明题一模一样。每一段都证明一个小问题，下一段的证明，依赖于上一段的结论。</strong> 所以每段有个主题，就比胡乱写强很多。</p>
+<a id="more"></a>
+<h3 id="要有重点">要有重点</h3><p>无论说话还是写作，都最忌没有重点。如果读完一篇文章，你不知道这篇文章的主旨是什么；读完一段话，你不知道这段话是在讲什么。那这篇文章就太失败了。<br>用粗体把重点标注出来，很容易吸引眼球。</p>
+<h2 id="随时记录">随时记录</h2><p>想题目恐怕是世界上最难的事情了。其实日常生活中，很多时刻会有想写的冲动。尤其是发呆的时候，脑子里估计都写了一大段了，但一被打断，又忘得一干二净。等真正要写文章的时候，只能拔剑四顾心茫然。<br>所以我们 <strong>平时一旦有点小思路，就拿手机记下来</strong> 。反正手机不离身，记东西很方便。不用记太细，记些关键字也行，整个过程耗时不会超过一分钟。</p>
+<h2 id="立即动笔（键盘）">立即动笔（键盘）</h2><p>题目定好以后，很多人会觉得，自己才想好了文章的前两点，后面都不知道怎么写。所以还是等彻底想好再提笔吧。<br>我以前也这样，后来发现自己真是大错特错，因为 <strong>写作可以帮助我们更好的思考</strong> 。为什么我们脑子里只想到一两点，因为我们的脑子暂时被这两点占满了。你想来想去，思路在脑子里兜圈子，怎么也绕不出这两点。<br>此时如果你写下来，把这两点「释放」到书面上，脑子放空之后自然能想到三四五点。如果把大脑比作 CPU 的话，文章就是缓存。我们把计算出的数据暂时存放在缓存中，才能更好的计算。</p>
+<p>具体为什么写作能让你更好的思考，可参考这篇 <a href="http://mindhacks.cn/2009/02/09/writing-is-better-thinking" target="_blank" rel="external">书写是为了更好的思考</a> 文章。</p>
+<p>综上所述，想到一点就立即动笔。我这篇在写之前，就只想到了目前篇幅的三分之一。</p>
+<hr>
+<p>好了，今天要说的就是这么多。另外有的童鞋说昨天的文章有种戛然而止的感觉，确实，主要是因为我在最后一段提了个问句的原因。所以今天这篇就算作昨天那个问题的补充吧。</p>
+<p>欢迎关注我的公众号：haoqihaisimao_weixin</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/qrcode_for_gh_2df3b33e3297_258.jpg" alt=""></p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>既然是小技巧，那么就不敢班门弄斧，只简单说说自己平时遵循的几条写作原则：</p>
+<h2 id="尽量用短句">尽量用短句</h2><ul>
+<li>写作以表达清晰为首要宗旨，所以 <strong>尽量用短句</strong> 。长句会增加理解成本，尤其是对于中文来说。中文的定语是放在被修饰词前面的，不像英语通常放在后面，用从句很容易扩展。中文你要用从句，还 <strong>不如直接另起一句话</strong> 。</li>
+</ul>
+<p>而且能一句话说清楚的，不要绕来绕去解释。</p>
+<ul>
+<li>在句语句之间 <strong>多用连接词</strong> ，一方面表明其联系，一方面增强连贯性。</li>
+<li><strong>不要用晦涩难懂的词</strong> 。我们不是在写高考作文。</li>
+<li><strong>对标点的使用要尽量规范。</strong> 尽量少用感叹号。</li>
+</ul>
+<h2 id="文章逻辑要清晰">文章逻辑要清晰</h2><h3 id="分段、分点说明">分段、分点说明</h3><p>众所周知，我们现在看到长篇大论的文章都难以下咽。但如果在文中加几个段落标题，效果就大大不同。<br>同样的，在遇到排列句的时候，每句单独成行，比一整段要清晰的多。</p>
+<p>这些措施一方面是在排版上进行改进，提升了阅读体验。更重要的一方面是这样使你的文章逻辑更加清晰。<br><strong>写文章和做数学证明题一模一样。每一段都证明一个小问题，下一段的证明，依赖于上一段的结论。</strong> 所以每段有个主题，就比胡乱写强很多。</p>]]>
+    
+    </summary>
+    
+      <category term="Blog" scheme="http://www.geekplux.com/tags/Blog/"/>
+    
+      <category term="Skill" scheme="http://www.geekplux.com/tags/Skill/"/>
+    
+      <category term="Thought" scheme="http://www.geekplux.com/tags/Thought/"/>
+    
+      <category term="Thought" scheme="http://www.geekplux.com/categories/Thought/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[如何管理好自己的密码]]></title>
@@ -1976,72 +2033,6 @@
       <category term="入门" scheme="http://www.geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Android" scheme="http://www.geekplux.com/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[如何绑定独立域名]]></title>
-    <link href="http://www.geekplux.com/2013/08/10/bind_domain.html"/>
-    <id>http://www.geekplux.com/2013/08/10/bind_domain.html</id>
-    <published>2013-08-10T10:18:11.000Z</published>
-    <updated>2015-08-04T08:58:37.000Z</updated>
-    <content type="html"><![CDATA[<p>前天把博客搭好之后总觉得得搞个独立域名才算「高端大气上档次」。今天把绑定的经验分享一下。</p>
-<hr>
-<h2 id="购买域名"><strong>购买域名</strong></h2><p>域名，就是你网站的网址（标识和入口），比如我的是geekplux.com。不是说没有这一串字母就不能访问你的网站，只是用IP访问的话，谁愿意记那一堆数字。相比之下，还是记字母简单。</p>
-<p>免费的域名有很多，但是免费的顶级域名真不多。据我所知，<code>.tk</code>是很不错的。如果你决定要长期写下去，也想让别人独一无二的网址访问你的博客，那还是买一个吧。</p>
-<p>域名提供商很多，国内有<a href="http://www.net.cn/" target="_blank" rel="external">万网</a>等，国外有<a href="http://www.name.com/" target="_blank" rel="external">name</a>、<a href="http://www.godaddy.com/" target="_blank" rel="external">GoDaddy</a>等。不过还是推荐你购买国外厂商的，因为国内要备案，提交各种材料等审核（<em>国外难道没有监管机制吗？呆在天朝就是安全</em>），我们只是为了有个博客，没必要这么兴师动众的。我用的是GoDaddy的，因为可以用支付宝支付。买的时候看个人喜好，我用的是<code>.com</code>的，也有人追求个性用<code>.me</code>、<code>.us</code>等（不信可以搜 www.fuck.me ）。不推荐<code>.info</code>的，以这个结尾的大部分是垃圾网站，容易被搜索引擎屏蔽，我想宅男都懂。</p>
-<p>在GoDaddy选好你的域名之后，一路点continue，到支付页面选支付宝，价钱跟你域名的好坏有关了（BTW，我在支付前特地Google了一下GoDaddy有没有优惠，结果真搜到了GoDaddy的优惠码，6折买的）。。。接下来要将你的域名和IP绑定起来，这里涉及到一个叫<strong>DNS</strong>的东西。</p>
-<a id="more"></a>
-<h2 id="配置DNS"><strong>配置DNS</strong></h2><p>DNS可以理解成一个专门破译密码的侦探，把你的域名解析成IP地址，所以只要把你刚买的域名在DNS里设置成指向你的IP，别人就能通过域名访问你的网站了。DNS具体的工作方式太复杂，我是小白，讲不清楚。</p>
-<p>GoDaddy默认提供了DNS服务，但是很不稳定，具体原因。。。这个。。。在天朝我还是不要说了吧。。。既然如此，得另选个DNS服务了，穷屌丝总喜欢用免费的东西，于是我打算用<a href="https://www.dnspod.cn/" target="_blank" rel="external">DNSPod</a>，虽然是免费，但是谁用谁知道。以下是设置步骤：</p>
-<h3 id="一、先在GoDaddy里设置"><strong>一、先在GoDaddy里设置</strong></h3><ol>
-<li>登录 <a href="http://www.godaddy.com" target="_blank" rel="external">http://www.godaddy.com</a></li>
-<li><p>登录后，选择【My Account】，然后单击【DOMAINS】后的【Launch】<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%5Cgodaddy_1.jpg" alt=""></p>
-</li>
-<li><p>在域名列表中找到要修改要修改DNS的域名，然后点击该域名后的下拉图标（如下图所示），然后点击下拉列表中的 【Set NameServers】<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%5Cgodaddy_2.jpg" alt=""></p>
-</li>
-<li><p>选择【Custom】 ，然后点击右下角的Add Nameserver<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%5CQQ%E5%9B%BE%E7%89%8720130810233021.jpg" alt=""></p>
-</li>
-<li><p>输入DNSPod的2个DNS短地址（对应6台服务器），然后点击【Add】，再点击【Save】即可。<br>f1g1ns1.dnspod.net<br>f1g1ns2.dnspod.net<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%5Cgodaddy_4.jpg" alt=""></p>
-</li>
-<li><p>点击保存，等待全球递归DNS服务器刷新（最多72小时）。<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%5CQQ%E5%9B%BE%E7%89%8720130810233128.jpg" alt=""></p>
-</li>
-</ol>
-<h3 id="二、再在DNSPod里设置"><strong>二、再在DNSPod里设置</strong></h3><p>在【我的域名】页面，点击【添加记录】，然后设置成如下图所示就行了。<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E5%A6%82%E4%BD%95%E7%BB%91%E5%AE%9A%E7%8B%AC%E7%AB%8B%E5%9F%9F%E5%90%8D%5C67668a0fjw1e4w9xigzx6j20mc07n756.jpg" alt=""></p>
-<hr>
-<p>如果一切顺利的话，你就可以在你浏览器的地址栏里华丽的输入你的网址来访问你的网站了。加上上一篇<a href="http://www.geekplux.com/2013/08/08/写博客就用FarBox/" target="_blank" rel="external">写博客就用FarBox</a>基本上一个博客就成形了。认真的话几个小时就全部搞定了。没基础的同学可以多去Google一下（什么时候用Google什么时候用百度自己脑补吧）。送大家一句话，多Google，不费电(￣︶￣)。</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>前天把博客搭好之后总觉得得搞个独立域名才算「高端大气上档次」。今天把绑定的经验分享一下。</p>
-<hr>
-<h2 id="购买域名"><strong>购买域名</strong></h2><p>域名，就是你网站的网址（标识和入口），比如我的是geekplux.com。不是说没有这一串字母就不能访问你的网站，只是用IP访问的话，谁愿意记那一堆数字。相比之下，还是记字母简单。</p>
-<p>免费的域名有很多，但是免费的顶级域名真不多。据我所知，<code>.tk</code>是很不错的。如果你决定要长期写下去，也想让别人独一无二的网址访问你的博客，那还是买一个吧。</p>
-<p>域名提供商很多，国内有<a href="http://www.net.cn/">万网</a>等，国外有<a href="http://www.name.com/">name</a>、<a href="http://www.godaddy.com/">GoDaddy</a>等。不过还是推荐你购买国外厂商的，因为国内要备案，提交各种材料等审核（<em>国外难道没有监管机制吗？呆在天朝就是安全</em>），我们只是为了有个博客，没必要这么兴师动众的。我用的是GoDaddy的，因为可以用支付宝支付。买的时候看个人喜好，我用的是<code>.com</code>的，也有人追求个性用<code>.me</code>、<code>.us</code>等（不信可以搜 www.fuck.me ）。不推荐<code>.info</code>的，以这个结尾的大部分是垃圾网站，容易被搜索引擎屏蔽，我想宅男都懂。</p>
-<p>在GoDaddy选好你的域名之后，一路点continue，到支付页面选支付宝，价钱跟你域名的好坏有关了（BTW，我在支付前特地Google了一下GoDaddy有没有优惠，结果真搜到了GoDaddy的优惠码，6折买的）。。。接下来要将你的域名和IP绑定起来，这里涉及到一个叫<strong>DNS</strong>的东西。</p>]]>
-    
-    </summary>
-    
-      <category term="Blog" scheme="http://www.geekplux.com/tags/Blog/"/>
-    
-      <category term="Discovery" scheme="http://www.geekplux.com/tags/Discovery/"/>
-    
-      <category term="Domain" scheme="http://www.geekplux.com/tags/Domain/"/>
-    
-      <category term="FarBox" scheme="http://www.geekplux.com/tags/FarBox/"/>
-    
-      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
-    
-      <category term="博客" scheme="http://www.geekplux.com/tags/%E5%8D%9A%E5%AE%A2/"/>
-    
-      <category term="域名" scheme="http://www.geekplux.com/tags/%E5%9F%9F%E5%90%8D/"/>
-    
-      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="Tool" scheme="http://www.geekplux.com/categories/Tool/"/>
-    
-      <category term="FarBox" scheme="http://www.geekplux.com/categories/Tool/FarBox/"/>
     
   </entry>
   
