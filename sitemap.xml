@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.geekplux.com/gab/index.html</loc>
+    <lastmod>2015-11-14T15:53:00.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.geekplux.com/2015/10/28/writing-skills.html</loc>
     <lastmod>2015-11-11T10:58:19.000Z</lastmod>
   </url>
@@ -9,11 +14,6 @@
   <url>
     <loc>http://www.geekplux.com/2013/07/26/change_wechat_push_mode.html</loc>
     <lastmod>2015-11-11T10:40:41.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.geekplux.com/gab/index.html</loc>
-    <lastmod>2015-10-29T07:21:24.000Z</lastmod>
   </url>
   
   <url>
