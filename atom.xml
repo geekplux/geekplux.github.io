@@ -4,7 +4,7 @@
   <subtitle><![CDATA[知行合一]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://www.geekplux.com/"/>
-  <updated>2015-11-14T16:05:17.000Z</updated>
+  <updated>2015-11-14T16:07:24.000Z</updated>
   <id>http://www.geekplux.com/</id>
   
   <author>
@@ -16,10 +16,10 @@
   
   <entry>
     <title><![CDATA[为什么我喜欢写代码]]></title>
-    <link href="http://www.geekplux.com/2015/11/14/why-i-like-coding.html"/>
-    <id>http://www.geekplux.com/2015/11/14/why-i-like-coding.html</id>
-    <published>2015-11-14T15:59:22.000Z</published>
-    <updated>2015-11-14T16:05:17.000Z</updated>
+    <link href="http://www.geekplux.com/2015/11/13/why-i-like-coding.html"/>
+    <id>http://www.geekplux.com/2015/11/13/why-i-like-coding.html</id>
+    <published>2015-11-13T15:04:22.000Z</published>
+    <updated>2015-11-14T16:07:24.000Z</updated>
     <content type="html"><![CDATA[<p>我知道很大一部分的程序员，最初都是游戏爱好者。因为喜欢游戏，进而喜欢电脑，研究它，想知道怎么制作个游戏，怎么破解一个游戏等等。这部分因为喜欢一件事进而喜欢上鼓捣代码的人，算作一类。另一类就是我这种，一开始并不知道自己真正喜欢的是什么，甚至不知道什么是代码，但接触了编程之后，就停不下来的人。</p>
 <p>虽然我在高考填志愿的时候，专业一栏都写的是「计算机科学与技术」，但我对这个专业的了解比对女性生理结构的了解还少。大一的课程终于接触到了真正的代码，我却没有因此产生浓厚的兴趣。而后来，当运行成功一个自己编写的程序时，那种头皮发麻，一股电流从背脊击穿头部的感觉，让我瞬间明白了这才是我该做一辈子的事。</p>
 <h2 id="编程的反馈很快">编程的反馈很快</h2><p>编程之所以有趣，最主要的原因是它能即时反馈。你写下一行代码，立即就能知道它的对错；你写完一个程序，一运行就能知道成功与否；如果做的是界面，那就更明显了，代码一变，界面立马就变。</p>
