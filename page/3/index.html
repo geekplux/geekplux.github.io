@@ -85,6 +85,78 @@ var _hmt = _hmt || [];
       <div class="outer">
         <section id="main">
   
+    <article id="post-css_written_principles" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/02/20/css_written_principles.html" class="article-date">
+  <time datetime="2014-02-20T05:57:32.000Z" itemprop="datePublished">2014-02-20</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Web/">Web</a>►<a class="article-category-link" href="/categories/Web/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+<div class="article-gallery">
+  <div class="article-gallery-photos">
+    
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cigzac7fc0067pehviid0di4u">
+        <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" itemprop="image">
+      </a>
+    
+  </div>
+</div>
+
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/02/20/css_written_principles.html">CSS编写原则</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
+<h2 id="权重">权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
+<ul>
+<li>id选择器</li>
+<li>class选择器</li>
+<li>标签选择器</li>
+</ul>
+<p>还有一种<strong>内联样式</strong>( inline-style )，是指直接在HTML代码中添加CSS样式。以上四种的权重顺序是：<strong>内联样式（1000）</strong> &gt; <strong>id选择器（100）</strong> &gt; <strong>class选择器（10）</strong> &gt; <strong>标签选择器（1）</strong>。括号内分别是它们的<strong>权重值</strong>！。举个栗子：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"color : #fff;"</span> <span class="attribute">id</span>=<span class="value">"example"</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>栗子<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.dome</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<p>如果只有第四句来定义样式，则这个<code>&lt;span&gt;</code>是蓝色的，如果加上第三条语句，则变成了红色，第四句被覆盖掉了。如果用第二句，则变为黑色，第三句即被覆盖，以此类推如果用内联样式则<code>&lt;span&gt;</code>变成白色了。</p>
+<p>像我这样的菜鸟刚开始滥用各类选择器，往往会出现想覆盖父元素样式的时候覆盖不了的情况，熟不知<strong>要想覆盖，必须让这条语句的权重值大于父元素</strong>（具体可以参考这篇文章<a href="http://www.w3cplus.com/css/css-specificity-things-you-should-know.html">你应该知道的一些事情——CSS权重</a>）。</p>
+        
+          <p class="article-more-link">
+            <a href="/2014/02/20/css_written_principles.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://www.geekplux.com/2014/02/20/css_written_principles.html" data-id="cigzac7fc0067pehviid0di4u" class="article-share-link">Share</a>
+      
+        <a href="http://www.geekplux.com/2014/02/20/css_written_principles.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Summary/">Summary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-goodbye_my_university" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/02/02/goodbye_my_university.html" class="article-date">
@@ -125,7 +197,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2014/02/02/goodbye_my_university.html" data-id="cigza0afo005cglhv81r96m8j" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/2014/02/02/goodbye_my_university.html" data-id="cigzac7f1005npehv41rt0pk6" class="article-share-link">Share</a>
       
         <a href="http://www.geekplux.com/2014/02/02/goodbye_my_university.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -182,7 +254,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2013/10/17/create_cocos2d-x_project.html" data-id="cigza0aga0065glhvhqn8ngwn" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/2013/10/17/create_cocos2d-x_project.html" data-id="cigzac7ff006gpehv1ec9feoh" class="article-share-link">Share</a>
       
         <a href="http://www.geekplux.com/2013/10/17/create_cocos2d-x_project.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -242,7 +314,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2013/10/16/cocos2d-x_environment_build.html" data-id="cigza0agt007aglhvy9gkwejt" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/2013/10/16/cocos2d-x_environment_build.html" data-id="cigzac7g3007lpehv17qphup6" class="article-share-link">Share</a>
       
         <a href="http://www.geekplux.com/2013/10/16/cocos2d-x_environment_build.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -272,7 +344,7 @@ var _hmt = _hmt || [];
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CAndroid%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8%5C147853184651e4b83d435a3.png" rel="gallery_cigza0ah70084glhv834xivh8">
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CAndroid%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8%5C147853184651e4b83d435a3.png" rel="gallery_cigzac7gf008fpehvsah41gae">
         <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CAndroid%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8%5C147853184651e4b83d435a3.png" itemprop="image">
       </a>
     
@@ -311,7 +383,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2013/09/02/android_get_started.html" data-id="cigza0ah70084glhv834xivh8" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/2013/09/02/android_get_started.html" data-id="cigzac7gf008fpehvsah41gae" class="article-share-link">Share</a>
       
         <a href="http://www.geekplux.com/2013/09/02/android_get_started.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -365,7 +437,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2013/08/10/bind_domain.html" data-id="cigza0ah3007rglhv3dlmqctm" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/2013/08/10/bind_domain.html" data-id="cigzac7gb0082pehv31xxjzar" class="article-share-link">Share</a>
       
         <a href="http://www.geekplux.com/2013/08/10/bind_domain.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -428,7 +500,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2013/08/08/write_blog_by_farbox.html" data-id="cigza0add000cglhv77cw85yv" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/2013/08/08/write_blog_by_farbox.html" data-id="cigzac7ce000gpehvldaiemyj" class="article-share-link">Share</a>
       
         <a href="http://www.geekplux.com/2013/08/08/write_blog_by_farbox.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -481,7 +553,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2013/07/26/change_wechat_push_mode.html" data-id="cigza0agz007jglhvrftwoo3v" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/2013/07/26/change_wechat_push_mode.html" data-id="cigzac7g8007upehv3vv3uv2y" class="article-share-link">Share</a>
       
         <a href="http://www.geekplux.com/2013/07/26/change_wechat_push_mode.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -495,63 +567,9 @@ var _hmt = _hmt || [];
 
 
   
-    <article id="post-love_like_water" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/04/10/love_like_water.html" class="article-date">
-  <time datetime="2013-04-10T02:36:38.000Z" itemprop="datePublished">2013-04-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Life/">Life</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/04/10/love_like_water.html">情似流水</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>看来我得写篇日志了。</p>
-<p>情似流水，行于当行，止于当止。而我，总是相反。</p>
-<p>生物老师说当我们自以为被丘比特射中的时候，只不过是因为我们的大脑在分泌着多巴胺，在多巴胺的作用下，我们领略着爱的幸福，就如同吸毒或吸烟一样让人上瘾，欲罢不能，我们自以为在茫茫人海中，在经历了上辈子的五百次回眸之后我们终于遇到了对的人，其实这只不过是激素的力量。</p>
-<p>这样说的确冷酷了一点。但是感性的我们一如既往的对爱情充满向往，哪怕那幻想的美丽泡沫被现实击碎多少次。当再次陷入恋爱之时，我们又会推翻之前的一切消极看法，认定这个人或许就是自己过尽千帆皆不是的那一个，命运终究安排我们相遇。呵呵，目光放远，万事皆悲。是啊，她的微笑，她的双眸，她的善良，她的一切与我都是那么匹配。接着，情不自己，甚至偏执的认为我们是命中注定，爱是永恒不灭。</p>
-<p>情不知其所起，一往而深。一见钟情竟然在我一直坚定不移的相信下出现。我的生命也放佛因为有了对方才有了意义。偶然的相遇或邂逅，都被赋予了不同寻常的含义。既见君子，云胡不喜！人和人相遇的概率很简单可以算出来，她是那分子1，而分母的大小，你可想而知。虽然这概率小之又小，但是也验证了冥冥之中有一双神秘的手安排着这一切。如果把我们相遇相知相恋相隔的剧情串起来，发现，只要哪个环节差一点点，我们都不可能在一起。</p>
-<p>爱情宿命论，无疑是一种幻觉和自我安慰。但是，我们的确遇到了一个可以让自己身心栖息的伴侣，寻求片刻的宁静或永恒。我不能想象我在她的生命中被人取代，反之亦然。我很自私。</p>
-        
-          <p class="article-more-link">
-            <a href="/2013/04/10/love_like_water.html#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2013/04/10/love_like_water.html" data-id="cigza0afe004pglhv8mm9fpe0" class="article-share-link">Share</a>
-      
-        <a href="http://www.geekplux.com/2013/04/10/love_like_water.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Essay/">Essay</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Life/">Life</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Love/">Love</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/情感/">情感</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/随笔/">随笔</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
   
     <nav id="page-nav">
-      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
+      <a class="extend prev" rel="prev" href="/page/2/">&laquo; Prev</a><a class="page-number" href="/">1</a><a class="page-number" href="/page/2/">2</a><span class="page-number current">3</span><a class="page-number" href="/page/4/">4</a><a class="page-number" href="/page/5/">5</a><a class="extend next" rel="next" href="/page/4/">Next &raquo;</a>
     </nav>
   
 
@@ -567,7 +585,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Agile-Development/">Agile Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cocos2d-x/">Cocos2d-x</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thought/">Thought</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/FarBox/">FarBox</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/Mac/">Mac</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ukulele/">Ukulele</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CoffeeScript/">CoffeeScript</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Agile-Development/">Agile Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cocos2d-x/">Cocos2d-x</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thought/">Thought</a><span class="category-list-count">4</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/FarBox/">FarBox</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/Mac/">Mac</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ukulele/">Ukulele</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CoffeeScript/">CoffeeScript</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -576,7 +594,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Agile-Development/" style="font-size: 10px;">Agile Development</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Backbone/" style="font-size: 10px;">Backbone</a> <a href="/tags/Blog/" style="font-size: 12.86px;">Blog</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CSS/" style="font-size: 12.86px;">CSS</a> <a href="/tags/Cocos2d-x/" style="font-size: 11.43px;">Cocos2d-x</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/CoffeeScript/" style="font-size: 11.43px;">CoffeeScript</a> <a href="/tags/Computer-Science/" style="font-size: 12.86px;">Computer Science</a> <a href="/tags/Development/" style="font-size: 10px;">Development</a> <a href="/tags/Development-Environment/" style="font-size: 11.43px;">Development Environment</a> <a href="/tags/Discovery/" style="font-size: 11.43px;">Discovery</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Essay/" style="font-size: 14.29px;">Essay</a> <a href="/tags/FarBox/" style="font-size: 11.43px;">FarBox</a> <a href="/tags/Game-Development/" style="font-size: 11.43px;">Game Development</a> <a href="/tags/Guide/" style="font-size: 14.29px;">Guide</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Instrument/" style="font-size: 10px;">Instrument</a> <a href="/tags/Life/" style="font-size: 17.14px;">Life</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Mac/" style="font-size: 11.43px;">Mac</a> <a href="/tags/Note/" style="font-size: 20px;">Note</a> <a href="/tags/Responsive-Design/" style="font-size: 10px;">Responsive Design</a> <a href="/tags/Skill/" style="font-size: 12.86px;">Skill</a> <a href="/tags/Summary/" style="font-size: 17.14px;">Summary</a> <a href="/tags/Thought/" style="font-size: 12.86px;">Thought</a> <a href="/tags/Tool/" style="font-size: 17.14px;">Tool</a> <a href="/tags/Translation/" style="font-size: 12.86px;">Translation</a> <a href="/tags/Ukulele/" style="font-size: 10px;">Ukulele</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Web/" style="font-size: 17.14px;">Web</a> <a href="/tags/乐器/" style="font-size: 10px;">乐器</a> <a href="/tags/入门/" style="font-size: 14.29px;">入门</a> <a href="/tags/博客/" style="font-size: 11.43px;">博客</a> <a href="/tags/域名/" style="font-size: 10px;">域名</a> <a href="/tags/尝试/" style="font-size: 10px;">尝试</a> <a href="/tags/工具/" style="font-size: 17.14px;">工具</a> <a href="/tags/开发环境/" style="font-size: 11.43px;">开发环境</a> <a href="/tags/微信公众平台/" style="font-size: 10px;">微信公众平台</a> <a href="/tags/思考/" style="font-size: 11.43px;">思考</a> <a href="/tags/总结/" style="font-size: 17.14px;">总结</a> <a href="/tags/情感/" style="font-size: 10px;">情感</a> <a href="/tags/感想/" style="font-size: 15.71px;">感想</a> <a href="/tags/新技能/" style="font-size: 11.43px;">新技能</a> <a href="/tags/游戏开发/" style="font-size: 11.43px;">游戏开发</a> <a href="/tags/生活/" style="font-size: 18.57px;">生活</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a> <a href="/tags/计算机科学/" style="font-size: 12.86px;">计算机科学</a> <a href="/tags/译文/" style="font-size: 12.86px;">译文</a> <a href="/tags/运营/" style="font-size: 10px;">运营</a> <a href="/tags/随笔/" style="font-size: 14.29px;">随笔</a>
+      <a href="/tags/Agile-Development/" style="font-size: 10px;">Agile Development</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Backbone/" style="font-size: 10px;">Backbone</a> <a href="/tags/Blog/" style="font-size: 13.33px;">Blog</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CSS/" style="font-size: 13.33px;">CSS</a> <a href="/tags/Cocos2d-x/" style="font-size: 11.67px;">Cocos2d-x</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/CoffeeScript/" style="font-size: 11.67px;">CoffeeScript</a> <a href="/tags/Computer-Science/" style="font-size: 13.33px;">Computer Science</a> <a href="/tags/Development/" style="font-size: 10px;">Development</a> <a href="/tags/Development-Environment/" style="font-size: 11.67px;">Development Environment</a> <a href="/tags/Discovery/" style="font-size: 11.67px;">Discovery</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Essay/" style="font-size: 15px;">Essay</a> <a href="/tags/FarBox/" style="font-size: 11.67px;">FarBox</a> <a href="/tags/Game-Development/" style="font-size: 11.67px;">Game Development</a> <a href="/tags/Guide/" style="font-size: 15px;">Guide</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Instrument/" style="font-size: 10px;">Instrument</a> <a href="/tags/Life/" style="font-size: 18.33px;">Life</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Mac/" style="font-size: 11.67px;">Mac</a> <a href="/tags/Note/" style="font-size: 20px;">Note</a> <a href="/tags/Responsive-Design/" style="font-size: 10px;">Responsive Design</a> <a href="/tags/Skill/" style="font-size: 13.33px;">Skill</a> <a href="/tags/Summary/" style="font-size: 18.33px;">Summary</a> <a href="/tags/Thought/" style="font-size: 13.33px;">Thought</a> <a href="/tags/Tool/" style="font-size: 18.33px;">Tool</a> <a href="/tags/Translation/" style="font-size: 13.33px;">Translation</a> <a href="/tags/Ukulele/" style="font-size: 10px;">Ukulele</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Web/" style="font-size: 18.33px;">Web</a> <a href="/tags/writing/" style="font-size: 10px;">writing</a> <a href="/tags/乐器/" style="font-size: 10px;">乐器</a> <a href="/tags/代码/" style="font-size: 10px;">代码</a> <a href="/tags/入门/" style="font-size: 15px;">入门</a> <a href="/tags/写文章/" style="font-size: 10px;">写文章</a> <a href="/tags/博客/" style="font-size: 11.67px;">博客</a> <a href="/tags/域名/" style="font-size: 10px;">域名</a> <a href="/tags/尝试/" style="font-size: 10px;">尝试</a> <a href="/tags/工具/" style="font-size: 18.33px;">工具</a> <a href="/tags/开发环境/" style="font-size: 11.67px;">开发环境</a> <a href="/tags/微信公众平台/" style="font-size: 10px;">微信公众平台</a> <a href="/tags/思考/" style="font-size: 11.67px;">思考</a> <a href="/tags/总结/" style="font-size: 18.33px;">总结</a> <a href="/tags/情感/" style="font-size: 11.67px;">情感</a> <a href="/tags/感想/" style="font-size: 16.67px;">感想</a> <a href="/tags/新技能/" style="font-size: 11.67px;">新技能</a> <a href="/tags/游戏开发/" style="font-size: 11.67px;">游戏开发</a> <a href="/tags/生活/" style="font-size: 20px;">生活</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a> <a href="/tags/计算机科学/" style="font-size: 13.33px;">计算机科学</a> <a href="/tags/译文/" style="font-size: 13.33px;">译文</a> <a href="/tags/运营/" style="font-size: 10px;">运营</a> <a href="/tags/随笔/" style="font-size: 15px;">随笔</a>
     </div>
   </div>
 
@@ -586,6 +604,10 @@ var _hmt = _hmt || [];
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2015/11/14/why-i-like-coding.html">为什么我喜欢写代码</a>
+          </li>
         
           <li>
             <a href="/2015/10/28/writing-skills.html">写文章的小技巧</a>
@@ -601,10 +623,6 @@ var _hmt = _hmt || [];
         
           <li>
             <a href="/2015/06/06/vim-those-fit-yourself-are-the-best.html">Vim - 适合自己的，才是最好的</a>
-          </li>
-        
-          <li>
-            <a href="/2015/01/05/play-ukulele.html">轻松玩转 Ukulele</a>
           </li>
         
       </ul>
