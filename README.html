@@ -3,22 +3,21 @@
 <head>
   <meta charset="utf-8">
   
-  <title>初识 TDD | GeekPlux</title>
+  <title>GeekPlux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。
-神马是 TDD维基百科上是这样说的：测试驱动开发（Test-d">
-<meta property="og:type" content="article">
-<meta property="og:title" content="初识 TDD">
-<meta property="og:url" content="http://www.geekplux.com/2014/03/21/understand_tdd.html">
+  <meta name="description" content="GeekPlux’s blogGeekPlux
+记录自己的一些浅知拙见和学习笔记。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="GeekPlux">
+<meta property="og:url" content="http://www.geekplux.com/README.html">
 <meta property="og:site_name" content="GeekPlux">
-<meta property="og:description" content="最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。
-神马是 TDD维基百科上是这样说的：测试驱动开发（Test-d">
-<meta property="og:image" content="http://upload.wikimedia.org/wikipedia/en/9/9c/Test-driven_development.PNG">
-<meta property="og:updated_time" content="2015-01-04T12:01:30.000Z">
+<meta property="og:description" content="GeekPlux’s blogGeekPlux
+记录自己的一些浅知拙见和学习笔记。">
+<meta property="og:updated_time" content="2014-04-01T16:37:50.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="初识 TDD">
-<meta name="twitter:description" content="最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。
-神马是 TDD维基百科上是这样说的：测试驱动开发（Test-d">
+<meta name="twitter:title" content="GeekPlux">
+<meta name="twitter:description" content="GeekPlux’s blogGeekPlux
+记录自己的一些浅知拙见和学习笔记。">
 <meta name="twitter:creator" content="@GeekPlux">
   
     <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
@@ -88,99 +87,33 @@ var _hmt = _hmt || [];
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-understand_tdd" class="article article-type-post" itemscope itemprop="blogPost">
+        <section id="main"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2014/03/21/understand_tdd.html" class="article-date">
-  <time datetime="2014-03-20T16:20:09.000Z" itemprop="datePublished">2014-03-21</time>
+    <a href="/README.html" class="article-date">
+  <time datetime="2015-11-17T08:30:00.000Z" itemprop="datePublished">2015-11-17</time>
 </a>
     
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Agile-Development/">Agile Development</a>
-  </div>
-
   </div>
   <div class="article-inner">
     
     
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      初识 TDD
-    </h1>
-  
-
-      </header>
-    
     <div class="article-entry" itemprop="articleBody">
       
-        <p>最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。</p>
-<h1 id="神马是_TDD">神马是 TDD</h1><p>维基百科上是这样说的：测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导<strong>先写测试程序，然后编码实现其功能</strong>得名。</p>
-<p>好吧，上面那段翻译的真是让人捉急，人家原文是这样的：</p>
-<blockquote>
-<p>Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards. </p>
-</blockquote>
-<p>看完英文应该比较好理解。通俗点就是：<strong>先写测试，再写只能让测试通过的代码，然后不停的循环这两个步骤，直到重构出满足需求的代码</strong>。以每个测试来推动整个开发的进行，这样有助于编写简洁和高质量的代码，并加速开发过程。</p>
-<a id="more"></a>
-<h1 id="TDD_流程">TDD 流程</h1><p><img src="http://upload.wikimedia.org/wikipedia/en/9/9c/Test-driven_development.PNG" alt=""></p>
-<ol>
-<li>先写一个测试，覆盖的需求很少</li>
-<li>检查是否运行失败</li>
-<li>编写能通过这个测试的代码</li>
-<li>运行该测试</li>
-<li>如果测试通过，则写新的测试，覆盖更多需求；如果测试没有通过，则更改代码直到通过</li>
-<li>重构代码，使其能通过新写的测试</li>
-<li>重复第 5 步</li>
-<li>重复第 6 步<br>……</li>
-</ol>
-<h1 id="一个好的_Test_Case_应有下列特点：">一个好的 Test Case 应有下列特点：</h1><ul>
-<li>快    —天下武功，唯快不破</li>
-<li>独立    —不依赖于其他的测试用例的输出结果</li>
-<li>可读    —基本上别人一看你的代码就知道是在测试什么功能，都不用写注释</li>
-<li>完整    —包括目的，输入，预期结果</li>
-<li>可重复    —无论谁测试结果都一样，且可以根据之前的测试编写下一个测试</li>
-<li>一个assert    —只有一个判断结果，准确、简洁</li>
-</ul>
-<p>要实现前两点，则测试用例就不能涉及到文件、数据库、网络、环境（第三方类库）等。</p>
-<h1 id="感受">感受</h1><p>TDD 作为一种敏捷开发方式，越来越为人所吹。毕竟敏捷开发越来越流行，所以 TDD 也是越来越被人吹捧。而且整个 TDD 开发过程看起来效果非常棒，尤其是在敏捷教练现场演示了一遍之后（果然例子理解起来永远比理论容易）。感觉是把大事化小，逐步解决。</p>
-<p>不过，任何东西都有利有弊。比如，测试的范围就是个很麻烦的问题，怎么才能写出一个好的测试用例。既不会覆盖的需求太多，又不会覆盖的太少……</p>
-<p>不管怎样，还是学到了东西，非常感谢两位敏捷教练。</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+        <h2 id="GeekPlux’s_blog">GeekPlux’s blog</h2><p><a href="http://www.geekplux.com/">GeekPlux</a></p>
+<p>记录自己的一些浅知拙见和学习笔记。</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://www.geekplux.com/2014/03/21/understand_tdd.html" data-id="cih34ds17001v8w9cudfrr692" class="article-share-link">Share</a>
+      <a data-url="http://www.geekplux.com/README.html" data-id="cih34ds5600948w9c7ts2z39c" class="article-share-link">Share</a>
       
-        <a href="http://www.geekplux.com/2014/03/21/understand_tdd.html#disqus_thread" class="article-comment-link">Comments</a>
+        <a href="http://www.geekplux.com/README.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Agile-Development/">Agile Development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
-
     </footer>
   </div>
   
     
-<nav id="article-nav">
-  
-    <a href="/2014/04/06/simple_guide_to_responsive_design.html" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          响应式设计简易指南（译）
-        
-      </div>
-    </a>
-  
-  
-    <a href="/2014/03/14/collapsing_margins.html" id="article-nav-older" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">Collapsing margins——合并的外边距</div>
-    </a>
-  
-</nav>
-
   
 </article>
 
@@ -284,7 +217,7 @@ var _hmt = _hmt || [];
 <script>
   var disqus_shortname = 'geekplux';
   
-  var disqus_url = 'http://www.geekplux.com/2014/03/21/understand_tdd.html';
+  var disqus_url = 'http://www.geekplux.com/README.html';
   
   (function(){
     var dsq = document.createElement('script');
