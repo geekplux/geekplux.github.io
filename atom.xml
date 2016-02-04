@@ -3,9 +3,9 @@
   <title><![CDATA[GeekPlux]]></title>
   <subtitle><![CDATA[知行合一]]></subtitle>
   <link href="/atom.xml" rel="self"/>
-  <link href="http://www.geekplux.com/"/>
+  <link href="http://geekplux.com/"/>
   <updated>2016-02-03T07:52:45.000Z</updated>
-  <id>http://www.geekplux.com/</id>
+  <id>http://geekplux.com/</id>
   
   <author>
     <name><![CDATA[GeekPlux]]></name>
@@ -16,8 +16,8 @@
   
   <entry>
     <title><![CDATA[建立索引式的学习方法]]></title>
-    <link href="http://www.geekplux.com/2015/12/08/learning_by_index.html"/>
-    <id>http://www.geekplux.com/2015/12/08/learning_by_index.html</id>
+    <link href="http://geekplux.com/2015/12/08/learning-by-index.html"/>
+    <id>http://geekplux.com/2015/12/08/learning-by-index.html</id>
     <published>2015-12-08T13:53:27.000Z</published>
     <updated>2016-02-03T07:52:45.000Z</updated>
     <content type="html"><![CDATA[<p>学习方法的重要性不必多言，相信每个人都知道。然而，并不是掌握了好的学习方法，就可以让你事半功倍，而是要找到适合自己的学习方法。<strong>索引式</strong>的学习方法就很适合我。</p>
@@ -45,20 +45,20 @@
     
     </summary>
     
-      <category term="Learning" scheme="http://www.geekplux.com/tags/Learning/"/>
+      <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
     
-      <category term="学习" scheme="http://www.geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+      <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
-      <category term="方法论" scheme="http://www.geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
-      <category term="Thought" scheme="http://www.geekplux.com/categories/Thought/"/>
+      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[为什么我喜欢写代码]]></title>
-    <link href="http://www.geekplux.com/2015/11/13/why-i-like-coding.html"/>
-    <id>http://www.geekplux.com/2015/11/13/why-i-like-coding.html</id>
+    <link href="http://geekplux.com/2015/11/13/why-i-like-coding.html"/>
+    <id>http://geekplux.com/2015/11/13/why-i-like-coding.html</id>
     <published>2015-11-13T15:04:22.000Z</published>
     <updated>2016-02-03T07:59:04.000Z</updated>
     <content type="html"><![CDATA[<p>我知道很大一部分的程序员，最初都是游戏爱好者。因为喜欢游戏，进而喜欢电脑，研究它，想知道怎么制作个游戏，怎么破解一个游戏等等。这部分因为喜欢一件事进而喜欢上鼓捣代码的人，算作一类。另一类就是我这种，一开始并不知道自己真正喜欢的是什么，甚至不知道什么是代码，但接触了编程之后，就停不下来的人。</p>
@@ -84,22 +84,22 @@
     
     </summary>
     
-      <category term="代码" scheme="http://www.geekplux.com/tags/%E4%BB%A3%E7%A0%81/"/>
+      <category term="代码" scheme="http://geekplux.com/tags/%E4%BB%A3%E7%A0%81/"/>
     
-      <category term="情感" scheme="http://www.geekplux.com/tags/%E6%83%85%E6%84%9F/"/>
+      <category term="情感" scheme="http://geekplux.com/tags/%E6%83%85%E6%84%9F/"/>
     
-      <category term="感想" scheme="http://www.geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
+      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
-      <category term="生活" scheme="http://www.geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="Life" scheme="http://www.geekplux.com/categories/Life/"/>
+      <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[写文章的小技巧]]></title>
-    <link href="http://www.geekplux.com/2015/10/28/writing-skills.html"/>
-    <id>http://www.geekplux.com/2015/10/28/writing-skills.html</id>
+    <link href="http://geekplux.com/2015/10/28/writing-skills.html"/>
+    <id>http://geekplux.com/2015/10/28/writing-skills.html</id>
     <published>2015-10-28T10:24:11.000Z</published>
     <updated>2015-11-14T16:04:55.000Z</updated>
     <content type="html"><![CDATA[<p>既然是小技巧，那么就不敢班门弄斧，只简单说说自己平时遵循的几条写作原则：</p>
@@ -143,24 +143,24 @@
     
     </summary>
     
-      <category term="Blog" scheme="http://www.geekplux.com/tags/Blog/"/>
+      <category term="Blog" scheme="http://geekplux.com/tags/Blog/"/>
     
-      <category term="Skill" scheme="http://www.geekplux.com/tags/Skill/"/>
+      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
-      <category term="Thought" scheme="http://www.geekplux.com/tags/Thought/"/>
+      <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
-      <category term="writing" scheme="http://www.geekplux.com/tags/writing/"/>
+      <category term="writing" scheme="http://geekplux.com/tags/writing/"/>
     
-      <category term="写文章" scheme="http://www.geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
+      <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
     
-      <category term="Thought" scheme="http://www.geekplux.com/categories/Thought/"/>
+      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[为什么文章写得好的人都很厉害]]></title>
-    <link href="http://www.geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html"/>
-    <id>http://www.geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</id>
+    <link href="http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html"/>
+    <id>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</id>
     <published>2015-10-27T14:22:22.000Z</published>
     <updated>2016-02-04T17:15:40.000Z</updated>
     <content type="html"><![CDATA[<p>首先定义什么是好文章。我觉得 <strong>能让读者领悟自己想表达的</strong> 就叫好文章。换种说法就是 <strong>能达到自己写作目的</strong> 的文章就叫好文章。</p>
@@ -195,20 +195,20 @@
     
     </summary>
     
-      <category term="Writing" scheme="http://www.geekplux.com/tags/Writing/"/>
+      <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
     
-      <category term="写文章" scheme="http://www.geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
+      <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
     
-      <category term="感想" scheme="http://www.geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
+      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
-      <category term="Thought" scheme="http://www.geekplux.com/categories/Thought/"/>
+      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[如何管理好自己的密码]]></title>
-    <link href="http://www.geekplux.com/2015/09/24/password-management.html"/>
-    <id>http://www.geekplux.com/2015/09/24/password-management.html</id>
+    <link href="http://geekplux.com/2015/09/24/password-management.html"/>
+    <id>http://geekplux.com/2015/09/24/password-management.html</id>
     <published>2015-09-24T09:08:59.000Z</published>
     <updated>2015-09-24T11:40:28.000Z</updated>
     <content type="html"><![CDATA[<p>最近 Xcode Ghost 席卷三大平台，有预谋有组织有纪律。很多人看到这个消息纷纷修改常用密码，但我觉得密码管理其实功在平时，一个好的密码可以大幅提升你账户的安全系数。</p>
@@ -248,20 +248,20 @@
     
     </summary>
     
-      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
-      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="生活" scheme="http://www.geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="Life" scheme="http://www.geekplux.com/categories/Life/"/>
+      <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Backbone View 之间通信的三种方式]]></title>
-    <link href="http://www.geekplux.com/2015/07/04/communicating-between-views-in-backbone.html"/>
-    <id>http://www.geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</id>
+    <link href="http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html"/>
+    <id>http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</id>
     <published>2015-07-04T12:49:33.000Z</published>
     <updated>2015-07-04T13:52:50.000Z</updated>
     <content type="html"><![CDATA[<p>掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 Backbone View 之间通信的三种方式讲的清晰明了。译文如下（已拿到授权）：</p>
@@ -297,7 +297,7 @@
 <p>如果有比这更好的方法，欢迎分享交流。</p>
 <p>（译文完）</p>
 <hr>
-<p><strong>原文地址</strong>：<a href="http://veerasundar.com/blog/2013/04/communicating-between-views-in-backbone/" target="_blank" rel="external">Communicating between views in Backbone</a><br><strong>译文地址</strong>：<a href="http://www.geekplux.com/2015/07/04/communicating-between-views-in-backbone.html">Backbone View 之间通信的三种方式</a></p>
+<p><strong>原文地址</strong>：<a href="http://veerasundar.com/blog/2013/04/communicating-between-views-in-backbone/" target="_blank" rel="external">Communicating between views in Backbone</a><br><strong>译文地址</strong>：<a href="http://www.geekplux.com/2015/07/04/communicating-between-views-in-backbone.html" target="_blank" rel="external">Backbone View 之间通信的三种方式</a></p>
 <hr>
 <p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
 ]]></content>
@@ -315,25 +315,25 @@
     
     </summary>
     
-      <category term="Backbone" scheme="http://www.geekplux.com/tags/Backbone/"/>
+      <category term="Backbone" scheme="http://geekplux.com/tags/Backbone/"/>
     
-      <category term="Translation" scheme="http://www.geekplux.com/tags/Translation/"/>
+      <category term="Translation" scheme="http://geekplux.com/tags/Translation/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/tags/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="译文" scheme="http://www.geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
+      <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/categories/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Vim - 适合自己的，才是最好的]]></title>
-    <link href="http://www.geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html"/>
-    <id>http://www.geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</id>
+    <link href="http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html"/>
+    <id>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</id>
     <published>2015-06-06T12:28:21.000Z</published>
     <updated>2015-06-06T12:59:55.000Z</updated>
-    <content type="html"><![CDATA[<p>Vim 被称为编辑器之神，是我用过之后才体会到的，用之前实在不敢对它做出什么评价。在大学时代，Vim 的大名就已如雷贯耳，但由于它陡峭的学习曲线，一直望而却步。等真正开始学习之后，发现并没有想象中的复杂，也没有所谓的瓶颈，只要在实际写代码中强迫自己使用就可以了，无形中就会形成习惯。最初的不适，换来的是效率的飞升。这和我当初学习<a href="http://www.geekplux.com/2014/07/06/learn_shuangpin.html">双拼</a>的感觉一样。下图是我的 Vim 界面：</p>
+    <content type="html"><![CDATA[<p>Vim 被称为编辑器之神，是我用过之后才体会到的，用之前实在不敢对它做出什么评价。在大学时代，Vim 的大名就已如雷贯耳，但由于它陡峭的学习曲线，一直望而却步。等真正开始学习之后，发现并没有想象中的复杂，也没有所谓的瓶颈，只要在实际写代码中强迫自己使用就可以了，无形中就会形成习惯。最初的不适，换来的是效率的飞升。这和我当初学习<a href="http://www.geekplux.com/2014/07/06/learn_shuangpin.html" target="_blank" rel="external">双拼</a>的感觉一样。下图是我的 Vim 界面：</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/vim.png" alt="我的 Vim 界面"></p>
 <h2 id="学习方式">学习方式</h2><p>我一开始也是看了很多教程，这里我就不说具体的学习方法了，因为 Google 上一搜一大堆。</p>
 <p>我只想谈一点：很多「过来人」告诫新手，一开始使用 Vim 一定不能使用插件，<strong>要从最纯净的 Vim 开始练习</strong>。他们认为一上手就使用别人的配置，很容易被别人影响，不能领会到自己配置 Vim，这种从无到有的感觉。虽然我也很喜欢折腾的感觉，但这对于学习、入门一个工具来说有点<strong>南辕北辙</strong>，我们学习一个工具就是为了用好它，或者<strong>用它来为我们服务</strong>。为什么要我们去适应它呢？也许这不符合 Vim 的哲学，但是我觉得：</p>
@@ -399,22 +399,22 @@
     
     </summary>
     
-      <category term="IDE" scheme="http://www.geekplux.com/tags/IDE/"/>
+      <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
-      <category term="Vim" scheme="http://www.geekplux.com/tags/Vim/"/>
+      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
     
-      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/categories/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[轻松玩转 Ukulele]]></title>
-    <link href="http://www.geekplux.com/2015/01/05/play-ukulele.html"/>
-    <id>http://www.geekplux.com/2015/01/05/play-ukulele.html</id>
+    <link href="http://geekplux.com/2015/01/05/play-ukulele.html"/>
+    <id>http://geekplux.com/2015/01/05/play-ukulele.html</id>
     <published>2015-01-05T15:54:00.000Z</published>
     <updated>2015-08-04T09:00:13.000Z</updated>
     <content type="html"><![CDATA[<p>每个人都幻想过自己拥有一身的艺术细菌，可以像各种钢琴王子一样在琴键上挥洒自如。但是由于某些不可抗力，从小到大一直没学什么乐器，或者是学了也没坚持下来。最尴尬的是选了一种鸡肋乐器，学有所成却不接地气，比如二胡（我真不是黑，因为我也学过那么两年），总不能在同学聚会激战正酣的时候拿出来即兴演奏吧……还是老老实实戴个圆框墨镜到地铁口来一曲二泉映月……</p>
@@ -519,24 +519,24 @@
     
     </summary>
     
-      <category term="Instrument" scheme="http://www.geekplux.com/tags/Instrument/"/>
+      <category term="Instrument" scheme="http://geekplux.com/tags/Instrument/"/>
     
-      <category term="Skill" scheme="http://www.geekplux.com/tags/Skill/"/>
+      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
-      <category term="Ukulele" scheme="http://www.geekplux.com/tags/Ukulele/"/>
+      <category term="Ukulele" scheme="http://geekplux.com/tags/Ukulele/"/>
     
-      <category term="乐器" scheme="http://www.geekplux.com/tags/%E4%B9%90%E5%99%A8/"/>
+      <category term="乐器" scheme="http://geekplux.com/tags/%E4%B9%90%E5%99%A8/"/>
     
-      <category term="新技能" scheme="http://www.geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
+      <category term="新技能" scheme="http://geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
     
-      <category term="Ukulele" scheme="http://www.geekplux.com/categories/Ukulele/"/>
+      <category term="Ukulele" scheme="http://geekplux.com/categories/Ukulele/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[告别社交网络有多难]]></title>
-    <link href="http://www.geekplux.com/2014/08/02/farewell_social_network.html"/>
-    <id>http://www.geekplux.com/2014/08/02/farewell_social_network.html</id>
+    <link href="http://geekplux.com/2014/08/02/farewell_social_network.html"/>
+    <id>http://geekplux.com/2014/08/02/farewell_social_network.html</id>
     <published>2014-08-02T12:50:46.000Z</published>
     <updated>2015-01-04T11:58:13.000Z</updated>
     <content type="html"><![CDATA[<p>我猜 QQ 空间最初应该是作为和新浪博客竞争才出现的，当时我还在初中，不会写什么 Blog，所以空间出来正迎合了我们这些学生的需求。随后「非主流」、「火星文」开始火，又是抓住了青春期学生的叛逆心理。不过我当时对非主流不是太感冒，一直很用心的经营着空间，犹记得当年幼稚的我还写了篇文章宣称空间是我的心灵归宿（正如现在矫情的我写这篇应该退出社交网络的文章）。所以从初中开始我的喜怒哀乐全在空间里，文章写了上百篇，照片更是几千张。</p>
@@ -581,24 +581,24 @@
     
     </summary>
     
-      <category term="Life" scheme="http://www.geekplux.com/tags/Life/"/>
+      <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
     
-      <category term="Thought" scheme="http://www.geekplux.com/tags/Thought/"/>
+      <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
-      <category term="思考" scheme="http://www.geekplux.com/tags/%E6%80%9D%E8%80%83/"/>
+      <category term="思考" scheme="http://geekplux.com/tags/%E6%80%9D%E8%80%83/"/>
     
-      <category term="感想" scheme="http://www.geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
+      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
-      <category term="生活" scheme="http://www.geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="Thought" scheme="http://www.geekplux.com/categories/Thought/"/>
+      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[双拼学习记]]></title>
-    <link href="http://www.geekplux.com/2014/07/06/learn_shuangpin.html"/>
-    <id>http://www.geekplux.com/2014/07/06/learn_shuangpin.html</id>
+    <link href="http://geekplux.com/2014/07/06/learn_shuangpin.html"/>
+    <id>http://geekplux.com/2014/07/06/learn_shuangpin.html</id>
     <published>2014-07-06T14:59:29.000Z</published>
     <updated>2015-01-04T11:51:30.000Z</updated>
     <content type="html"><![CDATA[<p>转移到<strong>双拼</strong>阵营差不多三个星期了。现在打字真的是「飞一般的感觉」。</p>
@@ -638,22 +638,22 @@
     
     </summary>
     
-      <category term="Skill" scheme="http://www.geekplux.com/tags/Skill/"/>
+      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
-      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="新技能" scheme="http://www.geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
+      <category term="新技能" scheme="http://geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/categories/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CoffeeScript 编码风格指南（译）]]></title>
-    <link href="http://www.geekplux.com/2014/06/21/coffeescript_style_guide.html"/>
-    <id>http://www.geekplux.com/2014/06/21/coffeescript_style_guide.html</id>
+    <link href="http://geekplux.com/2014/06/21/coffeescript_style_guide.html"/>
+    <id>http://geekplux.com/2014/06/21/coffeescript_style_guide.html</id>
     <published>2014-06-21T15:47:32.000Z</published>
     <updated>2015-01-04T11:41:59.000Z</updated>
     <content type="html"><![CDATA[<p>这份指南阐述了一些 <a href="http://jashkenas.github.com/coffee-script/" target="_blank" rel="external">CoffeeScript</a> 的最佳实践和编码惯例。</p>
@@ -881,24 +881,24 @@
     
     </summary>
     
-      <category term="CoffeeScript" scheme="http://www.geekplux.com/tags/CoffeeScript/"/>
+      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
     
-      <category term="Translation" scheme="http://www.geekplux.com/tags/Translation/"/>
+      <category term="Translation" scheme="http://geekplux.com/tags/Translation/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/tags/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="译文" scheme="http://www.geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
+      <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/categories/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
-      <category term="CoffeeScript" scheme="http://www.geekplux.com/categories/Web/CoffeeScript/"/>
+      <category term="CoffeeScript" scheme="http://geekplux.com/categories/Web/CoffeeScript/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CoffeeScript 笔记]]></title>
-    <link href="http://www.geekplux.com/2014/05/15/coffeescript_note.html"/>
-    <id>http://www.geekplux.com/2014/05/15/coffeescript_note.html</id>
+    <link href="http://geekplux.com/2014/05/15/coffeescript_note.html"/>
+    <id>http://geekplux.com/2014/05/15/coffeescript_note.html</id>
     <published>2014-05-15T11:06:09.000Z</published>
     <updated>2015-08-04T08:59:03.000Z</updated>
     <content type="html"><![CDATA[<p>最近读了《CoffeeScript程序设计》的前半部分「核心 CoffeeScript」。对 CoffeeScript 也是有了初步的了解，本文只是我的随手笔记，并没有非常系统的总结 CoffeeScript 语法，想学习语法的同学可以看以下两份中文材料：</p>
@@ -1061,24 +1061,24 @@
     
     </summary>
     
-      <category term="CoffeeScript" scheme="http://www.geekplux.com/tags/CoffeeScript/"/>
+      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
     
-      <category term="Note" scheme="http://www.geekplux.com/tags/Note/"/>
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/tags/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="笔记" scheme="http://www.geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/categories/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
-      <category term="CoffeeScript" scheme="http://www.geekplux.com/categories/Web/CoffeeScript/"/>
+      <category term="CoffeeScript" scheme="http://geekplux.com/categories/Web/CoffeeScript/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSS 最核心的几个概念]]></title>
-    <link href="http://www.geekplux.com/2014/04/25/several_core_concepts_of_css.html"/>
-    <id>http://www.geekplux.com/2014/04/25/several_core_concepts_of_css.html</id>
+    <link href="http://geekplux.com/2014/04/25/several_core_concepts_of_css.html"/>
+    <id>http://geekplux.com/2014/04/25/several_core_concepts_of_css.html</id>
     <published>2014-04-25T12:28:33.000Z</published>
     <updated>2015-08-04T09:00:26.000Z</updated>
     <content type="html"><![CDATA[<p>本文将讲述 CSS 中最核心的几个概念，包括：盒模型、position、float等。这些是 CSS 的基础，也是最常用的几个属性，它们之间看似独立却又相辅相成。为了掌握它们，有必要写出来探讨一下，如有错误欢迎指正。</p>
@@ -1202,28 +1202,28 @@
     
     </summary>
     
-      <category term="CSS" scheme="http://www.geekplux.com/tags/CSS/"/>
+      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
     
-      <category term="Note" scheme="http://www.geekplux.com/tags/Note/"/>
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
-      <category term="Summary" scheme="http://www.geekplux.com/tags/Summary/"/>
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/tags/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="总结" scheme="http://www.geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
     
-      <category term="笔记" scheme="http://www.geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/categories/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
-      <category term="CSS" scheme="http://www.geekplux.com/categories/Web/CSS/"/>
+      <category term="CSS" scheme="http://geekplux.com/categories/Web/CSS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[响应式设计简易指南（译）]]></title>
-    <link href="http://www.geekplux.com/2014/04/06/simple_guide_to_responsive_design.html"/>
-    <id>http://www.geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</id>
+    <link href="http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html"/>
+    <id>http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</id>
     <published>2014-04-06T14:54:42.000Z</published>
     <updated>2015-01-04T11:59:54.000Z</updated>
     <content type="html"><![CDATA[<h4 id="为什么要使用响应式设计？">为什么要使用响应式设计？</h4><p>我们想让我们的网站通过响应用户的行为、设备的屏幕大小和屏幕方向，从而在所有设备上都能用。</p>
@@ -1295,26 +1295,26 @@
     
     </summary>
     
-      <category term="Guide" scheme="http://www.geekplux.com/tags/Guide/"/>
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
     
-      <category term="Responsive Design" scheme="http://www.geekplux.com/tags/Responsive-Design/"/>
+      <category term="Responsive Design" scheme="http://geekplux.com/tags/Responsive-Design/"/>
     
-      <category term="Translation" scheme="http://www.geekplux.com/tags/Translation/"/>
+      <category term="Translation" scheme="http://geekplux.com/tags/Translation/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/tags/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="入门" scheme="http://www.geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
-      <category term="译文" scheme="http://www.geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
+      <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/categories/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[初识 TDD]]></title>
-    <link href="http://www.geekplux.com/2014/03/21/understand_tdd.html"/>
-    <id>http://www.geekplux.com/2014/03/21/understand_tdd.html</id>
+    <link href="http://geekplux.com/2014/03/21/understand_tdd.html"/>
+    <id>http://geekplux.com/2014/03/21/understand_tdd.html</id>
     <published>2014-03-20T16:20:09.000Z</published>
     <updated>2015-01-04T12:01:30.000Z</updated>
     <content type="html"><![CDATA[<p>最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。</p>
@@ -1362,20 +1362,20 @@
     
     </summary>
     
-      <category term="Agile Development" scheme="http://www.geekplux.com/tags/Agile-Development/"/>
+      <category term="Agile Development" scheme="http://geekplux.com/tags/Agile-Development/"/>
     
-      <category term="Note" scheme="http://www.geekplux.com/tags/Note/"/>
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
-      <category term="笔记" scheme="http://www.geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Agile Development" scheme="http://www.geekplux.com/categories/Agile-Development/"/>
+      <category term="Agile Development" scheme="http://geekplux.com/categories/Agile-Development/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Collapsing margins——合并的外边距]]></title>
-    <link href="http://www.geekplux.com/2014/03/14/collapsing_margins.html"/>
-    <id>http://www.geekplux.com/2014/03/14/collapsing_margins.html</id>
+    <link href="http://geekplux.com/2014/03/14/collapsing_margins.html"/>
+    <id>http://geekplux.com/2014/03/14/collapsing_margins.html</id>
     <published>2014-03-14T13:10:19.000Z</published>
     <updated>2015-08-04T08:59:10.000Z</updated>
     <content type="html"><![CDATA[<p>昨天在写 CSS 时遇到一个小问题，困扰了我好长时间，最后 Google 之，发现早有前人踩过此坑。为免以后再掉进坑，记下来比较好。</p>
@@ -1474,24 +1474,24 @@
     
     </summary>
     
-      <category term="CSS" scheme="http://www.geekplux.com/tags/CSS/"/>
+      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
     
-      <category term="Note" scheme="http://www.geekplux.com/tags/Note/"/>
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/tags/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="笔记" scheme="http://www.geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/categories/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
-      <category term="CSS" scheme="http://www.geekplux.com/categories/Web/CSS/"/>
+      <category term="CSS" scheme="http://geekplux.com/categories/Web/CSS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[菜鸟级 Mac 配置（二）]]></title>
-    <link href="http://www.geekplux.com/2014/03/03/mac_configuration_2.html"/>
-    <id>http://www.geekplux.com/2014/03/03/mac_configuration_2.html</id>
+    <link href="http://geekplux.com/2014/03/03/mac_configuration_2.html"/>
+    <id>http://geekplux.com/2014/03/03/mac_configuration_2.html</id>
     <published>2014-03-03T05:50:50.000Z</published>
     <updated>2015-08-04T08:59:44.000Z</updated>
     <content type="html"><![CDATA[<p>这一篇该讲讲我自己搭建开发环境遇到的事了。</p>
@@ -1597,26 +1597,26 @@
     
     </summary>
     
-      <category term="Development Environment" scheme="http://www.geekplux.com/tags/Development-Environment/"/>
+      <category term="Development Environment" scheme="http://geekplux.com/tags/Development-Environment/"/>
     
-      <category term="Mac" scheme="http://www.geekplux.com/tags/Mac/"/>
+      <category term="Mac" scheme="http://geekplux.com/tags/Mac/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
-      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="开发环境" scheme="http://www.geekplux.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
+      <category term="开发环境" scheme="http://geekplux.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/categories/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
-      <category term="Mac" scheme="http://www.geekplux.com/categories/Tool/Mac/"/>
+      <category term="Mac" scheme="http://geekplux.com/categories/Tool/Mac/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[菜鸟级 Mac 配置（一）]]></title>
-    <link href="http://www.geekplux.com/2014/02/26/mac_configuration_1.html"/>
-    <id>http://www.geekplux.com/2014/02/26/mac_configuration_1.html</id>
+    <link href="http://geekplux.com/2014/02/26/mac_configuration_1.html"/>
+    <id>http://geekplux.com/2014/02/26/mac_configuration_1.html</id>
     <published>2014-02-26T13:14:15.000Z</published>
     <updated>2015-08-04T08:59:37.000Z</updated>
     <content type="html"><![CDATA[<p>前两天我的神机 MBP 终于到手了，虽然之前我已经见过 N 台 Macbook，但拆开包装的那一刻我还是被它惊艳了。新款比以前更薄了，感觉跟 air 的厚度相差无几（这货好意思叫 pro 么）。哈哈，作为一名第一次使用 Mac 的孩纸，我果然遇到了很多菜鸟级的问题，通过不断的 Google，基本都配置好了，现在来罗列一下。</p>
@@ -1741,22 +1741,22 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://www.geekplux.com/tags/Mac/"/>
+      <category term="Mac" scheme="http://geekplux.com/tags/Mac/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/tags/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
-      <category term="工具" scheme="http://www.geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Tool" scheme="http://www.geekplux.com/categories/Tool/"/>
+      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
-      <category term="Mac" scheme="http://www.geekplux.com/categories/Tool/Mac/"/>
+      <category term="Mac" scheme="http://geekplux.com/categories/Tool/Mac/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[CSS编写原则]]></title>
-    <link href="http://www.geekplux.com/2014/02/20/css_written_principles.html"/>
-    <id>http://www.geekplux.com/2014/02/20/css_written_principles.html</id>
+    <link href="http://geekplux.com/2014/02/20/css_written_principles.html"/>
+    <id>http://geekplux.com/2014/02/20/css_written_principles.html</id>
     <published>2014-02-20T05:57:32.000Z</published>
     <updated>2015-08-04T08:59:28.000Z</updated>
     <content type="html"><![CDATA[<p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
@@ -1860,28 +1860,28 @@
     
     </summary>
     
-      <category term="CSS" scheme="http://www.geekplux.com/tags/CSS/"/>
+      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
     
-      <category term="Note" scheme="http://www.geekplux.com/tags/Note/"/>
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
-      <category term="Summary" scheme="http://www.geekplux.com/tags/Summary/"/>
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/tags/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="总结" scheme="http://www.geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
     
-      <category term="笔记" scheme="http://www.geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
-      <category term="Web" scheme="http://www.geekplux.com/categories/Web/"/>
+      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
-      <category term="CSS" scheme="http://www.geekplux.com/categories/Web/CSS/"/>
+      <category term="CSS" scheme="http://geekplux.com/categories/Web/CSS/"/>
     
   </entry>
   
   <entry>
     <title><![CDATA[Goodbye，我的大学]]></title>
-    <link href="http://www.geekplux.com/2014/02/02/goodbye_my_university.html"/>
-    <id>http://www.geekplux.com/2014/02/02/goodbye_my_university.html</id>
+    <link href="http://geekplux.com/2014/02/02/goodbye_my_university.html"/>
+    <id>http://geekplux.com/2014/02/02/goodbye_my_university.html</id>
     <published>2014-02-02T12:22:22.000Z</published>
     <updated>2015-01-04T11:48:29.000Z</updated>
     <content type="html"><![CDATA[<p>不知为何，现在写文章，第一句总想感叹一下时光流逝的速度，可能确实是年纪渐长……转眼已大四，伫立在象牙塔和江湖的十字路口，也是时候总结一下了。大学四年，不得不说是我成长最快的四年，也让我充分认识了上大学的必要性。第一次这么长时间跨度的总结，注定是篇长文。</p>
@@ -1959,15 +1959,15 @@
     
     </summary>
     
-      <category term="Life" scheme="http://www.geekplux.com/tags/Life/"/>
+      <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
     
-      <category term="Summary" scheme="http://www.geekplux.com/tags/Summary/"/>
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
     
-      <category term="总结" scheme="http://www.geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
     
-      <category term="生活" scheme="http://www.geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
-      <category term="Life" scheme="http://www.geekplux.com/categories/Life/"/>
+      <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
   </entry>
   
