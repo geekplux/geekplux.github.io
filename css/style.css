@@ -616,7 +616,7 @@ a.article-title:hover {
   padding: 10px 0;
 }
 .article-entry blockquote {
-  font-size: 1.2em;
+  font-size: 1em;
   padding: 0px 15px;
   border-left-style: solid;
   border-left-width: 3px;

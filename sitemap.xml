@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://www.geekplux.com/about/index.html</loc>
+    <lastmod>2016-02-04T16:42:39.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://www.geekplux.com/2015/11/13/why-i-like-coding.html</loc>
     <lastmod>2016-02-03T07:59:04.000Z</lastmod>
   </url>
@@ -9,11 +14,6 @@
   <url>
     <loc>http://www.geekplux.com/2015/12/08/learning_by_index.html</loc>
     <lastmod>2016-02-03T07:52:45.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://www.geekplux.com/about/index.html</loc>
-    <lastmod>2015-12-25T13:09:57.000Z</lastmod>
   </url>
   
   <url>
