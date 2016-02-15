@@ -85,6 +85,62 @@ var _hmt = _hmt || [];
       <div class="outer">
         <section id="main">
   
+    <article id="post-collapsing_margins" class="article article-type-post" itemscope itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2014/03/14/collapsing_margins.html" class="article-date">
+  <time datetime="2014-03-14T13:10:19.000Z" itemprop="datePublished">2014-03-14</time>
+</a>
+    
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Web/">Web</a>►<a class="article-category-link" href="/categories/Web/CSS/">CSS</a>
+  </div>
+
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/03/14/collapsing_margins.html">Collapsing margins——合并的外边距</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>昨天在写 CSS 时遇到一个小问题，困扰了我好长时间，最后 Google 之，发现早有前人踩过此坑。为免以后再掉进坑，记下来比较好。</p>
+<p>昨天遇到的问题是这样的。我设置了一对父子元素如下：</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"parent"</span>&gt;</span>Parent</span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"children"</span>&gt;</span>Children</span><br><span class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<p>它们的样式如下：</p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.parent</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">80px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> yellow</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.children</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">80px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.divider</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">1px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> black</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<p>产生的效果如图所示：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCollapsing%20margins%20%E5%90%88%E5%B9%B6%E7%9A%84%E5%A4%96%E8%BE%B9%E8%B7%9D%5CScreen%20Shot%202014-03-14%20at%209.13.00%20PM.png" alt=""></p>
+<p>为什么分割线跑到了 Children 里面？这两个父子元素都设置了 <code>margin-bottom</code>，加起来应该是 30px，为什么现在成了 20px？种种疑问在我脑中盘旋。刚开始以为是万恶的 <code>position</code>，但是我把所有能想到的属性排列组合都设置了一遍，发现还是不行。果断 Google，才知道这个问题由来已久……</p>
+        
+          <p class="article-more-link">
+            <a href="/2014/03/14/collapsing_margins.html#more">Read More</a>
+          </p>
+        
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://geekplux.com/2014/03/14/collapsing_margins.html" data-id="ciko3nsau007i1ahvh9gqzdlu" class="article-share-link">Share</a>
+      
+        <a href="http://geekplux.com/2014/03/14/collapsing_margins.html#disqus_thread" class="article-comment-link">Comments</a>
+      
+      
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-mac_configuration_2" class="article article-type-post" itemscope itemprop="blogPost">
   <div class="article-meta">
     <a href="/2014/03/03/mac_configuration_2.html" class="article-date">
@@ -134,7 +190,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/03/03/mac_configuration_2.html" data-id="cik8k03ax004pcdhvazvxqjpx" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/03/03/mac_configuration_2.html" data-id="ciko3ns9e004v1ahvmajm9z2c" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/03/03/mac_configuration_2.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -197,7 +253,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/02/26/mac_configuration_1.html" data-id="cik8k03b10051cdhvw93ibfd0" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/02/26/mac_configuration_1.html" data-id="ciko3ns9i00571ahv9y9e6f3n" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/02/26/mac_configuration_1.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -227,7 +283,7 @@ var _hmt = _hmt || [];
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cik8k03bu006lcdhvme6qs9u0">
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_ciko3nsad006r1ahvz6oyhvsp">
         <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" itemprop="image">
       </a>
     
@@ -269,7 +325,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/02/20/css_written_principles.html" data-id="cik8k03bu006lcdhvme6qs9u0" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/02/20/css_written_principles.html" data-id="ciko3nsad006r1ahvz6oyhvsp" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/02/20/css_written_principles.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -323,7 +379,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/02/02/goodbye_my_university.html" data-id="cik8k03bn0061cdhv6y5b5wf6" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/02/02/goodbye_my_university.html" data-id="ciko3nsa100671ahv5lzh337d" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/02/02/goodbye_my_university.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -380,7 +436,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/10/17/create_cocos2d-x_project.html" data-id="cik8k03bz006ucdhvnrybvme2" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2013/10/17/create_cocos2d-x_project.html" data-id="ciko3nsah00701ahv7myd01jo" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2013/10/17/create_cocos2d-x_project.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -440,7 +496,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/10/16/cocos2d-x_environment_build.html" data-id="cik8k03cq007zcdhv97goe8rl" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2013/10/16/cocos2d-x_environment_build.html" data-id="ciko3nsb600851ahvt1m9mlkm" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2013/10/16/cocos2d-x_environment_build.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -470,7 +526,7 @@ var _hmt = _hmt || [];
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CAndroid%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8%5C147853184651e4b83d435a3.png" rel="gallery_cik8k03d7008tcdhvjyg07xvv">
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CAndroid%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8%5C147853184651e4b83d435a3.png" rel="gallery_ciko3nsbp008z1ahvdb8qd9pv">
         <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CAndroid%E5%BC%80%E5%8F%91%E5%A6%82%E4%BD%95%E5%85%A5%E9%97%A8%5C147853184651e4b83d435a3.png" itemprop="image">
       </a>
     
@@ -509,66 +565,12 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/09/02/android_get_started.html" data-id="cik8k03d7008tcdhvjyg07xvv" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2013/09/02/android_get_started.html" data-id="ciko3nsbp008z1ahvdb8qd9pv" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2013/09/02/android_get_started.html#disqus_thread" class="article-comment-link">Comments</a>
       
       
   <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Guide/">Guide</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门/">入门</a></li></ul>
-
-    </footer>
-  </div>
-  
-</article>
-
-
-  
-    <article id="post-bind_domain" class="article article-type-post" itemscope itemprop="blogPost">
-  <div class="article-meta">
-    <a href="/2013/08/10/bind_domain.html" class="article-date">
-  <time datetime="2013-08-10T10:18:11.000Z" itemprop="datePublished">2013-08-10</time>
-</a>
-    
-  <div class="article-category">
-    <a class="article-category-link" href="/categories/Tool/">Tool</a>►<a class="article-category-link" href="/categories/Tool/FarBox/">FarBox</a>
-  </div>
-
-  </div>
-  <div class="article-inner">
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2013/08/10/bind_domain.html">如何绑定独立域名</a>
-    </h1>
-  
-
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>前天把博客搭好之后总觉得得搞个独立域名才算「高端大气上档次」。今天把绑定的经验分享一下。</p>
-<hr>
-<h2 id="购买域名"><strong>购买域名</strong></h2><p>域名，就是你网站的网址（标识和入口），比如我的是geekplux.com。不是说没有这一串字母就不能访问你的网站，只是用IP访问的话，谁愿意记那一堆数字。相比之下，还是记字母简单。</p>
-<p>免费的域名有很多，但是免费的顶级域名真不多。据我所知，<code>.tk</code>是很不错的。如果你决定要长期写下去，也想让别人独一无二的网址访问你的博客，那还是买一个吧。</p>
-<p>域名提供商很多，国内有<a href="http://www.net.cn/">万网</a>等，国外有<a href="http://www.name.com/">name</a>、<a href="http://www.godaddy.com/">GoDaddy</a>等。不过还是推荐你购买国外厂商的，因为国内要备案，提交各种材料等审核（<em>国外难道没有监管机制吗？呆在天朝就是安全</em>），我们只是为了有个博客，没必要这么兴师动众的。我用的是GoDaddy的，因为可以用支付宝支付。买的时候看个人喜好，我用的是<code>.com</code>的，也有人追求个性用<code>.me</code>、<code>.us</code>等（不信可以搜 www.fuck.me ）。不推荐<code>.info</code>的，以这个结尾的大部分是垃圾网站，容易被搜索引擎屏蔽，我想宅男都懂。</p>
-<p>在GoDaddy选好你的域名之后，一路点continue，到支付页面选支付宝，价钱跟你域名的好坏有关了（BTW，我在支付前特地Google了一下GoDaddy有没有优惠，结果真搜到了GoDaddy的优惠码，6折买的）。。。接下来要将你的域名和IP绑定起来，这里涉及到一个叫<strong>DNS</strong>的东西。</p>
-        
-          <p class="article-more-link">
-            <a href="/2013/08/10/bind_domain.html#more">Read More</a>
-          </p>
-        
-      
-    </div>
-    <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/08/10/bind_domain.html" data-id="cik8k03d4008gcdhv7im9szc7" class="article-share-link">Share</a>
-      
-        <a href="http://geekplux.com/2013/08/10/bind_domain.html#disqus_thread" class="article-comment-link">Comments</a>
-      
-      
-  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Blog/">Blog</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Discovery/">Discovery</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Domain/">Domain</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/FarBox/">FarBox</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tool/">Tool</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/博客/">博客</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/域名/">域名</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li></ul>
 
     </footer>
   </div>
@@ -595,7 +597,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">Categories</h3>
     <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Agile-Development/">Agile Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cocos2d-x/">Cocos2d-x</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">7</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thought/">Thought</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/FarBox/">FarBox</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/Mac/">Mac</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ukulele/">Ukulele</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CoffeeScript/">CoffeeScript</a><span class="category-list-count">2</span></li></ul></li></ul>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Agile-Development/">Agile Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cocos2d-x/">Cocos2d-x</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thought/">Thought</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/FarBox/">FarBox</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/Mac/">Mac</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ukulele/">Ukulele</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CoffeeScript/">CoffeeScript</a><span class="category-list-count">2</span></li></ul></li></ul>
     </div>
   </div>
 
@@ -604,7 +606,7 @@ var _hmt = _hmt || [];
   <div class="widget-wrap">
     <h3 class="widget-title">Tag Cloud</h3>
     <div class="widget tagcloud">
-      <a href="/tags/Agile-Development/" style="font-size: 10px;">Agile Development</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Backbone/" style="font-size: 10px;">Backbone</a> <a href="/tags/Blog/" style="font-size: 14px;">Blog</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CSS/" style="font-size: 14px;">CSS</a> <a href="/tags/Cocos2d-x/" style="font-size: 12px;">Cocos2d-x</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/CoffeeScript/" style="font-size: 12px;">CoffeeScript</a> <a href="/tags/Computer-Science/" style="font-size: 14px;">Computer Science</a> <a href="/tags/Development/" style="font-size: 10px;">Development</a> <a href="/tags/Development-Environment/" style="font-size: 12px;">Development Environment</a> <a href="/tags/Discovery/" style="font-size: 12px;">Discovery</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Essay/" style="font-size: 16px;">Essay</a> <a href="/tags/FarBox/" style="font-size: 12px;">FarBox</a> <a href="/tags/Game-Development/" style="font-size: 12px;">Game Development</a> <a href="/tags/Guide/" style="font-size: 16px;">Guide</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Instrument/" style="font-size: 10px;">Instrument</a> <a href="/tags/Learning/" style="font-size: 10px;">Learning</a> <a href="/tags/Life/" style="font-size: 18px;">Life</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Mac/" style="font-size: 12px;">Mac</a> <a href="/tags/Note/" style="font-size: 20px;">Note</a> <a href="/tags/Responsive-Design/" style="font-size: 10px;">Responsive Design</a> <a href="/tags/Skill/" style="font-size: 14px;">Skill</a> <a href="/tags/Summary/" style="font-size: 18px;">Summary</a> <a href="/tags/Thought/" style="font-size: 14px;">Thought</a> <a href="/tags/Tool/" style="font-size: 18px;">Tool</a> <a href="/tags/Translation/" style="font-size: 14px;">Translation</a> <a href="/tags/Ukulele/" style="font-size: 10px;">Ukulele</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Web/" style="font-size: 18px;">Web</a> <a href="/tags/Writing/" style="font-size: 10px;">Writing</a> <a href="/tags/writing/" style="font-size: 10px;">writing</a> <a href="/tags/乐器/" style="font-size: 10px;">乐器</a> <a href="/tags/代码/" style="font-size: 10px;">代码</a> <a href="/tags/入门/" style="font-size: 16px;">入门</a> <a href="/tags/写文章/" style="font-size: 12px;">写文章</a> <a href="/tags/博客/" style="font-size: 12px;">博客</a> <a href="/tags/域名/" style="font-size: 10px;">域名</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/尝试/" style="font-size: 10px;">尝试</a> <a href="/tags/工具/" style="font-size: 18px;">工具</a> <a href="/tags/开发环境/" style="font-size: 12px;">开发环境</a> <a href="/tags/微信公众平台/" style="font-size: 10px;">微信公众平台</a> <a href="/tags/思考/" style="font-size: 12px;">思考</a> <a href="/tags/总结/" style="font-size: 18px;">总结</a> <a href="/tags/情感/" style="font-size: 12px;">情感</a> <a href="/tags/感想/" style="font-size: 18px;">感想</a> <a href="/tags/新技能/" style="font-size: 12px;">新技能</a> <a href="/tags/方法论/" style="font-size: 10px;">方法论</a> <a href="/tags/游戏开发/" style="font-size: 12px;">游戏开发</a> <a href="/tags/生活/" style="font-size: 20px;">生活</a> <a href="/tags/笔记/" style="font-size: 20px;">笔记</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a> <a href="/tags/计算机科学/" style="font-size: 14px;">计算机科学</a> <a href="/tags/译文/" style="font-size: 14px;">译文</a> <a href="/tags/运营/" style="font-size: 10px;">运营</a> <a href="/tags/随笔/" style="font-size: 16px;">随笔</a>
+      <a href="/tags/Agile-Development/" style="font-size: 10px;">Agile Development</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Backbone/" style="font-size: 10px;">Backbone</a> <a href="/tags/Blog/" style="font-size: 12.86px;">Blog</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CSS/" style="font-size: 12.86px;">CSS</a> <a href="/tags/Cocos2d-x/" style="font-size: 11.43px;">Cocos2d-x</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/CoffeeScript/" style="font-size: 11.43px;">CoffeeScript</a> <a href="/tags/Computer-Science/" style="font-size: 12.86px;">Computer Science</a> <a href="/tags/Development/" style="font-size: 10px;">Development</a> <a href="/tags/Development-Environment/" style="font-size: 11.43px;">Development Environment</a> <a href="/tags/Discovery/" style="font-size: 11.43px;">Discovery</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Essay/" style="font-size: 14.29px;">Essay</a> <a href="/tags/FarBox/" style="font-size: 11.43px;">FarBox</a> <a href="/tags/Game-Development/" style="font-size: 11.43px;">Game Development</a> <a href="/tags/Guide/" style="font-size: 14.29px;">Guide</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Instrument/" style="font-size: 10px;">Instrument</a> <a href="/tags/Learning/" style="font-size: 10px;">Learning</a> <a href="/tags/Life/" style="font-size: 17.14px;">Life</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Mac/" style="font-size: 11.43px;">Mac</a> <a href="/tags/Note/" style="font-size: 18.57px;">Note</a> <a href="/tags/Responsive-Design/" style="font-size: 10px;">Responsive Design</a> <a href="/tags/Skill/" style="font-size: 12.86px;">Skill</a> <a href="/tags/Summary/" style="font-size: 17.14px;">Summary</a> <a href="/tags/Thought/" style="font-size: 12.86px;">Thought</a> <a href="/tags/Tool/" style="font-size: 15.71px;">Tool</a> <a href="/tags/Translation/" style="font-size: 12.86px;">Translation</a> <a href="/tags/Ukulele/" style="font-size: 10px;">Ukulele</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Web/" style="font-size: 15.71px;">Web</a> <a href="/tags/Writing/" style="font-size: 10px;">Writing</a> <a href="/tags/writing/" style="font-size: 10px;">writing</a> <a href="/tags/乐器/" style="font-size: 10px;">乐器</a> <a href="/tags/代码/" style="font-size: 10px;">代码</a> <a href="/tags/入门/" style="font-size: 14.29px;">入门</a> <a href="/tags/写文章/" style="font-size: 11.43px;">写文章</a> <a href="/tags/博客/" style="font-size: 11.43px;">博客</a> <a href="/tags/域名/" style="font-size: 10px;">域名</a> <a href="/tags/学习/" style="font-size: 10px;">学习</a> <a href="/tags/尝试/" style="font-size: 10px;">尝试</a> <a href="/tags/工具/" style="font-size: 15.71px;">工具</a> <a href="/tags/开发环境/" style="font-size: 11.43px;">开发环境</a> <a href="/tags/微信公众平台/" style="font-size: 10px;">微信公众平台</a> <a href="/tags/思考/" style="font-size: 11.43px;">思考</a> <a href="/tags/总结/" style="font-size: 17.14px;">总结</a> <a href="/tags/情感/" style="font-size: 11.43px;">情感</a> <a href="/tags/感想/" style="font-size: 15.71px;">感想</a> <a href="/tags/新技能/" style="font-size: 11.43px;">新技能</a> <a href="/tags/方法论/" style="font-size: 10px;">方法论</a> <a href="/tags/游戏开发/" style="font-size: 11.43px;">游戏开发</a> <a href="/tags/生活/" style="font-size: 20px;">生活</a> <a href="/tags/笔记/" style="font-size: 18.57px;">笔记</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a> <a href="/tags/计算机科学/" style="font-size: 12.86px;">计算机科学</a> <a href="/tags/译文/" style="font-size: 12.86px;">译文</a> <a href="/tags/运营/" style="font-size: 10px;">运营</a> <a href="/tags/随笔/" style="font-size: 14.29px;">随笔</a>
     </div>
   </div>
 
@@ -614,6 +616,10 @@ var _hmt = _hmt || [];
     <h3 class="widget-title">Recents</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2016/02/08/two-years-after-graduated.html">毕业后的两年</a>
+          </li>
         
           <li>
             <a href="/2015/12/08/learning-by-index.html">建立索引式的学习方法</a>
@@ -629,10 +635,6 @@ var _hmt = _hmt || [];
         
           <li>
             <a href="/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html">为什么文章写得好的人都很厉害</a>
-          </li>
-        
-          <li>
-            <a href="/2015/09/24/password-management.html">如何管理好自己的密码</a>
           </li>
         
       </ul>
