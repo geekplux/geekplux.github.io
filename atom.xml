@@ -4,7 +4,7 @@
   <subtitle><![CDATA[知行合一]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://geekplux.com/"/>
-  <updated>2016-02-15T15:18:19.000Z</updated>
+  <updated>2016-06-02T15:49:47.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -15,11 +15,98 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[如何阅读一篇学术论文]]></title>
+    <link href="http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html"/>
+    <id>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</id>
+    <published>2016-05-31T12:49:56.000Z</published>
+    <updated>2016-06-02T15:49:47.000Z</updated>
+    <content type="html"><![CDATA[<p>这是一个<strong>知识过剩</strong>的时代。大量标榜为「干货」的文章每时每刻都在不断地产出，搜索引擎的便捷似乎也让我们离这些「知识」只有一步之遥。然而，随着多年在互联网上的浸淫，我发现<strong>越是容易得到的知识，价值越不大，留存的时间也越不长</strong>。所以，相对于那些东拼西凑组成的所谓干货，一本好书或一篇好的学术论文，才是知识的结晶（单从前后两者成文的时间上就可以很好的证明这点）。</p>
+<p>关于「如何阅读一本书」的讨论，已经盈千累万，而关于「如何阅读一篇学术论文」的似乎还凤毛麟角。所以这篇文章我打算写一写我在阅读论文过程中总结出的一些方法，希望能对你有帮助，当然如果你有其他更好的方法，欢迎补充。文章共分为四个部分，第一部分介绍读论文的核心要素，第二部分列出阅读单篇论文的具体步骤，第三部分是一些补充。方法论讲完之后，最后一部分将阐述为什么要阅读文献期刊。</p>
+<h2 id="一、阅读论文的核心要素">一、阅读论文的核心要素</h2><p>根据每个人读论文的目的不同，阅读的侧重点也会有所不同，但都不外乎要获取知识、解决问题，所以无论你的目的是什么，有<strong>三个核心要素</strong>是你在阅读一篇论文时必须掌握的：</p>
+<ol>
+<li>这篇论文主要表达的是什么？作者的写这篇论文的目的是什么？或者说是这篇文章做出了什么成果？</li>
+<li>这篇论文的观点/成果是如何实现的？作者用了哪些论据来支持他的观点/成果？</li>
+<li>相关的工作有哪些？在这篇文章之前有什么已成立/取得的观点/成果？作者的观点/成果主要是建立在哪个的基础上？作者的观点/成果比别人突出在哪里？</li>
+</ol>
+<p>阅读论文不能盲目的去读，要<strong>带着问题去读</strong>才有收获，只要了解了这三个核心要素，就可以对论文有一个整体的印象。</p>
+<a id="more"></a>
+<h2 id="二、阅读论文的步骤：">二、阅读论文的步骤：</h2><p>针对<strong>单篇</strong>论文：</p>
+<ol>
+<li><strong>认真</strong>地阅读标题、Abstract 和 Introduction。</li>
+<li>把每一个章节的标题、子标题都过一遍，具体的内容先不急着看。</li>
+<li>阅读 Conclusion，回应刚才的 Abstract 和 Introduction。</li>
+<li>瞥一眼参考文献，看引用了哪些文章，里面有没有自己已经看过的。</li>
+</ol>
+<p>这四个步骤完毕之后，基本上可以解答上文提到的三个核心问题。而且你还能获得额外的一些信息，比如这篇文章和我研究的相关性、值不值得我精读、写的是否通俗易懂、我的知识储备是否能读等等。</p>
+<p>如果得到的判断是这篇文章需要精读，那么我们可以开始下面的步骤：</p>
+<ol>
+<li>阅读文章的主体，重点注意抛出的观点，和提出的论据。</li>
+<li>对于有公式、图表或其他具体论述的地方要多关注，时间足够就认真阅读。</li>
+<li>遇到有引用参考文献的地方，先不要打断当前的阅读，但要在脑子里有个印象，以便将来进行相关的阅读，从而更好的理解本文的背景。</li>
+</ol>
+<p>这三个步骤花的时间可能是上面四个步骤时间的几倍，完成之后基本上对整篇文章的细节都掌握了。如果没有读懂，可能是自己的知识不够，也有可能是状态不好，你可以选择把这篇文章放在一边以后在读，或者再把这三个步骤重复几遍。当然，如果你读懂了，并且这篇文章的内容正是你苦寻已久的及时雨，那么可以进行下面这步：</p>
+<ol>
+<li>把文章的论证重现一遍。</li>
+<li>改动重现过程中的相关步骤，与本文进行对比。</li>
+</ol>
+<p>完成这步，你对文章的理解程度肯定会比一般人深，如果有新的发现或结论，你还可以与原作者进行交流，或自己在其基础上发表新的论文等。</p>
+<h2 id="三、一些补充">三、一些补充</h2><p>上一节中的阅读步骤都是针对单篇论文的，其实在阅读论文过程中，我们很少是阅读完一篇再读下一篇，而通常是同时读几篇，每篇只读一部分，得到答案就够了。所以针对上述的步骤，还需要一些补充：</p>
+<ol>
+<li>要获取某个知识/解决方案时，应该是<strong>大规模、分批次</strong>阅读，而<strong>不是逐篇阅读</strong>（通常这篇读不懂的，会在另一篇中有答案）。</li>
+<li>拿到一个方向相关的大量论文后，尽可能从标题判断出阅读顺序（也要考虑发表时间）。</li>
+<li>阅读单篇论文，<strong>不要逐行阅读</strong>，提炼出适合自己的阅读论文顺序。</li>
+<li>阅读论文时<strong>要敢于想象（猜）</strong>，大胆假设，小心验证，很可能一次性就猜对，节约很多时间。</li>
+<li>每篇论文中详细的推导过程，很可能你根本不需要懂。</li>
+<li>不要有公式恐惧症。关键的公式可能就三五个，其他不懂也没关系。公式之间的恒等式推导过程可以完全略。假如到了万不得已非要看懂的情况，重点看公式推导过程中引入的假设条件，和公式中每个字母所指代的东西。</li>
+<li>读不懂的时候，不要气馁，可能是自己的知识储备还不够，也可能是今天的状态不好，先放一边，读下一篇。</li>
+</ol>
+<p>大量阅读提升广度，精准阅读提升深度。读的越多越熟练。</p>
+<h2 id="四、为什么要阅读文献期刊？">四、为什么要阅读文献期刊？</h2><p>只要深入掌握到阅读与分析期刊论文的技巧, 就可以掌握到可能在大学不曾研习过的三种能力:</p>
+<ol>
+<li>从无组织的知识中检索、筛选、组织知识的能力</li>
+<li>对一切既有进行精确批判的独立自主判断能力</li>
+<li>创造新知识的能力</li>
+</ol>
+<p>阅读论文是我在研一后半年才意识到的一件收益很大的事（惭愧），也是一个漫长的旅程。如果你也有幸开始这个旅程，希望你能轻松上路，如果你在途中遇到了困难，希望你能「不求甚解」，从万千论文中挑出自己最容易读懂的读，挑软柿子捏。等走的路多了，自然会知道哪有坑洼，哪有岔路。这些话也送给我自己。</p>
+<h4 id="参考文献：">参考文献：</h4><ul>
+<li>Keshav, S. (2007). How to read a paper. ACM SIGCOMM Computer Communication Review, 1–3. <a href="http://doi.org/10.1145/1273445.1273458" target="_blank" rel="external">http://doi.org/10.1145/1273445.1273458</a></li>
+<li>Laramee, R. S. (2011). How to read a visualization research paper: Extracting the essentials. IEEE Computer Graphics and Applications, 31(3), 78–82. <a href="http://doi.org/10.1109/MCG.2011.44" target="_blank" rel="external">http://doi.org/10.1109/MCG.2011.44</a></li>
+<li>彭明辉 研究所新生完全求生手册</li>
+</ul>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>这是一个<strong>知识过剩</strong>的时代。大量标榜为「干货」的文章每时每刻都在不断地产出，搜索引擎的便捷似乎也让我们离这些「知识」只有一步之遥。然而，随着多年在互联网上的浸淫，我发现<strong>越是容易得到的知识，价值越不大，留存的时间也越不长</strong>。所以，相对于那些东拼西凑组成的所谓干货，一本好书或一篇好的学术论文，才是知识的结晶（单从前后两者成文的时间上就可以很好的证明这点）。</p>
+<p>关于「如何阅读一本书」的讨论，已经盈千累万，而关于「如何阅读一篇学术论文」的似乎还凤毛麟角。所以这篇文章我打算写一写我在阅读论文过程中总结出的一些方法，希望能对你有帮助，当然如果你有其他更好的方法，欢迎补充。文章共分为四个部分，第一部分介绍读论文的核心要素，第二部分列出阅读单篇论文的具体步骤，第三部分是一些补充。方法论讲完之后，最后一部分将阐述为什么要阅读文献期刊。</p>
+<h2 id="一、阅读论文的核心要素">一、阅读论文的核心要素</h2><p>根据每个人读论文的目的不同，阅读的侧重点也会有所不同，但都不外乎要获取知识、解决问题，所以无论你的目的是什么，有<strong>三个核心要素</strong>是你在阅读一篇论文时必须掌握的：</p>
+<ol>
+<li>这篇论文主要表达的是什么？作者的写这篇论文的目的是什么？或者说是这篇文章做出了什么成果？</li>
+<li>这篇论文的观点/成果是如何实现的？作者用了哪些论据来支持他的观点/成果？</li>
+<li>相关的工作有哪些？在这篇文章之前有什么已成立/取得的观点/成果？作者的观点/成果主要是建立在哪个的基础上？作者的观点/成果比别人突出在哪里？</li>
+</ol>
+<p>阅读论文不能盲目的去读，要<strong>带着问题去读</strong>才有收获，只要了解了这三个核心要素，就可以对论文有一个整体的印象。</p>]]>
+    
+    </summary>
+    
+      <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
+    
+      <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="Research" scheme="http://geekplux.com/categories/Research/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[毕业后的两年]]></title>
     <link href="http://geekplux.com/2016/02/15/two-years-after-graduated.html"/>
     <id>http://geekplux.com/2016/02/15/two-years-after-graduated.html</id>
     <published>2016-02-15T15:03:27.000Z</published>
-    <updated>2016-02-15T15:18:19.000Z</updated>
+    <updated>2016-02-15T17:15:36.000Z</updated>
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=16504268&auto=0&height=66"></iframe>
 
 <p>在我们 5 岁的时候，过一年相当于经历人生的 1/5，而到了 25 岁的时候，过一年却相当于只经历了人生的 1/25。时间的重要性似乎随着我们年龄的增长而变得越来越低。主观感受上我们觉得时间走的越来越快了，而实际上却是我们对时空的认知变得扭曲了。</p>
@@ -90,6 +177,8 @@
 <blockquote>
 <p>「我还年轻，我渴望上路。带着最初的激情，追寻着最初的梦想，感受着最初的体验，我们上路吧 。」<br>——凯鲁亚克</p>
 </blockquote>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
 ]]></content>
     <summary type="html">
     <![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="http://music.163.com/outchain/player?type=2&id=16504268&auto=0&height=66"></iframe>
@@ -201,7 +290,7 @@
     <link href="http://geekplux.com/2015/10/28/writing-skills.html"/>
     <id>http://geekplux.com/2015/10/28/writing-skills.html</id>
     <published>2015-10-28T10:24:11.000Z</published>
-    <updated>2015-11-14T16:04:55.000Z</updated>
+    <updated>2016-06-02T13:46:32.000Z</updated>
     <content type="html"><![CDATA[<p>既然是小技巧，那么就不敢班门弄斧，只简单说说自己平时遵循的几条写作原则：</p>
 <h2 id="尽量用短句">尽量用短句</h2><ul>
 <li>写作以表达清晰为首要宗旨，所以 <strong>尽量用短句</strong> 。长句会增加理解成本，尤其是对于中文来说。中文的定语是放在被修饰词前面的，不像英语通常放在后面，用从句很容易扩展。中文你要用从句，还 <strong>不如直接另起一句话</strong> 。</li>
@@ -249,7 +338,7 @@
     
       <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
-      <category term="writing" scheme="http://geekplux.com/tags/writing/"/>
+      <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
     
       <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
     
@@ -1850,131 +1939,6 @@
       <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
       <category term="Mac" scheme="http://geekplux.com/categories/Tool/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[CSS编写原则]]></title>
-    <link href="http://geekplux.com/2014/02/20/css_written_principles.html"/>
-    <id>http://geekplux.com/2014/02/20/css_written_principles.html</id>
-    <published>2014-02-20T05:57:32.000Z</published>
-    <updated>2015-08-04T08:59:28.000Z</updated>
-    <content type="html"><![CDATA[<p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
-<h2 id="权重">权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
-<ul>
-<li>id选择器</li>
-<li>class选择器</li>
-<li>标签选择器</li>
-</ul>
-<p>还有一种<strong>内联样式</strong>( inline-style )，是指直接在HTML代码中添加CSS样式。以上四种的权重顺序是：<strong>内联样式（1000）</strong> &gt; <strong>id选择器（100）</strong> &gt; <strong>class选择器（10）</strong> &gt; <strong>标签选择器（1）</strong>。括号内分别是它们的<strong>权重值</strong>！。举个栗子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"color : #fff;"</span> <span class="attribute">id</span>=<span class="value">"example"</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>栗子<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.dome</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<p>如果只有第四句来定义样式，则这个<code>&lt;span&gt;</code>是蓝色的，如果加上第三条语句，则变成了红色，第四句被覆盖掉了。如果用第二句，则变为黑色，第三句即被覆盖，以此类推如果用内联样式则<code>&lt;span&gt;</code>变成白色了。</p>
-<p>像我这样的菜鸟刚开始滥用各类选择器，往往会出现想覆盖父元素样式的时候覆盖不了的情况，熟不知<strong>要想覆盖，必须让这条语句的权重值大于父元素</strong>（具体可以参考这篇文章<a href="http://www.w3cplus.com/css/css-specificity-things-you-should-know.html" target="_blank" rel="external">你应该知道的一些事情——CSS权重</a>）。</p>
-<a id="more"></a>
-<h3 id="尽量不要用id选择器">尽量不要用id选择器</h3><p>由于id选择器权重值过大的原因，我们要尽量少用它（内联样式估计没人会用了吧）。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example"</span> <span class="attribute">class</span>=<span class="value">"parent"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"son"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<p>如果你使用id选择器</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<p>则再写</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.son</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<p>就没用了，甚至</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.parent</span> <span class="class">.son</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<p>都没用。你必须用：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="class">.son</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>才能再改变它的背景色。这样远不如只用一个class轻松写意。尤其是#example下面层级多的话，代码就会越写越长，可见少使用id，多用class才是正道。而且id只能用一次，class可以重复使用。</p>
-<h3 id="尽量不要多层级的选择器">尽量不要多层级的选择器</h3><p>当CSS写到后来，你可能会发现经常有类似这样的一长串代码出现：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="class">.content</span> <span class="class">.right</span> <span class="class">.tag</span> <span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure></p>
-<p>这主要还是因为你没有搞清权重的原因。每次你想为子元素重新定义样式时都要有个权重值大于父元素的一大串选择器。这样的代码不仅你看起来痛苦，浏览器看起来也痛苦（原因可参考这篇文章<a href="http://www.alloyteam.com/2012/10/high-performance-css/" target="_blank" rel="external">【高性能前端2】高性能CSS</a>）。</p>
-<p>所以后代选择器不仅性能低下而且代码很脆弱：HTML代码和CSS代码严重耦合，HTML代码结构发生变化时，CSS也得修改，自己改起来都痛苦，更别说万一将来有人来接盘你的代码……你考虑过他的感受么T_T。还是那句话，用class，最多两三层选择器就搞定了！</p>
-<p>其实还有个终极神器<code>!importants</code>。只要在样式语句后面加上这个就能覆盖<strong>之前</strong>和<strong>之后</strong>的一切样式！这意味着你再想把它覆盖是不可能的。当你都逼到用这个神器的时候，说明你的代码实在写的不敢恭维……你一定会有更好的解决方式的，所以尽量不要用<code>!importants</code>。</p>
-<h2 id="精简">精简</h2><p>精简你的CSS代码可以提升你编写的速度，还能让代码看起来整洁、一目了然，节省时间和空间。</p>
-<h3 id="使用复合语法">使用复合语法</h3><p>尽量使用复合语法：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.someclass &#123;</span><br><span class="line">    background: #000;</span><br><span class="line">    background-image: url(../imgs/carrot.png);</span><br><span class="line">    background-position: bottom;</span><br><span class="line">    background-repeat: repeat-x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.someclass &#123;</span><br><span class="line">    background: #000 url(../imgs/carrot.png) repeat-x bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>类似的还有<code>padding</code>、<code>margin</code>、<code>font</code>、<code>border</code>等。用复合语法可以精简代码，一目了然。</p>
-<h3 id="减少重复">减少重复</h3><ul>
-<li>利用CSS继承</li>
-</ul>
-<p>如果页面中父元素的多个子元素使用相同的样式，那最好把他们相同的样式定义在其父元素上，让它们继承这些CSS样式。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.example li &#123;font-family:Georgia, serif;&#125;</span><br><span class="line">.example p &#123;font-family:Georgia, serif;&#125;</span><br><span class="line">.example h1 &#123;font-family:Georgia, serif;&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.example &#123;font-family:Georgia, serif;&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>利用分组选择器</li>
-</ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.someclass &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    background: blue;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.otherclass &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    background: blue;</span><br><span class="line">    font-size: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.someclass, .otherclass &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    background: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.someclass &#123;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.otherclass &#123;</span><br><span class="line">    font-size: 8px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="移除没用的样式">移除没用的样式</h3><blockquote>
-<p>移除无匹配的样式，有两个好处：</p>
-<p>第一，删除无用的样式后可以缩减样式文件的体积，加快资源下载速度；</p>
-<p>第二，对于浏览器而言，所有的样式规则的都会被解析后索引起来，即使是当前页面无匹配的规则。移除无匹配的规则，减少索引项，加快浏览器查找速度；</p>
-</blockquote>
-<h2 id="格式">格式</h2><h3 id="命名很重要">命名很重要</h3><p>程序猿最讨厌的事已经不是写文档了，而是<strong>命名</strong>。好的命名可以让你「见名思义」，不写注释也可以读懂；坏的命名会让你抓狂，你不得不用ctrl+F匹配它们……我还发现很多人都是根据HTML代码的结构去命名，如</p>
-<pre><code>#header、 .<span class="attribute">content</span>、 .<span class="attribute">left</span>、 .<span class="attribute">right</span>
-</code></pre><p>等等，这些并没有实际的意义，当HTML越来越复杂的时候，或者新人来接手的时候，就会时常摸不着头脑，难以调试和维护。所以我个人觉得应该多用具有实际意义的、可以见名思义的class命名。</p>
-<h3 id="好看一点">好看一点</h3><p>代码的易读性和易维护性成正比。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.someclass-a, .someclass-b, .someclass-c, .someclass-d &#123;</span><br><span class="line"> ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.someclass-a,</span><br><span class="line">.someclass-b,</span><br><span class="line">.someclass-c,</span><br><span class="line">.someclass-d &#123;</span><br><span class="line"> ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 更好看一点</span><br><span class="line">.someclass &#123;</span><br><span class="line">    background-image:</span><br><span class="line">        linear-gradient(#000, #ccc),</span><br><span class="line">        linear-gradient(#ccc, #ddd);</span><br><span class="line">    box-shadow:</span><br><span class="line">        2px 2px 2px #000,</span><br><span class="line">        1px 4px 1px 1px #ddd inset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="其他">其他</h3><ul>
-<li>注释：程序猿最讨厌的四件事：写注释、写文档、别人不写注释、别人不写文档……</li>
-<li>单位： 到底是用<code>px</code>还是<code>em</code> —&gt;<a href="http://www.1z1b.com/one-blog-a-week/px-em-pt/" target="_blank" rel="external">CSS文字大小单位PX、EM、PT</a></li>
-<li>兼容： IE你到底要闹哪样~`</li>
-</ul>
-<p>以下是大牛总结的一些CSS技巧：</p>
-<ul>
-<li><a href="http://www.ruanyifeng.com/blog/2010/03/css_cookbook.html" target="_blank" rel="external">CSS使用技巧</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2010/03/cross-browser_css3_features.html" target="_blank" rel="external">CSS3常用功能的写法</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2014/02/css_transition_and_animation.html" target="_blank" rel="external">CSS动画简介</a></li>
-<li><a href="http://www.ruanyifeng.com/blog/2009/03/css_selectors.html" target="_blank" rel="external">CSS选择器笔记</a></li>
-</ul>
-<p>学习CSS：</p>
-<ul>
-<li><a href="http://zh.learnlayout.com/" target="_blank" rel="external">学习CSS布局</a></li>
-<li><a href="http://www.w3school.com.cn/" target="_blank" rel="external">w3school</a></li>
-<li><a href="http://www.csszengarden.com/tr/chinese/" target="_blank" rel="external">CSS禅意花园</a></li>
-</ul>
-<p>手册：</p>
-<ul>
-<li><a href="http://css.doyoe.com/" target="_blank" rel="external">CSS参考手册</a></li>
-</ul>
-<p>工具：</p>
-<ul>
-<li><a href="http://csslint.net/" target="_blank" rel="external">CSS Lint</a></li>
-<li><a href="https://github.com/tkadauke/css_doc" target="_blank" rel="external">css_doc</a> 写注释用</li>
-<li><a href="https://github.com/kneath/kss" target="_blank" rel="external">kss</a> 写注释用</li>
-</ul>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
-<h2 id="权重">权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
-<ul>
-<li>id选择器</li>
-<li>class选择器</li>
-<li>标签选择器</li>
-</ul>
-<p>还有一种<strong>内联样式</strong>( inline-style )，是指直接在HTML代码中添加CSS样式。以上四种的权重顺序是：<strong>内联样式（1000）</strong> &gt; <strong>id选择器（100）</strong> &gt; <strong>class选择器（10）</strong> &gt; <strong>标签选择器（1）</strong>。括号内分别是它们的<strong>权重值</strong>！。举个栗子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"color : #fff;"</span> <span class="attribute">id</span>=<span class="value">"example"</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>栗子<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.dome</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<p>如果只有第四句来定义样式，则这个<code>&lt;span&gt;</code>是蓝色的，如果加上第三条语句，则变成了红色，第四句被覆盖掉了。如果用第二句，则变为黑色，第三句即被覆盖，以此类推如果用内联样式则<code>&lt;span&gt;</code>变成白色了。</p>
-<p>像我这样的菜鸟刚开始滥用各类选择器，往往会出现想覆盖父元素样式的时候覆盖不了的情况，熟不知<strong>要想覆盖，必须让这条语句的权重值大于父元素</strong>（具体可以参考这篇文章<a href="http://www.w3cplus.com/css/css-specificity-things-you-should-know.html">你应该知道的一些事情——CSS权重</a>）。</p>]]>
-    
-    </summary>
-    
-      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
-    
-      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
-    
-      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
-    
-      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
-    
-      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
-    
-      <category term="CSS" scheme="http://geekplux.com/categories/Web/CSS/"/>
     
   </entry>
   
