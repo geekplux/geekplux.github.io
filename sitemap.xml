@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://geekplux.com/gab/index.html</loc>
+    <lastmod>2016-06-03T08:36:18.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
     <lastmod>2016-06-03T08:21:36.000Z</lastmod>
   </url>
@@ -14,11 +19,6 @@
   <url>
     <loc>http://geekplux.com/2016/02/15/two-years-after-graduated.html</loc>
     <lastmod>2016-02-15T17:15:36.000Z</lastmod>
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/gab/index.html</loc>
-    <lastmod>2016-02-15T14:37:54.000Z</lastmod>
   </url>
   
   <url>
