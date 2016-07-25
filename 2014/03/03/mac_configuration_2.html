@@ -31,6 +31,7 @@ Xcode
 Xcode
 
 虽然身为一个菜鸟，但 Xcode 的大名早就如雷贯耳，毕竟是苹果亲生的，无论看起来还是用起来都非常迷人。第一次打开 App Store 就在很显著的位置看到了它，果断点了安装。结果发现">
+<meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E8%8F%9C%E9%B8%9F%E7%BA%A7Mac%E9%85%8D%E7%BD%AE%5CScreen%20Shot%202014-02-26%20at%205.53.11%20PM.png">
 <meta name="twitter:creator" content="@GeekPlux">
   
     <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
@@ -38,7 +39,7 @@ Xcode
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 
@@ -133,32 +134,32 @@ var _hmt = _hmt || [];
 </ul>
 <p>虽然身为一个菜鸟，但 Xcode 的大名早就如雷贯耳，毕竟是苹果亲生的，无论看起来还是用起来都非常迷人。第一次打开 App Store 就在很显著的位置看到了它，果断点了安装。结果发现有 2G 多，耐心等着下完（其实我特别想吐槽我这儿 50KB/s 的网速！）。</p>
 <p>为什么 Xcode 必装？因为有编译的地方就有它。所以这里还要装一个 Command line tools，基本方法是打开 Xcode，找到 Preferences—Downloads—Components，在里面找到它并安装。如果你找不到，那可以在命令行输入：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
 <p>这时会弹出一个选项框，问你是去下载 Xcode 还是直接安装，选择安装。</p>
 <ul>
 <li><strong>brew</strong></li>
 </ul>
 <p>我以前并木有听过 Homebrew（毕竟第一次用 Mac），但我看几篇 Mac 教程都提到它，于是去下载来尝试一下。果然群众的眼光是雪亮的，自从用了 brew 感觉上五楼都不喘气了……有了它，可以方便的管理工具包，常用的命令有：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew install xxx</span><br><span class="line">brew uninstall xxx</span><br><span class="line">brew list</span><br><span class="line">brew update xxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">brew install xxx</div><div class="line">brew uninstall xxx</div><div class="line">brew list</div><div class="line">brew update xxx</div></pre></td></tr></table></figure>
 <p>都是一句话，非常给力。不得不佩服 Ruby 社区的大神们，简直造福人类。</p>
 <a id="more"></a>
 <p>去 Homebrew 的官网是 <a href="http://brew.sh/" target="_blank" rel="external">bew.sh</a>，找到它的安装代码：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ruby <span class="operator">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)</span>"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ruby <span class="_">-e</span> <span class="string">"<span class="variable">$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)</span>"</span></div></pre></td></tr></table></figure>
 <p>copy 到命令行，回车，搞定！</p>
 <p>还有个东西叫 Homebrew-Cask，谁用谁知道。</p>
 <ul>
 <li><strong>oh-my-zsh</strong></li>
 </ul>
 <p>Mac 自带了很多 Shell，通过下面的命令：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat /etc/shells</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">cat /etc/shells</div></pre></td></tr></table></figure>
 <p>可以看到如下列表：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">/bin/bash</span><br><span class="line">/bin/csh</span><br><span class="line">/bin/ksh</span><br><span class="line">/bin/sh</span><br><span class="line">/bin/tcsh</span><br><span class="line">/bin/zsh</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">/bin/bash</div><div class="line">/bin/csh</div><div class="line">/bin/ksh</div><div class="line">/bin/sh</div><div class="line">/bin/tcsh</div><div class="line">/bin/zsh</div></pre></td></tr></table></figure>
 <p>系统默认的是 bash，但 zsh 才是其中最犀利的，被称为「终极 Shell」。而且一位国外特别有（wu）才（liao）的程序员为 zsh 量身定做了一套配置方案叫 <strong>oh-my-zsh</strong>，实在是对我等小白用心良苦，我不能辜负他的这片心意啊。</p>
 <p>首先，通过</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">chsh <span class="operator">-s</span> /bin/zsh</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">chsh <span class="_">-s</span> /bin/zsh</div></pre></td></tr></table></figure>
 <p>把默认 Shell 换为 zsh。然后用下面的两句（任选其一）可以自动安装 oh-my-zsh：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh</span><br></pre></td></tr></table></figure>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">curl -L https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh | sh</div></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">wget --no-check-certificate https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O - | sh</div></pre></td></tr></table></figure>
 <p>剩下的配置就参考我灰常喜爱的池老师的文章吧—— <a href="http://macshuo.com/?p=676" target="_blank" rel="external">终极 Shell</a></p>
 <ul>
 <li><strong>iTerm2</strong></li>
@@ -180,11 +181,11 @@ var _hmt = _hmt || [];
 <li><strong>Apache</strong></li>
 </ul>
 <p>Mac 自带 Apache ，可以使用以下命令控制它：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">sudo apachectl start</span><br><span class="line">sudo apachectl restart</span><br><span class="line">sudo apachectl stop</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sudo apachectl start</div><div class="line">sudo apachectl restart</div><div class="line">sudo apachectl stop</div></pre></td></tr></table></figure>
 <p>所以，唯一修改的就是它的站点目录了。Mac 下 Apache 的默认站点目录是</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">DocumentRoot <span class="string">"/Library/WebServer/Documents"</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">DocumentRoot <span class="string">"/Library/WebServer/Documents"</span></div></pre></td></tr></table></figure>
 <p>我没有修改它，而是做了个软链接，我觉得这样更方便。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ln <span class="operator">-s</span> 「你想更换的目录」 /Library/WebServer/Documents</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln <span class="_">-s</span> 「你想更换的目录」 /Library/WebServer/Documents</div></pre></td></tr></table></figure>
 <p>重启生效。</p>
 <ul>
 <li><strong>PHP</strong></li>
@@ -195,16 +196,16 @@ var _hmt = _hmt || [];
 <li><strong>MySQL</strong></li>
 </ul>
 <p>Mac 终于不自带 MySQL 了，但是我们有 brew。第一步</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">brew install mysql</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">brew install mysql</div></pre></td></tr></table></figure>
 <p>安装成功后，第二步，用下面语句设置：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">unset</span> TMPDIR</span><br><span class="line">mysql_install_db --verbose --user=`whoami` --basedir=<span class="string">"<span class="variable">$(brew --prefix mysql)</span>"</span> --datadir=/usr/<span class="built_in">local</span>/var/mysql --tmpdir=/tmp</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">unset</span> TMPDIR</div><div class="line">mysql_install_db --verbose --user=`whoami` --basedir=<span class="string">"<span class="variable">$(brew --prefix mysql)</span>"</span> --datadir=/usr/<span class="built_in">local</span>/var/mysql --tmpdir=/tmp</div></pre></td></tr></table></figure>
 <p>第三步，启动 MySQL:</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">mysql.server start</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">mysql.server start</div></pre></td></tr></table></figure>
 <p>第四步，输入以下脚本。根据提示完成配置（虽然是全英文，但要认真看）。</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/usr/<span class="built_in">local</span>/Cellar/mysql/<span class="number">5.5</span>.<span class="number">10</span>/bin/mysql_secure_installation</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/Cellar/mysql/5.5.10/bin/mysql_secure_installation</div></pre></td></tr></table></figure>
 <p>按这四步来安装，我觉得应该是万无一失的。否则总会碰到一些比较蛋疼的问题，比如 root 用户的密码都设置不了（不知道是不是我一个人碰到），出现的错误提示现在忘了，不过根据 StackOverflow 上<a href="http://stackoverflow.com/questions/4359131/brew-install-mysql-on-mac-os" target="_blank" rel="external">这篇帖子</a>的方法可以重新安装。刚才的那四步也是这位程序员写的，清晰易懂。</p>
 <p><em>后来还是由于我更换英文版，我发现数据库导入都成了乱码……（耳边又响起了 no zuo no die），原因是因为英文版又把默认编码改了……可以使用下面这句更改 MySQL 的默认编码：</em></p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">SET NAMES <span class="string">'utf8'</span>;</span><br><span class="line"></span><br><span class="line">上面这一条就相当于下面的三句指令：</span><br><span class="line">SET character_<span class="built_in">set</span>_client = utf8;</span><br><span class="line">SET character_<span class="built_in">set</span>_results = utf8;</span><br><span class="line">SET character_<span class="built_in">set</span>_connection = utf8;</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">SET NAMES <span class="string">'utf8'</span>;</div><div class="line"></div><div class="line">上面这一条就相当于下面的三句指令：</div><div class="line">SET character_<span class="built_in">set</span>_client = utf8;</div><div class="line">SET character_<span class="built_in">set</span>_results = utf8;</div><div class="line">SET character_<span class="built_in">set</span>_connection = utf8;</div></pre></td></tr></table></figure>
 <p>至此，基本上我的环境都搭好了，编辑器当然用 Sublime Text 3。后来我还安装了一下 Android Studio，还是那个问题，第一次 Gradle 太慢了，在天朝还是下载离线的吧……</p>
 <p>我对 Mac 还在探索中，如果你有什么好的 Mac 技巧，可以告诉我哦~</p>
 <hr>
@@ -213,7 +214,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/03/03/mac_configuration_2.html" data-id="cipidtnq0004uuehvkexjpxb3" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/03/03/mac_configuration_2.html" data-id="cir1pw0jy001bidhvwmar1otj" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/03/03/mac_configuration_2.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -361,11 +362,11 @@ var _hmt = _hmt || [];
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

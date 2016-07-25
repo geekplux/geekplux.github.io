@@ -143,8 +143,8 @@ body {
 .inner {
   display: inline;
   float: left;
-  width: 97.7777777777778%;
-  margin: 0 1.1111111111111%;
+  width: 97.77777777777777%;
+  margin: 0 1.111111111111111%;
 }
 .left,
 .alignleft {
@@ -1292,8 +1292,8 @@ pre .javascript .function {
   .widget-wrap {
     display: inline;
     float: left;
-    width: 31.1111111111111%;
-    margin: 0 1.1111111111111%;
+    width: 31.11111111111111%;
+    margin: 0 1.111111111111111%;
   }
 }
 .widget-title {

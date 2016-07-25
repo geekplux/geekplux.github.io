@@ -35,6 +35,7 @@
 内联元素（inline element 有的人也叫它行内元素）
 
 两者的区别在于以下三点">
+<meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Cthree_core_concepts_of_cssD65A4E60-A213-481C-86D6-A3929A0A8D28.png">
 <meta name="twitter:creator" content="@GeekPlux">
   
     <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
@@ -42,7 +43,7 @@
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 
@@ -131,7 +132,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>本文将讲述 CSS 中最核心的几个概念，包括：盒模型、position、float等。这些是 CSS 的基础，也是最常用的几个属性，它们之间看似独立却又相辅相成。为了掌握它们，有必要写出来探讨一下，如有错误欢迎指正。</p>
-<h1 id="元素类型">元素类型</h1><p>HTML 的元素可以分为两种：</p>
+<h1 id="元素类型"><a href="#元素类型" class="headerlink" title="元素类型"></a>元素类型</h1><p>HTML 的元素可以分为两种：</p>
 <ul>
 <li>块级元素（block level element）</li>
 <li>内联元素（inline element 有的人也叫它行内元素）</li>
@@ -144,35 +145,35 @@ var _hmt = _hmt || [];
 </ol>
 <p><em>最常见块级元素应该是 <code>&lt;div&gt;</code> 吧，内联元素有 <code>&lt;span&gt;</code> <code>&lt;a&gt;</code> <code>&lt;img&gt;</code> 等等，完整的元素列表可以谷歌一下。</em></p>
 <p>具体来说一下吧,</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.example</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">100px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>我们为 <code>&lt;div&gt;</code> 设置上面的样式，是有效果的，因为其是块级元素，而对 <code>&lt;span&gt;</code> 设置上面的样式是没用的。要想让 <code>&lt;span&gt;</code> 也可以改变宽高，可以通过设置 <code>display: block;</code> 来达到效果。当 display 的值设为 block 时，元素将以块级形式呈现；当 display 值设为 inline 时，元素将以内联形式呈现。</p>
 <a id="more"></a>
 <p>若既想让元素在行内显示，又能设置宽高，可以设置：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">display</span>: <span class="tag">inline-block</span>;</span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;</div></pre></td></tr></table></figure>
 <p>inline-block 在我看来就是让元素对外呈内联元素，可以和其他元素共处与一行内；对内则让元素呈块级元素，可改变其宽高。</p>
 <hr>
 <p>HTML 代码是顺序执行的，一份无任何 CSS 样式的 HTML 代码最终呈现出的页面是根据元素出现的顺序和类型排列的。块级元素就从上到下排列，遇到内联元素则从左到右排列。这种无样式的情况下，元素的分布叫<strong>普通流</strong>，元素出现的位置应该叫<strong>正常位置</strong>（这是我瞎起的），同时<strong>所有元素会在页面上占据一个空间</strong>，空间大小由其盒模型决定。</p>
-<h1 id="盒模型">盒模型</h1><p>页面上显示的每个元素（包括内联元素）都可以看作一个盒子，即盒模型( box model )。请看 Chrome DevTools 里的截图：</p>
+<h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><p>页面上显示的每个元素（包括内联元素）都可以看作一个盒子，即盒模型( box model )。请看 Chrome DevTools 里的截图：</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Cthree_core_concepts_of_cssD65A4E60-A213-481C-86D6-A3929A0A8D28.png" alt=""></p>
 <p>可以显而易见的看出盒模型由 4 部分组成。从内到外分别是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">content -&#62; padding -&#62; border -&#62; margin</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">content -&gt; padding -&gt; border -&gt; margin</div></pre></td></tr></table></figure>
 <p>按理来说一个元素的宽度（高度以此类推）应该这样计算：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#24635;&#23485;&#24230; = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">总宽度 = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</div></pre></td></tr></table></figure>
 <p>但是不同浏览器（你没有猜错，就是那个与众不同的浏览器）对宽度的诠释不一样。符合 W3C 标准的浏览器认为一个元素的宽度只等于其 content 的宽度，其余都要额外算。于是你规定一个元素：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.example</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">200px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">padding</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">border</span>:<span class="value"> <span class="number">5px</span> solid <span class="hexcolor">#000</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">margin</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>则他最终的宽度应为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#23485;&#24230; = width(200px) + padding(10px * 2) + border(5px * 2) + margin(20px * 2) = 270px;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">宽度 = width(200px) + padding(10px * 2) + border(5px * 2) + margin(20px * 2) = 270px;</div></pre></td></tr></table></figure>
 <p>而在 IE（低于IE9） 下，最终宽度为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#23485;&#24230; = width(200px) + margin(20px * 2) = 240px;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">宽度 = width(200px) + margin(20px * 2) = 240px;</div></pre></td></tr></table></figure>
 <p>我个人觉得 IE 的更符合人类思维，毕竟 padding 叫内边距，边框算作额外的宽度也说不下去。W3C 最后为了解决这个问题，在 CSS3 中加了 box-sizing 这个属性。当我们设置 <code>box-sizing: border-box;</code> 时，border 和 padding 就被包含在了宽高之内，和 IE 之前的标准是一样的。所以，为了避免你同一份 css 在不同浏览器下表现不同，最好加上：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*, *<span class="pseudo">:before</span>, *<span class="pseudo">:after</span> <span class="rules">&#123;</span><br><span class="line">  <span class="rule"><span class="attribute">-moz-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">-webkit-box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">  <span class="rule"><span class="attribute">box-sizing</span>:<span class="value"> border-box</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</div><div class="line">  <span class="attribute">-moz-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">-webkit-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这里还有两种特殊情况：</p>
 <ul>
 <li>无宽度 —— 绝对定位（position: absolute;） 元素</li>
 <li>无宽度 —— 浮动（float） 元素</li>
 </ul>
 <p>它们在页面上的表现均<strong>不占据空间</strong>（脱离普通流，感觉像浮在页面上层一样，移动它们不影响其他元素的定位）。这就涉及到另外两个核心概念 position 和 float。</p>
-<h1 id="position">position</h1><p>position 这个属性决定了元素将如何定位。它的值大概有以下五种：</p>
+<h1 id="position"><a href="#position" class="headerlink" title="position"></a>position</h1><p>position 这个属性决定了元素将如何定位。它的值大概有以下五种：</p>
 <table>
 <thead>
 <tr>
@@ -214,7 +215,7 @@ var _hmt = _hmt || [];
 <li>如果该元素是块级元素，元素的宽度由原来的 width: 100%（占据一行），变为了 auto。</li>
 </ol>
 <p>由此观之，当 position 设置为 absolute 或 fixed，就没必要设置 display 为 block 了。而且如果你不想覆盖下层的元素，可以设置 z-index 值 达到效果。</p>
-<h1 id="float">float</h1><p>float 顾名思义，就是把元素浮动，它的取值一共有四个：left right none inherit，光看名字就懂了，无需多言。</p>
+<h1 id="float"><a href="#float" class="headerlink" title="float"></a>float</h1><p>float 顾名思义，就是把元素浮动，它的取值一共有四个：left right none inherit，光看名字就懂了，无需多言。</p>
 <p>最初的 float 只是用来实现<strong>文字环绕图片</strong>的效果，仅此而已。而现在 float 的应用已不止这个，前辈们也是写了无数博文来深入浅出的讲解它。<br>浅如：<br><a href="http://www.cnblogs.com/iyangyuan/archive/2013/03/27/2983813.html" target="_blank" rel="external">经验分享：CSS浮动(float,clear)通俗讲解</a> 篇幅不长，通俗易懂，可以看完这篇文章再回过头来看本文。<br>深如：<br><a href="http://www.zhangxinxu.com/wordpress/2010/01/css-float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E3%80%81%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%8B%93%E5%B1%95%E4%B8%80/" target="_blank" rel="external">CSS float浮动的深入研究、详解及拓展(一)</a><br><a href="http://www.zhangxinxu.com/wordpress/2010/01/css-float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E3%80%81%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%8B%93%E5%B1%95%E4%BA%8C/" target="_blank" rel="external">CSS float浮动的深入研究、详解及拓展(二)</a><br>从本质上讲解了 float 的原理。</p>
 <p>我就不班门弄斧写原理了，只说说 float 的几个要点就行了：</p>
 <ol>
@@ -222,7 +223,7 @@ var _hmt = _hmt || [];
 <li>元素设置 float 之后，它会<strong>脱离普通流</strong>（和 <code>position: absolute;</code> 一样），不再占据原来那层的空间，还会覆盖下一层的元素。</li>
 <li>浮动不会对该元素的上一个兄弟元素有任何影响。</li>
 <li>浮动之后，该元素的下一个兄弟元素会紧贴到该元素之前没有设置 float 的元素之后（很好理解，因为该元素脱离普通流了，或者说不在这一层了，所以它的下一个元素当然要补上它的位置）。</li>
-<li>如果该元素的下一个兄弟元素中有内联元素（通常是文字），则会围绕该元素显示，形成类似「文字围绕图片」的效果。（可参考<a href="http://www.zhangxinxu.com/wordpress/2010/01/css-float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E3%80%81%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%8B%93%E5%B1%95%E4%B8%80/" target="_blank" rel="external">CSS float浮动的深入研究、详解及拓展(一)</a>中的讲解）。这个我还是实践了一下的：<iframe width="100%" height="300" src="http://jsfiddle.net/9yAH8/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe></li>
+<li>如果该元素的下一个兄弟元素中有内联元素（通常是文字），则会围绕该元素显示，形成类似「文字围绕图片」的效果。（可参考<a href="http://www.zhangxinxu.com/wordpress/2010/01/css-float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E3%80%81%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%8B%93%E5%B1%95%E4%B8%80/" target="_blank" rel="external">CSS float浮动的深入研究、详解及拓展(一)</a>中的讲解）。这个我还是实践了一下的：<iframe scrolling="no" width="100%" height="300" src="http://jsfiddle.net/9yAH8/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe></li>
 <li>下一个兄弟元素如果也设置了同一方向的 float，则会紧随该元素之后显示。</li>
 <li>该元素将<strong>变为块级元素</strong>，相当于给该元素设置了 <code>display: block;</code>（和<code>position: absolute;</code> 一样）。</li>
 </ol>
@@ -234,7 +235,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/04/25/several_core_concepts_of_css.html" data-id="cipidtnoz002quehvufp4mqgf" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/04/25/several_core_concepts_of_css.html" data-id="cir1pw0kg001vidhv2rp39pxs" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/04/25/several_core_concepts_of_css.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -382,11 +383,11 @@ var _hmt = _hmt || [];
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

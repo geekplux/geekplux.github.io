@@ -21,7 +21,7 @@
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 
@@ -111,14 +111,14 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念"><strong>概念</strong></h2><h3 id="引用"><strong>引用</strong></h3><p><strong>引用</strong>就是某一对象（变量）的一个<strong>别名</strong>。举个例子更容易理解：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"><span class="keyword">int</span> &amp;n = m;</span><br></pre></td></tr></table></figure>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a><strong>概念</strong></h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a><strong>引用</strong></h3><p><strong>引用</strong>就是某一对象（变量）的一个<strong>别名</strong>。举个例子更容易理解：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> m;</div><div class="line"><span class="keyword">int</span> &amp;n = m;</div></pre></td></tr></table></figure>
 <p>这段程序中，<code>n</code>是<code>m</code>的一个引用（reference），<code>m</code>是被引用物（referent）。<br><code>n</code>相当于<code>m</code>的<strong>别名</strong>（绰号），对<code>n</code>的任何操作就是对<code>m</code>的操作。<br><code>n</code>既不是<code>m</code>的拷贝，也不是指向<code>m</code>的指针，其实<code>n</code>就是<code>m</code>它自己。</p>
-<h3 id="指针"><strong>指针</strong></h3><blockquote>
+<h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a><strong>指针</strong></h3><blockquote>
 <p><strong>指针</strong>用于指向对象（变量）。指针提供对其所指对象的间接访问。指针用于指向单个对象。</p>
 </blockquote>
 <p>（这三句摘自《C++ Primer, Fourth Edition》）。再举个例子：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"><span class="keyword">int</span> *n = &amp;m;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> m;</div><div class="line"><span class="keyword">int</span> *n = &amp;m;</div></pre></td></tr></table></figure>
 <p>第二条语句定义了一个指向<code>int</code>型的指针<code>n</code>，并初始化<code>n</code>使其指向<code>int</code>型的变量<code>m</code>。<br><code>*n</code>中的 <code>*</code> 操作符表明<code>n</code>是一个指针变量（<strong><code>n</code>本质上也是一个变量，只不过这个变量的存储内容是 地址</strong>）。<br><code>&amp;m</code>中的 <code>&amp;</code> 符号是<strong>取地址操作符</strong>，当此操作符用于一个对象上时，返回的是该对象的存储地址。</p>
         
           <p class="article-more-link">
@@ -128,7 +128,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/01/02/pointer_references.html" data-id="cipidtnp40031uehv3q6tjzce" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2013/01/02/pointer_references.html" data-id="cir1pw0kj001yidhv47o9b9am" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2013/01/02/pointer_references.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -171,7 +171,7 @@ var _hmt = _hmt || [];
         <p>好久不写，对语言都生疏了。浮躁、焦虑使我的思维不能专注，写文章很容易把话题扯远，所以今天打算就「定计划」一项展开。之所以把内容限定的这么小，也是为了能让思维集中思考一个问题。</p>
 <hr>
 <p>生活节奏的加快让我们不得不想办法提升自己的效率。制定一个详尽的计划是大家普遍使用的一种方式。</p>
-<h2 id="制定计划的必要性"><strong>制定计划的必要性</strong></h2><p>早在初中的思想政治课上，我们就已经深刻的认识到制定计划的重要性了，比如：目标明确、科学安排时间、提升效率、磨练意志、养成良好的习惯等等……之前还看过<a href="http://www.mifengtd.cn/">褪墨</a>上的一篇文章<a href="http://www.mifengtd.cn/articles/the-pros-of-having-a-plan.html">制定计划的好处</a>，文章里说：</p>
+<h2 id="制定计划的必要性"><a href="#制定计划的必要性" class="headerlink" title="制定计划的必要性"></a><strong>制定计划的必要性</strong></h2><p>早在初中的思想政治课上，我们就已经深刻的认识到制定计划的重要性了，比如：目标明确、科学安排时间、提升效率、磨练意志、养成良好的习惯等等……之前还看过<a href="http://www.mifengtd.cn/">褪墨</a>上的一篇文章<a href="http://www.mifengtd.cn/articles/the-pros-of-having-a-plan.html">制定计划的好处</a>，文章里说：</p>
 <blockquote>
 <p>计划对于人生来说相当重要，如果你在计划上失败了，那你注定会在执行上失败。没有计划的人生杂乱无章，看似忙碌却是空缺的。</p>
 </blockquote>
@@ -190,7 +190,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2012/10/25/plan_or_not.html" data-id="cipidtnpd003quehvntq81c2t" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2012/10/25/plan_or_not.html" data-id="cir1pw0k9001pidhvd3pd2njq" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2012/10/25/plan_or_not.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -243,7 +243,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2012/05/18/happiness_is_capability.html" data-id="cipidtnqn0067uehvef7aayib" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2012/05/18/happiness_is_capability.html" data-id="cir1pw0je000uidhv891bkkrc" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2012/05/18/happiness_is_capability.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -298,7 +298,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2012/01/30/twenty_years_old_gab.html" data-id="cipidtnop0022uehvsb0o19l7" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2012/01/30/twenty_years_old_gab.html" data-id="cir1pw0km0021idhvrxujq7ie" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2012/01/30/twenty_years_old_gab.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -349,7 +349,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2011/10/18/do_not_care.html" data-id="cipidtnqy006ruehv06ipouj7" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2011/10/18/do_not_care.html" data-id="cir1pw0j4000lidhvxu8vvf8m" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2011/10/18/do_not_care.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -477,11 +477,11 @@ var _hmt = _hmt || [];
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

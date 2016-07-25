@@ -28,6 +28,7 @@
 这段程序中，n是m的一个引用（reference），m是被引用物（referent）。n相当于m的别名（绰号），对n的任何操作就是对m的操作。n既不是m的拷贝，也不是指向m的指针，其实n就是m它自己。
 指针
 指针用于指向对象（变量）。指针提供对其所指对象的间接访问。指针用于指向单个对象">
+<meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CC++%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8%E5%B0%8F%E7%BB%93%5C%E6%8C%87%E9%92%88%E4%B8%8E%E5%BC%95%E7%94%A8.jpg">
 <meta name="twitter:creator" content="@GeekPlux">
   
     <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
@@ -35,7 +36,7 @@
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 
@@ -123,22 +124,22 @@ var _hmt = _hmt || [];
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="概念"><strong>概念</strong></h2><h3 id="引用"><strong>引用</strong></h3><p><strong>引用</strong>就是某一对象（变量）的一个<strong>别名</strong>。举个例子更容易理解：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"><span class="keyword">int</span> &amp;n = m;</span><br></pre></td></tr></table></figure>
+        <h2 id="概念"><a href="#概念" class="headerlink" title="概念"></a><strong>概念</strong></h2><h3 id="引用"><a href="#引用" class="headerlink" title="引用"></a><strong>引用</strong></h3><p><strong>引用</strong>就是某一对象（变量）的一个<strong>别名</strong>。举个例子更容易理解：</p>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> m;</div><div class="line"><span class="keyword">int</span> &amp;n = m;</div></pre></td></tr></table></figure>
 <p>这段程序中，<code>n</code>是<code>m</code>的一个引用（reference），<code>m</code>是被引用物（referent）。<br><code>n</code>相当于<code>m</code>的<strong>别名</strong>（绰号），对<code>n</code>的任何操作就是对<code>m</code>的操作。<br><code>n</code>既不是<code>m</code>的拷贝，也不是指向<code>m</code>的指针，其实<code>n</code>就是<code>m</code>它自己。</p>
-<h3 id="指针"><strong>指针</strong></h3><blockquote>
+<h3 id="指针"><a href="#指针" class="headerlink" title="指针"></a><strong>指针</strong></h3><blockquote>
 <p><strong>指针</strong>用于指向对象（变量）。指针提供对其所指对象的间接访问。指针用于指向单个对象。</p>
 </blockquote>
 <p>（这三句摘自《C++ Primer, Fourth Edition》）。再举个例子：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> m;</span><br><span class="line"><span class="keyword">int</span> *n = &amp;m;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">int</span> m;</div><div class="line"><span class="keyword">int</span> *n = &amp;m;</div></pre></td></tr></table></figure>
 <p>第二条语句定义了一个指向<code>int</code>型的指针<code>n</code>，并初始化<code>n</code>使其指向<code>int</code>型的变量<code>m</code>。<br><code>*n</code>中的 <code>*</code> 操作符表明<code>n</code>是一个指针变量（<strong><code>n</code>本质上也是一个变量，只不过这个变量的存储内容是 地址</strong>）。<br><code>&amp;m</code>中的 <code>&amp;</code> 符号是<strong>取地址操作符</strong>，当此操作符用于一个对象上时，返回的是该对象的存储地址。</p>
 <a id="more"></a>
-<h2 id="联系"><strong>联系</strong></h2><ul>
+<h2 id="联系"><a href="#联系" class="headerlink" title="联系"></a><strong>联系</strong></h2><ul>
 <li>都是有关地址的概念。<br>指针指向一块内存，它的内容是所指内存的地址；而引用则是某块内存的别名。</li>
 <li>都是间接访问其他对象。</li>
 <li>都能用于函数参数和返回值的传递。</li>
 </ul>
-<h2 id="区别"><strong>区别</strong></h2><ul>
+<h2 id="区别"><a href="#区别" class="headerlink" title="区别"></a><strong>区别</strong></h2><ul>
 <li><strong>一、指针是一个实体（本质上就是存放变量地址的一个变量），而引用只是个别名。</strong></li>
 </ul>
 <p>这句话从内存分配的角度很好理解，程序会为指针变量分配内存区域，而引用不分配内存区域。</p>
@@ -161,11 +162,11 @@ var _hmt = _hmt || [];
 </ol>
 <p>先理解<strong>值传递</strong>：值传递过程中，被调函数的形式参数作为被调函数的局部变量处理，即在栈中开辟了内存空间以存放由主调函数放进来的实参的值，从而成为了实参的一个拷贝。<em>值传递的特点是被调函数对形式参数的任何操作都是作为局部变量进行，不会影响主调函数的实参变量的值。</em></p>
 <p><strong>指针传递</strong>本质上值传递，只不过它所传递的是一个地址值。然后把上面那段话「翻译」一下：指针传递时，形参是一个指针变量，该变量拷贝了实参的地址值，然后作为被调函数的局部变量（传递过来的实参的地址值不会变），再然后我们可以用<code>*</code>操作符访问实参，从而对实参进行操作。很绕口，不如看个例子：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> *n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  *n = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> m = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line">  f(&amp;m);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> *n)</span></span></div><div class="line">&#123;</div><div class="line">  *n = <span class="number">5</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">int</span> m = <span class="number">1</span>;</div><div class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">  f(&amp;m);</div><div class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>该程序输出结果为：1 5</p>
 <p>在函数<code>f</code>中，形参<code>n</code>是指向<code>int</code>型的指针变量，拷贝了实参<code>m</code>的地址，作为<code>f</code>函数的局部变量，然后通过<code>*n</code>改变实参<code>m</code>的值。</p>
 <p>而在<strong>引用传递</strong>过程中，被调函数的形式参数虽然也作为局部变量在栈中开辟了内存空间，但是这时存放的是<strong>由主调函数放进来的实参变量的地址</strong>。被调函数对形参的任何操作都被处理成间接寻址（不必通过*操作符），即通过栈中存放的地址访问主调函数中的实参变量。正因为如此，被调函数对形参做的任何操作都影响了主调函数中的实参变量（此时的形参其实就是实参）。再举个例子：</p>
-<figure class="highlight c++"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="preprocessor">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> &amp;n)</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  n = <span class="number">5</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span><br><span class="line"></span>&#123;</span><br><span class="line">  <span class="keyword">int</span> m = <span class="number">1</span>;</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line">  f(m);</span><br><span class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; endl;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c++"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="meta">#<span class="meta-keyword">include</span> <span class="meta-string">&lt;iostream&gt;</span></span></div><div class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> <span class="built_in">std</span>;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">void</span> <span class="title">f</span><span class="params">(<span class="keyword">int</span> &amp;n)</span></span></div><div class="line">&#123;</div><div class="line">  n = <span class="number">5</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span></span></div><div class="line">&#123;</div><div class="line">  <span class="keyword">int</span> m = <span class="number">1</span>;</div><div class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; <span class="built_in">endl</span>;</div><div class="line">  f(m);</div><div class="line">  <span class="built_in">cout</span> &lt;&lt; m &lt;&lt; <span class="built_in">endl</span>;</div><div class="line"></div><div class="line">  <span class="keyword">return</span> <span class="number">0</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>输出结果为：1 5</p>
 <p><code>n</code>是<code>f</code>中的局部变量，同时<code>n</code>也是实参<code>m</code>的引用。此时<code>n</code>就为<code>m</code>，所以在<code>f</code>中对<code>n</code>的操作都会影响<code>m</code>，为<code>n</code>赋值5就是对<code>m</code>赋值5。</p>
 <p>还可以从编译角度理解（此处从网上摘录）：</p>
@@ -188,7 +189,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/01/02/pointer_references.html" data-id="cipidtnp40031uehv3q6tjzce" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2013/01/02/pointer_references.html" data-id="cir1pw0kj001yidhv47o9b9am" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2013/01/02/pointer_references.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -336,11 +337,11 @@ var _hmt = _hmt || [];
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

@@ -31,6 +31,7 @@ class选择器
 id选择器
 class选择器
 标签选择器">
+<meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg">
 <meta name="twitter:creator" content="@GeekPlux">
   
     <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
@@ -38,7 +39,7 @@ class选择器
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 
@@ -116,7 +117,7 @@ var _hmt = _hmt || [];
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cipidtnr2006yuehvkc79yluy">
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cir1pw0ip000fidhvcn7b6dm3">
         <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" itemprop="image">
       </a>
     
@@ -137,60 +138,60 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
-<h2 id="权重">权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
+<h2 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
 <ul>
 <li>id选择器</li>
 <li>class选择器</li>
 <li>标签选择器</li>
 </ul>
 <p>还有一种<strong>内联样式</strong>( inline-style )，是指直接在HTML代码中添加CSS样式。以上四种的权重顺序是：<strong>内联样式（1000）</strong> &gt; <strong>id选择器（100）</strong> &gt; <strong>class选择器（10）</strong> &gt; <strong>标签选择器（1）</strong>。括号内分别是它们的<strong>权重值</strong>！。举个栗子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"color : #fff;"</span> <span class="attribute">id</span>=<span class="value">"example"</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>栗子<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.dome</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color : #fff;"</span> <span class="attr">id</span>=<span class="string">"example"</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span>栗子<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#example</span> &#123;<span class="attribute">color</span>: <span class="number">#000</span>;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.dome</span> &#123;<span class="attribute">color</span>: red;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span> &#123;<span class="attribute">color</span>: blue;&#125;</div></pre></td></tr></table></figure>
 <p>如果只有第四句来定义样式，则这个<code>&lt;span&gt;</code>是蓝色的，如果加上第三条语句，则变成了红色，第四句被覆盖掉了。如果用第二句，则变为黑色，第三句即被覆盖，以此类推如果用内联样式则<code>&lt;span&gt;</code>变成白色了。</p>
 <p>像我这样的菜鸟刚开始滥用各类选择器，往往会出现想覆盖父元素样式的时候覆盖不了的情况，熟不知<strong>要想覆盖，必须让这条语句的权重值大于父元素</strong>（具体可以参考这篇文章<a href="http://www.w3cplus.com/css/css-specificity-things-you-should-know.html" target="_blank" rel="external">你应该知道的一些事情——CSS权重</a>）。</p>
 <a id="more"></a>
-<h3 id="尽量不要用id选择器">尽量不要用id选择器</h3><p>由于id选择器权重值过大的原因，我们要尽量少用它（内联样式估计没人会用了吧）。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">id</span>=<span class="value">"example"</span> <span class="attribute">class</span>=<span class="value">"parent"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="title">span</span> <span class="attribute">class</span>=<span class="value">"son"</span>&gt;</span><span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<h3 id="尽量不要用id选择器"><a href="#尽量不要用id选择器" class="headerlink" title="尽量不要用id选择器"></a>尽量不要用id选择器</h3><p>由于id选择器权重值过大的原因，我们要尽量少用它（内联样式估计没人会用了吧）。</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">id</span>=<span class="string">"example"</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">span</span> <span class="attr">class</span>=<span class="string">"son"</span>&gt;</span><span class="tag">&lt;/<span class="name">span</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>如果你使用id选择器</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#example</span> <span class="selector-tag">span</span> &#123;<span class="attribute">background-color</span>: blue;&#125;</div></pre></td></tr></table></figure>
 <p>则再写</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.son</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.son</span> &#123;<span class="attribute">background-color</span>: red;&#125;</div></pre></td></tr></table></figure>
 <p>就没用了，甚至</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.parent</span> <span class="class">.son</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<p>都没用。你必须用：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="class">.son</span> <span class="rules">&#123;<span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure></p>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> <span class="selector-class">.son</span> &#123;<span class="attribute">background-color</span>: red;&#125;</div></pre></td></tr></table></figure>
+<p>都没用。你必须用：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#example</span> <span class="selector-class">.son</span> &#123;<span class="attribute">background-color</span>: red;&#125;</div></pre></td></tr></table></figure></p>
 <p>才能再改变它的背景色。这样远不如只用一个class轻松写意。尤其是#example下面层级多的话，代码就会越写越长，可见少使用id，多用class才是正道。而且id只能用一次，class可以重复使用。</p>
-<h3 id="尽量不要多层级的选择器">尽量不要多层级的选择器</h3><p>当CSS写到后来，你可能会发现经常有类似这样的一长串代码出现：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="class">.content</span> <span class="class">.right</span> <span class="class">.tag</span> <span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure></p>
+<h3 id="尽量不要多层级的选择器"><a href="#尽量不要多层级的选择器" class="headerlink" title="尽量不要多层级的选择器"></a>尽量不要多层级的选择器</h3><p>当CSS写到后来，你可能会发现经常有类似这样的一长串代码出现：<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#example</span> <span class="selector-class">.content</span> <span class="selector-class">.right</span> <span class="selector-class">.tag</span> <span class="selector-tag">span</span> &#123;<span class="attribute">color</span>: blue;&#125;</div></pre></td></tr></table></figure></p>
 <p>这主要还是因为你没有搞清权重的原因。每次你想为子元素重新定义样式时都要有个权重值大于父元素的一大串选择器。这样的代码不仅你看起来痛苦，浏览器看起来也痛苦（原因可参考这篇文章<a href="http://www.alloyteam.com/2012/10/high-performance-css/" target="_blank" rel="external">【高性能前端2】高性能CSS</a>）。</p>
 <p>所以后代选择器不仅性能低下而且代码很脆弱：HTML代码和CSS代码严重耦合，HTML代码结构发生变化时，CSS也得修改，自己改起来都痛苦，更别说万一将来有人来接盘你的代码……你考虑过他的感受么T_T。还是那句话，用class，最多两三层选择器就搞定了！</p>
 <p>其实还有个终极神器<code>!importants</code>。只要在样式语句后面加上这个就能覆盖<strong>之前</strong>和<strong>之后</strong>的一切样式！这意味着你再想把它覆盖是不可能的。当你都逼到用这个神器的时候，说明你的代码实在写的不敢恭维……你一定会有更好的解决方式的，所以尽量不要用<code>!importants</code>。</p>
-<h2 id="精简">精简</h2><p>精简你的CSS代码可以提升你编写的速度，还能让代码看起来整洁、一目了然，节省时间和空间。</p>
-<h3 id="使用复合语法">使用复合语法</h3><p>尽量使用复合语法：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.someclass &#123;</span><br><span class="line">    background: #000;</span><br><span class="line">    background-image: url(../imgs/carrot.png);</span><br><span class="line">    background-position: bottom;</span><br><span class="line">    background-repeat: repeat-x;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.someclass &#123;</span><br><span class="line">    background: #000 url(../imgs/carrot.png) repeat-x bottom;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="精简"><a href="#精简" class="headerlink" title="精简"></a>精简</h2><p>精简你的CSS代码可以提升你编写的速度，还能让代码看起来整洁、一目了然，节省时间和空间。</p>
+<h3 id="使用复合语法"><a href="#使用复合语法" class="headerlink" title="使用复合语法"></a>使用复合语法</h3><p>尽量使用复合语法：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">// 糟糕的写法</div><div class="line">.someclass &#123;</div><div class="line">    background: #000;</div><div class="line">    background-image: url(../imgs/carrot.png);</div><div class="line">    background-position: bottom;</div><div class="line">    background-repeat: repeat-x;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 好的写法</div><div class="line">.someclass &#123;</div><div class="line">    background: #000 url(../imgs/carrot.png) repeat-x bottom;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>类似的还有<code>padding</code>、<code>margin</code>、<code>font</code>、<code>border</code>等。用复合语法可以精简代码，一目了然。</p>
-<h3 id="减少重复">减少重复</h3><ul>
+<h3 id="减少重复"><a href="#减少重复" class="headerlink" title="减少重复"></a>减少重复</h3><ul>
 <li>利用CSS继承</li>
 </ul>
 <p>如果页面中父元素的多个子元素使用相同的样式，那最好把他们相同的样式定义在其父元素上，让它们继承这些CSS样式。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.example li &#123;font-family:Georgia, serif;&#125;</span><br><span class="line">.example p &#123;font-family:Georgia, serif;&#125;</span><br><span class="line">.example h1 &#123;font-family:Georgia, serif;&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.example &#123;font-family:Georgia, serif;&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">// 糟糕的写法</div><div class="line">.example li &#123;font-family:Georgia, serif;&#125;</div><div class="line">.example p &#123;font-family:Georgia, serif;&#125;</div><div class="line">.example h1 &#123;font-family:Georgia, serif;&#125;</div><div class="line"></div><div class="line">// 好的写法</div><div class="line">.example &#123;font-family:Georgia, serif;&#125;</div></pre></td></tr></table></figure>
 <ul>
 <li>利用分组选择器</li>
 </ul>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.someclass &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    background: blue;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.otherclass &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    background: blue;</span><br><span class="line">    font-size: 8px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.someclass, .otherclass &#123;</span><br><span class="line">    color: red;</span><br><span class="line">    background: blue;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.someclass &#123;</span><br><span class="line">    font-size: 16px;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">.otherclass &#123;</span><br><span class="line">    font-size: 8px;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="移除没用的样式">移除没用的样式</h3><blockquote>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div></pre></td><td class="code"><pre><div class="line">// 糟糕的写法</div><div class="line">.someclass &#123;</div><div class="line">    color: red;</div><div class="line">    background: blue;</div><div class="line">    font-size: 16px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.otherclass &#123;</div><div class="line">    color: red;</div><div class="line">    background: blue;</div><div class="line">    font-size: 8px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 好的写法</div><div class="line">.someclass, .otherclass &#123;</div><div class="line">    color: red;</div><div class="line">    background: blue;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.someclass &#123;</div><div class="line">    font-size: 16px;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.otherclass &#123;</div><div class="line">    font-size: 8px;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="移除没用的样式"><a href="#移除没用的样式" class="headerlink" title="移除没用的样式"></a>移除没用的样式</h3><blockquote>
 <p>移除无匹配的样式，有两个好处：</p>
 <p>第一，删除无用的样式后可以缩减样式文件的体积，加快资源下载速度；</p>
 <p>第二，对于浏览器而言，所有的样式规则的都会被解析后索引起来，即使是当前页面无匹配的规则。移除无匹配的规则，减少索引项，加快浏览器查找速度；</p>
 </blockquote>
-<h2 id="格式">格式</h2><h3 id="命名很重要">命名很重要</h3><p>程序猿最讨厌的事已经不是写文档了，而是<strong>命名</strong>。好的命名可以让你「见名思义」，不写注释也可以读懂；坏的命名会让你抓狂，你不得不用ctrl+F匹配它们……我还发现很多人都是根据HTML代码的结构去命名，如</p>
-<pre><code>#header、 .<span class="attribute">content</span>、 .<span class="attribute">left</span>、 .<span class="attribute">right</span>
+<h2 id="格式"><a href="#格式" class="headerlink" title="格式"></a>格式</h2><h3 id="命名很重要"><a href="#命名很重要" class="headerlink" title="命名很重要"></a>命名很重要</h3><p>程序猿最讨厌的事已经不是写文档了，而是<strong>命名</strong>。好的命名可以让你「见名思义」，不写注释也可以读懂；坏的命名会让你抓狂，你不得不用ctrl+F匹配它们……我还发现很多人都是根据HTML代码的结构去命名，如</p>
+<pre><code>#header、 .content、 .left、 .right
 </code></pre><p>等等，这些并没有实际的意义，当HTML越来越复杂的时候，或者新人来接手的时候，就会时常摸不着头脑，难以调试和维护。所以我个人觉得应该多用具有实际意义的、可以见名思义的class命名。</p>
-<h3 id="好看一点">好看一点</h3><p>代码的易读性和易维护性成正比。</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">// 糟糕的写法</span><br><span class="line">.someclass-a, .someclass-b, .someclass-c, .someclass-d &#123;</span><br><span class="line"> ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 好的写法</span><br><span class="line">.someclass-a,</span><br><span class="line">.someclass-b,</span><br><span class="line">.someclass-c,</span><br><span class="line">.someclass-d &#123;</span><br><span class="line"> ...</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 更好看一点</span><br><span class="line">.someclass &#123;</span><br><span class="line">    background-image:</span><br><span class="line">        linear-gradient(#000, #ccc),</span><br><span class="line">        linear-gradient(#ccc, #ddd);</span><br><span class="line">    box-shadow:</span><br><span class="line">        2px 2px 2px #000,</span><br><span class="line">        1px 4px 1px 1px #ddd inset;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h3 id="其他">其他</h3><ul>
+<h3 id="好看一点"><a href="#好看一点" class="headerlink" title="好看一点"></a>好看一点</h3><p>代码的易读性和易维护性成正比。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">// 糟糕的写法</div><div class="line">.someclass-a, .someclass-b, .someclass-c, .someclass-d &#123;</div><div class="line"> ...</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 好的写法</div><div class="line">.someclass-a,</div><div class="line">.someclass-b,</div><div class="line">.someclass-c,</div><div class="line">.someclass-d &#123;</div><div class="line"> ...</div><div class="line">&#125;</div><div class="line"></div><div class="line">// 更好看一点</div><div class="line">.someclass &#123;</div><div class="line">    background-image:</div><div class="line">        linear-gradient(#000, #ccc),</div><div class="line">        linear-gradient(#ccc, #ddd);</div><div class="line">    box-shadow:</div><div class="line">        2px 2px 2px #000,</div><div class="line">        1px 4px 1px 1px #ddd inset;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h3 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h3><ul>
 <li>注释：程序猿最讨厌的四件事：写注释、写文档、别人不写注释、别人不写文档……</li>
-<li>单位： 到底是用<code>px</code>还是<code>em</code> —&gt;<a href="http://www.1z1b.com/one-blog-a-week/px-em-pt/" target="_blank" rel="external">CSS文字大小单位PX、EM、PT</a></li>
+<li>单位： 到底是用<code>px</code>还是<code>em</code> –&gt;<a href="http://www.1z1b.com/one-blog-a-week/px-em-pt/" target="_blank" rel="external">CSS文字大小单位PX、EM、PT</a></li>
 <li>兼容： IE你到底要闹哪样~`</li>
 </ul>
 <p>以下是大牛总结的一些CSS技巧：</p>
@@ -222,7 +223,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/02/20/css_written_principles.html" data-id="cipidtnr2006yuehvkc79yluy" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/02/20/css_written_principles.html" data-id="cir1pw0ip000fidhvcn7b6dm3" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/02/20/css_written_principles.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -370,11 +371,11 @@ var _hmt = _hmt || [];
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

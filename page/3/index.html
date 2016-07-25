@@ -21,7 +21,7 @@
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 
@@ -112,7 +112,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。</p>
-<h1 id="神马是_TDD">神马是 TDD</h1><p>维基百科上是这样说的：测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导<strong>先写测试程序，然后编码实现其功能</strong>得名。</p>
+<h1 id="神马是-TDD"><a href="#神马是-TDD" class="headerlink" title="神马是 TDD"></a>神马是 TDD</h1><p>维基百科上是这样说的：测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导<strong>先写测试程序，然后编码实现其功能</strong>得名。</p>
 <p>好吧，上面那段翻译的真是让人捉急，人家原文是这样的：</p>
 <blockquote>
 <p>Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards. </p>
@@ -126,7 +126,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/03/21/understand_tdd.html" data-id="cipidtnog001kuehv2v2695ex" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/03/21/understand_tdd.html" data-id="cir1pw0ko0023idhv8dqgev4g" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/03/21/understand_tdd.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -168,9 +168,9 @@ var _hmt = _hmt || [];
       
         <p>昨天在写 CSS 时遇到一个小问题，困扰了我好长时间，最后 Google 之，发现早有前人踩过此坑。为免以后再掉进坑，记下来比较好。</p>
 <p>昨天遇到的问题是这样的。我设置了一对父子元素如下：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"parent"</span>&gt;</span>Parent</span><br><span class="line">    <span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"children"</span>&gt;</span>Children</span><br><span class="line">    <span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">div</span> <span class="attribute">class</span>=<span class="value">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="title">div</span>&gt;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"parent"</span>&gt;</span>Parent</div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"children"</span>&gt;</span>Children</div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"divider"</span>&gt;</span><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
 <p>它们的样式如下：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.parent</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">10px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">80px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> yellow</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.children</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">margin-bottom</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">width</span>:<span class="value"> <span class="number">80px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">20px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> red</span></span>;</span><br><span class="line">&#125;</span></span><br><span class="line"><span class="class">.divider</span> <span class="rules">&#123;</span><br><span class="line">    <span class="rule"><span class="attribute">height</span>:<span class="value"> <span class="number">1px</span></span></span>;</span><br><span class="line">    <span class="rule"><span class="attribute">background-color</span>:<span class="value"> black</span></span>;</span><br><span class="line">&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.parent</span> &#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">background-color</span>: yellow;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.children</span> &#123;</div><div class="line">    <span class="attribute">margin-bottom</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">width</span>: <span class="number">80px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">20px</span>;</div><div class="line">    <span class="attribute">background-color</span>: red;</div><div class="line">&#125;</div><div class="line"><span class="selector-class">.divider</span> &#123;</div><div class="line">    <span class="attribute">height</span>: <span class="number">1px</span>;</div><div class="line">    <span class="attribute">background-color</span>: black;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>产生的效果如图所示：</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCollapsing%20margins%20%E5%90%88%E5%B9%B6%E7%9A%84%E5%A4%96%E8%BE%B9%E8%B7%9D%5CScreen%20Shot%202014-03-14%20at%209.13.00%20PM.png" alt=""></p>
 <p>为什么分割线跑到了 Children 里面？这两个父子元素都设置了 <code>margin-bottom</code>，加起来应该是 30px，为什么现在成了 20px？种种疑问在我脑中盘旋。刚开始以为是万恶的 <code>position</code>，但是我把所有能想到的属性排列组合都设置了一遍，发现还是不行。果断 Google，才知道这个问题由来已久……</p>
@@ -182,7 +182,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/03/14/collapsing_margins.html" data-id="cipidtnrg007puehv2dzf2py5" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/03/14/collapsing_margins.html" data-id="cir1pw0ig000aidhv8gss5qni" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/03/14/collapsing_margins.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -229,13 +229,13 @@ var _hmt = _hmt || [];
 </ul>
 <p>虽然身为一个菜鸟，但 Xcode 的大名早就如雷贯耳，毕竟是苹果亲生的，无论看起来还是用起来都非常迷人。第一次打开 App Store 就在很显著的位置看到了它，果断点了安装。结果发现有 2G 多，耐心等着下完（其实我特别想吐槽我这儿 50KB/s 的网速！）。</p>
 <p>为什么 Xcode 必装？因为有编译的地方就有它。所以这里还要装一个 Command line tools，基本方法是打开 Xcode，找到 Preferences—Downloads—Components，在里面找到它并安装。如果你找不到，那可以在命令行输入：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">xcode-select --install</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">xcode-select --install</div></pre></td></tr></table></figure>
 <p>这时会弹出一个选项框，问你是去下载 Xcode 还是直接安装，选择安装。</p>
 <ul>
 <li><strong>brew</strong></li>
 </ul>
 <p>我以前并木有听过 Homebrew（毕竟第一次用 Mac），但我看几篇 Mac 教程都提到它，于是去下载来尝试一下。果然群众的眼光是雪亮的，自从用了 brew 感觉上五楼都不喘气了……有了它，可以方便的管理工具包，常用的命令有：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">brew install xxx</span><br><span class="line">brew uninstall xxx</span><br><span class="line">brew list</span><br><span class="line">brew update xxx</span><br></pre></td></tr></table></figure>
+<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">brew install xxx</div><div class="line">brew uninstall xxx</div><div class="line">brew list</div><div class="line">brew update xxx</div></pre></td></tr></table></figure>
 <p>都是一句话，非常给力。不得不佩服 Ruby 社区的大神们，简直造福人类。</p>
         
           <p class="article-more-link">
@@ -245,7 +245,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/03/03/mac_configuration_2.html" data-id="cipidtnq0004uuehvkexjpxb3" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/03/03/mac_configuration_2.html" data-id="cir1pw0jy001bidhvwmar1otj" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/03/03/mac_configuration_2.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -286,7 +286,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>前两天我的神机 MBP 终于到手了，虽然之前我已经见过 N 台 Macbook，但拆开包装的那一刻我还是被它惊艳了。新款比以前更薄了，感觉跟 air 的厚度相差无几（这货好意思叫 pro 么）。哈哈，作为一名第一次使用 Mac 的孩纸，我果然遇到了很多菜鸟级的问题，通过不断的 Google，基本都配置好了，现在来罗列一下。</p>
-<h2 id="基础设置篇">基础设置篇</h2><ul>
+<h2 id="基础设置篇"><a href="#基础设置篇" class="headerlink" title="基础设置篇"></a>基础设置篇</h2><ul>
 <li><strong>触控板设置</strong></li>
 </ul>
 <p>体验了两天，MBP 的触控板真心好用，鼠标已被我打入冷宫。所以根据自己的习惯设置好触控板是第一步。我就改了两处：</p>
@@ -308,7 +308,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/02/26/mac_configuration_1.html" data-id="cipidtnq40056uehv5yhbaygq" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/02/26/mac_configuration_1.html" data-id="cir1pw0jv0018idhvo6itjraj" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/02/26/mac_configuration_1.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -338,7 +338,7 @@ var _hmt = _hmt || [];
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cipidtnr2006yuehvkc79yluy">
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cir1pw0ip000fidhvcn7b6dm3">
         <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" itemprop="image">
       </a>
     
@@ -359,17 +359,17 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
-<h2 id="权重">权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
+<h2 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
 <ul>
 <li>id选择器</li>
 <li>class选择器</li>
 <li>标签选择器</li>
 </ul>
 <p>还有一种<strong>内联样式</strong>( inline-style )，是指直接在HTML代码中添加CSS样式。以上四种的权重顺序是：<strong>内联样式（1000）</strong> &gt; <strong>id选择器（100）</strong> &gt; <strong>class选择器（10）</strong> &gt; <strong>标签选择器（1）</strong>。括号内分别是它们的<strong>权重值</strong>！。举个栗子：</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">span</span> <span class="attribute">style</span>=<span class="value">"color : #fff;"</span> <span class="attribute">id</span>=<span class="value">"example"</span> <span class="attribute">class</span>=<span class="value">"demo"</span>&gt;</span>栗子<span class="tag">&lt;/<span class="title">span</span>&gt;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="id">#example</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> <span class="hexcolor">#000</span></span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="class">.dome</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> red</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">span</span> <span class="rules">&#123;<span class="rule"><span class="attribute">color</span>:<span class="value"> blue</span></span>;&#125;</span></span><br></pre></td></tr></table></figure>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">span</span> <span class="attr">style</span>=<span class="string">"color : #fff;"</span> <span class="attr">id</span>=<span class="string">"example"</span> <span class="attr">class</span>=<span class="string">"demo"</span>&gt;</span>栗子<span class="tag">&lt;/<span class="name">span</span>&gt;</span></div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-id">#example</span> &#123;<span class="attribute">color</span>: <span class="number">#000</span>;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.dome</span> &#123;<span class="attribute">color</span>: red;&#125;</div></pre></td></tr></table></figure>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">span</span> &#123;<span class="attribute">color</span>: blue;&#125;</div></pre></td></tr></table></figure>
 <p>如果只有第四句来定义样式，则这个<code>&lt;span&gt;</code>是蓝色的，如果加上第三条语句，则变成了红色，第四句被覆盖掉了。如果用第二句，则变为黑色，第三句即被覆盖，以此类推如果用内联样式则<code>&lt;span&gt;</code>变成白色了。</p>
 <p>像我这样的菜鸟刚开始滥用各类选择器，往往会出现想覆盖父元素样式的时候覆盖不了的情况，熟不知<strong>要想覆盖，必须让这条语句的权重值大于父元素</strong>（具体可以参考这篇文章<a href="http://www.w3cplus.com/css/css-specificity-things-you-should-know.html">你应该知道的一些事情——CSS权重</a>）。</p>
         
@@ -380,7 +380,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/02/20/css_written_principles.html" data-id="cipidtnr2006yuehvkc79yluy" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/02/20/css_written_principles.html" data-id="cir1pw0ip000fidhvcn7b6dm3" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/02/20/css_written_principles.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -421,7 +421,7 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>不知为何，现在写文章，第一句总想感叹一下时光流逝的速度，可能确实是年纪渐长……转眼已大四，伫立在象牙塔和江湖的十字路口，也是时候总结一下了。大学四年，不得不说是我成长最快的四年，也让我充分认识了上大学的必要性。第一次这么长时间跨度的总结，注定是篇长文。</p>
-<h2 id="改变">改变</h2><h3 id="环境的改变">环境的改变</h3><p>环境对一个人的影响程度因人而异，但对我尤甚，因为我自制力太差。虽然当初我在走进校园大门的时已经做好了心理准备，但学校的堕落程度还是一次次刷新了我的底线。确实，在一个糟糕的环境里，<strong>合群 = 浪费时间</strong>。这并不是鼓励不合群，而是要学会<em>择其善者而从之</em>。在大一，加入学生会就是一个改变小环境的机会。在学生会两年的时间里，我认识了众多有想法的朋友。每个人都有值得我学习的地方，每次经历都让我懂得很多道理。在升为部长之后更是事事亲力亲为，希望以身作则（事必躬亲绝对是最渣的管理方式-_-||）。而当班长，也是希望能严于律己，推己及人。当时我还想和班里的每位同学都搞好关系，真是too young too simple。李开复曾说：</p>
+<h2 id="改变"><a href="#改变" class="headerlink" title="改变"></a>改变</h2><h3 id="环境的改变"><a href="#环境的改变" class="headerlink" title="环境的改变"></a>环境的改变</h3><p>环境对一个人的影响程度因人而异，但对我尤甚，因为我自制力太差。虽然当初我在走进校园大门的时已经做好了心理准备，但学校的堕落程度还是一次次刷新了我的底线。确实，在一个糟糕的环境里，<strong>合群 = 浪费时间</strong>。这并不是鼓励不合群，而是要学会<em>择其善者而从之</em>。在大一，加入学生会就是一个改变小环境的机会。在学生会两年的时间里，我认识了众多有想法的朋友。每个人都有值得我学习的地方，每次经历都让我懂得很多道理。在升为部长之后更是事事亲力亲为，希望以身作则（事必躬亲绝对是最渣的管理方式-_-||）。而当班长，也是希望能严于律己，推己及人。当时我还想和班里的每位同学都搞好关系，真是too young too simple。李开复曾说：</p>
 <blockquote>
 <p>用胸怀接受不能改变的事，用勇气改变可以改变的事，用智慧分辨两者的不同</p>
 </blockquote>
@@ -434,7 +434,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2014/02/02/goodbye_my_university.html" data-id="cipidtnqq006euehvi3qjer37" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2014/02/02/goodbye_my_university.html" data-id="cir1pw0jb000qidhv3db0rja1" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2014/02/02/goodbye_my_university.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -477,7 +477,7 @@ var _hmt = _hmt || [];
         <p>作为一名程序猿的，凡事都得从Hello World开始！接下来就由我来演示一遍如何创建一个Hello World项目。</p>
 <p><strong>要想创建一个Cocos2d-x项目就必须有它的模板</strong>，如果你使用过Cocos2d-x2.1.4以前的版本就知道其官方自带有模板安装文件，所以你可以下载2.1.4以前的版本（如cocos2d-x 2.1.3），将cocos2d-x 2.1.3\template目录下的<code>msvc</code>文件夹复制到cocos2d-x 2.2.0\template下，再复制cocos2d-x 2.1.3目录下的文件<code>install-templates-msvc.bat</code>到cocos2d-x 2.2.0下，点击运行，结束后你就可以在VS2012的新建项目中发现有Cocos2d-x模板了。</p>
 <p>但是新版的已经没有了，<strong>官方推荐用脚本新建项目</strong>。所以我们还是参照官方文档用最新的方法吧。一个脚本生成所有平台的项目文件，非常方便！</p>
-<h2 id="准备"><strong>准备</strong></h2><ul>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a><strong>准备</strong></h2><ul>
 <li>按照上一篇<a href="http://www.geekplux.com/2013/10/16/Windows8.1下Cocos2d-x环境搭建/">《Windows8.1下Cocos2d-x环境搭建》</a>先搭建好环境</li>
 <li>下载Python<a href="http://www.python.org/download/">官网下载</a></li>
 <li>安装Python：<br>一路next就行了，安装目录默认为 <code>C:\Python27\</code></li>
@@ -491,7 +491,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/10/17/create_cocos2d-x_project.html" data-id="cipidtnr70077uehv784upoot" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2013/10/17/create_cocos2d-x_project.html" data-id="cir1pw0ii000cidhv2rs2uv6p" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2013/10/17/create_cocos2d-x_project.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -532,11 +532,11 @@ var _hmt = _hmt || [];
     <div class="article-entry" itemprop="articleBody">
       
         <p>Cocos2d-x是一个开源的2d游戏引擎，基于Cocos2d-iPhone设计，MIT许可证下发布。其最明显的特点是<strong>跨平台</strong>，只需要编写一次代码，就可以无缝地部署在包括iOS、Android、Windows、OSX在内的许多主流游戏平台上。在移动终端多样化的今天，跨平台是大势所趋。接下来开始正题：如何搭建Cocos2d-x开发环境。</p>
-<h2 id="准备"><strong>准备</strong></h2><ul>
+<h2 id="准备"><a href="#准备" class="headerlink" title="准备"></a><strong>准备</strong></h2><ul>
 <li>正确安装Visual Studio 2012（2010也可以，以下简称VS）</li>
 <li>官网<a href="http://www.cocos2d-x.org/download">下载Cocos2d-x</a>（本文使用的是C++2.2版本）</li>
 </ul>
-<h2 id="步骤"><strong>步骤</strong></h2><ul>
+<h2 id="步骤"><a href="#步骤" class="headerlink" title="步骤"></a><strong>步骤</strong></h2><ul>
 <li>解压Cocos2d-x压缩包：将下好的引擎解压到你认为合适的地方，比如说D盘或者E盘。</li>
 <li>打开解压后的Cocos2d-x引擎的目录，可看到如下文件：</li>
 </ul>
@@ -551,7 +551,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2013/10/16/cocos2d-x_environment_build.html" data-id="cipidtnrt008cuehvf4hcc47t" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2013/10/16/cocos2d-x_environment_build.html" data-id="cir1pw0hs0006idhvemd4m33c" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2013/10/16/cocos2d-x_environment_build.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -679,11 +679,11 @@ var _hmt = _hmt || [];
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>

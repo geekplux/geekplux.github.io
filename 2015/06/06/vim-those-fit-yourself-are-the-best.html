@@ -22,6 +22,7 @@
 <meta name="twitter:description" content="Vim 被称为编辑器之神，是我用过之后才体会到的，用之前实在不敢对它做出什么评价。在大学时代，Vim 的大名就已如雷贯耳，但由于它陡峭的学习曲线，一直望而却步。等真正开始学习之后，发现并没有想象中的复杂，也没有所谓的瓶颈，只要在实际写代码中强迫自己使用就可以了，无形中就会形成习惯。最初的不适，换来的是效率的飞升。这和我当初学习双拼的感觉一样。下图是我的 Vim 界面：
 
 学习方式我一开始也是看了很">
+<meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/vim.png">
 <meta name="twitter:creator" content="@GeekPlux">
   
     <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
@@ -29,7 +30,7 @@
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css" type="text/css">
+  <link rel="stylesheet" href="/css/style.css">
   <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
   
 
@@ -119,7 +120,7 @@ var _hmt = _hmt || [];
       
         <p>Vim 被称为编辑器之神，是我用过之后才体会到的，用之前实在不敢对它做出什么评价。在大学时代，Vim 的大名就已如雷贯耳，但由于它陡峭的学习曲线，一直望而却步。等真正开始学习之后，发现并没有想象中的复杂，也没有所谓的瓶颈，只要在实际写代码中强迫自己使用就可以了，无形中就会形成习惯。最初的不适，换来的是效率的飞升。这和我当初学习<a href="http://www.geekplux.com/2014/07/06/learn_shuangpin.html" target="_blank" rel="external">双拼</a>的感觉一样。下图是我的 Vim 界面：</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/vim.png" alt="我的 Vim 界面"></p>
-<h2 id="学习方式">学习方式</h2><p>我一开始也是看了很多教程，这里我就不说具体的学习方法了，因为 Google 上一搜一大堆。</p>
+<h2 id="学习方式"><a href="#学习方式" class="headerlink" title="学习方式"></a>学习方式</h2><p>我一开始也是看了很多教程，这里我就不说具体的学习方法了，因为 Google 上一搜一大堆。</p>
 <p>我只想谈一点：很多「过来人」告诫新手，一开始使用 Vim 一定不能使用插件，<strong>要从最纯净的 Vim 开始练习</strong>。他们认为一上手就使用别人的配置，很容易被别人影响，不能领会到自己配置 Vim，这种从无到有的感觉。虽然我也很喜欢折腾的感觉，但这对于学习、入门一个工具来说有点<strong>南辕北辙</strong>，我们学习一个工具就是为了用好它，或者<strong>用它来为我们服务</strong>。为什么要我们去适应它呢？也许这不符合 Vim 的哲学，但是我觉得：</p>
 <ul>
 <li>Vim 存在这么多年，已经有很多优秀的 Vim 配置（比如：<a href="https://github.com/spf13/spf13-vim" target="_blank" rel="external">spf13-vim</a>），可以为我们节省很多折腾的时间。不过如果你非常喜欢折（zuo）腾（si），那也可以从头开始。</li>
@@ -131,14 +132,14 @@ var _hmt = _hmt || [];
 <p>如果你学习 Vim 是为了体验学习的新鲜感，或者业余玩味，请忽略我上面的话。但如果你的最终目的是为了在实际中用到它，提升我们的工作效率，那你不妨和我一样，直接拉别人的配置下来，在 Shell 里输入 Vim 启动，开始写代码！</p>
 <p>当时我找到了 <a href="https://github.com/wklken/k-vim" target="_blank" rel="external">k-vim</a>，按照他的安装步骤，很简单就把 Vim 配置好了，启动 Vim，发现界面也很漂亮，嗯，这就是我要的效果。接着，我打开自己那两天正在写的项目，通过仅会的四个快捷键 <strong>HJKL</strong> 移动光标来查看文件。然后我仔细阅读了 <a href="https://github.com/wklken/k-vim" target="_blank" rel="external">k-vim</a> 的 README 文件，把它提到的几个快捷键试了试，感觉很不错。接下来的几天，它的 README 网页我一直开着，遇到想要的快捷键一搜就搞定，虽然写代码的效率确实下降了很多，但对编辑器的使用越来越纯熟。一周之后我已经习惯用 Vim 来编程了。</p>
 <p>接下来开始进一步研究 Vim，理解 Vim  的<strong>三种模式</strong>（正常模式、命令模式、视图模式），然后掌握如何配置<strong>插件</strong>和<strong>快捷键</strong>就OK了。最关键一点就是要实战，强迫自己所有的操作只用键盘，强迫只用 Vim 作编辑器。</p>
-<h2 id="插件与快捷键">插件与快捷键</h2><p>Vim 的插件可以通过 <a href="https://github.com/gmarik/Vundle.vim" target="_blank" rel="external">Vundle</a> 来管理。（据说 <a href="https://github.com/junegunn/vim-plug" target="_blank" rel="external">vim-plug</a> 也挺好用）</p>
+<h2 id="插件与快捷键"><a href="#插件与快捷键" class="headerlink" title="插件与快捷键"></a>插件与快捷键</h2><p>Vim 的插件可以通过 <a href="https://github.com/gmarik/Vundle.vim" target="_blank" rel="external">Vundle</a> 来管理。（据说 <a href="https://github.com/junegunn/vim-plug" target="_blank" rel="external">vim-plug</a> 也挺好用）</p>
 <p>只需两步：</p>
 <ul>
 <li>在 <code>vimrc.bundles</code> 文件中配置你想要的插件</li>
 <li>在 Vim 的命令模式中输入<code>:BundleInstall</code></li>
 </ul>
 <p>其他的命令有：</p>
-<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">:BundleUpdate    //&#26356;&#26032;&#25554;&#20214;&#10;:BundleClean     //&#21024;&#38500;&#25554;&#20214;</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">:BundleUpdate    //更新插件</div><div class="line">:BundleClean     //删除插件</div></pre></td></tr></table></figure>
 <p>个人觉得必备的插件：</p>
 <ul>
 <li>syntastic 多语言语法检查</li>
@@ -149,20 +150,20 @@ var _hmt = _hmt || [];
 <li>vim-ctrlspace tab/buffer导航增强</li>
 </ul>
 <p>而快捷键的学习方法，就是用到的时候去 Google，多用几次就记住了。如果它自带的快捷键用着不舒服，你完全可以自己重设，Vim 就是自由，不必拘泥条条框框。</p>
-<h2 id="哲学">哲学</h2><p>非常推荐阅读 Stack Overflow 上的这篇回答：</p>
+<h2 id="哲学"><a href="#哲学" class="headerlink" title="哲学"></a>哲学</h2><p>非常推荐阅读 Stack Overflow 上的这篇回答：</p>
 <p><a href="http://stackoverflow.com/questions/1218390/what-is-your-most-productive-shortcut-with-vim" target="_blank" rel="external">What is your most productive shortcut with Vim?</a></p>
 <p>这篇真正阐述了 Vim 作者当初设计 Vim 快捷键时的哲学，看懂这篇对 Vim 快捷键的掌握会更上一层。</p>
-<h2 id="感悟">感悟</h2><p>在学习 Vim、使用 Vim 的过程中，我最大的感悟就是<strong>「适合自己的，才是最好的」</strong>。</p>
+<h2 id="感悟"><a href="#感悟" class="headerlink" title="感悟"></a>感悟</h2><p>在学习 Vim、使用 Vim 的过程中，我最大的感悟就是<strong>「适合自己的，才是最好的」</strong>。</p>
 <p>很多插件看起来很酷炫，快捷键几下就能实现很繁杂的操作，但是你不一定会有使用这个插件的需求，或者即使用也用的不多。有人总喜欢拿 IDE 和 Vim 比，我觉得这根本没有比较的必要，你两个都用也没什么问题。大的项目，复杂的文件结构和引用，你不用 IDE 而用 Vim，是浪费时间。而且一般 IDE 都提供了 Vim 模式，你仍可以在 IDE 中继续击键如飞。</p>
 <p>用 Vim 体验的是一种<strong>轻便、自由、可塑</strong>的感觉。你可以根据自己的需求来培养 Vim，这就像恋（gao）爱（ji）一样是两个人互相适应的过程。互相习惯才能把效率最大化。</p>
 <hr>
-<h3 id="推荐链接">推荐链接</h3><ul>
+<h3 id="推荐链接"><a href="#推荐链接" class="headerlink" title="推荐链接"></a>推荐链接</h3><ul>
 <li><a href="http://vim-adventures.com/" target="_blank" rel="external">Vim Adventure</a>  Vim 小游戏</li>
 <li><a href="http://yannesposito.com/Scratch/en/blog/Learn-Vim-Progressively/" target="_blank" rel="external">Learn Vim Progressively</a> 中文版：<a href="http://coolshell.cn/articles/5426.html" target="_blank" rel="external">简明 Vim 练级攻略</a></li>
 <li><a href="http://learnvimscriptthehardway.stevelosh.com/" target="_blank" rel="external">Learn Vimscript the Hard Way</a> 中文版：<a href="http://learnvimscriptthehardway.onefloweroneworld.com/" target="_blank" rel="external">笨方法学Vimscript</a></li>
 <li><a href="http://www.openvim.com/tutorial.html" target="_blank" rel="external">交互式学习 Vim</a></li>
 <li><a href="http://vimawesome.com/" target="_blank" rel="external">Vim Awesome</a> Awesome Vim plugins from across the universe</li>
-<li><a href="http://cenalulu.github.io/linux/all-vim-cheatsheat/" target="_blank" rel="external">史上最全Vim快捷键键位图 — 入门到进阶</a></li>
+<li><a href="http://cenalulu.github.io/linux/all-vim-cheatsheat/" target="_blank" rel="external">史上最全Vim快捷键键位图 – 入门到进阶</a></li>
 <li><a href="https://github.com/yangyangwithgnu/use_vim_as_ide" target="_blank" rel="external">所需即所获：像 IDE 一样使用 vim</a></li>
 <li><a href="http://yuez.me/jiang-ni-de-vim-da-zao-cheng-qing-qiao-qiang-da-de-ide/" target="_blank" rel="external">将你的Vim 打造成轻巧强大的IDE</a></li>
 </ul>
@@ -172,7 +173,7 @@ var _hmt = _hmt || [];
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html" data-id="cipidtnoe001cuehvuen9lto7" class="article-share-link">Share</a>
+      <a data-url="http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html" data-id="cir1pw0kq0026idhvaickxt15" class="article-share-link">Share</a>
       
         <a href="http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html#disqus_thread" class="article-comment-link">Comments</a>
       
@@ -320,11 +321,11 @@ var _hmt = _hmt || [];
 <script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
-  <script src="/fancybox/jquery.fancybox.pack.js" type="text/javascript"></script>
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
 
 
-<script src="/js/script.js" type="text/javascript"></script>
+<script src="/js/script.js"></script>
 
   </div>
 </body>
