@@ -3,6 +3,34 @@
 
 
     
+  <url>
+    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
+    <lastmod>2016-07-25T07:51:12.000Z</lastmod>
+    <data>
+        <display>
+        <title>轻松玩转 Ukulele</title>
+        <pubTime>2015-01-05T15:54:00.000Z</pubTime>
+        
+        <tag>新技能</tag>
+         
+        <tag>Skill</tag>
+         
+        <tag>乐器</tag>
+         
+        <tag>Instrument</tag>
+         
+        <tag>Ukulele</tag>
+         
+         
+           
+             
+              <breadCrumb title="Ukulele" url="http://geekplux.com/categories/Ukulele/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
@@ -332,34 +360,6 @@
 
     
   <url>
-    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
-    <lastmod>2015-08-04T09:00:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>轻松玩转 Ukulele</title>
-        <pubTime>2015-01-05T15:54:00.000Z</pubTime>
-        
-        <tag>新技能</tag>
-         
-        <tag>Skill</tag>
-         
-        <tag>乐器</tag>
-         
-        <tag>Instrument</tag>
-         
-        <tag>Ukulele</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ukulele" url="http://geekplux.com/categories/Ukulele/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2013/01/04/os_processor_management.html</loc>
     <lastmod>2015-08-04T09:00:04.000Z</lastmod>
     <data>
@@ -457,13 +457,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          
@@ -607,11 +607,11 @@
         
         <tag>Web</tag>
          
+        <tag>CoffeeScript</tag>
+         
         <tag>笔记</tag>
          
         <tag>Note</tag>
-         
-        <tag>CoffeeScript</tag>
          
          
            
