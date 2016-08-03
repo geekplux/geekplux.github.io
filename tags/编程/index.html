@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <meta charset="utf-8">
   
@@ -16,16 +16,86 @@
 <meta name="twitter:description" content="GeekPlux&apos;s Blog | Web | JavaScript | Code | Computer Science | Geek">
 <meta name="twitter:creator" content="@GeekPlux">
   
-    <link rel="alternative" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
   
   
     <link rel="icon" href="/favicon.ico">
   
-  <link rel="stylesheet" href="/css/style.css">
-  <!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+<body>
+  <div id="container" class="container">
+    
+  
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+      <a href="/2013/01/02/pointer_references.html" class="archive-article-date">
+  <time datetime="2013-01-02T07:41:25.000Z" itemprop="datePublished">Jan 2 2013</time>
+</a>
+
+      
+  
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/2013/01/02/pointer_references.html">C++指针与引用小结</a>
+    </h1>
   
 
+    </header>
+  </div>
+</article>
+
   
+  
+    </div></section>
+  
+
+
+
+  </div>
+  
+    <footer id="footer" class="post-footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+  
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
 <script>
 var _hmt = _hmt || [];
 (function() {
@@ -37,198 +107,10 @@ var _hmt = _hmt || [];
 </script>
 
 
-</head>
-
-<body>
-  <div id="container">
-    <div id="wrap">
-      <header id="header">
-  <div id="banner"></div>
-  <div id="header-outer" class="outer">
-    <div id="header-title" class="inner">
-      <h1 id="logo-wrap">
-        <a href="/" id="logo">GeekPlux</a>
-      </h1>
-      
-        <h2 id="subtitle-wrap">
-          <a href="/" id="subtitle">知行合一</a>
-        </h2>
-      
-    </div>
-    <div id="header-inner" class="inner">
-      <nav id="main-nav">
-        <a id="main-nav-toggle" class="nav-icon"></a>
-        
-          <a class="main-nav-link" href="/">Home</a>
-        
-          <a class="main-nav-link" href="/archives">Archives</a>
-        
-          <a class="main-nav-link" href="/wiki">Wiki</a>
-        
-          <a class="main-nav-link" href="/about">About</a>
-        
-          <a class="main-nav-link" href="/gab">扯淡集</a>
-        
-      </nav>
-      <nav id="sub-nav">
-        
-          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-        
-        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
-      </nav>
-      <div id="search-form-wrap">
-        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" results="0" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://geekplux.com"></form>
-      </div>
-    </div>
-  </div>
-</header>
-      <div class="outer">
-        <section id="main">
-  
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2013" class="archive-year">2013</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      <a href="/2013/01/02/pointer_references.html" class="archive-article-date">
-  <time datetime="2013-01-02T07:41:25.000Z" itemprop="datePublished">Jan 2</time>
-</a>
-      
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2013/01/02/pointer_references.html">C++指针与引用小结</a>
-    </h1>
-  
-
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
-</section>
-        
-      </div>
-      <footer id="footer">
-  
-    <aside id="sidebar" class="outer">
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Categories</h3>
-    <div class="widget">
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Agile-Development/">Agile Development</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Android/">Android</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Cocos2d-x/">Cocos2d-x</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Code/">Code</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Computer-Science/">Computer Science</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Life/">Life</a><span class="category-list-count">8</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Research/">Research</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Thought/">Thought</a><span class="category-list-count">6</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/">Tool</a><span class="category-list-count">6</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/FarBox/">FarBox</a><span class="category-list-count">2</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tool/Mac/">Mac</a><span class="category-list-count">2</span></li></ul></li><li class="category-list-item"><a class="category-list-link" href="/categories/Ukulele/">Ukulele</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/">Web</a><span class="category-list-count">7</span><ul class="category-list-child"><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CSS/">CSS</a><span class="category-list-count">3</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/Web/CoffeeScript/">CoffeeScript</a><span class="category-list-count">2</span></li></ul></li></ul>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Tag Cloud</h3>
-    <div class="widget tagcloud">
-      <a href="/tags/Agile-Development/" style="font-size: 10px;">Agile Development</a> <a href="/tags/Android/" style="font-size: 10px;">Android</a> <a href="/tags/Backbone/" style="font-size: 10px;">Backbone</a> <a href="/tags/Blog/" style="font-size: 12.86px;">Blog</a> <a href="/tags/C-C/" style="font-size: 10px;">C/C++</a> <a href="/tags/CSS/" style="font-size: 12.86px;">CSS</a> <a href="/tags/Cocos2d-x/" style="font-size: 11.43px;">Cocos2d-x</a> <a href="/tags/Code/" style="font-size: 10px;">Code</a> <a href="/tags/CoffeeScript/" style="font-size: 11.43px;">CoffeeScript</a> <a href="/tags/Computer-Science/" style="font-size: 12.86px;">Computer Science</a> <a href="/tags/Development/" style="font-size: 10px;">Development</a> <a href="/tags/Development-Environment/" style="font-size: 11.43px;">Development Environment</a> <a href="/tags/Discovery/" style="font-size: 11.43px;">Discovery</a> <a href="/tags/Domain/" style="font-size: 10px;">Domain</a> <a href="/tags/Essay/" style="font-size: 14.29px;">Essay</a> <a href="/tags/FarBox/" style="font-size: 11.43px;">FarBox</a> <a href="/tags/Game-Development/" style="font-size: 11.43px;">Game Development</a> <a href="/tags/Guide/" style="font-size: 14.29px;">Guide</a> <a href="/tags/IDE/" style="font-size: 10px;">IDE</a> <a href="/tags/Instrument/" style="font-size: 10px;">Instrument</a> <a href="/tags/Learning/" style="font-size: 11.43px;">Learning</a> <a href="/tags/Life/" style="font-size: 17.14px;">Life</a> <a href="/tags/Love/" style="font-size: 10px;">Love</a> <a href="/tags/Mac/" style="font-size: 11.43px;">Mac</a> <a href="/tags/Note/" style="font-size: 18.57px;">Note</a> <a href="/tags/Research/" style="font-size: 10px;">Research</a> <a href="/tags/Responsive-Design/" style="font-size: 10px;">Responsive Design</a> <a href="/tags/Skill/" style="font-size: 12.86px;">Skill</a> <a href="/tags/Summary/" style="font-size: 17.14px;">Summary</a> <a href="/tags/Thought/" style="font-size: 12.86px;">Thought</a> <a href="/tags/Tool/" style="font-size: 15.71px;">Tool</a> <a href="/tags/Translation/" style="font-size: 12.86px;">Translation</a> <a href="/tags/Ukulele/" style="font-size: 10px;">Ukulele</a> <a href="/tags/Vim/" style="font-size: 10px;">Vim</a> <a href="/tags/Web/" style="font-size: 15.71px;">Web</a> <a href="/tags/Writing/" style="font-size: 11.43px;">Writing</a> <a href="/tags/乐器/" style="font-size: 10px;">乐器</a> <a href="/tags/代码/" style="font-size: 10px;">代码</a> <a href="/tags/入门/" style="font-size: 14.29px;">入门</a> <a href="/tags/写文章/" style="font-size: 11.43px;">写文章</a> <a href="/tags/博客/" style="font-size: 11.43px;">博客</a> <a href="/tags/域名/" style="font-size: 10px;">域名</a> <a href="/tags/学习/" style="font-size: 11.43px;">学习</a> <a href="/tags/尝试/" style="font-size: 10px;">尝试</a> <a href="/tags/工具/" style="font-size: 15.71px;">工具</a> <a href="/tags/开发环境/" style="font-size: 11.43px;">开发环境</a> <a href="/tags/微信公众平台/" style="font-size: 10px;">微信公众平台</a> <a href="/tags/思考/" style="font-size: 11.43px;">思考</a> <a href="/tags/总结/" style="font-size: 17.14px;">总结</a> <a href="/tags/情感/" style="font-size: 11.43px;">情感</a> <a href="/tags/感想/" style="font-size: 15.71px;">感想</a> <a href="/tags/新技能/" style="font-size: 11.43px;">新技能</a> <a href="/tags/方法论/" style="font-size: 11.43px;">方法论</a> <a href="/tags/游戏开发/" style="font-size: 11.43px;">游戏开发</a> <a href="/tags/生活/" style="font-size: 20px;">生活</a> <a href="/tags/笔记/" style="font-size: 18.57px;">笔记</a> <a href="/tags/编程/" style="font-size: 10px;">编程</a> <a href="/tags/计算机科学/" style="font-size: 12.86px;">计算机科学</a> <a href="/tags/译文/" style="font-size: 12.86px;">译文</a> <a href="/tags/运营/" style="font-size: 10px;">运营</a> <a href="/tags/随笔/" style="font-size: 14.29px;">随笔</a>
-    </div>
-  </div>
-
-  
-    
-  <div class="widget-wrap">
-    <h3 class="widget-title">Recents</h3>
-    <div class="widget">
-      <ul>
-        
-          <li>
-            <a href="/2016/05/31/how-to-read-a-research-paper.html">如何阅读一篇学术论文</a>
-          </li>
-        
-          <li>
-            <a href="/2016/02/15/two-years-after-graduated.html">毕业后的两年</a>
-          </li>
-        
-          <li>
-            <a href="/2015/12/08/learning-by-index.html">建立索引式的学习方法</a>
-          </li>
-        
-          <li>
-            <a href="/2015/11/13/why-i-like-coding.html">为什么我喜欢写代码</a>
-          </li>
-        
-          <li>
-            <a href="/2015/10/28/writing-skills.html">写文章的小技巧</a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-
-  
-</aside>
-  
-  <div class="outer">
-    <div id="footer-info" class="inner">
-      &copy; 2016
-      <a xmlns:cc="http://creativecommons.org/ns#" href="http://www.geekplux.com/" property="cc:attributionName" rel="cc:attributionURL">GeekPlux</a>
-      本博客所有内容采用 <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。
-      <br>
-      Contact me via <a href="mailto:geekplux@gmail.com">Mail</a>,
-      <a href="http://twitter.com/geekplux">Twitter</a>,
-      <a href="http://weibo.com/208886423">Weibo</a> or
-      <a href="http://github.com/geekplux">Github</a>
-      More info: <a href="/aboutme">About</a>.
-      ( <a href="/atom.xml" rel="rss" title="RSS feed">RSS feed</a> )
-      <br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
-  </div>
-</footer>
-
-    </div>
-    <nav id="mobile-nav">
-  
-    <a href="/" class="mobile-nav-link">Home</a>
-  
-    <a href="/archives" class="mobile-nav-link">Archives</a>
-  
-    <a href="/wiki" class="mobile-nav-link">Wiki</a>
-  
-    <a href="/about" class="mobile-nav-link">About</a>
-  
-    <a href="/gab" class="mobile-nav-link">扯淡集</a>
-  
-</nav>
-    
-<script>
-  var disqus_shortname = 'geekplux';
-  
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/count.js';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
 
 
-<script src="//code.jquery.com/jquery-2.1.1.min.js"></script>
 
 
-  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
-  <script src="/fancybox/jquery.fancybox.pack.js"></script>
-
-
-<script src="/js/script.js"></script>
 
   </div>
 </body>

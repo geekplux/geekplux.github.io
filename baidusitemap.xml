@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
+    <lastmod>2016-07-29T17:52:25.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何阅读一篇学术论文</title>
+        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
+        
+        <tag>Research</tag>
+         
+        <tag>方法论</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
     <lastmod>2016-07-25T07:51:12.000Z</lastmod>
     <data>
@@ -31,32 +57,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
-    <lastmod>2016-06-03T08:21:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何阅读一篇学术论文</title>
-        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
-        
-        <tag>Research</tag>
-         
-        <tag>方法论</tag>
-         
-        <tag>学习</tag>
-         
-        <tag>Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
@@ -94,13 +94,13 @@
         <title>毕业后的两年</title>
         <pubTime>2016-02-15T15:03:27.000Z</pubTime>
         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
         <tag>生活</tag>
          
         <tag>Life</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
          
          
            
@@ -120,13 +120,13 @@
         <title>Goodbye，我的大学</title>
         <pubTime>2014-02-02T12:22:22.000Z</pubTime>
         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
         <tag>生活</tag>
          
         <tag>Life</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
          
          
            
@@ -457,13 +457,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>开发环境</tag>
-         
-        <tag>Development Environment</tag>
-         
         <tag>Tool</tag>
          
         <tag>工具</tag>
+         
+        <tag>开发环境</tag>
+         
+        <tag>Development Environment</tag>
          
         <tag>Mac</tag>
          
@@ -607,11 +607,11 @@
         
         <tag>Web</tag>
          
-        <tag>CoffeeScript</tag>
-         
         <tag>笔记</tag>
          
         <tag>Note</tag>
+         
+        <tag>CoffeeScript</tag>
          
          
            
@@ -785,11 +785,11 @@
          
         <tag>Life</tag>
          
+        <tag>感想</tag>
+         
         <tag>随笔</tag>
          
         <tag>Essay</tag>
-         
-        <tag>感想</tag>
          
          
            
@@ -867,11 +867,11 @@
          
         <tag>Life</tag>
          
+        <tag>感想</tag>
+         
         <tag>随笔</tag>
          
         <tag>Essay</tag>
-         
-        <tag>感想</tag>
          
          
            
@@ -895,11 +895,11 @@
          
         <tag>Life</tag>
          
+        <tag>感想</tag>
+         
         <tag>随笔</tag>
          
         <tag>Essay</tag>
-         
-        <tag>感想</tag>
          
          
            
@@ -923,11 +923,11 @@
          
         <tag>Life</tag>
          
-        <tag>感想</tag>
-         
         <tag>Thought</tag>
          
         <tag>思考</tag>
+         
+        <tag>感想</tag>
          
          
            
@@ -951,11 +951,11 @@
          
         <tag>Life</tag>
          
-        <tag>感想</tag>
-         
         <tag>Thought</tag>
          
         <tag>思考</tag>
+         
+        <tag>感想</tag>
          
          
            
