@@ -96,13 +96,13 @@
       <category term="Research" scheme="http://geekplux.com/categories/Research/"/>
     
     
-      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
-    
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
       <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
     
   </entry>
   
@@ -202,13 +202,13 @@
       <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
     
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
-    
       <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
     
   </entry>
   
@@ -249,11 +249,11 @@
       <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
     
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
       <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
