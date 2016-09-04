@@ -11,13 +11,13 @@
         <title>如何阅读一篇学术论文</title>
         <pubTime>2016-05-31T12:49:56.000Z</pubTime>
         
-        <tag>学习</tag>
-         
-        <tag>Learning</tag>
+        <tag>Research</tag>
          
         <tag>方法论</tag>
          
-        <tag>Research</tag>
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
          
          
            
@@ -197,11 +197,11 @@
         <title>建立索引式的学习方法</title>
         <pubTime>2015-12-08T13:53:27.000Z</pubTime>
         
+        <tag>方法论</tag>
+         
         <tag>学习</tag>
          
         <tag>Learning</tag>
-         
-        <tag>方法论</tag>
          
          
            
@@ -548,13 +548,13 @@
         <title>如何新建一个Cocos2d-x项目</title>
         <pubTime>2013-10-17T08:43:30.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Cocos2d-x</tag>
          
         <tag>游戏开发</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Game Development</tag>
          
@@ -634,15 +634,15 @@
         <title>Windows8.1下Cocos2d-x环境搭建</title>
         <pubTime>2013-10-16T09:54:30.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Cocos2d-x</tag>
          
         <tag>开发环境</tag>
          
         <tag>游戏开发</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Game Development</tag>
          
@@ -703,11 +703,11 @@
         <title>Android开发如何入门</title>
         <pubTime>2013-09-02T08:34:30.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Android</tag>
          
         <tag>Development</tag>
          
