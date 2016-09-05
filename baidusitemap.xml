@@ -3,6 +3,33 @@
 
 
     
+    
+  <url>
+    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
+    <lastmod>2016-09-05T06:00:16.000Z</lastmod>
+    <data>
+        <display>
+        <title>为什么我喜欢写代码</title>
+        <pubTime>2015-11-13T15:04:22.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+        <tag>感想</tag>
+         
+        <tag>情感</tag>
+         
+        <tag>代码</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
   <url>
     <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
     <lastmod>2016-07-29T17:52:25.000Z</lastmod>
@@ -68,9 +95,9 @@
         
         <tag>Blog</tag>
          
-        <tag>Thought</tag>
-         
         <tag>Skill</tag>
+         
+        <tag>Thought</tag>
          
         <tag>Writing</tag>
          
@@ -156,33 +183,6 @@
            
              
               <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
-    <lastmod>2016-02-03T07:59:04.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么我喜欢写代码</title>
-        <pubTime>2015-11-13T15:04:22.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-        <tag>感想</tag>
-         
-        <tag>情感</tag>
-         
-        <tag>代码</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
           
         </display>
     </data>
@@ -833,11 +833,11 @@
         <title>响应式设计简易指南（译）</title>
         <pubTime>2014-04-06T14:54:42.000Z</pubTime>
         
+        <tag>Web</tag>
+         
         <tag>Guide</tag>
          
         <tag>入门</tag>
-         
-        <tag>Web</tag>
          
         <tag>译文</tag>
          
