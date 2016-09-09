@@ -95,13 +95,13 @@
         
         <tag>Blog</tag>
          
-        <tag>Skill</tag>
-         
         <tag>Thought</tag>
          
-        <tag>Writing</tag>
+        <tag>Skill</tag>
          
         <tag>写文章</tag>
+         
+        <tag>Writing</tag>
          
          
            
@@ -175,9 +175,9 @@
         
         <tag>感想</tag>
          
-        <tag>Writing</tag>
-         
         <tag>写文章</tag>
+         
+        <tag>Writing</tag>
          
          
            
@@ -308,11 +308,11 @@
          
         <tag>Note</tag>
          
-        <tag>CSS</tag>
-         
         <tag>总结</tag>
          
         <tag>Summary</tag>
+         
+        <tag>CSS</tag>
          
          
            
@@ -521,11 +521,11 @@
          
         <tag>Note</tag>
          
-        <tag>CSS</tag>
-         
         <tag>总结</tag>
          
         <tag>Summary</tag>
+         
+        <tag>CSS</tag>
          
          
            
@@ -548,13 +548,13 @@
         <title>如何新建一个Cocos2d-x项目</title>
         <pubTime>2013-10-17T08:43:30.000Z</pubTime>
         
-        <tag>Cocos2d-x</tag>
-         
-        <tag>游戏开发</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Cocos2d-x</tag>
+         
+        <tag>游戏开发</tag>
          
         <tag>Game Development</tag>
          
@@ -634,15 +634,15 @@
         <title>Windows8.1下Cocos2d-x环境搭建</title>
         <pubTime>2013-10-16T09:54:30.000Z</pubTime>
         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
         <tag>Cocos2d-x</tag>
          
         <tag>开发环境</tag>
          
         <tag>游戏开发</tag>
-         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
          
         <tag>Game Development</tag>
          
@@ -703,11 +703,11 @@
         <title>Android开发如何入门</title>
         <pubTime>2013-09-02T08:34:30.000Z</pubTime>
         
+        <tag>Android</tag>
+         
         <tag>Guide</tag>
          
         <tag>入门</tag>
-         
-        <tag>Android</tag>
          
         <tag>Development</tag>
          
@@ -833,11 +833,11 @@
         <title>响应式设计简易指南（译）</title>
         <pubTime>2014-04-06T14:54:42.000Z</pubTime>
         
-        <tag>Web</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Web</tag>
          
         <tag>译文</tag>
          

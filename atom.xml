@@ -357,13 +357,13 @@
     
       <category term="Blog" scheme="http://geekplux.com/tags/Blog/"/>
     
-      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
-    
       <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
-      <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
+      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
       <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
+    
+      <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
     
   </entry>
   
@@ -413,9 +413,9 @@
     
       <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
-      <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
-    
       <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
+    
+      <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
     
   </entry>
   
@@ -1462,11 +1462,11 @@
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
-      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
-    
       <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
     
   </entry>
   
@@ -1554,11 +1554,11 @@
       <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
     
     
-      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
-    
       <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
     
       <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
       <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
     
