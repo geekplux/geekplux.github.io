@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2016-07-29T17:52:25.000Z</updated>
+  <updated>2016-10-25T17:14:48.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何搭建一个私人网盘</title>
+    <link href="http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html"/>
+    <id>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</id>
+    <published>2016-10-25T14:13:11.000Z</published>
+    <updated>2016-10-25T17:14:48.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。</p>
+</blockquote>
+<p>前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，还面对严苛的内容审查和隐私保护，虽然于用户来说提供了便利，但于公司来说实在是一件出力不讨好的事情。</p>
+<h2 id="之前的网盘方案"><a href="#之前的网盘方案" class="headerlink" title="之前的网盘方案"></a>之前的网盘方案</h2><p>国外的网盘我一直是三家一起用，分别是 Dropbox 存储代码和一些重要或私密文件；Google Drive 存储一些大文件和私密文件；OneDrive 存储一些电子书（同步太慢了）。国内的网盘我之前只用两家，一是坚果云，放一些个人常用的小文件，包括一些文档和软件配置文件；另一个是百毒云，放一些各处转存来的大文件、自己的照片和学习资料，一方面因其空间大，另一方面因其同步流畅。然而，百毒云前段时间把我的网盘<strong>全面封掉</strong>了，丢失了很多大学时的照片（其它文件要不不重要，要不有备份），申诉无果，实属无奈。</p>
+<h2 id="搭建一个只属于自己的网盘"><a href="#搭建一个只属于自己的网盘" class="headerlink" title="搭建一个只属于自己的网盘"></a>搭建一个只属于自己的网盘</h2><p>所以我决定搭建一个只属于自己的网盘。考察了几种方案（包括买 RAID 或 NAS 等），发现已有人在这方面做了努力，提供了像 <a href="https://www.seafile.com/home/" target="_blank" rel="external">Seafile</a> 和 <a href="https://owncloud.org/" target="_blank" rel="external">ownCloud</a> 这样的产品。接下来对比了两个软件，我决定选择用 ownCloud，主要出于以下几点考虑：</p>
+<ul>
+<li>可以设置是否加密，保证数据安全。</li>
+<li>ownCloud 可以用于同步日程、联系人、浏览器书签等，最重要的是<strong>密码管理</strong>，这对于目前有无数密码需要记的我们非常实用。ownCloud 还有个应用商店，大家可以自行发现有用的应用。</li>
+<li>ownCloud 提供网页和各种设备、系统的客户端（Windows、Mac、Linux、iOS、Android皆有）进行访问你的网盘。</li>
+<li>ownCloud 能将外部存储（如 FTP、WebDAV、Amazon S3，甚至 Dropbox 和 Google Drive）的文件挂载到 ownCloud 上，实现无缝存储和分享。</li>
+<li>文件支持版本管理，还有回收站，所以不必担心误删。</li>
+</ul>
+<h2 id="搭建方法"><a href="#搭建方法" class="headerlink" title="搭建方法"></a>搭建方法</h2><p>首先你得<strong>先有一个自己的 VPS</strong>。。没错，要不然你的数据往哪放，ownCloud 在哪运行。</p>
+<p>有了 VPS 之后，就可以按照官网教程一步一步安装搭建了。然而，步骤相当繁琐，你得先安装 PHP、MySQL、 Apache 等等，所以我们要祭出神器 —— docker（这里就不介绍 docker 的用法了，以下内容默认大家对 docker 的基本使用有所了解）。这样一来，之前冗长的步骤，就化成了三步：</p>
+<ol>
+<li>安装 docker、docker-compose，下载 ownCloud 的 image</li>
+<li>配置 docker-compose.yml</li>
+<li>配置完毕，启动，打开 ownCloud 主界面配置数据库、管理员等</li>
+</ol>
+<blockquote>
+<p>下面是对上面三步的详细讲解，嫌太长的话可以不看。只需要把下面用到的两个 docker images （owncloud、postgres）下载好，安装 docker-compose 并拷贝 docker-compose.yml 文件到你想要存储 ownCloud 数据的文件夹，然后运行 <code>docker-compose up</code> 就好，一气呵成。</p>
+</blockquote>
+<h3 id="使用-docker"><a href="#使用-docker" class="headerlink" title="使用 docker"></a>使用 docker</h3><p>安装好 docker 之后，直接下载 <code>owncloud</code> image 运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name owncloud -p 80:80 owncloud</div></pre></td></tr></table></figure>
+<p>其实就可以看到 ownCloud 已经运行起来了，访问你的 VPS 地址，就可以看到 ownCloud 的界面。</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/docker-owncloud-1.png" alt=""></p>
+<p>但这时的 ownCloud 还没有数据库，所以我们还需要用 docker –link 来添加一个数据库存储 ownCloud 的数据，这里用到了 <code>postgres</code> 这个 image（数据库你可以自己定，不一定要用 postgreSQL）。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">docker run --name owncloud-postgres -e POSTGRES_PASSWORD=mysecretpassword -d postgres</div><div class="line">docker run --rm --link owncloud-postgres:owncloud-db --name owncloud -p 80:80 owncloud</div></pre></td></tr></table></figure>
+<p>第一条命令会启动一个 postgreSQL 数据库，默认的用户是 postgres，密码设为了 mysecretpassword，host 是 owncloud-db。</p>
+<p>但这时我们运行的 docker container 一旦删掉，我们的数据就没有了，所以我们需要用 docker 中的 volumes (或 <a href="https://docs.docker.com/userguide/dockervolumes/#creating-and-mounting-a-data-volume-container" target="_blank" rel="external">docker data volumes</a>)来把 ownCloud 的数据持久化。</p>
+<h3 id="配置-docker-compose"><a href="#配置-docker-compose" class="headerlink" title="配置 docker compose"></a>配置 docker compose</h3><p>这样一来，我们得启动两个 container 作为 data-only container，然后再启动 owncloud 和 postgres 关联这两个 data-only container，非常繁杂，幸亏我们有 <code>docker-compose</code> 帮忙。先安装它：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">pip install docker-compose</div></pre></td></tr></table></figure>
+<p>然后配置 docker-compose.yml，下面配置中的 <code>volumes</code> 就是在配置数据持久化的目录结构。由于我把 docker-compose.yml 存在了VPS 的<code>~/owncloud</code>文件夹下，所以底下 <code>volumes</code> 配置中，冒号前面的宿主目录是那样写的，而冒号后面的是 container 中的目录，具体：</p>
+<ul>
+<li>/etc/postgresql 存储数据库的配置</li>
+<li>/var/lib/postgresql 存储数据库中的数据</li>
+<li>/var/www/html/app 存储 ownCloud APP 的数据</li>
+<li>/var/www/html/data 存储 ownCloud 的数据</li>
+<li>/var/www/html/config 存储 ownCloud 的配置</li>
+</ul>
+<figure class="highlight yml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># Composition of the containers</span></div><div class="line"></div><div class="line"><span class="attr">postgres-data:</span></div><div class="line"><span class="attr">  image:</span> postgres</div><div class="line"><span class="attr">  command:</span> /bin/<span class="literal">true</span></div><div class="line"><span class="attr">  volumes:</span></div><div class="line"><span class="bullet">    -</span> ~/owncloud/etc/postgresql:/etc/postgresql</div><div class="line"><span class="bullet">    -</span> ~/owncloud/var/lib/postgresql:/var/lib/postgresql</div><div class="line"></div><div class="line"><span class="attr">owncloud-data:</span></div><div class="line"><span class="attr">  image:</span> owncloud</div><div class="line">  <span class="comment"># This is a data container, so we want to exit as soon as the container is created</span></div><div class="line">  <span class="comment"># BUT we will have to fix permissions issues first (33 is the ID of the www-data user)</span></div><div class="line"><span class="attr">  command:</span> /bin/bash -c <span class="string">"/bin/chown -R 33 /var/www/html/data &amp;&amp; /bin/chown -R 33 /var/www/html/config"</span></div><div class="line"><span class="attr">  volumes:</span></div><div class="line"><span class="bullet">    -</span> ~/owncloud/var/www/html/apps:/var/www/html/apps</div><div class="line"><span class="bullet">    -</span> ~/owncloud/var/www/html/data:/var/www/html/data</div><div class="line"><span class="bullet">    -</span> ~/owncloud/var/www/html/config:/var/www/html/config</div><div class="line"></div><div class="line"><span class="attr">owncloud:</span></div><div class="line"><span class="attr">  image:</span> owncloud</div><div class="line"><span class="attr">  ports:</span></div><div class="line"><span class="bullet">    -</span> <span class="number">8080</span>:<span class="number">80</span></div><div class="line"><span class="attr">  volumes_from:</span></div><div class="line"><span class="bullet">    -</span> owncloud-data</div><div class="line"><span class="attr">  links:</span></div><div class="line"><span class="attr">    - postgres:</span>postgres</div><div class="line"><span class="attr">  hostname:</span> cloud</div><div class="line"><span class="attr">  domainname:</span> cloud.example.org <span class="comment"># Change to the hostname you will use</span></div><div class="line"></div><div class="line"><span class="attr">postgres:</span></div><div class="line"><span class="attr">  image:</span> postgres</div><div class="line"><span class="attr">  environment:</span></div><div class="line"><span class="bullet">    -</span> POSTGRES_USER=postgres</div><div class="line"><span class="bullet">    -</span> POSTGRES_PASSWORD=mypostgrespassword</div><div class="line"><span class="attr">  volumes_from:</span></div><div class="line"><span class="bullet">    -</span> postgres-data</div></pre></td></tr></table></figure>
+<p>把 docker-compose.yml 配置好之后，只需运行</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker-compose up</div></pre></td></tr></table></figure>
+<p>就可以把 ownCloud 运行起来了，上一步中的很多操作，这里一步就搞定了。不过<strong>切记！<code>owncloud-data</code>和<code>postgres-data</code>两个 container 和 volume 千万不要删。删之前请备份</strong>。</p>
+<h3 id="ownCloud-配置"><a href="#ownCloud-配置" class="headerlink" title="ownCloud 配置"></a>ownCloud 配置</h3><p>访问你 VPS 的 8080 端口（刚才配置文件里写了）打开 ownCloud 主页，需要做两件事</p>
+<ol>
+<li>输入管理员的账号和密码</li>
+<li>选择数据库用哪个，且输入数据库配置，这里对照我们刚才 docker-compose 里的写的输入就好</li>
+</ol>
+<p>点击完成，一切 OK，进入文件页面尽情探索吧！</p>
+<h2 id="参考-amp-延伸阅读"><a href="#参考-amp-延伸阅读" class="headerlink" title="参考&amp;延伸阅读"></a>参考&amp;延伸阅读</h2><ul>
+<li><a href="http://blog.securem.eu/serverside/2015/08/25/setting-up-owncloud-server-in-a-docker-container/" target="_blank" rel="external">Setting up an ownCloud Server in a Docker container using Docker Compose</a></li>
+<li><a href="https://github.com/vector090/vector090.github.io/wiki/%E4%BD%BF%E7%94%A8%E5%92%8C%E6%90%AD%E5%BB%BAownCloud%E7%A7%81%E6%9C%89%E4%BA%91%E8%A6%81%E7%82%B9" target="_blank" rel="external">使用和搭建ownCloud私有云要点</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏
+    
+    </summary>
+    
+      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
+    
+    
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="ownCloud" scheme="http://geekplux.com/tags/ownCloud/"/>
+    
+      <category term="docker" scheme="http://geekplux.com/tags/docker/"/>
+    
+      <category term="网盘" scheme="http://geekplux.com/tags/%E7%BD%91%E7%9B%98/"/>
+    
+      <category term="云" scheme="http://geekplux.com/tags/%E4%BA%91/"/>
+    
+  </entry>
   
   <entry>
     <title>如何阅读一篇学术论文</title>
@@ -361,9 +451,9 @@
     
       <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
-      <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
-    
       <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
+    
+      <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
@@ -413,9 +503,9 @@
     
       <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
-      <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
-    
       <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
+    
+      <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
@@ -1462,11 +1552,11 @@
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
+      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
+    
       <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
-    
-      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
     
   </entry>
   
@@ -1877,150 +1967,6 @@
       <category term="开发环境" scheme="http://geekplux.com/tags/%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83/"/>
     
       <category term="Development Environment" scheme="http://geekplux.com/tags/Development-Environment/"/>
-    
-      <category term="Mac" scheme="http://geekplux.com/tags/Mac/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>菜鸟级 Mac 配置（一）</title>
-    <link href="http://geekplux.com/2014/02/26/mac_configuration_1.html"/>
-    <id>http://geekplux.com/2014/02/26/mac_configuration_1.html</id>
-    <published>2014-02-26T13:14:15.000Z</published>
-    <updated>2015-08-04T08:59:37.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>前两天我的神机 MBP 终于到手了，虽然之前我已经见过 N 台 Macbook，但拆开包装的那一刻我还是被它惊艳了。新款比以前更薄了，感觉跟 air 的厚度相差无几（这货好意思叫 pro 么）。哈哈，作为一名第一次使用 Mac 的孩纸，我果然遇到了很多菜鸟级的问题，通过不断的 Google，基本都配置好了，现在来罗列一下。</p>
-<h2 id="基础设置篇"><a href="#基础设置篇" class="headerlink" title="基础设置篇"></a>基础设置篇</h2><ul>
-<li><strong>触控板设置</strong></li>
-</ul>
-<p>体验了两天，MBP 的触控板真心好用，鼠标已被我打入冷宫。所以根据自己的习惯设置好触控板是第一步。我就改了两处：</p>
-<ol>
-<li>轻触改为单击</li>
-<li>把双指滚动方向改为相反（不是自然方向）。如图：</li>
-</ol>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E8%8F%9C%E9%B8%9F%E7%BA%A7Mac%E9%85%8D%E7%BD%AE%5CScreen%20Shot%202014-02-26%20at%204.09.11%20PM.png" alt=""></p>
-<p><br></p>
-<ul>
-<li><strong>Finder设置</strong></li>
-</ul>
-<p>Finder—Preferences，把所有文件后缀名显示出来。（不显示出来木有安全感o(&gt;﹏&lt;)o）</p>
-<a id="more"></a>
-<ul>
-<li><strong>自带词典和发音</strong></li>
-</ul>
-<p>Mac 自带的词典非常好用，默认是<strong>三个手指轻触</strong>触控板就可以自动翻译选中的单词。而且，你可以通过以下的设置，如图：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E8%8F%9C%E9%B8%9F%E7%BA%A7Mac%E9%85%8D%E7%BD%AE%5CScreen%20Shot%202014-02-26%20at%206.50.04%20PM.png" alt=""></p>
-<p>就可以按 Option + Esc 让 Mac 把你选中的单词读出来。</p>
-<p>个人觉得最重要的就是这三个配置了，其它就是换了换快捷键和壁纸……当然我后来把语言换成了<strong>英文版</strong>（这后来引发了一个蛋疼的小问题，下一篇讲）。</p>
-<p>只要你把 Mac 的快捷键记牢（<a href="http://p2.zhimg.com/1e/d6/1ed6509202a411c9ce2387b153540b60_m.jpg" target="_blank" rel="external">参考这张图</a>），就能飞速的使用它了，真的是飞速！</p>
-<h2 id="必备软件篇"><a href="#必备软件篇" class="headerlink" title="必备软件篇"></a>必备软件篇</h2><p>Mac 下安装软件直接把 app 文件拖到 「应用程序」文件夹下就OK了。卸载就直接从该文件夹下删除就行。简单的令人发指……</p>
-<ul>
-<li><strong>神器 Alfred</strong></li>
-</ul>
-<p>当初在 Win 下，我用的是 launchy 用来快速启动软件。Mac 下的 Alfred 就是此类软件的神器。在 App Store 里找到它并安装。从此启动软件再也不需要去 Dock 和 Launchpad 里找了（具体使用的快捷键自己可以设置）。</p>
-<p>但这只是 Alfred 的基本功能，其最厉害之处是可以通过 workflow 扩展，github 上有专门的项目来收集各种牛（wu）逼（liao）人士开发的 workflow <a href="https://github.com/hzlzh/AlfredWorkflow.com" target="_blank" rel="external">项目地址</a>、<a href="http://www.alfredworkflow.com/" target="_blank" rel="external">项目主页</a>。你可以通过 workflow 扩展各种有趣的功能。比如查天气、计算器这种……知乎上也讨论过：<a href="http://www.zhihu.com/question/20656680" target="_blank" rel="external">借助 Alfred 2.0 的 Workflows 功能可以做哪些好玩的事情</a></p>
-<ul>
-<li><strong>F.lux</strong></li>
-</ul>
-<p>这个软件的功能是根据当前的时间来调节<strong>屏幕的色温</strong>，以达到保护双眼的目的。虽然 Mac 明媚的屏幕很吸引人，但是为了我的眼睛，我还是装上了 F.lux，当初 Win 下我也是必装，还是我唯一允许开机启动的软件~~谁用谁知道。</p>
-<ul>
-<li><strong>XtraFinder</strong></li>
-</ul>
-<p>其实我就看中了它的<strong>多标签页</strong>的功能。</p>
-<ul>
-<li>QQ</li>
-</ul>
-<p>这好像不用解释。社交类还有Skype、Line、WeiboX、Twitter都很不错。</p>
-<ul>
-<li>DropBox</li>
-</ul>
-<p>自动后台同步，毫无违和感。</p>
-<p>百度云盘其实也不错，当初还送了3T空间，可以同步些不是太重要但很大的文件。</p>
-<ul>
-<li>Chrome</li>
-</ul>
-<p>其实 Safari 也是极其好用的，但是为了跨平台，Chrome 就成了不二人选。Firefox 应该是多用来作开发用。</p>
-<ul>
-<li>MplayerX</li>
-</ul>
-<p>Mac 平台下比较流行的播放器。</p>
-<ul>
-<li>搜狗输入法</li>
-</ul>
-<p>我觉得搜狗就不错。</p>
-<ul>
-<li>Evernote &amp;&amp; Wiz</li>
-</ul>
-<p>之前一直是用 Wiz 的，主要是因为：</p>
-<ol>
-<li>Wiz 的多级目录不限层数，Evernote 最多三层。</li>
-<li>Wiz 一个月的流量是 180M ，Evernote 是 60M。</li>
-<li>Wiz 的排版比 Evernote 方便（个人认为）。</li>
-</ol>
-<p>Wiz 支持的导入格式有很多，还可以直接导入 Evernote 文件，但是导出就很渣了……把 Wiz 导出 HTML，再导入 Evernote 会出现没有标题等蛋疼现象。而且最关键的是 Wiz 的 Mac 版太丑了！！！所以开始用 Evernote 。</p>
-<ul>
-<li>Mou</li>
-</ul>
-<p>用 Markdown 写作必备，界面简洁好看，赏心悦目。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E8%8F%9C%E9%B8%9F%E7%BA%A7Mac%E9%85%8D%E7%BD%AE%5CScreen%20Shot%202014-02-26%20at%207.39.31%20PM.png" alt=""></p>
-<ul>
-<li>CleanMyMac 2</li>
-</ul>
-<p>清理垃圾</p>
-<ul>
-<li>Pocket</li>
-</ul>
-<p>现在已经离不开它了，想看的文章随手往里一丢。手机那边会自动下载好。地铁上或其他闲着没事的时候就可以拿出来看，阅读体验非常好。</p>
-<ul>
-<li>迅雷</li>
-</ul>
-<p>这还用解释吗？</p>
-<ul>
-<li>Wunderlist</li>
-</ul>
-<p>TO DO 应用，适合比较忙的人使用。多平台，界面太赞！</p>
-<ul>
-<li>其他优秀App</li>
-</ul>
-<p>可以去这个<a href="https://github.com/hzlzh/Best-App" target="_blank" rel="external">项目主页</a>看看。</p>
-<h2 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h2><p>通过我这两天感受下来，我觉得<strong>跨平台</strong>已成了我选择软件最重要的标准，毕竟现在终端种类太多了。而对于 Mac ，我觉得它最迷人的一点是它简单，什么都简单，风格简单，操作简单。简单就容易专注，最大化窗口后，能让你专注于眼前的工作，而不像 Win 不停的有干扰源出现。你还可以设置几个不同的桌面，一个桌面专门用来娱乐，放QQ、微博等的窗口，另一个桌面专门用来创作型任务。</p>
-<p>最后，以文章<a href="http://www.yangzhiping.com/psy/mac.html" target="_blank" rel="external">如何提高创作型任务的效率？（MAC版）</a>中的一段来说明 Mac 和 Win 的差异吧：</p>
-<blockquote>
-<p>因为心理学家诺曼的贡献与苹果在工业设计上的传统优势，Mac与Windows的最大不同是注意力。MACOSX以简洁的设计取胜，甚至强迫用户将注意力聚焦在当前工作之上。Windows系列操作系统设计，相对而言，缺少一个统一并且强硬执行下去的注意力法则。在Windows上，你可以看到大量分散你的注意力的软件设计，同时，在Windows上，格外泛滥你可能只需要20%功能，但是不得不受到其他80%的功能设计带来的诸如升级、数据维护等复杂操作的干扰。苹果公司作为一种与众不同的硅谷精神的“传销”头头，很好地维持了整个MAC生态链对用户注意力的关注，微软在这方面，则逊色较多，在Office系列中的全屏模式，往往你是阅读者而非创作者。</p>
-</blockquote>
-<p>下一篇主要讲一下我的开发环境配置……</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;前两天我的神机 MBP 终于到手了，虽然之前我已经见过 N 台 Macbook，但拆开包装的那一刻我还是被它惊艳了。新款比以前更薄了，感觉跟 air 的厚度相差无几（这货好意思叫 pro 么）。哈哈，作为一名第一次使用 Mac 的孩纸，我果然遇到了很多菜鸟级的问题，通过不断的 Google，基本都配置好了，现在来罗列一下。&lt;/p&gt;
-&lt;h2 id=&quot;基础设置篇&quot;&gt;&lt;a href=&quot;#基础设置篇&quot; class=&quot;headerlink&quot; title=&quot;基础设置篇&quot;&gt;&lt;/a&gt;基础设置篇&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;触控板设置&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;体验了两天，MBP 的触控板真心好用，鼠标已被我打入冷宫。所以根据自己的习惯设置好触控板是第一步。我就改了两处：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;轻触改为单击&lt;/li&gt;
-&lt;li&gt;把双指滚动方向改为相反（不是自然方向）。如图：&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;img src=&quot;http://7b1evr.com1.z0.glb.clouddn.com/illustration%5C%E8%8F%9C%E9%B8%9F%E7%BA%A7Mac%E9%85%8D%E7%BD%AE%5CScreen%20Shot%202014-02-26%20at%204.09.11%20PM.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;&lt;/br&gt;&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;strong&gt;Finder设置&lt;/strong&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;Finder—Preferences，把所有文件后缀名显示出来。（不显示出来木有安全感o(&amp;gt;﹏&amp;lt;)o）&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
-    
-      <category term="Mac" scheme="http://geekplux.com/categories/Tool/Mac/"/>
-    
-    
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
-    
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="Mac" scheme="http://geekplux.com/tags/Mac/"/>
     
