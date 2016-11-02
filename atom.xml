@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2016-11-02T10:24:28.000Z</updated>
+  <updated>2016-11-02T14:40:20.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html"/>
     <id>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</id>
     <published>2016-11-02T08:16:16.000Z</published>
-    <updated>2016-11-02T10:24:28.000Z</updated>
+    <updated>2016-11-02T14:40:20.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>在 InfoVis 2016 上，<a href="http://idl.cs.washington.edu/" target="_blank" rel="external">UW 交互数据实验室</a> 提出了一种新的交互数据可视化语法——Vega-Litte，获得了今年的 best paper，本文将根据其论文从多个角度介绍 Vega-Lite。<a href="http://idl.cs.washington.edu/papers/vega-lite/" target="_blank" rel="external">论文地址</a></p>
+<p>在 InfoVis 2016 上，<a href="http://idl.cs.washington.edu/" target="_blank" rel="external">UW 交互数据实验室</a> 提出了一种新的交互数据可视化语法——Vega-Lite，获得了今年的 best paper，本文将根据其论文从多个角度介绍 Vega-Lite。<a href="http://idl.cs.washington.edu/papers/vega-lite/" target="_blank" rel="external">论文地址</a></p>
 </blockquote>
 <h2 id="什么是-Vega-Lite？"><a href="#什么是-Vega-Lite？" class="headerlink" title="什么是 Vega-Lite？"></a>什么是 Vega-Lite？</h2><p>简而言之，<a href="https://vega.github.io/vega-lite/" target="_blank" rel="external">Vega-Lite</a> 是一种数据可视化的高级语法，能够快速定义一些基本的交互式数据可视化。</p>
 <p>如果你听说过 <a href="https://vega.github.io/vega/" target="_blank" rel="external">Vega</a>，那么光看 Vega-Lite 的名字就不难想到它们的关系。Vega-Lite 就是编译成 Vega 的更高级图形语法。</p>
@@ -446,13 +446,13 @@ vconcat([view1, view2, ...], resolve)
       <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
     
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
-    
       <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
     
       <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
     
   </entry>
   
