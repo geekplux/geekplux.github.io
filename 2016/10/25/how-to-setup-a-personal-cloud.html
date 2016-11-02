@@ -18,7 +18,7 @@
 前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，还面对严苛的内容审查和隐私保护，虽然于用户来说提供了便利，但于公司来说实在是一件出力不讨好的事情。
 之前的网盘方案国外的网盘我一直是三家一起用">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/docker-owncloud-1.png">
-<meta property="og:updated_time" content="2016-10-25T17:14:48.000Z">
+<meta property="og:updated_time" content="2016-11-02T10:17:59.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何搭建一个私人网盘">
 <meta name="twitter:description" content="文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。
@@ -99,7 +99,7 @@
 <li>配置完毕，启动，打开 ownCloud 主界面配置数据库、管理员等</li>
 </ol>
 <blockquote>
-<p>下面是对上面三步的详细讲解，嫌太长的话可以不看。只需要把下面用到的两个 docker images （owncloud、postgres）下载好，安装 docker-compose 并拷贝 docker-compose.yml 文件到你想要存储 ownCloud 数据的文件夹，然后运行 <code>docker-compose up</code> 就好，一气呵成。</p>
+<p><strong>下面是对上面三步的详细讲解，嫌太长的话可以不看。只需要把下面用到的两个 docker images （owncloud、postgres）下载好，安装 docker-compose 并拷贝 docker-compose.yml 文件到你想要存储 ownCloud 数据的文件夹，然后运行 <code>docker-compose up</code> 就好，一气呵成。</strong></p>
 </blockquote>
 <h3 id="使用-docker"><a href="#使用-docker" class="headerlink" title="使用 docker"></a>使用 docker</h3><p>安装好 docker 之后，直接下载 <code>owncloud</code> image 运行</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">docker run --name owncloud -p 80:80 owncloud</div></pre></td></tr></table></figure>
@@ -133,6 +133,8 @@
 <li><a href="http://blog.securem.eu/serverside/2015/08/25/setting-up-owncloud-server-in-a-docker-container/" target="_blank" rel="external">Setting up an ownCloud Server in a Docker container using Docker Compose</a></li>
 <li><a href="https://github.com/vector090/vector090.github.io/wiki/%E4%BD%BF%E7%94%A8%E5%92%8C%E6%90%AD%E5%BB%BAownCloud%E7%A7%81%E6%9C%89%E4%BA%91%E8%A6%81%E7%82%B9" target="_blank" rel="external">使用和搭建ownCloud私有云要点</a></li>
 </ul>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
 
       
     </div>
@@ -173,7 +175,14 @@
     
 <nav id="article-nav" class="article-nav">
   
-    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+    <a href="/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          Vega-Lite: A Grammar of Interactive Graphics
+        
+      </div>
+    </a>
   
   
     <a href="/2016/05/31/how-to-read-a-research-paper.html" id="article-nav-older" class="article-nav-link-wrap older">

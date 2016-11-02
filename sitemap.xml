@@ -2,9 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
+    
+    <lastmod>2016-11-02T10:24:28.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
+    
+    <lastmod>2016-11-02T10:20:26.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
+    
+    <lastmod>2016-11-02T10:20:06.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
+    
+    <lastmod>2016-11-02T10:19:45.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
+    
+    <lastmod>2016-11-02T10:18:05.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</loc>
     
-    <lastmod>2016-10-25T17:14:48.000Z</lastmod>
+    <lastmod>2016-11-02T10:17:59.000Z</lastmod>
     
   </url>
   
@@ -12,20 +47,6 @@
     <loc>http://geekplux.com/about/index.html</loc>
     
     <lastmod>2016-09-05T06:00:43.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
-    
-    <lastmod>2016-09-05T06:00:16.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
-    
-    <lastmod>2016-07-29T17:52:25.000Z</lastmod>
     
   </url>
   
@@ -65,13 +86,6 @@
   </url>
   
   <url>
-    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
-    
-    <lastmod>2016-02-04T17:15:40.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://geekplux.com/2015/12/08/learning-by-index.html</loc>
     
     <lastmod>2016-02-03T07:52:45.000Z</lastmod>
@@ -82,13 +96,6 @@
     <loc>http://geekplux.com/2013/07/26/change_wechat_push_mode.html</loc>
     
     <lastmod>2015-11-11T10:40:41.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
-    
-    <lastmod>2015-09-24T11:40:28.000Z</lastmod>
     
   </url>
   

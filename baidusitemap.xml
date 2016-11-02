@@ -4,8 +4,147 @@
 
     
   <url>
+    <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
+    <lastmod>2016-11-02T10:24:28.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vega-Lite: A Grammar of Interactive Graphics</title>
+        <pubTime>2016-11-02T08:16:16.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>Research</tag>
+         
+        <tag>Visualization</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>交互</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>Graphics</tag>
+         
+        <tag>Vega</tag>
+         
+        <tag>Vega-Lite</tag>
+         
+         
+           
+             
+              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
+          
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Research/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
+    <lastmod>2016-11-02T10:20:26.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何管理好自己的密码</title>
+        <pubTime>2015-09-24T09:08:59.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
+    <lastmod>2016-11-02T10:20:06.000Z</lastmod>
+    <data>
+        <display>
+        <title>为什么文章写得好的人都很厉害</title>
+        <pubTime>2015-10-27T14:22:22.000Z</pubTime>
+        
+        <tag>感想</tag>
+         
+        <tag>Writing</tag>
+         
+        <tag>写文章</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
+    <lastmod>2016-11-02T10:19:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>为什么我喜欢写代码</title>
+        <pubTime>2015-11-13T15:04:22.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+        <tag>感想</tag>
+         
+        <tag>情感</tag>
+         
+        <tag>代码</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
+    <lastmod>2016-11-02T10:18:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何阅读一篇学术论文</title>
+        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
+        
+        <tag>Research</tag>
+         
+        <tag>方法论</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</loc>
-    <lastmod>2016-10-25T17:14:48.000Z</lastmod>
+    <lastmod>2016-11-02T10:17:59.000Z</lastmod>
     <data>
         <display>
         <title>如何搭建一个私人网盘</title>
@@ -33,58 +172,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
-    <lastmod>2016-09-05T06:00:16.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么我喜欢写代码</title>
-        <pubTime>2015-11-13T15:04:22.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-        <tag>感想</tag>
-         
-        <tag>情感</tag>
-         
-        <tag>代码</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
-    <lastmod>2016-07-29T17:52:25.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何阅读一篇学术论文</title>
-        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
-        
-        <tag>Research</tag>
-         
-        <tag>方法论</tag>
-         
-        <tag>学习</tag>
-         
-        <tag>Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
@@ -151,13 +238,13 @@
         <title>毕业后的两年</title>
         <pubTime>2016-02-15T15:03:27.000Z</pubTime>
         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
         <tag>生活</tag>
          
         <tag>Life</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
          
          
            
@@ -177,42 +264,18 @@
         <title>Goodbye，我的大学</title>
         <pubTime>2014-02-02T12:22:22.000Z</pubTime>
         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
         <tag>生活</tag>
          
         <tag>Life</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
          
          
            
              
               <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
-    <lastmod>2016-02-04T17:15:40.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么文章写得好的人都很厉害</title>
-        <pubTime>2015-10-27T14:22:22.000Z</pubTime>
-        
-        <tag>感想</tag>
-         
-        <tag>Writing</tag>
-         
-        <tag>写文章</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
           
         </display>
     </data>
@@ -261,30 +324,6 @@
            
              
               <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
-    <lastmod>2015-09-24T11:40:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何管理好自己的密码</title>
-        <pubTime>2015-09-24T09:08:59.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
           
         </display>
     </data>
@@ -487,13 +526,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          
