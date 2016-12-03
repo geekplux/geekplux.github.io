@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
+    
+    <lastmod>2016-12-03T10:22:31.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
+    
+    <lastmod>2016-12-03T10:13:21.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
     
     <lastmod>2016-11-02T14:40:20.000Z</lastmod>
@@ -208,13 +222,6 @@
     <loc>http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</loc>
     
     <lastmod>2015-07-04T13:52:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
-    
-    <lastmod>2015-06-06T12:59:55.000Z</lastmod>
     
   </url>
   

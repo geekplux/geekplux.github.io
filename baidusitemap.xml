@@ -4,6 +4,62 @@
 
     
   <url>
+    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
+    <lastmod>2016-12-03T10:22:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>为什么要用 Emacs ？</title>
+        <pubTime>2016-12-03T07:22:17.000Z</pubTime>
+        
+        <tag>工具</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
+    <lastmod>2016-12-03T10:13:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vim - 适合自己的，才是最好的</title>
+        <pubTime>2015-06-06T12:28:21.000Z</pubTime>
+        
+        <tag>工具</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
     <lastmod>2016-11-02T14:40:20.000Z</lastmod>
     <data>
@@ -11,9 +67,9 @@
         <title>Vega-Lite: A Grammar of Interactive Graphics</title>
         <pubTime>2016-11-02T08:16:16.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
         <tag>Research</tag>
+         
+        <tag>Tool</tag>
          
         <tag>Visualization</tag>
          
@@ -50,11 +106,11 @@
         <title>如何管理好自己的密码</title>
         <pubTime>2015-09-24T09:08:59.000Z</pubTime>
         
-        <tag>Tool</tag>
+        <tag>生活</tag>
          
         <tag>工具</tag>
          
-        <tag>生活</tag>
+        <tag>Tool</tag>
          
          
            
@@ -150,9 +206,9 @@
         <title>如何搭建一个私人网盘</title>
         <pubTime>2016-10-25T14:13:11.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
         <tag>工具</tag>
+         
+        <tag>Tool</tag>
          
         <tag>ownCloud</tag>
          
@@ -210,8 +266,6 @@
         <title>写文章的小技巧</title>
         <pubTime>2015-10-28T10:24:11.000Z</pubTime>
         
-        <tag>Blog</tag>
-         
         <tag>Thought</tag>
          
         <tag>Skill</tag>
@@ -219,6 +273,8 @@
         <tag>Writing</tag>
          
         <tag>写文章</tag>
+         
+        <tag>Blog</tag>
          
          
            
@@ -338,15 +394,15 @@
         <title>写博客就用FarBox</title>
         <pubTime>2013-08-08T07:12:11.000Z</pubTime>
         
-        <tag>Discovery</tag>
-         
-        <tag>FarBox</tag>
+        <tag>工具</tag>
          
         <tag>Tool</tag>
          
         <tag>Blog</tag>
          
-        <tag>工具</tag>
+        <tag>Discovery</tag>
+         
+        <tag>FarBox</tag>
          
         <tag>博客</tag>
          
@@ -526,13 +582,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Tool</tag>
          
         <tag>Mac</tag>
          
@@ -557,9 +613,9 @@
         <title>菜鸟级 Mac 配置（一）</title>
         <pubTime>2014-02-26T13:14:15.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
         <tag>工具</tag>
+         
+        <tag>Tool</tag>
          
         <tag>Mac</tag>
          
@@ -617,13 +673,13 @@
         <title>如何新建一个Cocos2d-x项目</title>
         <pubTime>2013-10-17T08:43:30.000Z</pubTime>
         
-        <tag>Cocos2d-x</tag>
-         
-        <tag>游戏开发</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Cocos2d-x</tag>
+         
+        <tag>游戏开发</tag>
          
         <tag>Game Development</tag>
          
@@ -676,11 +732,11 @@
         
         <tag>Web</tag>
          
+        <tag>CoffeeScript</tag>
+         
         <tag>笔记</tag>
          
         <tag>Note</tag>
-         
-        <tag>CoffeeScript</tag>
          
          
            
@@ -703,15 +759,15 @@
         <title>Windows8.1下Cocos2d-x环境搭建</title>
         <pubTime>2013-10-16T09:54:30.000Z</pubTime>
         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
         <tag>Cocos2d-x</tag>
          
         <tag>开发环境</tag>
          
         <tag>游戏开发</tag>
-         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
          
         <tag>Game Development</tag>
          
@@ -735,19 +791,19 @@
         <title>如何绑定独立域名</title>
         <pubTime>2013-08-10T10:18:11.000Z</pubTime>
         
-        <tag>Discovery</tag>
-         
-        <tag>FarBox</tag>
+        <tag>工具</tag>
          
         <tag>Tool</tag>
          
         <tag>Blog</tag>
          
-        <tag>Domain</tag>
+        <tag>Discovery</tag>
          
-        <tag>工具</tag>
+        <tag>FarBox</tag>
          
         <tag>博客</tag>
+         
+        <tag>Domain</tag>
          
         <tag>域名</tag>
          
@@ -772,11 +828,11 @@
         <title>Android开发如何入门</title>
         <pubTime>2013-09-02T08:34:30.000Z</pubTime>
         
+        <tag>Android</tag>
+         
         <tag>Guide</tag>
          
         <tag>入门</tag>
-         
-        <tag>Android</tag>
          
         <tag>Development</tag>
          
@@ -810,32 +866,6 @@
            
              
               <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
-    <lastmod>2015-06-06T12:59:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vim - 适合自己的，才是最好的</title>
-        <pubTime>2015-06-06T12:28:21.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>Vim</tag>
-         
-        <tag>IDE</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
           
         </display>
     </data>
@@ -1074,13 +1104,13 @@
         <title>双拼学习记</title>
         <pubTime>2014-07-06T14:59:29.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>新技能</tag>
          
         <tag>Skill</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Tool</tag>
          
          
            
