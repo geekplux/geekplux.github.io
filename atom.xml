@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2016-12-03T10:22:31.000Z</updated>
+  <updated>2016-12-03T10:29:14.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -16,11 +16,11 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>为什么要用 Emacs ？</title>
+    <title>为什么要用 Emacs</title>
     <link href="http://geekplux.com/2016/12/03/why-use-emacs.html"/>
     <id>http://geekplux.com/2016/12/03/why-use-emacs.html</id>
     <published>2016-12-03T07:22:17.000Z</published>
-    <updated>2016-12-03T10:22:31.000Z</updated>
+    <updated>2016-12-03T10:29:14.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文仅从作者个人感受上谈一下自己使用 Emacs 的理由和感受，通篇无干货。</p>
@@ -65,13 +65,13 @@
       <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
     
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
-      <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
+    
+      <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
     
       <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
     
@@ -82,12 +82,12 @@
     <link href="http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html"/>
     <id>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</id>
     <published>2016-11-02T08:16:16.000Z</published>
-    <updated>2016-11-02T14:40:20.000Z</updated>
+    <updated>2016-12-03T10:29:32.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>在 InfoVis 2016 上，<a href="http://idl.cs.washington.edu/" target="_blank" rel="external">UW 交互数据实验室</a> 提出了一种新的交互数据可视化语法——Vega-Lite，获得了今年的 best paper，本文将根据其论文从多个角度介绍 Vega-Lite。<a href="http://idl.cs.washington.edu/papers/vega-lite/" target="_blank" rel="external">论文地址</a></p>
 </blockquote>
-<h2 id="什么是-Vega-Lite？"><a href="#什么是-Vega-Lite？" class="headerlink" title="什么是 Vega-Lite？"></a>什么是 Vega-Lite？</h2><p>简而言之，<a href="https://vega.github.io/vega-lite/" target="_blank" rel="external">Vega-Lite</a> 是一种数据可视化的高级语法，能够快速定义一些基本的交互式数据可视化。</p>
+<h2 id="什么是-Vega-Lite"><a href="#什么是-Vega-Lite" class="headerlink" title="什么是 Vega-Lite"></a>什么是 Vega-Lite</h2><p>简而言之，<a href="https://vega.github.io/vega-lite/" target="_blank" rel="external">Vega-Lite</a> 是一种数据可视化的高级语法，能够快速定义一些基本的交互式数据可视化。</p>
 <p>如果你听说过 <a href="https://vega.github.io/vega/" target="_blank" rel="external">Vega</a>，那么光看 Vega-Lite 的名字就不难想到它们的关系。Vega-Lite 就是编译成 Vega 的更高级图形语法。</p>
 <p>如下图所示，只要右边寥寥数行代码，就能定义一个散点图：</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/sctterplot1.png" alt=""></p>
@@ -209,9 +209,9 @@ vconcat([view1, view2, ...], resolve)
       <category term="Visualization" scheme="http://geekplux.com/categories/Research/Visualization/"/>
     
     
-      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
-    
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
     
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
@@ -307,9 +307,9 @@ vconcat([view1, view2, ...], resolve)
       <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
     
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="ownCloud" scheme="http://geekplux.com/tags/ownCloud/"/>
     
@@ -663,6 +663,8 @@ vconcat([view1, view2, ...], resolve)
       <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
     
+      <category term="Blog" scheme="http://geekplux.com/tags/Blog/"/>
+    
       <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
       <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
@@ -670,8 +672,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
     
       <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
-    
-      <category term="Blog" scheme="http://geekplux.com/tags/Blog/"/>
     
   </entry>
   
@@ -780,11 +780,11 @@ vconcat([view1, view2, ...], resolve)
       <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
     
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -939,13 +939,13 @@ vconcat([view1, view2, ...], resolve)
       <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
     
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
-      <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
+    
+      <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
     
       <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
     
@@ -1192,13 +1192,13 @@ vconcat([view1, view2, ...], resolve)
       <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
     
     
-      <category term="新技能" scheme="http://geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
-    
-      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+      <category term="新技能" scheme="http://geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
+    
+      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
   </entry>
   
@@ -1627,11 +1627,11 @@ vconcat([view1, view2, ...], resolve)
     
       <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
-    
       <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
     
   </entry>
   

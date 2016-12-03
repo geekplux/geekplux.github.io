@@ -4,72 +4,16 @@
 
     
   <url>
-    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
-    <lastmod>2016-12-03T10:22:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么要用 Emacs ？</title>
-        <pubTime>2016-12-03T07:22:17.000Z</pubTime>
-        
-        <tag>工具</tag>
-         
-        <tag>Tool</tag>
-         
-        <tag>Emacs</tag>
-         
-        <tag>Vim</tag>
-         
-        <tag>IDE</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
-    <lastmod>2016-12-03T10:13:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vim - 适合自己的，才是最好的</title>
-        <pubTime>2015-06-06T12:28:21.000Z</pubTime>
-        
-        <tag>工具</tag>
-         
-        <tag>Tool</tag>
-         
-        <tag>Emacs</tag>
-         
-        <tag>Vim</tag>
-         
-        <tag>IDE</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
-    <lastmod>2016-11-02T14:40:20.000Z</lastmod>
+    <lastmod>2016-12-03T10:29:32.000Z</lastmod>
     <data>
         <display>
         <title>Vega-Lite: A Grammar of Interactive Graphics</title>
         <pubTime>2016-11-02T08:16:16.000Z</pubTime>
         
-        <tag>Research</tag>
-         
         <tag>Tool</tag>
+         
+        <tag>Research</tag>
          
         <tag>Visualization</tag>
          
@@ -99,6 +43,62 @@
 
     
   <url>
+    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
+    <lastmod>2016-12-03T10:29:14.000Z</lastmod>
+    <data>
+        <display>
+        <title>为什么要用 Emacs</title>
+        <pubTime>2016-12-03T07:22:17.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>Emacs</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
+    <lastmod>2016-12-03T10:13:21.000Z</lastmod>
+    <data>
+        <display>
+        <title>Vim - 适合自己的，才是最好的</title>
+        <pubTime>2015-06-06T12:28:21.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>Emacs</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
     <lastmod>2016-11-02T10:20:26.000Z</lastmod>
     <data>
@@ -106,11 +106,11 @@
         <title>如何管理好自己的密码</title>
         <pubTime>2015-09-24T09:08:59.000Z</pubTime>
         
-        <tag>生活</tag>
+        <tag>Tool</tag>
          
         <tag>工具</tag>
          
-        <tag>Tool</tag>
+        <tag>生活</tag>
          
          
            
@@ -206,9 +206,9 @@
         <title>如何搭建一个私人网盘</title>
         <pubTime>2016-10-25T14:13:11.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>ownCloud</tag>
          
@@ -266,6 +266,8 @@
         <title>写文章的小技巧</title>
         <pubTime>2015-10-28T10:24:11.000Z</pubTime>
         
+        <tag>Blog</tag>
+         
         <tag>Thought</tag>
          
         <tag>Skill</tag>
@@ -273,8 +275,6 @@
         <tag>Writing</tag>
          
         <tag>写文章</tag>
-         
-        <tag>Blog</tag>
          
          
            
@@ -394,15 +394,15 @@
         <title>写博客就用FarBox</title>
         <pubTime>2013-08-08T07:12:11.000Z</pubTime>
         
-        <tag>工具</tag>
+        <tag>Discovery</tag>
+         
+        <tag>FarBox</tag>
          
         <tag>Tool</tag>
          
         <tag>Blog</tag>
          
-        <tag>Discovery</tag>
-         
-        <tag>FarBox</tag>
+        <tag>工具</tag>
          
         <tag>博客</tag>
          
@@ -582,13 +582,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>开发环境</tag>
-         
-        <tag>Development Environment</tag>
+        <tag>Tool</tag>
          
         <tag>工具</tag>
          
-        <tag>Tool</tag>
+        <tag>开发环境</tag>
+         
+        <tag>Development Environment</tag>
          
         <tag>Mac</tag>
          
@@ -613,9 +613,9 @@
         <title>菜鸟级 Mac 配置（一）</title>
         <pubTime>2014-02-26T13:14:15.000Z</pubTime>
         
-        <tag>工具</tag>
-         
         <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          
@@ -732,11 +732,11 @@
         
         <tag>Web</tag>
          
-        <tag>CoffeeScript</tag>
-         
         <tag>笔记</tag>
          
         <tag>Note</tag>
+         
+        <tag>CoffeeScript</tag>
          
          
            
@@ -791,19 +791,19 @@
         <title>如何绑定独立域名</title>
         <pubTime>2013-08-10T10:18:11.000Z</pubTime>
         
-        <tag>工具</tag>
+        <tag>Discovery</tag>
+         
+        <tag>FarBox</tag>
          
         <tag>Tool</tag>
          
         <tag>Blog</tag>
          
-        <tag>Discovery</tag>
+        <tag>Domain</tag>
          
-        <tag>FarBox</tag>
+        <tag>工具</tag>
          
         <tag>博客</tag>
-         
-        <tag>Domain</tag>
          
         <tag>域名</tag>
          
@@ -1104,13 +1104,13 @@
         <title>双拼学习记</title>
         <pubTime>2014-07-06T14:59:29.000Z</pubTime>
         
-        <tag>新技能</tag>
-         
-        <tag>Skill</tag>
+        <tag>Tool</tag>
          
         <tag>工具</tag>
          
-        <tag>Tool</tag>
+        <tag>新技能</tag>
+         
+        <tag>Skill</tag>
          
          
            
