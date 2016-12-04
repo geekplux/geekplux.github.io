@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://geekplux.com/about/index.html</loc>
+    
+    <lastmod>2016-12-04T07:29:42.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
     
     <lastmod>2016-12-04T07:25:55.000Z</lastmod>
@@ -54,13 +61,6 @@
     <loc>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</loc>
     
     <lastmod>2016-11-02T10:17:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/about/index.html</loc>
-    
-    <lastmod>2016-09-05T06:00:43.000Z</lastmod>
     
   </url>
   

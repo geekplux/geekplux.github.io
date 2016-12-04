@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
     <lastmod>2016-12-04T07:25:55.000Z</lastmod>
@@ -15,9 +16,9 @@
          
         <tag>工具</tag>
          
-        <tag>Emacs</tag>
-         
         <tag>Vim</tag>
+         
+        <tag>Emacs</tag>
          
         <tag>IDE</tag>
          
@@ -82,9 +83,9 @@
          
         <tag>工具</tag>
          
-        <tag>Emacs</tag>
-         
         <tag>Vim</tag>
+         
+        <tag>Emacs</tag>
          
         <tag>IDE</tag>
          
@@ -227,7 +228,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
@@ -582,13 +582,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>开发环境</tag>
-         
-        <tag>Development Environment</tag>
-         
         <tag>Tool</tag>
          
         <tag>工具</tag>
+         
+        <tag>开发环境</tag>
+         
+        <tag>Development Environment</tag>
          
         <tag>Mac</tag>
          
@@ -732,11 +732,11 @@
         
         <tag>Web</tag>
          
+        <tag>CoffeeScript</tag>
+         
         <tag>笔记</tag>
          
         <tag>Note</tag>
-         
-        <tag>CoffeeScript</tag>
          
          
            
