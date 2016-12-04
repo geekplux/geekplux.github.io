@@ -4,6 +4,34 @@
 
     
   <url>
+    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
+    <lastmod>2016-12-04T07:25:55.000Z</lastmod>
+    <data>
+        <display>
+        <title>为什么要用 Emacs</title>
+        <pubTime>2016-12-03T07:22:17.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
     <lastmod>2016-12-03T10:29:32.000Z</lastmod>
     <data>
@@ -43,34 +71,6 @@
 
     
   <url>
-    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
-    <lastmod>2016-12-03T10:29:14.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么要用 Emacs</title>
-        <pubTime>2016-12-03T07:22:17.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>Vim</tag>
-         
-        <tag>Emacs</tag>
-         
-        <tag>IDE</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
     <lastmod>2016-12-03T10:13:21.000Z</lastmod>
     <data>
@@ -82,9 +82,9 @@
          
         <tag>工具</tag>
          
-        <tag>Vim</tag>
-         
         <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
          
         <tag>IDE</tag>
          
@@ -582,13 +582,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          

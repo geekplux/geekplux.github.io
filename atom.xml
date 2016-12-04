@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2016-12-03T10:29:14.000Z</updated>
+  <updated>2016-12-04T07:25:55.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://geekplux.com/2016/12/03/why-use-emacs.html"/>
     <id>http://geekplux.com/2016/12/03/why-use-emacs.html</id>
     <published>2016-12-03T07:22:17.000Z</published>
-    <updated>2016-12-03T10:29:14.000Z</updated>
+    <updated>2016-12-04T07:25:55.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文仅从作者个人感受上谈一下自己使用 Emacs 的理由和感受，通篇无干货。</p>
@@ -38,7 +38,7 @@
 <p>除了以上两点，还有一个最关键的好处是：认识了很多牛人。不得不说，<strong>Emacs 的高门槛和小众，决定了其使用者的质量</strong>。很多 Emacs 道友来自非计算机行业，有的学化学，有的做木工，非常有趣。而且大家都特别有钻研精神，这可能也是所有 Emacs 玩家的共同点。</p>
 <h2 id="我是如何中了-Emacs-的毒"><a href="#我是如何中了-Emacs-的毒" class="headerlink" title="我是如何中了 Emacs 的毒"></a>我是如何中了 Emacs 的毒</h2><p>其实最早听说 Emacs 是在本科的时候。下载下来拨弄一番后发现难点在于记忆快捷键，实现一个自己想要的操作可能需要按一系列按键，有点像<strong>记忆菜单栏快捷键</strong>的感觉（<em>现在不这么认为了，现在完成一个操作我可能都是直接调用 Emacs 的函数，因为 Emacs 中任何一个操作其实都是一个函数</em>）。每一个快捷键组合打开一个「子菜单」，最终要实现的操作有可能在三级子菜单中，所以感觉相当繁琐。后来每每雄心壮志重新开始学习，都会被记忆快捷键这个拦路虎挡住。</p>
 <p>当然，学习 Vim 也如此。在不知道多少次折腾后，我还是先掌握了 Vim，学习历程和方式参见这篇 <a href="http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html">Vim - 适合自己的，才是最好的</a>。Vim 的哲学和 Emacs 不同，它把输入分成 <strong>纯输入</strong> 和 <strong>操作</strong> 两种模式（个人理解）。纯输入就是单纯的输入字符，需要换行、移动光标、复制粘贴时则需要「操作」。我觉得这种很符合大脑的思考方式，输入时单纯想着内容就好，需要「整理」内容时再操作。</p>
-<p>但是我想用 Emacs 之心不死，当时主要因为 Org-Mode 对我的吸引力很大。在听说 Emacs 有 evil 之后，果断转了过去，瞬间觉得学习曲线变得顺滑了。再之后发现了颜值颇高的 Spacemacs14，于是更加爱不释手。Spacemacs 的文档非常详尽，还提供了如何从 Vim 迁移的方案，对我这种菜鸟真的是非常友好。</p>
+<p>但是我想用 Emacs 之心不死，当时主要因为 Org-Mode 对我的吸引力很大。在听说 Emacs 有 evil 之后，果断转了过去，瞬间觉得学习曲线变得顺滑了。再之后发现了颜值颇高的 Spacemacs，于是更加爱不释手。Spacemacs 的文档非常详尽，还提供了如何从 Vim 迁移的方案，对我这种菜鸟真的是非常友好。</p>
 <p>从此，便算是入了坑，之后的填坑之路也是漫长，比如如何配置，如何使用 Org-Mode，如何寻找适合自己的最佳实践，每部分都能长篇大论一番。</p>
 <p>如果你有兴趣，还可以去 <a href="https://emacs-china.org/t/emacs-joy/80" target="_blank" rel="external">来聊聊大家是怎么入 Emacs 这个大坑的吧</a> 看看其他人入坑的经历。</p>
 <h3 id="关于-Emacs-的学习曲线"><a href="#关于-Emacs-的学习曲线" class="headerlink" title="关于 Emacs 的学习曲线"></a>关于 Emacs 的学习曲线</h3><p>有的人推崇从最原生的 Emacs 学起，自己一步步配置，有的人推崇直接用社区大牛写好的配置，我显然是后者。<a href="https://github.com/syl20bnr/spacemacs/" target="_blank" rel="external">Spacemacs</a> 就是一款对新手和 Vim 党非常友好的配置，而且文档写的<strong>特别详细</strong>，只要你<strong>耐心</strong>读，绝对是可以从容掌握它的，实在遇到困难可以在社区<strong>正确</strong>提问，只要你问题不是很让人反感，都会有很多大牛热心帮你（<em>这里我不禁要说一句，如果你是伸手党，那么 Emacs 是真的不适合你</em>）。</p>
@@ -69,9 +69,9 @@
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
-    
       <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
+    
+      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
     
       <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
     
@@ -943,9 +943,9 @@ vconcat([view1, view2, ...], resolve)
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
-    
       <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
+    
+      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
     
       <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
     
