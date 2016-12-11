@@ -402,13 +402,13 @@ vconcat([view1, view2, ...], resolve)
       <category term="Research" scheme="http://geekplux.com/categories/Research/"/>
     
     
-      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
-    
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
       <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
     
   </entry>
   
@@ -555,11 +555,11 @@ vconcat([view1, view2, ...], resolve)
       <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
     
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
       <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
@@ -1135,11 +1135,11 @@ vconcat([view1, view2, ...], resolve)
     
       <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
     
-      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
-    
       <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
       <category term="思考" scheme="http://geekplux.com/tags/%E6%80%9D%E8%80%83/"/>
+    
+      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   
@@ -1627,11 +1627,11 @@ vconcat([view1, view2, ...], resolve)
     
       <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
-      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
-    
       <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
     
   </entry>
   
