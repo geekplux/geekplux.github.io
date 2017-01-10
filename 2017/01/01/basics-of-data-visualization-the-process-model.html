@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>数据可视化基础——可视化流程 | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第一篇，主要介绍可视化流程，另两篇则主讲数据模型和视觉编码。原文地址：http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html
+
+很多人认为数据可视化非常简单，无非是输入几组数据，生成简单的条形图、直线图">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据可视化基础——可视化流程">
+<meta property="og:url" content="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第一篇，主要介绍可视化流程，另两篇则主讲数据模型和视觉编码。原文地址：http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html
+
+很多人认为数据可视化非常简单，无非是输入几组数据，生成简单的条形图、直线图">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/Screen%20Shot%202017-01-01%20at%2018.04.55.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/conceptual-model.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/nested-model.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-1.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-2.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/best-process-model.png">
+<meta property="og:updated_time" content="2017-01-10T03:12:44.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据可视化基础——可视化流程">
+<meta name="twitter:description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第一篇，主要介绍可视化流程，另两篇则主讲数据模型和视觉编码。原文地址：http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html
+
+很多人认为数据可视化非常简单，无非是输入几组数据，生成简单的条形图、直线图">
+<meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/Screen%20Shot%202017-01-01%20at%2018.04.55.png">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    <body>
+  
+      <div id="container" class="container">
+        <article id="post-basics-of-data-visualization-the-process-model" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/wiki">Wiki</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/gab">扯淡集</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据可视化基础——可视化流程
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <blockquote>
+<p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第一篇，主要介绍<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>和<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>。<br>原文地址：<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</a></p>
+</blockquote>
+<p>很多人认为数据可视化非常简单，无非是输入几组数据，生成简单的条形图、直线图等等。然而，这未免有点管中窥豹。其实数据可视化大致可分为<strong>信息可视化</strong>、<strong>科学可视化</strong>和<strong>可视化分析</strong>三大类，刚才提到的简单图表只是信息可视化中最常见的几种。一旦数据量增大，可视化目标改变，可视化系统的复杂度可能就会超出我们的想象。本文中涉及到的可视化流程模型适用于信息可视化和科学可视化。可视化分析的流程模型略有不同，本文暂时不进行讨论。</p>
+<h2 id="通用的可视化流程"><a href="#通用的可视化流程" class="headerlink" title="通用的可视化流程"></a>通用的可视化流程</h2><p>做任何事都有一个流程，可视化也不例外。</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/Screen%20Shot%202017-01-01%20at%2018.04.55.png" alt="数据可视化流程总览"></p>
+<p>一图以蔽之。可视化整体可分为三步：<strong>分析</strong>-<strong>处理</strong>-<strong>生成</strong>。</p>
+<h3 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h3><p>进行一个可视化任务时，我们首当其冲的当然是要分析，分析又分为三部分：任务、数据、领域。</p>
+<p>首先我们要分析我们这次可视化的出发点和目标是什么。我们遇到了什么问题、要展示什么信息、最后想得出什么结论、验证什么假说等等。数据承载的信息多种多样，不同的展示方式会使侧重点有天壤之别。只有想清楚以上问题，才能确定我们要过滤什么数据、用什么算法处理数据、用什么视觉通道编码等等。</p>
+<p>其次我们要分析我们的数据，这是至关重要的一步。因为每次可视化任务拿到的数据都是不同的，数据类型、数据结构均有变化，数据的维度也可能成倍增加。抽象的数据类型如何对应现实中的概念，不同的数据类型如何进行视觉编码，这些我们在下一篇<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>中进行介绍。</p>
+<p>最后我们针对不同的领域，也要进行相应的分析。毕竟术业有专攻，可视化的侧重点要跟着领域做出相应的变化。</p>
+<h3 id="二、处理"><a href="#二、处理" class="headerlink" title="二、处理"></a>二、处理</h3><p>处理可以分为两部分：<strong>对数据的处理</strong>和<strong>对视觉编码的处理</strong>。</p>
+<h4 id="1-数据处理"><a href="#1-数据处理" class="headerlink" title="1.数据处理"></a>1.数据处理</h4><p>在可视化之前我们要对数据进行数据清洗、数据规范、数据分析。</p>
+<p>数据清洗和规范是必不可少的步骤。首先把脏数据、敏感数据过滤掉，其次再剔除和我们目标无关的冗余数据，最后调整数据结构到我们系统能接受的方式。</p>
+<p>数据分析中最简单的方法当然是一些基本的统计方法，如求和、中值、方差、期望等等；复杂的方法有数据挖掘种的各种算法，这是又一个领域了，在此不赘述。</p>
+<p>最后的可视化结果中我们肯定不可能把所有的数据统统展示出来，于是又涉及到包括标准化（归一化）、采样、离散化、降维、聚类等数据处理的方法，这些概念之后可以单独写篇文章来介绍。</p>
+<h4 id="2-设计视觉编码"><a href="#2-设计视觉编码" class="headerlink" title="2.设计视觉编码"></a>2.设计视觉编码</h4><p>视觉编码的设计是指如何使用位置、尺寸、灰度值、纹理、色彩、方向、形状等视觉通道，以映射我们要展示的每个数据维度。这里看不懂没关系，第三篇<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>中会详细介绍。</p>
+<h3 id="三、生成"><a href="#三、生成" class="headerlink" title="三、生成"></a>三、生成</h3><p>这个阶段基本上就是把之前的分析和设计付诸实践，在制作或写代码过程中，再不断调整需求、不断地迭代（有可能要重复前两步），最后产出我们想要的结果。</p>
+<h2 id="其它可视化流程"><a href="#其它可视化流程" class="headerlink" title="其它可视化流程"></a>其它可视化流程</h2><h3 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h3><p>1990 年 Robert B. Haber 和 David A. McNabb 提出的数据可视化流程已经非常先进：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/conceptual-model.png" alt="Haber, R. B. and McNabb, D. A. Visualization idioms: A conceptual model for scientific visualization systems, 1990."></p>
+<p>这个处理模型非常先进，整个流程是线性的。它把数据分成五大阶段，分别要经历四个流程，每个过程的输入是上一个过程的输出。从图上看非常直观，很好理解。</p>
+<h3 id="嵌套模型"><a href="#嵌套模型" class="headerlink" title="嵌套模型"></a>嵌套模型</h3><p>另一种模型是嵌套模型：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/nested-model.png" alt="Munzner T. A Nested Process Model for Visualization Design and Validation[J]. IEEE Transactions on Visualization &amp; Computer Graphics, 2009, 15(6):921-8."></p>
+<p>嵌套模型的上半部分基本上就是我们之前说的分析、处理两步，下半部分是对可视化结果的各类验证。本质上就是一个验证加迭代的过程。我们知道很多事都不是一蹴而就的，需要不断迭代，所以有人提出了循环模型。</p>
+<h3 id="循环模型"><a href="#循环模型" class="headerlink" title="循环模型"></a>循环模型</h3><p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-1.png" alt="Stolte C, Hanrahan P. Polaris: a system for query, analysis and visualization of multi-dimensional relational databases[C]// IEEE Symposium on Information Visualization. 2000:5-14."></p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-2.png" alt="Wijk J J V. The Value of Visualization[C]// Visualization, 2005. VIS 05. IEEE. 2005:11-11."></p>
+<p>循环模型的两张图其实都是把线性模型首尾连起来，从图上看一目了然。</p>
+<h3 id="目前应用最广的模型"><a href="#目前应用最广的模型" class="headerlink" title="目前应用最广的模型"></a>目前应用最广的模型</h3><p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/best-process-model.png" alt="Card S K, Mackinlay J D, Shneiderman B. Readings in information visualization: using vision to think[M]// Readings in information visualization :. Morgan Kaufmann Publishers, 1999:647-650."></p>
+<p>对比之前的线性模型，其实也很类似，不过其在最后加入了用户交互的部分，且让每个步骤都变成了循环的。这是目前应用最广的可视化流程模型，后继几乎所有著名的信息可视化系统和工具都支持、兼容这个模型。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>纵观以上提到的各类模型，都非常类似，本质上还是离不开<strong>分析</strong>-<strong>处理</strong>-<strong>生成</strong>三步，所以掌握第一张图就可以了，以不变应万变。文中多次提到视觉编码、数据处理等概念，我们在接下来的两篇<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>和<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>介绍。欢迎各位在我博客文末留言讨论（如果看不到评论框可能是因为你没有科学上网）。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[2]<a href="http://www.cad.zju.edu.cn/home/vagblog/?page_id=1302" target="_blank" rel="external">浙江大学-陈为、巫英才数据可视化课程</a></li>
+<li>[3]Haber, R. B. and McNabb, D. A. Visualization idioms: A conceptual model for scientific visualization systems, 1990.</li>
+<li>[4]Munzner T. A Nested Process Model for Visualization Design and Validation[J]. IEEE Transactions on Visualization &amp; Computer Graphics, 2009, 15(6):921-8.</li>
+<li>[5]Stolte C, Hanrahan P. Polaris: a system for query, analysis and visualization of multi-dimensional relational databases[C]// IEEE Symposium on Information Visualization. 2000:5-14.</li>
+<li>[6]Wijk J J V. The Value of Visualization[C]// Visualization, 2005. VIS 05. IEEE. 2005:11-11.</li>
+<li>[7]Card S K, Mackinlay J D, Shneiderman B. Readings in information visualization: using vision to think[M]// Readings in information visualization :. Morgan Kaufmann Publishers, 1999:647-650.</li>
+<li>[8]<a href="http://courses.cs.washington.edu/courses/cse512/16sp/" target="_blank" rel="external">CSE512 Data Visualization (Spring 2016)</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/01/01/basics-of-data-visualization-the-process-model.html" class="article-date">
+  <time datetime="2017-01-01T09:35:36.000Z" itemprop="datePublished">2017-01-01</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Catégorie:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Visualization/">Visualization</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Mot-clé:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-Data/">Big Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Visualization/">Data Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Guide/">Guide</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Summary/">Summary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Visualization/">Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门/">入门</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/可视化/">可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据/">数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2017/01/02/basics-of-data-visualization-data-model.html" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          数据可视化基础——数据模型
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2016/12/30/the-ways-to-get-information.html" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">我获取信息的渠道</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   var disqus_url = 'http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

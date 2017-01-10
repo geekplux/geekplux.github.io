@@ -3,6 +3,172 @@
 
 
     
+  <url>
+    <loc>http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</loc>
+    <lastmod>2017-01-10T04:35:15.000Z</lastmod>
+    <data>
+        <display>
+        <title>数据可视化基础——视觉编码</title>
+        <pubTime>2017-01-03T12:02:52.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html</loc>
+    <lastmod>2017-01-10T03:20:30.000Z</lastmod>
+    <data>
+        <display>
+        <title>数据可视化基础——数据模型</title>
+        <pubTime>2017-01-02T04:01:48.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</loc>
+    <lastmod>2017-01-10T03:12:44.000Z</lastmod>
+    <data>
+        <display>
+        <title>数据可视化基础——可视化流程</title>
+        <pubTime>2017-01-01T09:35:36.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/12/30/the-ways-to-get-information.html</loc>
+    <lastmod>2016-12-30T04:09:40.000Z</lastmod>
+    <data>
+        <display>
+        <title>我获取信息的渠道</title>
+        <pubTime>2016-12-29T16:10:52.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+        <tag>Read</tag>
+         
+        <tag>阅读</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
     
   <url>
     <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
@@ -16,9 +182,9 @@
          
         <tag>工具</tag>
          
-        <tag>Vim</tag>
-         
         <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
          
         <tag>IDE</tag>
          
@@ -40,17 +206,17 @@
         <title>Vega-Lite: A Grammar of Interactive Graphics</title>
         <pubTime>2016-11-02T08:16:16.000Z</pubTime>
         
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据</tag>
+         
         <tag>Tool</tag>
          
         <tag>Research</tag>
          
-        <tag>Visualization</tag>
-         
-        <tag>数据</tag>
-         
         <tag>交互</tag>
-         
-        <tag>可视化</tag>
          
         <tag>Graphics</tag>
          
@@ -83,9 +249,9 @@
          
         <tag>工具</tag>
          
-        <tag>Vim</tag>
-         
         <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
          
         <tag>IDE</tag>
          
@@ -427,17 +593,17 @@
         <title>CSS 最核心的几个概念</title>
         <pubTime>2014-04-25T12:28:33.000Z</pubTime>
         
-        <tag>Web</tag>
-         
-        <tag>笔记</tag>
-         
         <tag>Note</tag>
          
-        <tag>CSS</tag>
+        <tag>笔记</tag>
          
         <tag>总结</tag>
          
         <tag>Summary</tag>
+         
+        <tag>Web</tag>
+         
+        <tag>CSS</tag>
          
          
            
@@ -460,9 +626,9 @@
         <title>C++指针与引用小结</title>
         <pubTime>2013-01-02T07:41:25.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Note</tag>
+         
+        <tag>笔记</tag>
          
         <tag>总结</tag>
          
@@ -492,9 +658,9 @@
         <title>操作系统总结——处理机管理</title>
         <pubTime>2013-01-04T08:03:25.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Note</tag>
+         
+        <tag>笔记</tag>
          
         <tag>总结</tag>
          
@@ -522,9 +688,9 @@
         <title>操作系统总结——存储器管理</title>
         <pubTime>2013-01-05T11:53:25.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Note</tag>
+         
+        <tag>笔记</tag>
          
         <tag>总结</tag>
          
@@ -552,9 +718,9 @@
         <title>操作系统总结——引论</title>
         <pubTime>2013-01-03T07:29:25.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Note</tag>
+         
+        <tag>笔记</tag>
          
         <tag>总结</tag>
          
@@ -586,11 +752,11 @@
          
         <tag>工具</tag>
          
-        <tag>Mac</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Mac</tag>
          
          
            
@@ -640,17 +806,17 @@
         <title>CSS编写原则</title>
         <pubTime>2014-02-20T05:57:32.000Z</pubTime>
         
-        <tag>Web</tag>
-         
-        <tag>笔记</tag>
-         
         <tag>Note</tag>
          
-        <tag>CSS</tag>
+        <tag>笔记</tag>
          
         <tag>总结</tag>
          
         <tag>Summary</tag>
+         
+        <tag>Web</tag>
+         
+        <tag>CSS</tag>
          
          
            
@@ -701,11 +867,11 @@
         <title>Collapsing margins——合并的外边距</title>
         <pubTime>2014-03-14T13:10:19.000Z</pubTime>
         
-        <tag>Web</tag>
+        <tag>Note</tag>
          
         <tag>笔记</tag>
          
-        <tag>Note</tag>
+        <tag>Web</tag>
          
         <tag>CSS</tag>
          
@@ -730,11 +896,11 @@
         <title>CoffeeScript 笔记</title>
         <pubTime>2014-05-15T11:06:09.000Z</pubTime>
         
-        <tag>Web</tag>
+        <tag>Note</tag>
          
         <tag>笔记</tag>
          
-        <tag>Note</tag>
+        <tag>Web</tag>
          
         <tag>CoffeeScript</tag>
          
@@ -765,11 +931,11 @@
          
         <tag>Cocos2d-x</tag>
          
+        <tag>开发环境</tag>
+         
         <tag>游戏开发</tag>
          
         <tag>Game Development</tag>
-         
-        <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
          
@@ -828,11 +994,11 @@
         <title>Android开发如何入门</title>
         <pubTime>2013-09-02T08:34:30.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Android</tag>
          
         <tag>Development</tag>
          
@@ -884,11 +1050,11 @@
          
         <tag>Life</tag>
          
-        <tag>感想</tag>
-         
         <tag>随笔</tag>
          
         <tag>Essay</tag>
+         
+        <tag>感想</tag>
          
          
            
@@ -908,9 +1074,9 @@
         <title>初识 TDD</title>
         <pubTime>2014-03-20T16:20:09.000Z</pubTime>
         
-        <tag>笔记</tag>
-         
         <tag>Note</tag>
+         
+        <tag>笔记</tag>
          
         <tag>Agile Development</tag>
          
@@ -966,11 +1132,11 @@
          
         <tag>Life</tag>
          
-        <tag>感想</tag>
-         
         <tag>随笔</tag>
          
         <tag>Essay</tag>
+         
+        <tag>感想</tag>
          
          
            
@@ -994,11 +1160,11 @@
          
         <tag>Life</tag>
          
-        <tag>感想</tag>
-         
         <tag>随笔</tag>
          
         <tag>Essay</tag>
+         
+        <tag>感想</tag>
          
          
            
@@ -1022,11 +1188,11 @@
          
         <tag>Life</tag>
          
+        <tag>感想</tag>
+         
         <tag>Thought</tag>
          
         <tag>思考</tag>
-         
-        <tag>感想</tag>
          
          
            
@@ -1050,11 +1216,11 @@
          
         <tag>Life</tag>
          
+        <tag>感想</tag>
+         
         <tag>Thought</tag>
          
         <tag>思考</tag>
-         
-        <tag>感想</tag>
          
          
            

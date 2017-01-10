@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2016-12-04T07:25:55.000Z</updated>
+  <updated>2017-01-10T04:35:15.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,468 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>数据可视化基础——视觉编码</title>
+    <link href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html"/>
+    <id>http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</id>
+    <published>2017-01-03T12:02:52.000Z</published>
+    <updated>2017-01-10T04:35:15.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第三篇，主要介绍<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>和<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>，建议从可视化流程看起。<br>原文地址：<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</a></p>
+</blockquote>
+<p>终于来到了最后一篇，前两篇的铺垫可能有点长，但是不种苗浇水怎能开枝散叶。可视化编码是可视化中的<strong>核心内容</strong>，本文会对其进行详细的讲解，尤其是<strong>视觉编码</strong>与<strong>视觉通道</strong>两个概念，如果其中遇到晦涩之处，不要心急，可囫囵吞枣直接往下看。</p>
+<h2 id="什么是视觉编码（visual-encoding）"><a href="#什么是视觉编码（visual-encoding）" class="headerlink" title="什么是视觉编码（visual encoding）"></a>什么是视觉编码（visual encoding）</h2><p>很多人可能看到题目的时候就有这个疑问，到底什么是视觉编码。其实视觉编码很简单，用一句话就能概括：</p>
+<blockquote>
+<p>视觉编码描述的是将数据映射到最终可视化结果上的过程。</p>
+</blockquote>
+<p>这里的可视化结果可能是图片，也可能是一张网页等等。</p>
+<p>编码二字，如果说<strong>编</strong>是指设计、映射的过程，那么码呢？<strong>码</strong>其实指的是一些图形符号。</p>
+<h2 id="图形能告诉我们什么"><a href="#图形能告诉我们什么" class="headerlink" title="图形能告诉我们什么"></a>图形能告诉我们什么</h2><p>在介绍各类图形符号之前，我们先谈谈：图形能告诉我们什么。</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/pic.png" alt=""></p>
+<p>仔细观察上方这个简单的图片，你能得得到什么信息？</p>
+<ol>
+<li>A B C 是不同的</li>
+<li>B 在 A 和 C 的中间</li>
+<li>BC 的长度是 AB 的大概两倍</li>
+</ol>
+<p>得益于我们视觉系统的强大，这些信息不假思索就能得出。如果把上图想象成一个二维坐标系，则我们可能得出更多的结论。</p>
+<blockquote>
+<p>“Resemblance, order and proportion are the three signfields in graphics.” - Bertin [1]</p>
+</blockquote>
+<p>图形符号和信息间的映射关系使我们能迅速获取信息。所以我们可以把图片看成一组图形符号的组合，这些图形符号中<strong>携带</strong>了一些信息，我们称作它<strong>编码</strong>了一些信息。而当人们从这些符号中<strong>读取</strong>信息时，我们称作我们<strong>解码</strong>了一些信息。</p>
+<p>我们人类解码信息靠的是我们的眼睛、我们的视觉系统。如果说图形符号是编码信息的工具或通道、那么我们的视觉就是解码信息的通道。因此，我们通常把这种<strong>图形符号&lt;——&gt;信息&lt;——&gt;视觉系统</strong>的对应称作<strong>视觉通道</strong>。</p>
+<p>至此算是把<strong>视觉通道</strong>、<strong>视觉编码</strong>这两个概念讲清楚了。如果一个人说他想用四个通道来编码四个维度的数据，即可以翻译成他想用四种图形符号来对应这份数据表的四个列的信息。</p>
+<p>这里举个例子（例子来自于 [2]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a>）：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/example.png" alt="例子来自于陈为 沈则潜 陶煜波《数据可视化》"></p>
+<ul>
+<li>上图中图 A 表示了三个不同班级的数学平均分，用柱状图表示，柱状图的<strong>高度</strong>作为一个视觉通道，编码了数学平均分的<em>值</em>；柱状，这个<strong>形状</strong>作为一个视觉通道编码了数学平均分这一<em>属性</em>。</li>
+<li>图 B 中，我们想在 A 的基础上多展示语文平均分这一项数据（即增加了一个数据维度），则选用点这个<strong>形状</strong>通道编码这两个<em>属性</em>；点的<strong>横坐标</strong>编码语文平均分的<em>值</em>；点的<strong>纵坐标</strong>编码数学平均分的<em>值</em>。</li>
+<li>这时候发现图 B 中我们把班级这个数据维度给丢掉了，于是我们可以用<strong>颜色</strong>这一视觉通道来编码班级这个<strong>属性</strong>信息，如图 C。</li>
+<li>如果我们还想展示班级<em>人数</em>这一信息，则可以用<strong>尺寸</strong>这一视觉通道来编码，如图 D。</li>
+</ul>
+<h2 id="视觉编码中常用的视觉通道"><a href="#视觉编码中常用的视觉通道" class="headerlink" title="视觉编码中常用的视觉通道"></a>视觉编码中常用的视觉通道</h2><p>1967 年，Jacques Bertin 初版的《Semiology of Graphics》一书提出了图形符号与信息的对应关系（就是本文上一节的内容），奠定了可视化编码的理论基础。</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/signal.png" alt="Bertin J. Semiology of graphics: diagrams[C]// Conference on Computer Networks. 1983."></p>
+<p>如上图所示，书中把图形符号分为两种：</p>
+<ul>
+<li><strong>位置变量</strong>：一般指二维坐标</li>
+<li><strong>视网膜变量</strong>：<strong>尺寸</strong>、<strong>数值</strong>、<strong>纹理</strong>、<strong>颜色</strong>、<strong>方向</strong>和<strong>形状</strong></li>
+</ul>
+<p>以上基本的图形符号共有 7 种。将其映射到点、线、面之后，就相当于有 21 种编码可用的视觉通道。后来人们还又补充了几种其他的视觉通道：<strong>长度</strong>、<strong>面积</strong>、<strong>体积</strong>、<strong>透明度</strong>、<strong>模糊/聚焦</strong>、<strong>动画</strong>等，所以可用的视觉通道其实太多了。</p>
+<p>而一般一份可视化作品可用到的视觉通道要尽可能得少，因为太多了反而会造成我们视觉系统的混乱，使我们获取信息更难。于是这就涉及到了视觉通道的设计原则。</p>
+<h2 id="视觉编码设计原则"><a href="#视觉编码设计原则" class="headerlink" title="视觉编码设计原则"></a>视觉编码设计原则</h2><p>这一节其实可以单独再分一篇文章写，因为可视化编码设计实在是复杂：假设我们有 k 个视觉通道，有 n 个数据维度，则一共有 <code>(n+1)^k</code> 种编码方案……从中选出一种最佳方案难度可见一斑。</p>
+<p>不过既然本文是讲解视觉编码相关，所以这个章节是逃不掉的，在此提纲挈领讲一下。如果想深入了解，可以阅读参考文献中提到的书籍。</p>
+<h3 id="视觉通道的三个性质"><a href="#视觉通道的三个性质" class="headerlink" title="视觉通道的三个性质"></a>视觉通道的三个性质</h3><p>上一篇<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>讲解了可视化中数据分为三类：<strong>类别型</strong>、<strong>有序型</strong>、<strong>数值型</strong>。</p>
+<ol>
+<li><strong>定性性质</strong>（或叫分类性质）。适用于类别型数据。比如形状或颜色，这两个视觉通道，非常容易被人眼识别。从一堆正方形中识别出一个三角形，或看万绿丛中一点红，都是我们眼睛拿手好戏。</li>
+<li><strong>定量性质或定序性质</strong>。适用于有序型和类别型数据。比如长度、大小特别适合于编码数值/量的大小。</li>
+<li><strong>分组性质</strong>。具有相同视觉通道的数据，人眼也能很快识别出来，将其归为一组。</li>
+</ol>
+<p>总结一下视觉通道与数据类型的对应关系，如下图所示：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/level.png" alt="视觉通道与数据类型的对应"></p>
+<h3 id="视觉编码设计的两大原则"><a href="#视觉编码设计的两大原则" class="headerlink" title="视觉编码设计的两大原则"></a>视觉编码设计的两大原则</h3><p>Mackinlay[4] 和 Tversky[5] 分别提出了两套可视化设计的原则，Mackinlay 强调表达性和有效性，Tversky 强调一致性和理解性。两者可以糅合起来：</p>
+<ol>
+<li><strong>表达性、一致性</strong>：可视化的结果应该充分表达了数据想要表达的信息，且没有多余。</li>
+<li><strong>有效性、理解性</strong>：可视化之后比前一种数据表达方案更加有效，更加容易让人理解。</li>
+</ol>
+<p>下面这张图总结了视觉编码面对不同数据类型的优先级：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/level2.png" alt="视觉编码面对不同数据类型的优先级"></p>
+<p>如果要具体展开每项视觉通道来说，未免有点太繁琐，而且设计可视化编码除了视觉通道还需要考虑：</p>
+<ul>
+<li>色彩搭配</li>
+<li>交互</li>
+<li>美学因素</li>
+<li>信息的密度</li>
+<li>直观映射、隐喻</li>
+</ul>
+<p>以上每一项都很重要，之后有机会再写吧。这个可视化基础系列总算是完结了，文字虽然不多，但是搜索资料、读论文、总结等还是挺累的，希望你能有所收获。欢迎各位在我博客文末留言讨论（如果看不到评论框可能是因为你没有科学上网）。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1]Bertin J. Semiology of graphics: diagrams[C]// Conference on Computer Networks. 1983.</li>
+<li>[2]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[3]<a href="http://courses.cs.washington.edu/courses/cse512/16sp/" target="_blank" rel="external">CSE512 Data Visualization (Spring 2016)</a></li>
+<li>[4]Mackinlay, Jock. Automating the design of graphical presentations of relational information[J]. Acm Transactions on Graphics, 1986, 5(2):110-141.</li>
+<li>[5]Tversky B, Morrison J B, Betrancourt M. Animation: Can it facilitate?[J]. International Journal of Human-Computer Studies, 2002, 57(4):247-262.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第三篇，主要介绍&lt;a href=&quot;http://geekplux.com/2017/01/03/basics-of-data-visualization-visu
+    
+    </summary>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
+    
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="大数据" scheme="http://geekplux.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Big Data" scheme="http://geekplux.com/tags/Big-Data/"/>
+    
+      <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据可视化基础——数据模型</title>
+    <link href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html"/>
+    <id>http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html</id>
+    <published>2017-01-02T04:01:48.000Z</published>
+    <updated>2017-01-10T03:20:30.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第二篇，主要介绍<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>和<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>，建议从可视化流程看起。<br>原文地址：<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html</a></p>
+</blockquote>
+<p>数据说白了就是一组可定性或可量化的值。随着计算机存储能力的大幅提高，人们对于数据的关注与日俱增，「大数据」一词近几年来也被人们频频提及。而数据可视化的主要任务是将数据转换为易于感知的图形。因此，为了更准确更形象的表达数据，我们需要了解一些数据相关的概念。</p>
+<h2 id="数据模型与概念模型"><a href="#数据模型与概念模型" class="headerlink" title="数据模型与概念模型"></a>数据模型与概念模型</h2><p>为什么数据能代表我们的世界？要回答这个问题，我们得先了解数据和概念两个模型。</p>
+<p><strong>数据模型</strong>是一组数字或符号的组合，它包含数据的定义、类型等，可以进行各类数学操作等。<strong>概念模型</strong>描述的是事物的语义或状态行为等。</p>
+<p><strong>现实</strong> =&gt; <strong>概念</strong> =&gt; <strong>数据</strong></p>
+<p>现实世界可以用概念模型来描述，而概念模型又可以用数据模型来描述。经过两层抽象，数据便可以描述我们的现实生活中的方方面面。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>一个东西具体归为哪一类，取决于我们用什么标准划分，数据亦然。</p>
+<p>从数据在计算机中的存储可分为浮点数、整数、字符等；从关系模型的角度分，数据又可以分为实体和关系两类；从数据的结构来分，可以分为一维、二维、三维、多维、时间序列、空间序列、树型、图型等等[3]；还有很多的分类方法，我们暂时先不讨论，把关注点聚焦到和数据可视化有关的分类方法上。</p>
+<p>按照测量标度来分，数据一般被分为四类：<strong>类别型</strong>、<strong>有序型</strong>、<strong>区间型</strong>、<strong>比值型</strong>。</p>
+<ul>
+<li><strong>类别型</strong>数据用于区分事物。例如，人可以分为男女，水果能分为苹果香蕉等。</li>
+<li><strong>有序型</strong>用来表示对象间的顺序关系。例如，我们的身高可以从矮到高，学生的成绩可以从低到高排列等。</li>
+<li><strong>区间型</strong>用于对象间的定量比较。例如，身高 160cm 与身高 170cm 相差 10cm，而 170cm 与 180cm 也相差 10cm，它们俩的差值是相等的。由此可见，区间型数据基于任意的起始点，所以它只能衡量对象间的相对差别。</li>
+<li><strong>比值型</strong>用于比较数值间的比例关系。例如，体重 80kg 是体重 40kg 的两倍。</li>
+</ul>
+<p>不同的数据类型适用于不同的操作[1]：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">操作</th>
+<th style="text-align:left">集合操作</th>
+<th style="text-align:left">统计操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">类别型</td>
+<td style="text-align:left">=、≠</td>
+<td style="text-align:left">互换元素位置</td>
+<td style="text-align:left">类别、模式、列联相关</td>
+</tr>
+<tr>
+<td style="text-align:left">有序型</td>
+<td style="text-align:left">=、≠、&gt;、&lt;</td>
+<td style="text-align:left">计算元素单调递增（减）</td>
+<td style="text-align:left">中值、百分位数</td>
+</tr>
+<tr>
+<td style="text-align:left">区间型</td>
+<td style="text-align:left">=、≠、&gt;、&lt;、+、-</td>
+<td style="text-align:left">元素间线性加（减）</td>
+<td style="text-align:left">平均值、标准方差、等级相关、积差相关</td>
+</tr>
+<tr>
+<td style="text-align:left">比值型</td>
+<td style="text-align:left">=、≠、&gt;、&lt;、+、-、×、÷</td>
+<td style="text-align:left">元素间相似度</td>
+<td style="text-align:left">变异系数</td>
+</tr>
+</tbody>
+</table>
+<p>不过，在数据可视化中，我们通常不特别区分区间型和比值型，将其统称为<strong>数值型</strong>。进而可将数据类型进一步精简为三种：<strong>类别型</strong>、<strong>有序型</strong>、<strong>数值型</strong>。具体为什么要分为这三类，我相信你看完下一篇<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>之后会完全明白。</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>说了那么多，都比较抽象，不如直接来看个例子。下面是一个简单的数据表，每一行通常称作一条<strong>记录</strong>，每一列称作一个<strong>字段</strong>，共有几个字段，则通常就说这份数据有几个<strong>维度</strong>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">id</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">款式</th>
+<th style="text-align:left">尺码</th>
+<th style="text-align:left">销量</th>
+<th style="text-align:left">年增长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">男款</td>
+<td style="text-align:left">上衣</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">50</td>
+<td style="text-align:left">10%</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">女款</td>
+<td style="text-align:left">上衣</td>
+<td style="text-align:left">S</td>
+<td style="text-align:left">35</td>
+<td style="text-align:left">5%</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">女款</td>
+<td style="text-align:left">裤子</td>
+<td style="text-align:left">M</td>
+<td style="text-align:left">40</td>
+<td style="text-align:left">20%</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">男款</td>
+<td style="text-align:left">上衣</td>
+<td style="text-align:left">XL</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">15%</td>
+</tr>
+</tbody>
+</table>
+<p>对照我们上文的概念，不难判断出上表中：</p>
+<ul>
+<li>类型、款式为类别型数据；</li>
+<li>id、尺码为有序型数据；</li>
+<li>销量和年增长为数值型数据。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，其实本文的任务就已经完成了。通篇传递的最重要的知识就是数据可视化中的三大数据类型，消化了这点，下一篇<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>就能更好的理解。欢迎各位在我博客文末留言讨论（如果看不到评论框可能是因为你没有科学上网）。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[2]<a href="http://www.cad.zju.edu.cn/home/vagblog/?page_id=1302" target="_blank" rel="external">浙江大学-陈为、巫英才数据可视化课程</a></li>
+<li>[3]Shneiderman B. The eyes have it: a task by data type taxonomy for information visualizations[C]// Visual Languages, 1996. Proceedings. IEEE Symposium on. IEEE Xplore, 1996:336-343.</li>
+<li>[4]<a href="http://courses.cs.washington.edu/courses/cse512/16sp/" target="_blank" rel="external">CSE512 Data Visualization (Spring 2016)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第二篇，主要介绍&lt;a href=&quot;http://geekplux.com/2017/01/02/basics-of-data-visualization-data
+    
+    </summary>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
+    
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="大数据" scheme="http://geekplux.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Big Data" scheme="http://geekplux.com/tags/Big-Data/"/>
+    
+      <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数据可视化基础——可视化流程</title>
+    <link href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html"/>
+    <id>http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</id>
+    <published>2017-01-01T09:35:36.000Z</published>
+    <updated>2017-01-10T03:12:44.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第一篇，主要介绍<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>和<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>。<br>原文地址：<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</a></p>
+</blockquote>
+<p>很多人认为数据可视化非常简单，无非是输入几组数据，生成简单的条形图、直线图等等。然而，这未免有点管中窥豹。其实数据可视化大致可分为<strong>信息可视化</strong>、<strong>科学可视化</strong>和<strong>可视化分析</strong>三大类，刚才提到的简单图表只是信息可视化中最常见的几种。一旦数据量增大，可视化目标改变，可视化系统的复杂度可能就会超出我们的想象。本文中涉及到的可视化流程模型适用于信息可视化和科学可视化。可视化分析的流程模型略有不同，本文暂时不进行讨论。</p>
+<h2 id="通用的可视化流程"><a href="#通用的可视化流程" class="headerlink" title="通用的可视化流程"></a>通用的可视化流程</h2><p>做任何事都有一个流程，可视化也不例外。</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/Screen%20Shot%202017-01-01%20at%2018.04.55.png" alt="数据可视化流程总览"></p>
+<p>一图以蔽之。可视化整体可分为三步：<strong>分析</strong>-<strong>处理</strong>-<strong>生成</strong>。</p>
+<h3 id="一、分析"><a href="#一、分析" class="headerlink" title="一、分析"></a>一、分析</h3><p>进行一个可视化任务时，我们首当其冲的当然是要分析，分析又分为三部分：任务、数据、领域。</p>
+<p>首先我们要分析我们这次可视化的出发点和目标是什么。我们遇到了什么问题、要展示什么信息、最后想得出什么结论、验证什么假说等等。数据承载的信息多种多样，不同的展示方式会使侧重点有天壤之别。只有想清楚以上问题，才能确定我们要过滤什么数据、用什么算法处理数据、用什么视觉通道编码等等。</p>
+<p>其次我们要分析我们的数据，这是至关重要的一步。因为每次可视化任务拿到的数据都是不同的，数据类型、数据结构均有变化，数据的维度也可能成倍增加。抽象的数据类型如何对应现实中的概念，不同的数据类型如何进行视觉编码，这些我们在下一篇<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>中进行介绍。</p>
+<p>最后我们针对不同的领域，也要进行相应的分析。毕竟术业有专攻，可视化的侧重点要跟着领域做出相应的变化。</p>
+<h3 id="二、处理"><a href="#二、处理" class="headerlink" title="二、处理"></a>二、处理</h3><p>处理可以分为两部分：<strong>对数据的处理</strong>和<strong>对视觉编码的处理</strong>。</p>
+<h4 id="1-数据处理"><a href="#1-数据处理" class="headerlink" title="1.数据处理"></a>1.数据处理</h4><p>在可视化之前我们要对数据进行数据清洗、数据规范、数据分析。</p>
+<p>数据清洗和规范是必不可少的步骤。首先把脏数据、敏感数据过滤掉，其次再剔除和我们目标无关的冗余数据，最后调整数据结构到我们系统能接受的方式。</p>
+<p>数据分析中最简单的方法当然是一些基本的统计方法，如求和、中值、方差、期望等等；复杂的方法有数据挖掘种的各种算法，这是又一个领域了，在此不赘述。</p>
+<p>最后的可视化结果中我们肯定不可能把所有的数据统统展示出来，于是又涉及到包括标准化（归一化）、采样、离散化、降维、聚类等数据处理的方法，这些概念之后可以单独写篇文章来介绍。</p>
+<h4 id="2-设计视觉编码"><a href="#2-设计视觉编码" class="headerlink" title="2.设计视觉编码"></a>2.设计视觉编码</h4><p>视觉编码的设计是指如何使用位置、尺寸、灰度值、纹理、色彩、方向、形状等视觉通道，以映射我们要展示的每个数据维度。这里看不懂没关系，第三篇<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>中会详细介绍。</p>
+<h3 id="三、生成"><a href="#三、生成" class="headerlink" title="三、生成"></a>三、生成</h3><p>这个阶段基本上就是把之前的分析和设计付诸实践，在制作或写代码过程中，再不断调整需求、不断地迭代（有可能要重复前两步），最后产出我们想要的结果。</p>
+<h2 id="其它可视化流程"><a href="#其它可视化流程" class="headerlink" title="其它可视化流程"></a>其它可视化流程</h2><h3 id="线性模型"><a href="#线性模型" class="headerlink" title="线性模型"></a>线性模型</h3><p>1990 年 Robert B. Haber 和 David A. McNabb 提出的数据可视化流程已经非常先进：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/conceptual-model.png" alt="Haber, R. B. and McNabb, D. A. Visualization idioms: A conceptual model for scientific visualization systems, 1990."></p>
+<p>这个处理模型非常先进，整个流程是线性的。它把数据分成五大阶段，分别要经历四个流程，每个过程的输入是上一个过程的输出。从图上看非常直观，很好理解。</p>
+<h3 id="嵌套模型"><a href="#嵌套模型" class="headerlink" title="嵌套模型"></a>嵌套模型</h3><p>另一种模型是嵌套模型：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/nested-model.png" alt="Munzner T. A Nested Process Model for Visualization Design and Validation[J]. IEEE Transactions on Visualization &amp; Computer Graphics, 2009, 15(6):921-8."></p>
+<p>嵌套模型的上半部分基本上就是我们之前说的分析、处理两步，下半部分是对可视化结果的各类验证。本质上就是一个验证加迭代的过程。我们知道很多事都不是一蹴而就的，需要不断迭代，所以有人提出了循环模型。</p>
+<h3 id="循环模型"><a href="#循环模型" class="headerlink" title="循环模型"></a>循环模型</h3><p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-1.png" alt="Stolte C, Hanrahan P. Polaris: a system for query, analysis and visualization of multi-dimensional relational databases[C]// IEEE Symposium on Information Visualization. 2000:5-14."></p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-2.png" alt="Wijk J J V. The Value of Visualization[C]// Visualization, 2005. VIS 05. IEEE. 2005:11-11."></p>
+<p>循环模型的两张图其实都是把线性模型首尾连起来，从图上看一目了然。</p>
+<h3 id="目前应用最广的模型"><a href="#目前应用最广的模型" class="headerlink" title="目前应用最广的模型"></a>目前应用最广的模型</h3><p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/best-process-model.png" alt="Card S K, Mackinlay J D, Shneiderman B. Readings in information visualization: using vision to think[M]// Readings in information visualization :. Morgan Kaufmann Publishers, 1999:647-650."></p>
+<p>对比之前的线性模型，其实也很类似，不过其在最后加入了用户交互的部分，且让每个步骤都变成了循环的。这是目前应用最广的可视化流程模型，后继几乎所有著名的信息可视化系统和工具都支持、兼容这个模型。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>纵观以上提到的各类模型，都非常类似，本质上还是离不开<strong>分析</strong>-<strong>处理</strong>-<strong>生成</strong>三步，所以掌握第一张图就可以了，以不变应万变。文中多次提到视觉编码、数据处理等概念，我们在接下来的两篇<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>和<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>介绍。欢迎各位在我博客文末留言讨论（如果看不到评论框可能是因为你没有科学上网）。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[2]<a href="http://www.cad.zju.edu.cn/home/vagblog/?page_id=1302" target="_blank" rel="external">浙江大学-陈为、巫英才数据可视化课程</a></li>
+<li>[3]Haber, R. B. and McNabb, D. A. Visualization idioms: A conceptual model for scientific visualization systems, 1990.</li>
+<li>[4]Munzner T. A Nested Process Model for Visualization Design and Validation[J]. IEEE Transactions on Visualization &amp; Computer Graphics, 2009, 15(6):921-8.</li>
+<li>[5]Stolte C, Hanrahan P. Polaris: a system for query, analysis and visualization of multi-dimensional relational databases[C]// IEEE Symposium on Information Visualization. 2000:5-14.</li>
+<li>[6]Wijk J J V. The Value of Visualization[C]// Visualization, 2005. VIS 05. IEEE. 2005:11-11.</li>
+<li>[7]Card S K, Mackinlay J D, Shneiderman B. Readings in information visualization: using vision to think[M]// Readings in information visualization :. Morgan Kaufmann Publishers, 1999:647-650.</li>
+<li>[8]<a href="http://courses.cs.washington.edu/courses/cse512/16sp/" target="_blank" rel="external">CSE512 Data Visualization (Spring 2016)</a></li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第一篇，主要介绍&lt;a href=&quot;http://geekplux.com/2017/01/01/basics-of-data-visualization-the-
+    
+    </summary>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
+    
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="大数据" scheme="http://geekplux.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Big Data" scheme="http://geekplux.com/tags/Big-Data/"/>
+    
+      <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>我获取信息的渠道</title>
+    <link href="http://geekplux.com/2016/12/30/the-ways-to-get-information.html"/>
+    <id>http://geekplux.com/2016/12/30/the-ways-to-get-information.html</id>
+    <published>2016-12-29T16:10:52.000Z</published>
+    <updated>2016-12-30T04:09:40.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>互联网迅猛的浪潮抹平了信息的鸿沟，却也让优质的信息变得如沧海一粟。人们常言「信息不对等」，往往在感慨<strong>有价值的信息</strong>总是被人捷足先登。正因这些信息如此重要，催生了一代又一代、各式各样的信息获取工具。</p>
+<h2 id="我阅读工具的演化史"><a href="#我阅读工具的演化史" class="headerlink" title="我阅读工具的演化史"></a>我阅读工具的演化史</h2><p>印象中，最早的信息聚合网站，应该是叫「<a href="https://en.wikipedia.org/wiki/Golden_Pages" target="_blank" rel="external">黄页</a>」，已经有 100 多年的历史，马云早期的创业项目就叫「中国黄页」。后来家里的 IE 首页变成了一些门户网站，这时候获取信息主要靠手动点击链接到各大网站。再之后，我接触到了 <strong>Google Reader</strong>，认识了 RSS，从此开启了一扇新的大门。</p>
+<p>之前获取信息的方式是自己主动探索，而现在只需要维护好自己的 RSS 订阅列表，就会有感兴趣的信息源源不断地流进来。犹记得当时我的订阅列表很长，每天点开都是几百上千的未读，<strong>快速扫一遍，把感兴趣的随手添加到 pocket（因为 pocket 可以离线阅读），抽碎片时间打开 pocket 阅读，遇到好文章再收藏到 Evernote</strong>，这个阅读流一直沿用了一两年。即使后来 Google Reader 被 Google 遗弃我也坚持用 RSS，只是频率比以前低了不少。</p>
+<p>再到后来，不少博客写手开始转战到了微信公众号，很多文章用微信直接阅读，体验也挺好，于是阅读公众号成了我当时新的阅读方式。然而好景不长，很快公众平台就被一堆营销号攻占，一些写手为了圈钱，写作质量也大幅下降。我开始慢慢取关公众号，并且意识到了一个问题：<strong>大多数的文章都是没有价值的，或者说远没有自己想象的有价值</strong>。很多文章都是东拼西凑来的，能引发思考的凤毛麟角。</p>
+<p>别人的文章好似二手的知识，我们如果想获取一手的就要追根溯源，看他参考的文献、引用的书籍，与其这样，为什么不直接看书或看论文？想通这点之后，我就把阅读的绝大部分时间放在了看书上，看文章的时间可能一天只有不到半小时。</p>
+<h2 id="我现阶段的信息获取方式"><a href="#我现阶段的信息获取方式" class="headerlink" title="我现阶段的信息获取方式"></a>我现阶段的信息获取方式</h2><p>我现在的信息渠道主要分四部分：</p>
+<ul>
+<li>书籍、论文（不在本文讨论范围内，阅读论文可参考<a href="http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html">《如何阅读一篇学术论文》</a></li>
+<li>邮件列表</li>
+<li>RSS</li>
+<li>经常去逛的一些网站</li>
+</ul>
+<h4 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h4><p>RSS 列表主要分两部分，一部分是个人博客，另一部分是少数几个信息聚合类网站和一些期刊、杂志。其中重点看个人博客，由于现在大家的博客更新都很慢，所以一般我一周没看也攒不了几篇。期刊杂志我也会留心，因为有一些和我研究方向——数据可视化有关的。</p>
+<p>现在我的 RSS 软件主要用 <a href="http://www.inoreader.com/" target="_blank" rel="external">inoreader</a>，基本功能都有，也提供了夜间模式（对于夜猫子来说很重要），感觉还不错。</p>
+<h4 id="Mailing-List"><a href="#Mailing-List" class="headerlink" title="Mailing List"></a>Mailing List</h4><p>邮件列表也算是一种很古老的信息获取方式。我主要用它来做两件事：订阅一些 Google Group 来划划水；订阅一些日报和周报。</p>
+<p>之所以选择邮件列表看周报，主要是基于以下两个原因：</p>
+<ul>
+<li>本质上日报或周报已经是别人筛选过一遍的文章，所以质量相对一些信息聚合网站也会高一点</li>
+<li>日报或周报降低了阅读的频次</li>
+</ul>
+<p>日报一天一封，周报一周才一封，保证了你一周只会看这封邮件一次，这大大地节约了浪费在无效信息上的时间。很多网站还提供日报和周报的切换功能，非常方便。</p>
+<p>我这里列一些我订阅的，期待大家能在文末评论（或发邮件给我），互通有无。</p>
+<ul>
+<li><a href="http://weekly.codetengu.com/" target="_blank" rel="external">CodeTengu Weekly 碼天狗週刊</a></li>
+<li><a href="http://memect.com/" target="_blank" rel="external">好东西传送门</a> 的机器学习日报、大数据日报、Python、Web 日报</li>
+<li><a href="http://www.wildml.com/" target="_blank" rel="external">The Wild Week in AI</a></li>
+<li>This week’s hi-res photos from Unsplash</li>
+<li><a href="http://javascriptweekly.com/" target="_blank" rel="external">JavaScript Weekly</a></li>
+<li><a href="http://frontendfocus.co/" target="_blank" rel="external">FrontEnd Focus</a></li>
+<li><a href="https://blog.risingstack.com/" target="_blank" rel="external">RisingStack Engineering</a></li>
+<li><a href="http://css-weekly.com/" target="_blank" rel="external">CSS Weekly</a></li>
+<li><a href="http://webtoolsweekly.com/" target="_blank" rel="external">Web Tools Weekly</a></li>
+<li><a href="http://www.gitxiv.com/" target="_blank" rel="external">GitXiv Top Posts</a></li>
+<li><a href="http://rubyweekly.com/" target="_blank" rel="external">Ruby Weekly</a></li>
+<li><a href="http://nodeweekly.com/" target="_blank" rel="external">Node Weekly</a></li>
+<li><a href="http://dataelixir.com/" target="_blank" rel="external">Data Elixir</a></li>
+<li><a href="https://web-design-weekly.com/" target="_blank" rel="external">Web Design Weekly</a></li>
+<li>Product Hunt Daily Digest</li>
+<li>Quora Digest</li>
+<li>Medium Daily Digest</li>
+</ul>
+<h4 id="经常去逛的"><a href="#经常去逛的" class="headerlink" title="经常去逛的"></a>经常去逛的</h4><p>人不能两耳不闻窗外事，总得适当的划水。我经常去逛的网站有</p>
+<ul>
+<li><a href="https://news.ycombinator.com/" target="_blank" rel="external">Hacker News</a></li>
+<li><a href="https://www.reddit.com/" target="_blank" rel="external">reddit</a> - <a href="https://www.reddit.com/r/programming" target="_blank" rel="external">programming</a> 质量不错</li>
+<li><a href="https://github.com/explore" target="_blank" rel="external">GitHub Explore</a> - 当然我邮件里也订阅了这个</li>
+<li><a href="https://www.v2ex.com/" target="_blank" rel="external">v2ex</a> - v 站虽然划水时间占 99%，但小道消息还挺多的</li>
+<li><a href="http://www.bilibili.com/" target="_blank" rel="external">bilibili</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>任何事都是先做加法，再做减法的过程。我的 RSS 列表和邮件列表都曾经短期内迅速变长，后来又被我精心筛选到寥寥无几，不过我现在还是觉得有点多。</p>
+<p>我用的工具可能都比较复古，但是经久不衰的东西才真正不会被淘汰。尤其是邮件，这个几乎是网络一出现就有的东西，现在、未来都会依旧重要。</p>
+<p>最后还有个小技巧：文章是否值得读，不取决于题目是否夺人眼球，可能取决于你多个信息渠道中它重复出现的次数。</p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;互联网迅猛的浪潮抹平了信息的鸿沟，却也让优质的信息变得如沧海一粟。人们常言「信息不对等」，往往在感慨&lt;strong&gt;有价值的信息&lt;/strong&gt;总是被人捷足先登。正因这些信息如此重要，催生了一代又一代、各式各样的信息获取工具。&lt;/p&gt;
+&lt;h2 id=&quot;我阅读工具的演化史&quot;
+    
+    </summary>
+    
+      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
+    
+    
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="Read" scheme="http://geekplux.com/tags/Read/"/>
+    
+      <category term="阅读" scheme="http://geekplux.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么要用 Emacs</title>
@@ -69,9 +531,9 @@
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
-    
       <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
+    
+      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
     
       <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
     
@@ -209,17 +671,17 @@ vconcat([view1, view2, ...], resolve)
       <category term="Visualization" scheme="http://geekplux.com/categories/Research/Visualization/"/>
     
     
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
       <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
     
-      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
-    
-      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
-    
       <category term="交互" scheme="http://geekplux.com/tags/%E4%BA%A4%E4%BA%92/"/>
-    
-      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
       <category term="Graphics" scheme="http://geekplux.com/tags/Graphics/"/>
     
@@ -943,9 +1405,9 @@ vconcat([view1, view2, ...], resolve)
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
-      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
-    
       <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
+    
+      <category term="Vim" scheme="http://geekplux.com/tags/Vim/"/>
     
       <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
     
@@ -1135,11 +1597,11 @@ vconcat([view1, view2, ...], resolve)
     
       <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
     
+      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
+    
       <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
       <category term="思考" scheme="http://geekplux.com/tags/%E6%80%9D%E8%80%83/"/>
-    
-      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   
@@ -1448,502 +1910,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
     
       <category term="Translation" scheme="http://geekplux.com/tags/Translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CoffeeScript 笔记</title>
-    <link href="http://geekplux.com/2014/05/15/coffeescript_note.html"/>
-    <id>http://geekplux.com/2014/05/15/coffeescript_note.html</id>
-    <published>2014-05-15T11:06:09.000Z</published>
-    <updated>2015-08-04T08:59:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近读了《CoffeeScript程序设计》的前半部分「核心 CoffeeScript」。对 CoffeeScript 也是有了初步的了解，本文只是我的随手笔记，并没有非常系统的总结 CoffeeScript 语法，想学习语法的同学可以看以下两份中文材料：</p>
-<ul>
-<li><a href="http://island205.github.io/tlboc/" target="_blank" rel="external">CoffeeScript中文手册</a></li>
-<li><a href="http://island205.github.io/coffeescript-cookbook.github.com/" target="_blank" rel="external">CoffeeScript Cookbook</a></li>
-</ul>
-<h2 id="为什么要用-CoffeeScript？"><a href="#为什么要用-CoffeeScript？" class="headerlink" title="为什么要用 CoffeeScript？"></a>为什么要用 CoffeeScript？</h2><ul>
-<li>采用了 JavaScript 中的 Good Parts，符合 JS 最佳实践</li>
-<li>代码简洁清晰，有很多语法糖</li>
-</ul>
-<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><h4 id="1-有意义的空格"><a href="#1-有意义的空格" class="headerlink" title="1.有意义的空格"></a>1.有意义的空格</h4><p>CoffeeScript 移除了所有的大括号和分号。</p>
-<p>JS 会自动在行尾添加<code>;</code>，但它又没有纯粹的设计为一款不需要加分号的语言，所以有时候会引起一些蛋疼的Bug。而 CoffeeScript 会在编译出的 JS 代码里每行都加<code>;</code>，很方便。</p>
-<p>CoffeeScript 和 Python、Ruby 一样，采用强制缩进（Coffee的很多地方与 ruby 类似)，这种简洁，可读性又很强的代码，让人大爱。</p>
-<a id="more"></a>
-<h4 id="2-变量作用域的控制"><a href="#2-变量作用域的控制" class="headerlink" title="2.变量作用域的控制"></a>2.变量作用域的控制</h4><p>JS 中的变量作用域一直让人诟病。</p>
-<p>CoffeeScript 把编译生成的 JS 封装在一个匿名函数中：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">// 这里是编译生成的代码</span></div><div class="line">&#125;).call(<span class="keyword">this</span>);</div></pre></td></tr></table></figure>
-<p>这样就巧妙避免了全局作用域的污染。同时，CoffeeScript 始终在编译生成的 JS 代码中用 <code>var</code> 声明变量。</p>
-<h4 id="3-存在性判断"><a href="#3-存在性判断" class="headerlink" title="3.存在性判断"></a>3.存在性判断</h4><p>CoffeeScript 中有个操作符 <code>?</code>，用于检测变量是否存在。</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log html <span class="keyword">if</span> html?</div></pre></td></tr></table></figure>
-<p>这句 CoffeeScript 编译过来为（去掉了匿名封装函数，为了方便，之后的编译后代码都去掉）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> html !== <span class="string">"undefined"</span> &amp;&amp; html !== <span class="literal">null</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(html);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>可见，<code>?</code> 会先检测变量有没有定义，如果定义了再检测是否为 null。</p>
-<h4 id="4-函数和-splat-操作符"><a href="#4-函数和-splat-操作符" class="headerlink" title="4.函数和 splat 操作符"></a>4.函数和 splat 操作符</h4><p>CoffeeScript 中去掉了 <code>function</code> 关键字。用 <code>() -&gt;</code> 定义一个函数。括号内为参数，可以为参数设置默认值。如：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">myFunction</span> = <span class="params">(a, b = <span class="number">2</span>)</span> -&gt;</span></div><div class="line">  a + b</div></pre></td></tr></table></figure>
-<p>编译为：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myFunction;</div><div class="line"></div><div class="line">myFunction = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (b == <span class="literal">null</span>) &#123;</div><div class="line">    b = <span class="number">2</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> a + b;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>调用函数的时候，还可以不用括号。如：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">myFunction <span class="number">3</span>, <span class="number">5</span></div></pre></td></tr></table></figure>
-<p>有一点需要注意一下，CoffeeScript 会在编译后的 JS 代码中自动为最后一行添加 <code>return</code> 关键字。所以不论函数的最后一行是什么，都会成为返回值。如果你不想让最后一行成为返回值，就需要另起一行自己加上 <code>return</code>。</p>
-<p>splat 操作符非常强大。在你的函数需要接受<strong>可变数量的参数</strong>时就需要它了。书上的栗子：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">splatter</span> = <span class="params">(etc...)</span> -&gt;</span></div><div class="line">  <span class="built_in">console</span>.log <span class="string">"Length: <span class="subst">#&#123;etc.length&#125;</span>, Values: <span class="subst">#&#123;etc.join(<span class="string">', '</span>)&#125;</span>"</span></div><div class="line">  <span class="regexp">//</span> CoffeeScript 中字符串插值用 <span class="comment">#&#123;&#125;</span></div><div class="line"></div><div class="line">splatter()</div><div class="line">splatter(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>)</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出</div><div class="line">Length: <span class="number">0</span>, Values:</div><div class="line">Length: <span class="number">3</span>, Values: a, b, c</div></pre></td></tr></table></figure>
-<p>就在某个参数后面加上<code>...</code>，就使传入的参数自动转化为一个数组。<strong>splat 操作符可以出现在参数列表的任意位置，但是参数列表中只能有一个 splat 操作符</strong>。</p>
-<h4 id="5-数组与区间"><a href="#5-数组与区间" class="headerlink" title="5.数组与区间"></a>5.数组与区间</h4><p>一般定义数组是这样：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">myArray = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>]</div></pre></td></tr></table></figure>
-<p>在 CoffeeScript 里你还可以这样：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">myArray = [</div><div class="line">            <span class="string">"a"</span></div><div class="line">            <span class="string">"b"</span></div><div class="line">            <span class="string">"c"</span></div><div class="line">          ]</div></pre></td></tr></table></figure>
-<ul>
-<li>在 JS 中判断是否存在于数组，需要用 <code>Array.prototype.indexOf</code>，在 CoffeeScript 中只需要用 <code>in</code>：</li>
-</ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log <span class="string">"d was not be found"</span> <span class="keyword">unless</span> <span class="string">"d"</span> <span class="keyword">in</span> myArray</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出</div><div class="line">d was <span class="keyword">not</span> be found</div></pre></td></tr></table></figure>
-<ul>
-<li>交换赋值</li>
-</ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">x = <span class="string">"X"</span></div><div class="line">y = <span class="string">"Y"</span></div><div class="line"></div><div class="line">[x, y] = [y, x]</div></pre></td></tr></table></figure>
-<p>交换 x、y 的值就这么简单！</p>
-<ul>
-<li>多重赋值</li>
-</ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">myArray = [<span class="string">"A"</span>, <span class="string">"B"</span>, <span class="string">"C"</span>, <span class="string">"D"</span>]</div><div class="line"></div><div class="line">[start, middle..., end] = myArray  <span class="regexp">//</span> 可配合 splat 操作符使用</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log <span class="string">"start: <span class="subst">#&#123;start&#125;</span>"</span></div><div class="line"><span class="built_in">console</span>.log <span class="string">"middle: <span class="subst">#&#123;middle&#125;</span>"</span></div><div class="line"><span class="built_in">console</span>.log <span class="string">"end: <span class="subst">#&#123;end&#125;</span>"</span></div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出</div><div class="line">start: A</div><div class="line">middle: B,C</div><div class="line">end: D</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>区间</strong></li>
-</ul>
-<p>区间能让<strong>定义包含两个数字之间所有数字的数组</strong>变得很容易。</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">myRange = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line"><span class="built_in">console</span>.log myRange</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> ]</div></pre></td></tr></table></figure>
-<p>如果不想包括结束数值，可以用 <code>...</code> 代替 <code>..</code>。</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">myRange = [<span class="number">10.</span>.<span class="number">.1</span>]</div><div class="line"><span class="built_in">console</span>.log myRange</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">10</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span> ]</div></pre></td></tr></table></figure>
-<p>常见的数组操作，都可以通过区间完成：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">myArray = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line"></div><div class="line"><span class="regexp">//</span> 分割数组</div><div class="line">part = myArray[<span class="number">0.</span><span class="number">.2</span>]</div><div class="line"><span class="built_in">console</span>.log part</div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]</div><div class="line"></div><div class="line"></div><div class="line"><span class="regexp">//</span> 替换数组值</div><div class="line">myArray = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line">myArray[<span class="number">4.</span><span class="number">.7</span>] = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>]</div><div class="line"><span class="built_in">console</span>.log myArray</div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="number">9</span>, <span class="number">10</span> ]</div><div class="line"></div><div class="line"></div><div class="line"><span class="regexp">//</span> 插入值</div><div class="line">myArray = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line">myArray[<span class="number">4.</span>.<span class="number">-1</span>] = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>]</div><div class="line"><span class="built_in">console</span>.log myArray</div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> ]</div></pre></td></tr></table></figure>
-<h4 id="6-类和继承"><a href="#6-类和继承" class="headerlink" title="6.类和继承"></a>6.类和继承</h4><p>一例胜千言：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span></div><div class="line">  constructor: <span class="function"><span class="params">(@name)</span> -&gt;</span></div><div class="line"></div><div class="line">  move: <span class="function"><span class="params">(meters)</span> -&gt;</span></div><div class="line">    alert @name + <span class="string">" moved <span class="subst">#&#123;meters&#125;</span>m."</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Snake</span> <span class="keyword">extends</span> <span class="title">Animal</span></span></div><div class="line">  move: <span class="function">-&gt;</span></div><div class="line">    alert <span class="string">"Slithering..."</span></div><div class="line">    <span class="keyword">super</span> <span class="number">5</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Horse</span> <span class="keyword">extends</span> <span class="title">Animal</span></span></div><div class="line">  move: <span class="function">-&gt;</span></div><div class="line">    alert <span class="string">"Galloping..."</span></div><div class="line">    <span class="keyword">super</span> <span class="number">45</span></div><div class="line"></div><div class="line">sam = <span class="keyword">new</span> Snake <span class="string">"Sammy the Python"</span></div><div class="line">tom = <span class="keyword">new</span> Horse <span class="string">"Tommy the Palomino"</span></div><div class="line"></div><div class="line">sam.move()</div><div class="line">tom.move()</div></pre></td></tr></table></figure>
-<p>这是官网的例子，麻麻再也不用担心我在 JS 里使用类和继承了 T_T。</p>
-<ul>
-<li>consturctor 函数为类的构造函数。在 <code>new</code> 的时候调用，可以重写它。</li>
-<li><code>::</code> 就和 JS 里的 <code>prototype</code> 一样</li>
-</ul>
-<h2 id="很多语法糖"><a href="#很多语法糖" class="headerlink" title="很多语法糖"></a>很多语法糖</h2><p>我对「语法糖」的理解就是让代码的读写更简单。</p>
-<p>CoffeeScript 中添加了一些关键字，如 <code>unless when then until do</code> 等。不仅如此，CoffeeScript 引入了很多<strong>别名</strong>来代替一些关键字：</p>
-<table>
-<thead>
-<tr>
-<th>别名</th>
-<th>对应关键字</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>is</td>
-<td>===</td>
-</tr>
-<tr>
-<td>isnt</td>
-<td>!==</td>
-</tr>
-<tr>
-<td>not</td>
-<td>!</td>
-</tr>
-<tr>
-<td>and</td>
-<td>&amp;&amp;</td>
-</tr>
-<tr>
-<td>or</td>
-<td>&#124;&#124;</td>
-</tr>
-<tr>
-<td>true, yes, on</td>
-<td>true</td>
-</tr>
-<tr>
-<td>false, no, off</td>
-<td>false</td>
-</tr>
-<tr>
-<td>@, this</td>
-<td>this</td>
-</tr>
-<tr>
-<td>of</td>
-<td>in</td>
-</tr>
-<tr>
-<td>in</td>
-<td>no JS equivalent</td>
-</tr>
-</tbody>
-</table>
-<p>运用别名和新关键字，使代码读起来就和普通的英文一样。而且 CoffeeScript 还自动为你添加关键字，如函数最后的 <code>return</code>，<code>switch</code> 后自动添加 <code>break</code>（这种符合我们惰性的改进都是伟大的！ヽ( ^∀^)ﾉ）。</p>
-<h2 id="安装及用法"><a href="#安装及用法" class="headerlink" title="安装及用法"></a>安装及用法</h2><p>1.安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g coffee-script</div></pre></td></tr></table></figure></p>
-<p>2.用法：</p>
-<p>安装完成后，直接在命令行中输入 <code>coffee</code>，就进入了 CoffeeScript 的 REPL（Read-eval-print-loop） 模式，这是一个可交互的控制台，你可以输入 CoffeeScript 代码立即执行。如图：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Ccoffeescript_noteBF073048-AB31-4C6C-84FD-BEDE15DB9E62.png" alt=""></p>
-<p>也可以用<strong>指令</strong>编译 CoffeeScript 代码执行（<em>CoffeeScript 代码文件后缀名为 coffee</em>）：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">coffee -c hello_world.coffee</div></pre></td></tr></table></figure>
-<p>还有一些其他选项，我目前用的最多的是 <code>-o</code>、<code>-p</code>、<code>-w</code> 这三个。</p>
-<p><code>-o</code> 即 <code>--output</code>，设置编译后 JS 文件输出到指定文件夹<br><code>-p</code> 即 <code>--print</code> ，直接在终端打印出编译后的 JS 代码<br><code>-w</code> 即 <code>--watch</code>，监视文件改变，一有变化就重新执行这条指令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">coffee -c hello_world.coffee -o ./js -w</div></pre></td></tr></table></figure>
-<p>搭配起来就可以边写边编译到指定文件夹。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>有篇文章<a href="http://amix.dk/blog/post/19612" target="_blank" rel="external">《CoffeeScript: The beautiful way to write JavaScript》</a>，对 JS 和 CoffeeScript 的论述很中肯。但文中对「什么才是优美的代码」的总结更让人印象深刻：</p>
-<blockquote>
-<ul>
-<li>beautiful code uses the least amount of code to solve a given problem</li>
-<li>beautiful code is readable and understandable</li>
-<li>beautiful code is achieved not when there is nothing more to add, but when there is nothing left to take away (just like great designs)</li>
-<li>the minimal length is a side-effect of beautiful code and not a goal or a measure</li>
-</ul>
-</blockquote>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
-<li><a href="http://book.douban.com/subject/20509115/" target="_blank" rel="external">《CoffeeScript 程序设计》</a></li>
-<li><a href="http://coffeescript.org/" target="_blank" rel="external">CoffeeScript 官网</a></li>
-</ul>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近读了《CoffeeScript程序设计》的前半部分「核心 CoffeeScript」。对 CoffeeScript 也是有了初步的了解，本文只是我的随手笔记，并没有非常系统的总结 CoffeeScript 语法，想学习语法的同学可以看以下两份中文材料：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://island205.github.io/tlboc/&quot;&gt;CoffeeScript中文手册&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://island205.github.io/coffeescript-cookbook.github.com/&quot;&gt;CoffeeScript Cookbook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;为什么要用-CoffeeScript？&quot;&gt;&lt;a href=&quot;#为什么要用-CoffeeScript？&quot; class=&quot;headerlink&quot; title=&quot;为什么要用 CoffeeScript？&quot;&gt;&lt;/a&gt;为什么要用 CoffeeScript？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;采用了 JavaScript 中的 Good Parts，符合 JS 最佳实践&lt;/li&gt;
-&lt;li&gt;代码简洁清晰，有很多语法糖&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;一些特性&quot;&gt;&lt;a href=&quot;#一些特性&quot; class=&quot;headerlink&quot; title=&quot;一些特性&quot;&gt;&lt;/a&gt;一些特性&lt;/h2&gt;&lt;h4 id=&quot;1-有意义的空格&quot;&gt;&lt;a href=&quot;#1-有意义的空格&quot; class=&quot;headerlink&quot; title=&quot;1.有意义的空格&quot;&gt;&lt;/a&gt;1.有意义的空格&lt;/h4&gt;&lt;p&gt;CoffeeScript 移除了所有的大括号和分号。&lt;/p&gt;
-&lt;p&gt;JS 会自动在行尾添加&lt;code&gt;;&lt;/code&gt;，但它又没有纯粹的设计为一款不需要加分号的语言，所以有时候会引起一些蛋疼的Bug。而 CoffeeScript 会在编译出的 JS 代码里每行都加&lt;code&gt;;&lt;/code&gt;，很方便。&lt;/p&gt;
-&lt;p&gt;CoffeeScript 和 Python、Ruby 一样，采用强制缩进（Coffee的很多地方与 ruby 类似)，这种简洁，可读性又很强的代码，让人大爱。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
-    
-      <category term="CoffeeScript" scheme="http://geekplux.com/categories/Web/CoffeeScript/"/>
-    
-    
-      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
-    
-      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
-    
-      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CSS 最核心的几个概念</title>
-    <link href="http://geekplux.com/2014/04/25/several_core_concepts_of_css.html"/>
-    <id>http://geekplux.com/2014/04/25/several_core_concepts_of_css.html</id>
-    <published>2014-04-25T12:28:33.000Z</published>
-    <updated>2015-08-04T09:00:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>本文将讲述 CSS 中最核心的几个概念，包括：盒模型、position、float等。这些是 CSS 的基础，也是最常用的几个属性，它们之间看似独立却又相辅相成。为了掌握它们，有必要写出来探讨一下，如有错误欢迎指正。</p>
-<h1 id="元素类型"><a href="#元素类型" class="headerlink" title="元素类型"></a>元素类型</h1><p>HTML 的元素可以分为两种：</p>
-<ul>
-<li>块级元素（block level element）</li>
-<li>内联元素（inline element 有的人也叫它行内元素）</li>
-</ul>
-<p>两者的区别在于以下三点：</p>
-<ol>
-<li>块级元素会独占一行（即无法与其他元素显示在同一行内，除非你显式修改元素的 display 属性），而内联元素则都会在一行内显示。</li>
-<li>块级元素可以设置 width、height 属性，而内联元素设置无效。</li>
-<li>块级元素的 width 默认为 100%，而内联元素则是根据其自身的内容或子元素来决定其宽度。</li>
-</ol>
-<p><em>最常见块级元素应该是 <code>&lt;div&gt;</code> 吧，内联元素有 <code>&lt;span&gt;</code> <code>&lt;a&gt;</code> <code>&lt;img&gt;</code> 等等，完整的元素列表可以谷歌一下。</em></p>
-<p>具体来说一下吧,</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">100px</span>;</div><div class="line">    <span class="attribute">height</span>: <span class="number">100px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>我们为 <code>&lt;div&gt;</code> 设置上面的样式，是有效果的，因为其是块级元素，而对 <code>&lt;span&gt;</code> 设置上面的样式是没用的。要想让 <code>&lt;span&gt;</code> 也可以改变宽高，可以通过设置 <code>display: block;</code> 来达到效果。当 display 的值设为 block 时，元素将以块级形式呈现；当 display 值设为 inline 时，元素将以内联形式呈现。</p>
-<a id="more"></a>
-<p>若既想让元素在行内显示，又能设置宽高，可以设置：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">display</span>: <span class="selector-tag">inline-block</span>;</div></pre></td></tr></table></figure>
-<p>inline-block 在我看来就是让元素对外呈内联元素，可以和其他元素共处与一行内；对内则让元素呈块级元素，可改变其宽高。</p>
-<hr>
-<p>HTML 代码是顺序执行的，一份无任何 CSS 样式的 HTML 代码最终呈现出的页面是根据元素出现的顺序和类型排列的。块级元素就从上到下排列，遇到内联元素则从左到右排列。这种无样式的情况下，元素的分布叫<strong>普通流</strong>，元素出现的位置应该叫<strong>正常位置</strong>（这是我瞎起的），同时<strong>所有元素会在页面上占据一个空间</strong>，空间大小由其盒模型决定。</p>
-<h1 id="盒模型"><a href="#盒模型" class="headerlink" title="盒模型"></a>盒模型</h1><p>页面上显示的每个元素（包括内联元素）都可以看作一个盒子，即盒模型( box model )。请看 Chrome DevTools 里的截图：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Cthree_core_concepts_of_cssD65A4E60-A213-481C-86D6-A3929A0A8D28.png" alt=""></p>
-<p>可以显而易见的看出盒模型由 4 部分组成。从内到外分别是：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">content -&gt; padding -&gt; border -&gt; margin</div></pre></td></tr></table></figure>
-<p>按理来说一个元素的宽度（高度以此类推）应该这样计算：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">总宽度 = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</div></pre></td></tr></table></figure>
-<p>但是不同浏览器（你没有猜错，就是那个与众不同的浏览器）对宽度的诠释不一样。符合 W3C 标准的浏览器认为一个元素的宽度只等于其 content 的宽度，其余都要额外算。于是你规定一个元素：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>则他最终的宽度应为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">宽度 = width(200px) + padding(10px * 2) + border(5px * 2) + margin(20px * 2) = 270px;</div></pre></td></tr></table></figure>
-<p>而在 IE（低于IE9） 下，最终宽度为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">宽度 = width(200px) + margin(20px * 2) = 240px;</div></pre></td></tr></table></figure>
-<p>我个人觉得 IE 的更符合人类思维，毕竟 padding 叫内边距，边框算作额外的宽度也说不下去。W3C 最后为了解决这个问题，在 CSS3 中加了 box-sizing 这个属性。当我们设置 <code>box-sizing: border-box;</code> 时，border 和 padding 就被包含在了宽高之内，和 IE 之前的标准是一样的。所以，为了避免你同一份 css 在不同浏览器下表现不同，最好加上：</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</div><div class="line">  <span class="attribute">-moz-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">-webkit-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>这里还有两种特殊情况：</p>
-<ul>
-<li>无宽度 —— 绝对定位（position: absolute;） 元素</li>
-<li>无宽度 —— 浮动（float） 元素</li>
-</ul>
-<p>它们在页面上的表现均<strong>不占据空间</strong>（脱离普通流，感觉像浮在页面上层一样，移动它们不影响其他元素的定位）。这就涉及到另外两个核心概念 position 和 float。</p>
-<h1 id="position"><a href="#position" class="headerlink" title="position"></a>position</h1><p>position 这个属性决定了元素将如何定位。它的值大概有以下五种：</p>
-<table>
-<thead>
-<tr>
-<th style="text-align:left">position 值</th>
-<th style="text-align:left">如何定位</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td style="text-align:left">static</td>
-<td style="text-align:left">position的<strong>默认值</strong>。元素将定位到它的正常位置（上文提到过），其实也就相当于没有定位。元素在页面上<strong>占据</strong>位置。<strong>不能</strong>使用 top right bottom left 移动元素位置。</td>
-</tr>
-<tr>
-<td style="text-align:left">relative</td>
-<td style="text-align:left">相对定位，相对于元素的正常位置来进行定位。元素在页面<strong>占据</strong>位置。<strong>可以</strong>使用 top right bottom left 移动元素位置。</td>
-</tr>
-<tr>
-<td style="text-align:left">absolute</td>
-<td style="text-align:left">绝对定位，相对于<em>最近一级的</em> <strong>定位不是 static 的</strong>父元素来进行定位。元素在页面<strong>不占据</strong>位置。 <strong>可以</strong>使用 top right bottom left 移动元素位置。</td>
-</tr>
-<tr>
-<td style="text-align:left">fixed</td>
-<td style="text-align:left">绝对定位，相对于<strong>浏览器窗口</strong>来进行定位。其余和 absolute 一样，相当于一种特殊的 absolute。</td>
-</tr>
-<tr>
-<td style="text-align:left">inherit</td>
-<td style="text-align:left">从父元素继承 position 属性的值。</td>
-</tr>
-</tbody>
-</table>
-<p>具体效果可以参考<a href="http://www.w3school.com.cn/cssref/pr_class_position.asp" target="_blank" rel="external">w3school的实例</a>，或者自己写一下就明白了。</p>
-<p>每个网页都可以看成是由一层一层页面堆叠起来的，如下图所示。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Cthree_core_concepts_of_css2012-08-14-59d1deed94-70c5-48bb-b2ff-8421d516a981.gif" alt="图片来自网络"></p>
-<p>position 设置为 relative 的时候，元素依然在普通流中，位置是正常位置，你可以通过 left right 等移动元素。会影响其他元素的位置。</p>
-<p>而当一个元素的 position 值为 absolute 或 fixed 的时候，会发生三件事：</p>
-<ol>
-<li>把该元素往 Z 轴方向移了一层，<strong>元素脱离了普通流，所以不再占据原来那层的空间</strong>，还会覆盖下层的元素。</li>
-<li>该元素将<strong>变为块级元素</strong>，相当于给该元素设置了 <code>display: block;</code>（给一个内联元素，如 <code>&lt;span&gt;</code> ，设置 absolute 之后发现它可以设置宽高了）。</li>
-<li>如果该元素是块级元素，元素的宽度由原来的 width: 100%（占据一行），变为了 auto。</li>
-</ol>
-<p>由此观之，当 position 设置为 absolute 或 fixed，就没必要设置 display 为 block 了。而且如果你不想覆盖下层的元素，可以设置 z-index 值 达到效果。</p>
-<h1 id="float"><a href="#float" class="headerlink" title="float"></a>float</h1><p>float 顾名思义，就是把元素浮动，它的取值一共有四个：left right none inherit，光看名字就懂了，无需多言。</p>
-<p>最初的 float 只是用来实现<strong>文字环绕图片</strong>的效果，仅此而已。而现在 float 的应用已不止这个，前辈们也是写了无数博文来深入浅出的讲解它。<br>浅如：<br><a href="http://www.cnblogs.com/iyangyuan/archive/2013/03/27/2983813.html" target="_blank" rel="external">经验分享：CSS浮动(float,clear)通俗讲解</a> 篇幅不长，通俗易懂，可以看完这篇文章再回过头来看本文。<br>深如：<br><a href="http://www.zhangxinxu.com/wordpress/2010/01/css-float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E3%80%81%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%8B%93%E5%B1%95%E4%B8%80/" target="_blank" rel="external">CSS float浮动的深入研究、详解及拓展(一)</a><br><a href="http://www.zhangxinxu.com/wordpress/2010/01/css-float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E3%80%81%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%8B%93%E5%B1%95%E4%BA%8C/" target="_blank" rel="external">CSS float浮动的深入研究、详解及拓展(二)</a><br>从本质上讲解了 float 的原理。</p>
-<p>我就不班门弄斧写原理了，只说说 float 的几个要点就行了：</p>
-<ol>
-<li>只有左右浮动，没有上下浮动。</li>
-<li>元素设置 float 之后，它会<strong>脱离普通流</strong>（和 <code>position: absolute;</code> 一样），不再占据原来那层的空间，还会覆盖下一层的元素。</li>
-<li>浮动不会对该元素的上一个兄弟元素有任何影响。</li>
-<li>浮动之后，该元素的下一个兄弟元素会紧贴到该元素之前没有设置 float 的元素之后（很好理解，因为该元素脱离普通流了，或者说不在这一层了，所以它的下一个元素当然要补上它的位置）。</li>
-<li>如果该元素的下一个兄弟元素中有内联元素（通常是文字），则会围绕该元素显示，形成类似「文字围绕图片」的效果。（可参考<a href="http://www.zhangxinxu.com/wordpress/2010/01/css-float%E6%B5%AE%E5%8A%A8%E7%9A%84%E6%B7%B1%E5%85%A5%E7%A0%94%E7%A9%B6%E3%80%81%E8%AF%A6%E8%A7%A3%E5%8F%8A%E6%8B%93%E5%B1%95%E4%B8%80/" target="_blank" rel="external">CSS float浮动的深入研究、详解及拓展(一)</a>中的讲解）。这个我还是实践了一下的：<iframe scrolling="no" width="100%" height="300" src="http://jsfiddle.net/9yAH8/embedded/js,resources,html,css,result/light" frameborder="0" allowfullscreen></iframe></li>
-<li>下一个兄弟元素如果也设置了同一方向的 float，则会紧随该元素之后显示。</li>
-<li>该元素将<strong>变为块级元素</strong>，相当于给该元素设置了 <code>display: block;</code>（和<code>position: absolute;</code> 一样）。</li>
-</ol>
-<p>这里还有个东西，就是广为人知的——<strong>清除浮动</strong>。具体的方法五花八门，可以看这篇：<a href="http://www.iyunlu.com/view/css-xhtml/55.html" target="_blank" rel="external">那些年我们一起清除过的浮动</a>，我就不多说了。</p>
-<p>写完本文后，脑子中又出现了一系列问题，假如 position 和 float 同时设置会出现什么问题？兼容性如何？哪个属性会被覆盖？还没来得及实践，改天以排列组合的方式看看到底是什么效果……如果有人实践过可以偷偷告诉我^_^</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;本文将讲述 CSS 中最核心的几个概念，包括：盒模型、position、float等。这些是 CSS 的基础，也是最常用的几个属性，它们之间看似独立却又相辅相成。为了掌握它们，有必要写出来探讨一下，如有错误欢迎指正。&lt;/p&gt;
-&lt;h1 id=&quot;元素类型&quot;&gt;&lt;a href=&quot;#元素类型&quot; class=&quot;headerlink&quot; title=&quot;元素类型&quot;&gt;&lt;/a&gt;元素类型&lt;/h1&gt;&lt;p&gt;HTML 的元素可以分为两种：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;块级元素（block level element）&lt;/li&gt;
-&lt;li&gt;内联元素（inline element 有的人也叫它行内元素）&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;两者的区别在于以下三点：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;块级元素会独占一行（即无法与其他元素显示在同一行内，除非你显式修改元素的 display 属性），而内联元素则都会在一行内显示。&lt;/li&gt;
-&lt;li&gt;块级元素可以设置 width、height 属性，而内联元素设置无效。&lt;/li&gt;
-&lt;li&gt;块级元素的 width 默认为 100%，而内联元素则是根据其自身的内容或子元素来决定其宽度。&lt;/li&gt;
-&lt;/ol&gt;
-&lt;p&gt;&lt;em&gt;最常见块级元素应该是 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 吧，内联元素有 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;a&amp;gt;&lt;/code&gt; &lt;code&gt;&amp;lt;img&amp;gt;&lt;/code&gt; 等等，完整的元素列表可以谷歌一下。&lt;/em&gt;&lt;/p&gt;
-&lt;p&gt;具体来说一下吧,&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-class&quot;&gt;.example&lt;/span&gt; &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;width&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;100px&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;    &lt;span class=&quot;attribute&quot;&gt;height&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;100px&lt;/span&gt;;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-&lt;p&gt;我们为 &lt;code&gt;&amp;lt;div&amp;gt;&lt;/code&gt; 设置上面的样式，是有效果的，因为其是块级元素，而对 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 设置上面的样式是没用的。要想让 &lt;code&gt;&amp;lt;span&amp;gt;&lt;/code&gt; 也可以改变宽高，可以通过设置 &lt;code&gt;display: block;&lt;/code&gt; 来达到效果。当 display 的值设为 block 时，元素将以块级形式呈现；当 display 值设为 inline 时，元素将以内联形式呈现。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
-    
-      <category term="CSS" scheme="http://geekplux.com/categories/Web/CSS/"/>
-    
-    
-      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
-    
-      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
-    
-      <category term="CSS" scheme="http://geekplux.com/tags/CSS/"/>
-    
-      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>响应式设计简易指南（译）</title>
-    <link href="http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html"/>
-    <id>http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</id>
-    <published>2014-04-06T14:54:42.000Z</published>
-    <updated>2015-01-04T11:59:54.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>####为什么要使用响应式设计？<br>我们想让我们的网站通过响应用户的行为、设备的屏幕大小和屏幕方向，从而在所有设备上都能用。</p>
-<p>####一个碎片化的世界<br>截止2013年，有成千上万种不同的设备在浏览网页，所以我们不可能设计出适应所有屏幕大小的网页。相反，我们必须得采用一种更加流畅的方式去设计。</p>
-<p>####移动优先<br>最近一个比较火的词叫移动优先。它的意思是，先为移动端设计样式，然后再根据需求去优化更大屏幕的样式。换句话说，假如你把移动端样式当成网站的默认样式，且以后不用去优化它，一步到位。那就更省事了！</p>
-<blockquote>
-<p>“假定默认使用一个灵活但简单的布局，你的确可以适配各种浏览器，但这还不算是完全做到了响应式布局。所以当我们谈论「移动优先」，实际上是在说「渐进增强」。” —Ethan Marcotte</p>
-</blockquote>
-<p>##用 Min-width 进行媒体查询（ Media Queries ）<br>现在来介绍一种特别的布局方式。 通过 min-width 来界定不同屏幕该如何布局。它能就近检测出不同设备的屏幕大小（即 media queries，可直译为媒体查询），比在样式表末尾或一个单独文件中处理更简单。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* Small screens (default) */</span></div><div class="line"><span class="selector-tag">html</span> &#123; <span class="attribute">font-size</span>: <span class="number">100%</span>; &#125;</div><div class="line"></div><div class="line"><span class="comment">/* Medium screens (640px) */</span></div><div class="line">@<span class="keyword">media</span> (min-width: <span class="number">40rem</span>) &#123;</div><div class="line">  <span class="selector-tag">html</span> &#123; <span class="attribute">font-size</span>: <span class="number">112%</span>; &#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">/* Large screens (1024px) */</span></div><div class="line">@<span class="keyword">media</span> (min-width: <span class="number">64rem</span>) &#123;</div><div class="line">  <span class="selector-tag">html</span> &#123; <span class="attribute">font-size</span>: <span class="number">120%</span>; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<a id="more"></a>
-<p>##步骤</p>
-<p>####1. 不是所有浏览器生而平等<br>同一份 CSS，不同浏览器渲染出来的效果不一样。为了避免出现这种情况，你可以使用类似 <a href="http://necolas.github.io/normalize.css/" target="_blank" rel="external">Normalize.css</a> 这种更好的 CSS 来帮助你实现跨浏览器显示。当然，你要把这份CSS放在你样式表最前面。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/css/normalize.css"</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">href</span>=<span class="string">"/css/grid.css"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>####2. 在 Viewport 里加 Meta 标签<br>在你 HTML 的 <code>head</code> 代码里添加 Meta 标签。它可以使 media queries 在不同设备上起作用</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">meta</span> <span class="attr">name</span>=<span class="string">"viewport"</span> <span class="attr">content</span>=<span class="string">"width=device-width, initial-scale=1"</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>####3. CSS 盒模型<br>在 CSS 文件最顶端设置 box-sizing。运用 <code>*</code> 通用选择器使其应用到页面的每个元素上。</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</div><div class="line">  <span class="attribute">-moz-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">-webkit-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>####4. 创建容器<br>一个容器将包含页面所有标签，并控制页面最大宽度. 运用容器，让我们的响应式设计更进了一步！</p>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.container</span> &#123;</div><div class="line">  <span class="attribute">margin</span>: <span class="number">0</span> auto;</div><div class="line">  <span class="attribute">max-width</span>: <span class="number">48rem</span>;</div><div class="line">  <span class="attribute">width</span>: <span class="number">90%</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>####5. 创建列<br>在移动优先里，列默认均是 <code>block</code> 级别的（可以占满整行的宽度）。不需要额外的样式！</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column"</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<p>####6. 创建列宽<br>在大屏中，用 <code>float: left</code> 将列水平排列。然后运用 padding 设置相邻两列之间的间隙，忘掉传统的margin吧。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> (min-width: <span class="number">40rem</span>) &#123;</div><div class="line">  <span class="selector-class">.column</span> &#123;</div><div class="line">    <span class="attribute">float</span>: left;</div><div class="line">    <span class="attribute">padding-left</span>: <span class="number">1rem</span>;</div><div class="line">    <span class="attribute">padding-right</span>: <span class="number">1rem</span>;</div><div class="line">  &#125;</div><div class="line"></div><div class="line">  <span class="selector-class">.column</span><span class="selector-class">.full</span> &#123; <span class="attribute">width</span>: <span class="number">100%</span>; &#125;</div><div class="line">  <span class="selector-class">.column</span><span class="selector-class">.two-thirds</span> &#123; <span class="attribute">width</span>: <span class="number">66.7%</span>; &#125;</div><div class="line">  <span class="selector-class">.column</span><span class="selector-class">.half</span> &#123; <span class="attribute">width</span>: <span class="number">50%</span>; &#125;</div><div class="line">  <span class="selector-class">.column</span><span class="selector-class">.third</span> &#123; <span class="attribute">width</span>: <span class="number">33.3%</span>; &#125;</div><div class="line">  <span class="selector-class">.column</span><span class="selector-class">.fourth</span> &#123; <span class="attribute">width</span>: <span class="number">24.95%</span>; &#125;</div><div class="line">  <span class="selector-class">.column</span><span class="selector-class">.flow-opposite</span> &#123; <span class="attribute">float</span>: right; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>####7. 创建行<br>列应该包裹在行内，以避免其他元素堆放在其旁边造成布局混乱。否则就会出现广为人知的 clearing 问题。出现之后可以使用由 <a href="http://nicolasgallagher.com/micro-clearfix-hack/" target="_blank" rel="external">Nicolas Gallagher</a> 发明的 <code>clearfix</code> 解决。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row clearfix"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row clearfix"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">.clearfix:before,</div><div class="line">.clearfix:after &#123;</div><div class="line">  content: " ";</div><div class="line">  display: table;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.clearfix:after &#123;</div><div class="line">  clear: both;</div><div class="line">&#125;</div><div class="line"></div><div class="line">.clearfix &#123;</div><div class="line">  *zoom: 1;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<h4 id="相对流（-Flow-Opposite-）"><a href="#相对流（-Flow-Opposite-）" class="headerlink" title="相对流（ Flow Opposite ）"></a>相对流（ Flow Opposite ）</h4><p>给你想让它在移动端优先显示，而在大屏幕中右侧显示的列，添加 <code>.flow-opposite</code> 类。</p>
-<figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"container"</span>&gt;</span></div><div class="line">  <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"row clearfix"</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half flow-opposite"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">div</span> <span class="attr">class</span>=<span class="string">"column half"</span>&gt;</span></div><div class="line">      <span class="comment">&lt;!-- Your Content --&gt;</span></div><div class="line">    <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line">  <span class="tag">&lt;/<span class="name">div</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">div</span>&gt;</span></div></pre></td></tr></table></figure>
-<figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">@<span class="keyword">media</span> (min-width: <span class="number">40rem</span>) &#123;</div><div class="line">  <span class="selector-class">.column</span><span class="selector-class">.flow-opposite</span> &#123; <span class="attribute">float</span>: right; &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>####延伸阅读</p>
-<ul>
-<li><a href="http://www.abookapart.com/products/mobile-first" target="_blank" rel="external">A Book Apart: Mobile First</a></li>
-<li><a href="http://www.abookapart.com/products/responsive-web-design" target="_blank" rel="external">A Book Apart: Responsive Web Design</a></li>
-<li><a href="http://blog.teamtreehouse.com/beginners-guide-to-responsive-web-design" target="_blank" rel="external">Beginner’s Guide to Responsive Web Design</a></li>
-<li><a href="http://www.paulirish.com/2012/box-sizing-border-box-ftw/" target="_blank" rel="external">Box-sizing: Border-box FTW</a></li>
-<li><a href="http://dev.tutsplus.com/articles/quick-tip-dont-forget-the-viewport-meta-tag--webdesign-5972" target="_blank" rel="external">Don’t Forget the Viewport Meta Tag</a></li>
-<li><a href="http://bradfrostweb.com/blog/mobile/the-many-faces-of-mobile-first/" target="_blank" rel="external">The Many Faces of ‘Mobile First’</a></li>
-<li><a href="http://fuseinteractive.ca/blog/understanding-humble-clearfix" target="_blank" rel="external">Understanding the Humble Clearfix</a></li>
-</ul>
-<p>####参考文献</p>
-<ul>
-<li><a href="http://opensignal.com/reports/fragmentation-2013/" target="_blank" rel="external">Android Fragmentation Visualized</a></li>
-<li><a href="http://daneden.github.io/animate.css/" target="_blank" rel="external">Animate.css</a></li>
-<li><a href="http://developer.mozilla.org/en-US/docs/Web/CSS/box_model" target="_blank" rel="external">Box Model</a></li>
-<li><a href="http://developers.google.com/chrome-developer-tools/" target="_blank" rel="external">Chrome Developer Tools</a></li>
-<li><a href="https://gist.github.com/aekaplan" target="_blank" rel="external">Code samples by GitHub Gist</a></li>
-<li><a href="http://en.wikipedia.org/wiki/Internet_Explorer_box_model_bug" target="_blank" rel="external">Internet Explorer Box Model</a></li>
-<li><a href="http://coding.smashingmagazine.com/2009/04/22/progressive-enhancement-what-it-is-and-how-to-use-it/" target="_blank" rel="external">Progressive Enhancement</a></li>
-</ul>
-<h2 id="（译文完）"><a href="#（译文完）" class="headerlink" title="（译文完）"></a>（译文完）</h2><p>这是我最近翻译的一篇我觉得非常不错的指南。</p>
-<ul>
-<li><a href="http://www.adamkaplan.me/grid" target="_blank" rel="external">原文地址</a></li>
-<li><a href="http://geekplux.github.io/grid" target="_blank" rel="external">中文版地址</a></li>
-<li><a href="https://github.com/aekaplan/grid" target="_blank" rel="external">原 Github 地址</a></li>
-<li><a href="https://github.com/geekplux/grid" target="_blank" rel="external">中文版 Github 地址</a></li>
-</ul>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;####为什么要使用响应式设计？&lt;br&gt;我们想让我们的网站通过响应用户的行为、设备的屏幕大小和屏幕方向，从而在所有设备上都能用。&lt;/p&gt;
-&lt;p&gt;####一个碎片化的世界&lt;br&gt;截止2013年，有成千上万种不同的设备在浏览网页，所以我们不可能设计出适应所有屏幕大小的网页。相反，我们必须得采用一种更加流畅的方式去设计。&lt;/p&gt;
-&lt;p&gt;####移动优先&lt;br&gt;最近一个比较火的词叫移动优先。它的意思是，先为移动端设计样式，然后再根据需求去优化更大屏幕的样式。换句话说，假如你把移动端样式当成网站的默认样式，且以后不用去优化它，一步到位。那就更省事了！&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;“假定默认使用一个灵活但简单的布局，你的确可以适配各种浏览器，但这还不算是完全做到了响应式布局。所以当我们谈论「移动优先」，实际上是在说「渐进增强」。” —Ethan Marcotte&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;##用 Min-width 进行媒体查询（ Media Queries ）&lt;br&gt;现在来介绍一种特别的布局方式。 通过 min-width 来界定不同屏幕该如何布局。它能就近检测出不同设备的屏幕大小（即 media queries，可直译为媒体查询），比在样式表末尾或一个单独文件中处理更简单。&lt;/p&gt;
-&lt;figure class=&quot;highlight css&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;1&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;2&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;3&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;4&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;5&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;6&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;7&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;8&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;9&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;10&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;11&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;12&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;td class=&quot;code&quot;&gt;&lt;pre&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* Small screens (default) */&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;selector-tag&quot;&gt;html&lt;/span&gt; &amp;#123; &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;100%&lt;/span&gt;; &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* Medium screens (640px) */&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;media&lt;/span&gt; (min-width: &lt;span class=&quot;number&quot;&gt;40rem&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;html&lt;/span&gt; &amp;#123; &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;112%&lt;/span&gt;; &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&lt;span class=&quot;comment&quot;&gt;/* Large screens (1024px) */&lt;/span&gt;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;@&lt;span class=&quot;keyword&quot;&gt;media&lt;/span&gt; (min-width: &lt;span class=&quot;number&quot;&gt;64rem&lt;/span&gt;) &amp;#123;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;  &lt;span class=&quot;selector-tag&quot;&gt;html&lt;/span&gt; &amp;#123; &lt;span class=&quot;attribute&quot;&gt;font-size&lt;/span&gt;: &lt;span class=&quot;number&quot;&gt;120%&lt;/span&gt;; &amp;#125;&lt;/div&gt;&lt;div class=&quot;line&quot;&gt;&amp;#125;&lt;/div&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/figure&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
-    
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
-      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
-    
-      <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
-    
-      <category term="Translation" scheme="http://geekplux.com/tags/Translation/"/>
-    
-      <category term="Responsive Design" scheme="http://geekplux.com/tags/Responsive-Design/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>初识 TDD</title>
-    <link href="http://geekplux.com/2014/03/21/understand_tdd.html"/>
-    <id>http://geekplux.com/2014/03/21/understand_tdd.html</id>
-    <published>2014-03-20T16:20:09.000Z</published>
-    <updated>2015-01-04T12:01:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。</p>
-<h1 id="神马是-TDD"><a href="#神马是-TDD" class="headerlink" title="神马是 TDD"></a>神马是 TDD</h1><p>维基百科上是这样说的：测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导<strong>先写测试程序，然后编码实现其功能</strong>得名。</p>
-<p>好吧，上面那段翻译的真是让人捉急，人家原文是这样的：</p>
-<blockquote>
-<p>Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards. </p>
-</blockquote>
-<p>看完英文应该比较好理解。通俗点就是：<strong>先写测试，再写只能让测试通过的代码，然后不停的循环这两个步骤，直到重构出满足需求的代码</strong>。以每个测试来推动整个开发的进行，这样有助于编写简洁和高质量的代码，并加速开发过程。</p>
-<a id="more"></a>
-<h1 id="TDD-流程"><a href="#TDD-流程" class="headerlink" title="TDD 流程"></a>TDD 流程</h1><p><img src="http://upload.wikimedia.org/wikipedia/en/9/9c/Test-driven_development.PNG" alt=""></p>
-<ol>
-<li>先写一个测试，覆盖的需求很少</li>
-<li>检查是否运行失败</li>
-<li>编写能通过这个测试的代码</li>
-<li>运行该测试</li>
-<li>如果测试通过，则写新的测试，覆盖更多需求；如果测试没有通过，则更改代码直到通过</li>
-<li>重构代码，使其能通过新写的测试</li>
-<li>重复第 5 步</li>
-<li>重复第 6 步<br>……</li>
-</ol>
-<h1 id="一个好的-Test-Case-应有下列特点："><a href="#一个好的-Test-Case-应有下列特点：" class="headerlink" title="一个好的 Test Case 应有下列特点："></a>一个好的 Test Case 应有下列特点：</h1><ul>
-<li>快    –天下武功，唯快不破</li>
-<li>独立    –不依赖于其他的测试用例的输出结果</li>
-<li>可读    –基本上别人一看你的代码就知道是在测试什么功能，都不用写注释</li>
-<li>完整    –包括目的，输入，预期结果</li>
-<li>可重复    –无论谁测试结果都一样，且可以根据之前的测试编写下一个测试</li>
-<li>一个assert    –只有一个判断结果，准确、简洁</li>
-</ul>
-<p>要实现前两点，则测试用例就不能涉及到文件、数据库、网络、环境（第三方类库）等。</p>
-<h1 id="感受"><a href="#感受" class="headerlink" title="感受"></a>感受</h1><p>TDD 作为一种敏捷开发方式，越来越为人所吹。毕竟敏捷开发越来越流行，所以 TDD 也是越来越被人吹捧。而且整个 TDD 开发过程看起来效果非常棒，尤其是在敏捷教练现场演示了一遍之后（果然例子理解起来永远比理论容易）。感觉是把大事化小，逐步解决。</p>
-<p>不过，任何东西都有利有弊。比如，测试的范围就是个很麻烦的问题，怎么才能写出一个好的测试用例。既不会覆盖的需求太多，又不会覆盖的太少……</p>
-<p>不管怎样，还是学到了东西，非常感谢两位敏捷教练。</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。&lt;/p&gt;
-&lt;h1 id=&quot;神马是-TDD&quot;&gt;&lt;a href=&quot;#神马是-TDD&quot; class=&quot;headerlink&quot; title=&quot;神马是 TDD&quot;&gt;&lt;/a&gt;神马是 TDD&lt;/h1&gt;&lt;p&gt;维基百科上是这样说的：测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导&lt;strong&gt;先写测试程序，然后编码实现其功能&lt;/strong&gt;得名。&lt;/p&gt;
-&lt;p&gt;好吧，上面那段翻译的真是让人捉急，人家原文是这样的：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards. &lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;看完英文应该比较好理解。通俗点就是：&lt;strong&gt;先写测试，再写只能让测试通过的代码，然后不停的循环这两个步骤，直到重构出满足需求的代码&lt;/strong&gt;。以每个测试来推动整个开发的进行，这样有助于编写简洁和高质量的代码，并加速开发过程。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Agile Development" scheme="http://geekplux.com/categories/Agile-Development/"/>
-    
-    
-      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
-    
-      <category term="Agile Development" scheme="http://geekplux.com/tags/Agile-Development/"/>
     
   </entry>
   

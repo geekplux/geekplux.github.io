@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>数据可视化基础——数据模型 | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第二篇，主要介绍数据模型，另两篇则主讲可视化流程和视觉编码，建议从可视化流程看起。原文地址：http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html
+
+数据说白了就是一组可定性或可量化的值。随着计算机存储能力的大幅提高">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据可视化基础——数据模型">
+<meta property="og:url" content="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第二篇，主要介绍数据模型，另两篇则主讲可视化流程和视觉编码，建议从可视化流程看起。原文地址：http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html
+
+数据说白了就是一组可定性或可量化的值。随着计算机存储能力的大幅提高">
+<meta property="og:updated_time" content="2017-01-10T03:20:30.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据可视化基础——数据模型">
+<meta name="twitter:description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第二篇，主要介绍数据模型，另两篇则主讲可视化流程和视觉编码，建议从可视化流程看起。原文地址：http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html
+
+数据说白了就是一组可定性或可量化的值。随着计算机存储能力的大幅提高">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    <body>
+  
+      <div id="container" class="container">
+        <article id="post-basics-of-data-visualization-data-model" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/wiki">Wiki</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/gab">扯淡集</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据可视化基础——数据模型
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <blockquote>
+<p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第二篇，主要介绍<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>和<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>，建议从可视化流程看起。<br>原文地址：<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html</a></p>
+</blockquote>
+<p>数据说白了就是一组可定性或可量化的值。随着计算机存储能力的大幅提高，人们对于数据的关注与日俱增，「大数据」一词近几年来也被人们频频提及。而数据可视化的主要任务是将数据转换为易于感知的图形。因此，为了更准确更形象的表达数据，我们需要了解一些数据相关的概念。</p>
+<h2 id="数据模型与概念模型"><a href="#数据模型与概念模型" class="headerlink" title="数据模型与概念模型"></a>数据模型与概念模型</h2><p>为什么数据能代表我们的世界？要回答这个问题，我们得先了解数据和概念两个模型。</p>
+<p><strong>数据模型</strong>是一组数字或符号的组合，它包含数据的定义、类型等，可以进行各类数学操作等。<strong>概念模型</strong>描述的是事物的语义或状态行为等。</p>
+<p><strong>现实</strong> =&gt; <strong>概念</strong> =&gt; <strong>数据</strong></p>
+<p>现实世界可以用概念模型来描述，而概念模型又可以用数据模型来描述。经过两层抽象，数据便可以描述我们的现实生活中的方方面面。</p>
+<h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>一个东西具体归为哪一类，取决于我们用什么标准划分，数据亦然。</p>
+<p>从数据在计算机中的存储可分为浮点数、整数、字符等；从关系模型的角度分，数据又可以分为实体和关系两类；从数据的结构来分，可以分为一维、二维、三维、多维、时间序列、空间序列、树型、图型等等[3]；还有很多的分类方法，我们暂时先不讨论，把关注点聚焦到和数据可视化有关的分类方法上。</p>
+<p>按照测量标度来分，数据一般被分为四类：<strong>类别型</strong>、<strong>有序型</strong>、<strong>区间型</strong>、<strong>比值型</strong>。</p>
+<ul>
+<li><strong>类别型</strong>数据用于区分事物。例如，人可以分为男女，水果能分为苹果香蕉等。</li>
+<li><strong>有序型</strong>用来表示对象间的顺序关系。例如，我们的身高可以从矮到高，学生的成绩可以从低到高排列等。</li>
+<li><strong>区间型</strong>用于对象间的定量比较。例如，身高 160cm 与身高 170cm 相差 10cm，而 170cm 与 180cm 也相差 10cm，它们俩的差值是相等的。由此可见，区间型数据基于任意的起始点，所以它只能衡量对象间的相对差别。</li>
+<li><strong>比值型</strong>用于比较数值间的比例关系。例如，体重 80kg 是体重 40kg 的两倍。</li>
+</ul>
+<p>不同的数据类型适用于不同的操作[1]：</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">数据类型</th>
+<th style="text-align:left">操作</th>
+<th style="text-align:left">集合操作</th>
+<th style="text-align:left">统计操作</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">类别型</td>
+<td style="text-align:left">=、≠</td>
+<td style="text-align:left">互换元素位置</td>
+<td style="text-align:left">类别、模式、列联相关</td>
+</tr>
+<tr>
+<td style="text-align:left">有序型</td>
+<td style="text-align:left">=、≠、&gt;、&lt;</td>
+<td style="text-align:left">计算元素单调递增（减）</td>
+<td style="text-align:left">中值、百分位数</td>
+</tr>
+<tr>
+<td style="text-align:left">区间型</td>
+<td style="text-align:left">=、≠、&gt;、&lt;、+、-</td>
+<td style="text-align:left">元素间线性加（减）</td>
+<td style="text-align:left">平均值、标准方差、等级相关、积差相关</td>
+</tr>
+<tr>
+<td style="text-align:left">比值型</td>
+<td style="text-align:left">=、≠、&gt;、&lt;、+、-、×、÷</td>
+<td style="text-align:left">元素间相似度</td>
+<td style="text-align:left">变异系数</td>
+</tr>
+</tbody>
+</table>
+<p>不过，在数据可视化中，我们通常不特别区分区间型和比值型，将其统称为<strong>数值型</strong>。进而可将数据类型进一步精简为三种：<strong>类别型</strong>、<strong>有序型</strong>、<strong>数值型</strong>。具体为什么要分为这三类，我相信你看完下一篇<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>之后会完全明白。</p>
+<h2 id="例子"><a href="#例子" class="headerlink" title="例子"></a>例子</h2><p>说了那么多，都比较抽象，不如直接来看个例子。下面是一个简单的数据表，每一行通常称作一条<strong>记录</strong>，每一列称作一个<strong>字段</strong>，共有几个字段，则通常就说这份数据有几个<strong>维度</strong>。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">id</th>
+<th style="text-align:left">类型</th>
+<th style="text-align:left">款式</th>
+<th style="text-align:left">尺码</th>
+<th style="text-align:left">销量</th>
+<th style="text-align:left">年增长</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">1</td>
+<td style="text-align:left">男款</td>
+<td style="text-align:left">上衣</td>
+<td style="text-align:left">L</td>
+<td style="text-align:left">50</td>
+<td style="text-align:left">10%</td>
+</tr>
+<tr>
+<td style="text-align:left">2</td>
+<td style="text-align:left">女款</td>
+<td style="text-align:left">上衣</td>
+<td style="text-align:left">S</td>
+<td style="text-align:left">35</td>
+<td style="text-align:left">5%</td>
+</tr>
+<tr>
+<td style="text-align:left">3</td>
+<td style="text-align:left">女款</td>
+<td style="text-align:left">裤子</td>
+<td style="text-align:left">M</td>
+<td style="text-align:left">40</td>
+<td style="text-align:left">20%</td>
+</tr>
+<tr>
+<td style="text-align:left">4</td>
+<td style="text-align:left">男款</td>
+<td style="text-align:left">上衣</td>
+<td style="text-align:left">XL</td>
+<td style="text-align:left">30</td>
+<td style="text-align:left">15%</td>
+</tr>
+</tbody>
+</table>
+<p>对照我们上文的概念，不难判断出上表中：</p>
+<ul>
+<li>类型、款式为类别型数据；</li>
+<li>id、尺码为有序型数据；</li>
+<li>销量和年增长为数值型数据。</li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>至此，其实本文的任务就已经完成了。通篇传递的最重要的知识就是数据可视化中的三大数据类型，消化了这点，下一篇<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>就能更好的理解。欢迎各位在我博客文末留言讨论（如果看不到评论框可能是因为你没有科学上网）。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[2]<a href="http://www.cad.zju.edu.cn/home/vagblog/?page_id=1302" target="_blank" rel="external">浙江大学-陈为、巫英才数据可视化课程</a></li>
+<li>[3]Shneiderman B. The eyes have it: a task by data type taxonomy for information visualizations[C]// Visual Languages, 1996. Proceedings. IEEE Symposium on. IEEE Xplore, 1996:336-343.</li>
+<li>[4]<a href="http://courses.cs.washington.edu/courses/cse512/16sp/" target="_blank" rel="external">CSE512 Data Visualization (Spring 2016)</a></li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/01/02/basics-of-data-visualization-data-model.html" class="article-date">
+  <time datetime="2017-01-02T04:01:48.000Z" itemprop="datePublished">2017-01-02</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Catégorie:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Visualization/">Visualization</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Mot-clé:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-Data/">Big Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Visualization/">Data Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Guide/">Guide</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Summary/">Summary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Visualization/">Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门/">入门</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/可视化/">可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据/">数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <a href="/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html" id="article-nav-newer" class="article-nav-link-wrap newer">
+      <strong class="article-nav-caption">Récent</strong>
+      <div class="article-nav-title">
+        
+          数据可视化基础——视觉编码
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2017/01/01/basics-of-data-visualization-the-process-model.html" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">数据可视化基础——可视化流程</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   var disqus_url = 'http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

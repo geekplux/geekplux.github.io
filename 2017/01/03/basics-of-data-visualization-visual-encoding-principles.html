@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>数据可视化基础——视觉编码 | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第三篇，主要介绍视觉编码，另两篇则主讲可视化流程和数据模型，建议从可视化流程看起。原文地址：http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html
+
+终于来到了最后一篇，前两篇的铺垫可">
+<meta property="og:type" content="article">
+<meta property="og:title" content="数据可视化基础——视觉编码">
+<meta property="og:url" content="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第三篇，主要介绍视觉编码，另两篇则主讲可视化流程和数据模型，建议从可视化流程看起。原文地址：http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html
+
+终于来到了最后一篇，前两篇的铺垫可">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/pic.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/example.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/signal.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/level.png">
+<meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/level2.png">
+<meta property="og:updated_time" content="2017-01-10T04:35:15.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="数据可视化基础——视觉编码">
+<meta name="twitter:description" content="本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第三篇，主要介绍视觉编码，另两篇则主讲可视化流程和数据模型，建议从可视化流程看起。原文地址：http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html
+
+终于来到了最后一篇，前两篇的铺垫可">
+<meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/pic.png">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    <body>
+  
+      <div id="container" class="container">
+        <article id="post-basics-of-data-visualization-visual-encoding-principles" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/wiki">Wiki</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/gab">扯淡集</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="Flux RSS"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      数据可视化基础——视觉编码
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <blockquote>
+<p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第三篇，主要介绍<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>和<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>，建议从可视化流程看起。<br>原文地址：<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</a></p>
+</blockquote>
+<p>终于来到了最后一篇，前两篇的铺垫可能有点长，但是不种苗浇水怎能开枝散叶。可视化编码是可视化中的<strong>核心内容</strong>，本文会对其进行详细的讲解，尤其是<strong>视觉编码</strong>与<strong>视觉通道</strong>两个概念，如果其中遇到晦涩之处，不要心急，可囫囵吞枣直接往下看。</p>
+<h2 id="什么是视觉编码（visual-encoding）"><a href="#什么是视觉编码（visual-encoding）" class="headerlink" title="什么是视觉编码（visual encoding）"></a>什么是视觉编码（visual encoding）</h2><p>很多人可能看到题目的时候就有这个疑问，到底什么是视觉编码。其实视觉编码很简单，用一句话就能概括：</p>
+<blockquote>
+<p>视觉编码描述的是将数据映射到最终可视化结果上的过程。</p>
+</blockquote>
+<p>这里的可视化结果可能是图片，也可能是一张网页等等。</p>
+<p>编码二字，如果说<strong>编</strong>是指设计、映射的过程，那么码呢？<strong>码</strong>其实指的是一些图形符号。</p>
+<h2 id="图形能告诉我们什么"><a href="#图形能告诉我们什么" class="headerlink" title="图形能告诉我们什么"></a>图形能告诉我们什么</h2><p>在介绍各类图形符号之前，我们先谈谈：图形能告诉我们什么。</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/pic.png" alt=""></p>
+<p>仔细观察上方这个简单的图片，你能得得到什么信息？</p>
+<ol>
+<li>A B C 是不同的</li>
+<li>B 在 A 和 C 的中间</li>
+<li>BC 的长度是 AB 的大概两倍</li>
+</ol>
+<p>得益于我们视觉系统的强大，这些信息不假思索就能得出。如果把上图想象成一个二维坐标系，则我们可能得出更多的结论。</p>
+<blockquote>
+<p>“Resemblance, order and proportion are the three signfields in graphics.” - Bertin [1]</p>
+</blockquote>
+<p>图形符号和信息间的映射关系使我们能迅速获取信息。所以我们可以把图片看成一组图形符号的组合，这些图形符号中<strong>携带</strong>了一些信息，我们称作它<strong>编码</strong>了一些信息。而当人们从这些符号中<strong>读取</strong>信息时，我们称作我们<strong>解码</strong>了一些信息。</p>
+<p>我们人类解码信息靠的是我们的眼睛、我们的视觉系统。如果说图形符号是编码信息的工具或通道、那么我们的视觉就是解码信息的通道。因此，我们通常把这种<strong>图形符号&lt;——&gt;信息&lt;——&gt;视觉系统</strong>的对应称作<strong>视觉通道</strong>。</p>
+<p>至此算是把<strong>视觉通道</strong>、<strong>视觉编码</strong>这两个概念讲清楚了。如果一个人说他想用四个通道来编码四个维度的数据，即可以翻译成他想用四种图形符号来对应这份数据表的四个列的信息。</p>
+<p>这里举个例子（例子来自于 [2]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a>）：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/example.png" alt="例子来自于陈为 沈则潜 陶煜波《数据可视化》"></p>
+<ul>
+<li>上图中图 A 表示了三个不同班级的数学平均分，用柱状图表示，柱状图的<strong>高度</strong>作为一个视觉通道，编码了数学平均分的<em>值</em>；柱状，这个<strong>形状</strong>作为一个视觉通道编码了数学平均分这一<em>属性</em>。</li>
+<li>图 B 中，我们想在 A 的基础上多展示语文平均分这一项数据（即增加了一个数据维度），则选用点这个<strong>形状</strong>通道编码这两个<em>属性</em>；点的<strong>横坐标</strong>编码语文平均分的<em>值</em>；点的<strong>纵坐标</strong>编码数学平均分的<em>值</em>。</li>
+<li>这时候发现图 B 中我们把班级这个数据维度给丢掉了，于是我们可以用<strong>颜色</strong>这一视觉通道来编码班级这个<strong>属性</strong>信息，如图 C。</li>
+<li>如果我们还想展示班级<em>人数</em>这一信息，则可以用<strong>尺寸</strong>这一视觉通道来编码，如图 D。</li>
+</ul>
+<h2 id="视觉编码中常用的视觉通道"><a href="#视觉编码中常用的视觉通道" class="headerlink" title="视觉编码中常用的视觉通道"></a>视觉编码中常用的视觉通道</h2><p>1967 年，Jacques Bertin 初版的《Semiology of Graphics》一书提出了图形符号与信息的对应关系（就是本文上一节的内容），奠定了可视化编码的理论基础。</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/signal.png" alt="Bertin J. Semiology of graphics: diagrams[C]// Conference on Computer Networks. 1983."></p>
+<p>如上图所示，书中把图形符号分为两种：</p>
+<ul>
+<li><strong>位置变量</strong>：一般指二维坐标</li>
+<li><strong>视网膜变量</strong>：<strong>尺寸</strong>、<strong>数值</strong>、<strong>纹理</strong>、<strong>颜色</strong>、<strong>方向</strong>和<strong>形状</strong></li>
+</ul>
+<p>以上基本的图形符号共有 7 种。将其映射到点、线、面之后，就相当于有 21 种编码可用的视觉通道。后来人们还又补充了几种其他的视觉通道：<strong>长度</strong>、<strong>面积</strong>、<strong>体积</strong>、<strong>透明度</strong>、<strong>模糊/聚焦</strong>、<strong>动画</strong>等，所以可用的视觉通道其实太多了。</p>
+<p>而一般一份可视化作品可用到的视觉通道要尽可能得少，因为太多了反而会造成我们视觉系统的混乱，使我们获取信息更难。于是这就涉及到了视觉通道的设计原则。</p>
+<h2 id="视觉编码设计原则"><a href="#视觉编码设计原则" class="headerlink" title="视觉编码设计原则"></a>视觉编码设计原则</h2><p>这一节其实可以单独再分一篇文章写，因为可视化编码设计实在是复杂：假设我们有 k 个视觉通道，有 n 个数据维度，则一共有 <code>(n+1)^k</code> 种编码方案……从中选出一种最佳方案难度可见一斑。</p>
+<p>不过既然本文是讲解视觉编码相关，所以这个章节是逃不掉的，在此提纲挈领讲一下。如果想深入了解，可以阅读参考文献中提到的书籍。</p>
+<h3 id="视觉通道的三个性质"><a href="#视觉通道的三个性质" class="headerlink" title="视觉通道的三个性质"></a>视觉通道的三个性质</h3><p>上一篇<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>讲解了可视化中数据分为三类：<strong>类别型</strong>、<strong>有序型</strong>、<strong>数值型</strong>。</p>
+<ol>
+<li><strong>定性性质</strong>（或叫分类性质）。适用于类别型数据。比如形状或颜色，这两个视觉通道，非常容易被人眼识别。从一堆正方形中识别出一个三角形，或看万绿丛中一点红，都是我们眼睛拿手好戏。</li>
+<li><strong>定量性质或定序性质</strong>。适用于有序型和类别型数据。比如长度、大小特别适合于编码数值/量的大小。</li>
+<li><strong>分组性质</strong>。具有相同视觉通道的数据，人眼也能很快识别出来，将其归为一组。</li>
+</ol>
+<p>总结一下视觉通道与数据类型的对应关系，如下图所示：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/level.png" alt="视觉通道与数据类型的对应"></p>
+<h3 id="视觉编码设计的两大原则"><a href="#视觉编码设计的两大原则" class="headerlink" title="视觉编码设计的两大原则"></a>视觉编码设计的两大原则</h3><p>Mackinlay[4] 和 Tversky[5] 分别提出了两套可视化设计的原则，Mackinlay 强调表达性和有效性，Tversky 强调一致性和理解性。两者可以糅合起来：</p>
+<ol>
+<li><strong>表达性、一致性</strong>：可视化的结果应该充分表达了数据想要表达的信息，且没有多余。</li>
+<li><strong>有效性、理解性</strong>：可视化之后比前一种数据表达方案更加有效，更加容易让人理解。</li>
+</ol>
+<p>下面这张图总结了视觉编码面对不同数据类型的优先级：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/level2.png" alt="视觉编码面对不同数据类型的优先级"></p>
+<p>如果要具体展开每项视觉通道来说，未免有点太繁琐，而且设计可视化编码除了视觉通道还需要考虑：</p>
+<ul>
+<li>色彩搭配</li>
+<li>交互</li>
+<li>美学因素</li>
+<li>信息的密度</li>
+<li>直观映射、隐喻</li>
+</ul>
+<p>以上每一项都很重要，之后有机会再写吧。这个可视化基础系列总算是完结了，文字虽然不多，但是搜索资料、读论文、总结等还是挺累的，希望你能有所收获。欢迎各位在我博客文末留言讨论（如果看不到评论框可能是因为你没有科学上网）。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1]Bertin J. Semiology of graphics: diagrams[C]// Conference on Computer Networks. 1983.</li>
+<li>[2]<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[3]<a href="http://courses.cs.washington.edu/courses/cse512/16sp/" target="_blank" rel="external">CSE512 Data Visualization (Spring 2016)</a></li>
+<li>[4]Mackinlay, Jock. Automating the design of graphical presentations of relational information[J]. Acm Transactions on Graphics, 1986, 5(2):110-141.</li>
+<li>[5]Tversky B, Morrison J B, Betrancourt M. Animation: Can it facilitate?[J]. International Journal of Human-Computer Studies, 2002, 57(4):247-262.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html" class="article-date">
+  <time datetime="2017-01-03T12:02:52.000Z" itemprop="datePublished">2017-01-03</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Catégorie:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Visualization/">Visualization</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Mot-clé:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-Data/">Big Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Visualization/">Data Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Guide/">Guide</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Summary/">Summary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Visualization/">Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门/">入门</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/可视化/">可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据/">数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2017/01/02/basics-of-data-visualization-data-model.html" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Ancien</strong>
+      <div class="article-nav-title">数据可视化基础——数据模型</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   var disqus_url = 'http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
