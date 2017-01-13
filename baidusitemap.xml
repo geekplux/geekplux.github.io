@@ -4,6 +4,80 @@
 
     
   <url>
+    <loc>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</loc>
+    <lastmod>2017-01-13T16:39:05.000Z</lastmod>
+    <data>
+        <display>
+        <title>我获取信息的渠道</title>
+        <pubTime>2017-01-13T16:10:52.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+        <tag>Read</tag>
+         
+        <tag>阅读</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</loc>
+    <lastmod>2017-01-13T14:00:48.000Z</lastmod>
+    <data>
+        <display>
+        <title>数据可视化基础——可视化流程</title>
+        <pubTime>2017-01-01T09:35:36.000Z</pubTime>
+        
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</loc>
     <lastmod>2017-01-10T05:02:04.000Z</lastmod>
     <data>
@@ -56,52 +130,6 @@
         <display>
         <title>数据可视化基础——数据模型</title>
         <pubTime>2017-01-02T04:01:48.000Z</pubTime>
-        
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
-        <tag>Visualization</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>数据可视化</tag>
-         
-        <tag>数据</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Big Data</tag>
-         
-        <tag>Data</tag>
-         
-        <tag>Data Visualization</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-         
-           
-             
-              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</loc>
-    <lastmod>2017-01-10T05:01:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>数据可视化基础——可视化流程</title>
-        <pubTime>2017-01-01T09:35:36.000Z</pubTime>
         
         <tag>Guide</tag>
          
@@ -720,13 +748,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          

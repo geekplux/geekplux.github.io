@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-01-10T05:02:04.000Z</updated>
+  <updated>2017-01-13T16:39:05.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,91 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>我获取信息的渠道</title>
+    <link href="http://geekplux.com/2017/01/14/the-ways-to-get-information.html"/>
+    <id>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</id>
+    <published>2017-01-13T16:10:52.000Z</published>
+    <updated>2017-01-13T16:39:05.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>互联网迅猛的浪潮抹平了信息的鸿沟，却也让优质的信息变得如沧海一粟。人们常言「信息不对等」，往往在感慨<strong>有价值的信息</strong>总是被人捷足先登。正因这些信息如此重要，催生了一代又一代、各式各样的信息获取工具。</p>
+<h2 id="我阅读工具的演化史"><a href="#我阅读工具的演化史" class="headerlink" title="我阅读工具的演化史"></a>我阅读工具的演化史</h2><p>印象中，最早的信息聚合网站，应该是叫「<a href="https://en.wikipedia.org/wiki/Golden_Pages" target="_blank" rel="external">黄页</a>」，已经有 100 多年的历史，马云早期的创业项目就叫「中国黄页」。后来家里的 IE 首页变成了一些门户网站，这时候获取信息主要靠手动点击链接到各大网站。再之后，我接触到了 <strong>Google Reader</strong>，认识了 RSS，从此开启了一扇新的大门。</p>
+<p>之前获取信息的方式是自己主动探索，而现在只需要维护好自己的 RSS 订阅列表，就会有感兴趣的信息源源不断地流进来。犹记得当时我的订阅列表很长，每天点开都是几百上千的未读，<strong>快速扫一遍，把感兴趣的随手添加到 pocket（因为 pocket 可以离线阅读），抽碎片时间打开 pocket 阅读，遇到好文章再收藏到 Evernote</strong>，这个阅读流一直沿用了一两年。即使后来 Google Reader 被 Google 遗弃我也坚持用 RSS，只是频率比以前低了不少。</p>
+<p>再到后来，不少博客写手开始转战到了微信公众号，很多文章用微信直接阅读，体验也挺好，于是阅读公众号成了我当时新的阅读方式。然而好景不长，很快公众平台就被一堆营销号攻占，一些写手为了圈钱，写作质量也大幅下降。我开始慢慢取关公众号，并且意识到了一个问题：<strong>大多数的文章都是没有价值的，或者说远没有自己想象的有价值</strong>。很多文章都是东拼西凑来的，能引发思考的凤毛麟角。</p>
+<p>别人的文章好似二手的知识，我们如果想获取一手的就要追根溯源，看他参考的文献、引用的书籍，与其这样，为什么不直接看书或看论文？想通这点之后，我就把阅读的绝大部分时间放在了看书上，看文章的时间可能一天只有不到半小时。</p>
+<h2 id="我现阶段的信息获取方式"><a href="#我现阶段的信息获取方式" class="headerlink" title="我现阶段的信息获取方式"></a>我现阶段的信息获取方式</h2><p>我现在的信息渠道主要分四部分：</p>
+<ul>
+<li>书籍、论文（不在本文讨论范围内，阅读论文可参考<a href="http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html">《如何阅读一篇学术论文》</a></li>
+<li>邮件列表</li>
+<li>RSS</li>
+<li>经常去逛的一些网站</li>
+</ul>
+<h4 id="RSS"><a href="#RSS" class="headerlink" title="RSS"></a>RSS</h4><p>RSS 列表主要分两部分，一部分是个人博客，另一部分是少数几个信息聚合类网站和一些期刊、杂志。其中重点看个人博客，由于现在大家的博客更新都很慢，所以一般我一周没看也攒不了几篇。期刊杂志我也会留心，因为有一些和我研究方向——数据可视化有关的。</p>
+<p>现在我的 RSS 软件主要用 <a href="http://www.inoreader.com/" target="_blank" rel="external">inoreader</a>，基本功能都有，也提供了夜间模式（对于夜猫子来说很重要），感觉还不错。</p>
+<h4 id="Mailing-List"><a href="#Mailing-List" class="headerlink" title="Mailing List"></a>Mailing List</h4><p>邮件列表也算是一种很古老的信息获取方式。我主要用它来做两件事：订阅一些 Google Group 来划划水；订阅一些日报和周报。</p>
+<p>之所以选择邮件列表看周报，主要是基于以下两个原因：</p>
+<ul>
+<li>本质上日报或周报已经是别人筛选过一遍的文章，所以质量相对一些信息聚合网站也会高一点</li>
+<li>日报或周报降低了阅读的频次</li>
+</ul>
+<p>日报一天一封，周报一周才一封，保证了你一周只会看这封邮件一次，这大大地节约了浪费在无效信息上的时间。很多网站还提供日报和周报的切换功能，非常方便。</p>
+<p>我这里列一些我订阅的，期待大家能在文末评论（或发邮件给我），互通有无。</p>
+<ul>
+<li><a href="http://weekly.codetengu.com/" target="_blank" rel="external">CodeTengu Weekly 碼天狗週刊</a></li>
+<li><a href="http://memect.com/" target="_blank" rel="external">好东西传送门</a> 的机器学习日报、大数据日报、Python、Web 日报</li>
+<li><a href="http://www.wildml.com/" target="_blank" rel="external">The Wild Week in AI</a></li>
+<li>This week’s hi-res photos from Unsplash</li>
+<li><a href="http://javascriptweekly.com/" target="_blank" rel="external">JavaScript Weekly</a></li>
+<li><a href="http://frontendfocus.co/" target="_blank" rel="external">FrontEnd Focus</a></li>
+<li><a href="https://blog.risingstack.com/" target="_blank" rel="external">RisingStack Engineering</a></li>
+<li><a href="http://css-weekly.com/" target="_blank" rel="external">CSS Weekly</a></li>
+<li><a href="http://webtoolsweekly.com/" target="_blank" rel="external">Web Tools Weekly</a></li>
+<li><a href="http://www.gitxiv.com/" target="_blank" rel="external">GitXiv Top Posts</a></li>
+<li><a href="http://rubyweekly.com/" target="_blank" rel="external">Ruby Weekly</a></li>
+<li><a href="http://nodeweekly.com/" target="_blank" rel="external">Node Weekly</a></li>
+<li><a href="http://dataelixir.com/" target="_blank" rel="external">Data Elixir</a></li>
+<li><a href="https://web-design-weekly.com/" target="_blank" rel="external">Web Design Weekly</a></li>
+<li>Product Hunt Daily Digest</li>
+<li>Quora Digest</li>
+<li>Medium Daily Digest</li>
+</ul>
+<h4 id="经常去逛的"><a href="#经常去逛的" class="headerlink" title="经常去逛的"></a>经常去逛的</h4><p>人不能两耳不闻窗外事，总得适当的划水。我经常去逛的网站有</p>
+<ul>
+<li><a href="https://news.ycombinator.com/" target="_blank" rel="external">Hacker News</a></li>
+<li><a href="https://www.reddit.com/" target="_blank" rel="external">reddit</a> - <a href="https://www.reddit.com/r/programming" target="_blank" rel="external">programming</a> 质量不错</li>
+<li><a href="https://github.com/explore" target="_blank" rel="external">GitHub Explore</a> - 当然我邮件里也订阅了这个</li>
+<li><a href="https://www.v2ex.com/" target="_blank" rel="external">v2ex</a> - v 站虽然划水时间占 99%，但小道消息还挺多的</li>
+<li><a href="http://www.bilibili.com/" target="_blank" rel="external">bilibili</a></li>
+</ul>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>任何事都是先做加法，再做减法的过程。我的 RSS 列表和邮件列表都曾经短期内迅速变长，后来又被我精心筛选到寥寥无几，不过我现在还是觉得有点多。</p>
+<p>我用的工具可能都比较复古，但是经久不衰的东西才真正不会被淘汰。尤其是邮件，这个几乎是网络一出现就有的东西，现在、未来都会依旧重要。</p>
+<p>最后还有个小技巧：文章是否值得读，不取决于题目是否夺人眼球，可能取决于你多个信息渠道中它重复出现的次数。</p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;互联网迅猛的浪潮抹平了信息的鸿沟，却也让优质的信息变得如沧海一粟。人们常言「信息不对等」，往往在感慨&lt;strong&gt;有价值的信息&lt;/strong&gt;总是被人捷足先登。正因这些信息如此重要，催生了一代又一代、各式各样的信息获取工具。&lt;/p&gt;
+&lt;h2 id=&quot;我阅读工具的演化史&quot;
+    
+    </summary>
+    
+      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
+    
+    
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="Read" scheme="http://geekplux.com/tags/Read/"/>
+    
+      <category term="阅读" scheme="http://geekplux.com/tags/%E9%98%85%E8%AF%BB/"/>
+    
+  </entry>
   
   <entry>
     <title>数据可视化基础——视觉编码</title>
@@ -312,7 +397,7 @@
     <link href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html"/>
     <id>http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</id>
     <published>2017-01-01T09:35:36.000Z</published>
-    <updated>2017-01-10T05:01:54.000Z</updated>
+    <updated>2017-01-13T14:00:48.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第一篇，主要介绍<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>和<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>。<br>原文地址：<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</a></p>
@@ -336,7 +421,7 @@
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/conceptual-model.png" alt="Haber, R. B. and McNabb, D. A. Visualization idioms: A conceptual model for scientific visualization systems, 1990."></p>
 <p>这个处理模型非常先进，整个流程是线性的。它把数据分成五大阶段，分别要经历四个流程，每个过程的输入是上一个过程的输出。从图上看非常直观，很好理解。</p>
 <h3 id="嵌套模型"><a href="#嵌套模型" class="headerlink" title="嵌套模型"></a>嵌套模型</h3><p>另一种模型是嵌套模型：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/nested-model.png" alt="Munzner T. A Nested Process Model for Visualization Design and Validation[J]. IEEE Transactions on Visualization &amp; Computer Graphics, 2009, 15(6):921-8."></p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/nested-model.png" alt="Munzner T. A Nested Process Model for Visualization Design and Validation\[J\]. IEEE Transactions on Visualization &amp; Computer Graphics, 2009, 15(6):921-8."></p>
 <p>嵌套模型的上半部分基本上就是我们之前说的分析、处理两步，下半部分是对可视化结果的各类验证。本质上就是一个验证加迭代的过程。我们知道很多事都不是一蹴而就的，需要不断迭代，所以有人提出了循环模型。</p>
 <h3 id="循环模型"><a href="#循环模型" class="headerlink" title="循环模型"></a>循环模型</h3><p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-1.png" alt="Stolte C, Hanrahan P. Polaris: a system for query, analysis and visualization of multi-dimensional relational databases[C]// IEEE Symposium on Information Visualization. 2000:5-14."></p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/basics-of-data-visualization/cyclical-model-2.png" alt="Wijk J J V. The Value of Visualization[C]// Visualization, 2005. VIS 05. IEEE. 2005:11-11."></p>
@@ -1831,190 +1916,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
     
       <category term="Translation" scheme="http://geekplux.com/tags/Translation/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CoffeeScript 笔记</title>
-    <link href="http://geekplux.com/2014/05/15/coffeescript_note.html"/>
-    <id>http://geekplux.com/2014/05/15/coffeescript_note.html</id>
-    <published>2014-05-15T11:06:09.000Z</published>
-    <updated>2015-08-04T08:59:03.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近读了《CoffeeScript程序设计》的前半部分「核心 CoffeeScript」。对 CoffeeScript 也是有了初步的了解，本文只是我的随手笔记，并没有非常系统的总结 CoffeeScript 语法，想学习语法的同学可以看以下两份中文材料：</p>
-<ul>
-<li><a href="http://island205.github.io/tlboc/" target="_blank" rel="external">CoffeeScript中文手册</a></li>
-<li><a href="http://island205.github.io/coffeescript-cookbook.github.com/" target="_blank" rel="external">CoffeeScript Cookbook</a></li>
-</ul>
-<h2 id="为什么要用-CoffeeScript？"><a href="#为什么要用-CoffeeScript？" class="headerlink" title="为什么要用 CoffeeScript？"></a>为什么要用 CoffeeScript？</h2><ul>
-<li>采用了 JavaScript 中的 Good Parts，符合 JS 最佳实践</li>
-<li>代码简洁清晰，有很多语法糖</li>
-</ul>
-<h2 id="一些特性"><a href="#一些特性" class="headerlink" title="一些特性"></a>一些特性</h2><h4 id="1-有意义的空格"><a href="#1-有意义的空格" class="headerlink" title="1.有意义的空格"></a>1.有意义的空格</h4><p>CoffeeScript 移除了所有的大括号和分号。</p>
-<p>JS 会自动在行尾添加<code>;</code>，但它又没有纯粹的设计为一款不需要加分号的语言，所以有时候会引起一些蛋疼的Bug。而 CoffeeScript 会在编译出的 JS 代码里每行都加<code>;</code>，很方便。</p>
-<p>CoffeeScript 和 Python、Ruby 一样，采用强制缩进（Coffee的很多地方与 ruby 类似)，这种简洁，可读性又很强的代码，让人大爱。</p>
-<a id="more"></a>
-<h4 id="2-变量作用域的控制"><a href="#2-变量作用域的控制" class="headerlink" title="2.变量作用域的控制"></a>2.变量作用域的控制</h4><p>JS 中的变量作用域一直让人诟病。</p>
-<p>CoffeeScript 把编译生成的 JS 封装在一个匿名函数中：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="comment">// 这里是编译生成的代码</span></div><div class="line">&#125;).call(<span class="keyword">this</span>);</div></pre></td></tr></table></figure>
-<p>这样就巧妙避免了全局作用域的污染。同时，CoffeeScript 始终在编译生成的 JS 代码中用 <code>var</code> 声明变量。</p>
-<h4 id="3-存在性判断"><a href="#3-存在性判断" class="headerlink" title="3.存在性判断"></a>3.存在性判断</h4><p>CoffeeScript 中有个操作符 <code>?</code>，用于检测变量是否存在。</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log html <span class="keyword">if</span> html?</div></pre></td></tr></table></figure>
-<p>这句 CoffeeScript 编译过来为（去掉了匿名封装函数，为了方便，之后的编译后代码都去掉）</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">if</span> (<span class="keyword">typeof</span> html !== <span class="string">"undefined"</span> &amp;&amp; html !== <span class="literal">null</span>) &#123;</div><div class="line">  <span class="built_in">console</span>.log(html);</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>可见，<code>?</code> 会先检测变量有没有定义，如果定义了再检测是否为 null。</p>
-<h4 id="4-函数和-splat-操作符"><a href="#4-函数和-splat-操作符" class="headerlink" title="4.函数和 splat 操作符"></a>4.函数和 splat 操作符</h4><p>CoffeeScript 中去掉了 <code>function</code> 关键字。用 <code>() -&gt;</code> 定义一个函数。括号内为参数，可以为参数设置默认值。如：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">myFunction</span> = <span class="params">(a, b = <span class="number">2</span>)</span> -&gt;</span></div><div class="line">  a + b</div></pre></td></tr></table></figure>
-<p>编译为：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> myFunction;</div><div class="line"></div><div class="line">myFunction = <span class="function"><span class="keyword">function</span>(<span class="params">a, b</span>) </span>&#123;</div><div class="line">  <span class="keyword">if</span> (b == <span class="literal">null</span>) &#123;</div><div class="line">    b = <span class="number">2</span>;</div><div class="line">  &#125;</div><div class="line">  <span class="keyword">return</span> a + b;</div><div class="line">&#125;;</div></pre></td></tr></table></figure>
-<p>调用函数的时候，还可以不用括号。如：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">myFunction <span class="number">3</span>, <span class="number">5</span></div></pre></td></tr></table></figure>
-<p>有一点需要注意一下，CoffeeScript 会在编译后的 JS 代码中自动为最后一行添加 <code>return</code> 关键字。所以不论函数的最后一行是什么，都会成为返回值。如果你不想让最后一行成为返回值，就需要另起一行自己加上 <code>return</code>。</p>
-<p>splat 操作符非常强大。在你的函数需要接受<strong>可变数量的参数</strong>时就需要它了。书上的栗子：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="title">splatter</span> = <span class="params">(etc...)</span> -&gt;</span></div><div class="line">  <span class="built_in">console</span>.log <span class="string">"Length: <span class="subst">#&#123;etc.length&#125;</span>, Values: <span class="subst">#&#123;etc.join(<span class="string">', '</span>)&#125;</span>"</span></div><div class="line">  <span class="regexp">//</span> CoffeeScript 中字符串插值用 <span class="comment">#&#123;&#125;</span></div><div class="line"></div><div class="line">splatter()</div><div class="line">splatter(<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>)</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出</div><div class="line">Length: <span class="number">0</span>, Values:</div><div class="line">Length: <span class="number">3</span>, Values: a, b, c</div></pre></td></tr></table></figure>
-<p>就在某个参数后面加上<code>...</code>，就使传入的参数自动转化为一个数组。<strong>splat 操作符可以出现在参数列表的任意位置，但是参数列表中只能有一个 splat 操作符</strong>。</p>
-<h4 id="5-数组与区间"><a href="#5-数组与区间" class="headerlink" title="5.数组与区间"></a>5.数组与区间</h4><p>一般定义数组是这样：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">myArray = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>]</div></pre></td></tr></table></figure>
-<p>在 CoffeeScript 里你还可以这样：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">myArray = [</div><div class="line">            <span class="string">"a"</span></div><div class="line">            <span class="string">"b"</span></div><div class="line">            <span class="string">"c"</span></div><div class="line">          ]</div></pre></td></tr></table></figure>
-<ul>
-<li>在 JS 中判断是否存在于数组，需要用 <code>Array.prototype.indexOf</code>，在 CoffeeScript 中只需要用 <code>in</code>：</li>
-</ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log <span class="string">"d was not be found"</span> <span class="keyword">unless</span> <span class="string">"d"</span> <span class="keyword">in</span> myArray</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出</div><div class="line">d was <span class="keyword">not</span> be found</div></pre></td></tr></table></figure>
-<ul>
-<li>交换赋值</li>
-</ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">x = <span class="string">"X"</span></div><div class="line">y = <span class="string">"Y"</span></div><div class="line"></div><div class="line">[x, y] = [y, x]</div></pre></td></tr></table></figure>
-<p>交换 x、y 的值就这么简单！</p>
-<ul>
-<li>多重赋值</li>
-</ul>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">myArray = [<span class="string">"A"</span>, <span class="string">"B"</span>, <span class="string">"C"</span>, <span class="string">"D"</span>]</div><div class="line"></div><div class="line">[start, middle..., end] = myArray  <span class="regexp">//</span> 可配合 splat 操作符使用</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log <span class="string">"start: <span class="subst">#&#123;start&#125;</span>"</span></div><div class="line"><span class="built_in">console</span>.log <span class="string">"middle: <span class="subst">#&#123;middle&#125;</span>"</span></div><div class="line"><span class="built_in">console</span>.log <span class="string">"end: <span class="subst">#&#123;end&#125;</span>"</span></div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出</div><div class="line">start: A</div><div class="line">middle: B,C</div><div class="line">end: D</div></pre></td></tr></table></figure>
-<ul>
-<li><strong>区间</strong></li>
-</ul>
-<p>区间能让<strong>定义包含两个数字之间所有数字的数组</strong>变得很容易。</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">myRange = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line"><span class="built_in">console</span>.log myRange</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> ]</div></pre></td></tr></table></figure>
-<p>如果不想包括结束数值，可以用 <code>...</code> 代替 <code>..</code>。</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">myRange = [<span class="number">10.</span>.<span class="number">.1</span>]</div><div class="line"><span class="built_in">console</span>.log myRange</div><div class="line"></div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">10</span>, <span class="number">9</span>, <span class="number">8</span>, <span class="number">7</span>, <span class="number">6</span>, <span class="number">5</span>, <span class="number">4</span>, <span class="number">3</span>, <span class="number">2</span> ]</div></pre></td></tr></table></figure>
-<p>常见的数组操作，都可以通过区间完成：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div></pre></td><td class="code"><pre><div class="line">myArray = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line"></div><div class="line"><span class="regexp">//</span> 分割数组</div><div class="line">part = myArray[<span class="number">0.</span><span class="number">.2</span>]</div><div class="line"><span class="built_in">console</span>.log part</div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span> ]</div><div class="line"></div><div class="line"></div><div class="line"><span class="regexp">//</span> 替换数组值</div><div class="line">myArray = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line">myArray[<span class="number">4.</span><span class="number">.7</span>] = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>]</div><div class="line"><span class="built_in">console</span>.log myArray</div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="number">9</span>, <span class="number">10</span> ]</div><div class="line"></div><div class="line"></div><div class="line"><span class="regexp">//</span> 插入值</div><div class="line">myArray = [<span class="number">1.</span><span class="number">.10</span>]</div><div class="line">myArray[<span class="number">4.</span>.<span class="number">-1</span>] = [<span class="string">"a"</span>, <span class="string">"b"</span>, <span class="string">"c"</span>, <span class="string">"d"</span>]</div><div class="line"><span class="built_in">console</span>.log myArray</div><div class="line"><span class="regexp">//</span> 输出 [ <span class="number">1</span>, <span class="number">2</span>, <span class="number">3</span>, <span class="number">4</span>, <span class="string">'a'</span>, <span class="string">'b'</span>, <span class="string">'c'</span>, <span class="string">'d'</span>, <span class="number">5</span>, <span class="number">6</span>, <span class="number">7</span>, <span class="number">8</span>, <span class="number">9</span>, <span class="number">10</span> ]</div></pre></td></tr></table></figure>
-<h4 id="6-类和继承"><a href="#6-类和继承" class="headerlink" title="6.类和继承"></a>6.类和继承</h4><p>一例胜千言：</p>
-<figure class="highlight coffeescript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Animal</span></span></div><div class="line">  constructor: <span class="function"><span class="params">(@name)</span> -&gt;</span></div><div class="line"></div><div class="line">  move: <span class="function"><span class="params">(meters)</span> -&gt;</span></div><div class="line">    alert @name + <span class="string">" moved <span class="subst">#&#123;meters&#125;</span>m."</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Snake</span> <span class="keyword">extends</span> <span class="title">Animal</span></span></div><div class="line">  move: <span class="function">-&gt;</span></div><div class="line">    alert <span class="string">"Slithering..."</span></div><div class="line">    <span class="keyword">super</span> <span class="number">5</span></div><div class="line"></div><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">Horse</span> <span class="keyword">extends</span> <span class="title">Animal</span></span></div><div class="line">  move: <span class="function">-&gt;</span></div><div class="line">    alert <span class="string">"Galloping..."</span></div><div class="line">    <span class="keyword">super</span> <span class="number">45</span></div><div class="line"></div><div class="line">sam = <span class="keyword">new</span> Snake <span class="string">"Sammy the Python"</span></div><div class="line">tom = <span class="keyword">new</span> Horse <span class="string">"Tommy the Palomino"</span></div><div class="line"></div><div class="line">sam.move()</div><div class="line">tom.move()</div></pre></td></tr></table></figure>
-<p>这是官网的例子，麻麻再也不用担心我在 JS 里使用类和继承了 T_T。</p>
-<ul>
-<li>consturctor 函数为类的构造函数。在 <code>new</code> 的时候调用，可以重写它。</li>
-<li><code>::</code> 就和 JS 里的 <code>prototype</code> 一样</li>
-</ul>
-<h2 id="很多语法糖"><a href="#很多语法糖" class="headerlink" title="很多语法糖"></a>很多语法糖</h2><p>我对「语法糖」的理解就是让代码的读写更简单。</p>
-<p>CoffeeScript 中添加了一些关键字，如 <code>unless when then until do</code> 等。不仅如此，CoffeeScript 引入了很多<strong>别名</strong>来代替一些关键字：</p>
-<table>
-<thead>
-<tr>
-<th>别名</th>
-<th>对应关键字</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>is</td>
-<td>===</td>
-</tr>
-<tr>
-<td>isnt</td>
-<td>!==</td>
-</tr>
-<tr>
-<td>not</td>
-<td>!</td>
-</tr>
-<tr>
-<td>and</td>
-<td>&amp;&amp;</td>
-</tr>
-<tr>
-<td>or</td>
-<td>&#124;&#124;</td>
-</tr>
-<tr>
-<td>true, yes, on</td>
-<td>true</td>
-</tr>
-<tr>
-<td>false, no, off</td>
-<td>false</td>
-</tr>
-<tr>
-<td>@, this</td>
-<td>this</td>
-</tr>
-<tr>
-<td>of</td>
-<td>in</td>
-</tr>
-<tr>
-<td>in</td>
-<td>no JS equivalent</td>
-</tr>
-</tbody>
-</table>
-<p>运用别名和新关键字，使代码读起来就和普通的英文一样。而且 CoffeeScript 还自动为你添加关键字，如函数最后的 <code>return</code>，<code>switch</code> 后自动添加 <code>break</code>（这种符合我们惰性的改进都是伟大的！ヽ( ^∀^)ﾉ）。</p>
-<h2 id="安装及用法"><a href="#安装及用法" class="headerlink" title="安装及用法"></a>安装及用法</h2><p>1.安装：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">npm install -g coffee-script</div></pre></td></tr></table></figure></p>
-<p>2.用法：</p>
-<p>安装完成后，直接在命令行中输入 <code>coffee</code>，就进入了 CoffeeScript 的 REPL（Read-eval-print-loop） 模式，这是一个可交互的控制台，你可以输入 CoffeeScript 代码立即执行。如图：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Ccoffeescript_noteBF073048-AB31-4C6C-84FD-BEDE15DB9E62.png" alt=""></p>
-<p>也可以用<strong>指令</strong>编译 CoffeeScript 代码执行（<em>CoffeeScript 代码文件后缀名为 coffee</em>）：</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">coffee -c hello_world.coffee</div></pre></td></tr></table></figure>
-<p>还有一些其他选项，我目前用的最多的是 <code>-o</code>、<code>-p</code>、<code>-w</code> 这三个。</p>
-<p><code>-o</code> 即 <code>--output</code>，设置编译后 JS 文件输出到指定文件夹<br><code>-p</code> 即 <code>--print</code> ，直接在终端打印出编译后的 JS 代码<br><code>-w</code> 即 <code>--watch</code>，监视文件改变，一有变化就重新执行这条指令</p>
-<figure class="highlight sh"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">coffee -c hello_world.coffee -o ./js -w</div></pre></td></tr></table></figure>
-<p>搭配起来就可以边写边编译到指定文件夹。</p>
-<h2 id="其他"><a href="#其他" class="headerlink" title="其他"></a>其他</h2><p>有篇文章<a href="http://amix.dk/blog/post/19612" target="_blank" rel="external">《CoffeeScript: The beautiful way to write JavaScript》</a>，对 JS 和 CoffeeScript 的论述很中肯。但文中对「什么才是优美的代码」的总结更让人印象深刻：</p>
-<blockquote>
-<ul>
-<li>beautiful code uses the least amount of code to solve a given problem</li>
-<li>beautiful code is readable and understandable</li>
-<li>beautiful code is achieved not when there is nothing more to add, but when there is nothing left to take away (just like great designs)</li>
-<li>the minimal length is a side-effect of beautiful code and not a goal or a measure</li>
-</ul>
-</blockquote>
-<h3 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h3><ul>
-<li><a href="http://book.douban.com/subject/20509115/" target="_blank" rel="external">《CoffeeScript 程序设计》</a></li>
-<li><a href="http://coffeescript.org/" target="_blank" rel="external">CoffeeScript 官网</a></li>
-</ul>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近读了《CoffeeScript程序设计》的前半部分「核心 CoffeeScript」。对 CoffeeScript 也是有了初步的了解，本文只是我的随手笔记，并没有非常系统的总结 CoffeeScript 语法，想学习语法的同学可以看以下两份中文材料：&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;&lt;a href=&quot;http://island205.github.io/tlboc/&quot;&gt;CoffeeScript中文手册&lt;/a&gt;&lt;/li&gt;
-&lt;li&gt;&lt;a href=&quot;http://island205.github.io/coffeescript-cookbook.github.com/&quot;&gt;CoffeeScript Cookbook&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;为什么要用-CoffeeScript？&quot;&gt;&lt;a href=&quot;#为什么要用-CoffeeScript？&quot; class=&quot;headerlink&quot; title=&quot;为什么要用 CoffeeScript？&quot;&gt;&lt;/a&gt;为什么要用 CoffeeScript？&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;采用了 JavaScript 中的 Good Parts，符合 JS 最佳实践&lt;/li&gt;
-&lt;li&gt;代码简洁清晰，有很多语法糖&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;一些特性&quot;&gt;&lt;a href=&quot;#一些特性&quot; class=&quot;headerlink&quot; title=&quot;一些特性&quot;&gt;&lt;/a&gt;一些特性&lt;/h2&gt;&lt;h4 id=&quot;1-有意义的空格&quot;&gt;&lt;a href=&quot;#1-有意义的空格&quot; class=&quot;headerlink&quot; title=&quot;1.有意义的空格&quot;&gt;&lt;/a&gt;1.有意义的空格&lt;/h4&gt;&lt;p&gt;CoffeeScript 移除了所有的大括号和分号。&lt;/p&gt;
-&lt;p&gt;JS 会自动在行尾添加&lt;code&gt;;&lt;/code&gt;，但它又没有纯粹的设计为一款不需要加分号的语言，所以有时候会引起一些蛋疼的Bug。而 CoffeeScript 会在编译出的 JS 代码里每行都加&lt;code&gt;;&lt;/code&gt;，很方便。&lt;/p&gt;
-&lt;p&gt;CoffeeScript 和 Python、Ruby 一样，采用强制缩进（Coffee的很多地方与 ruby 类似)，这种简洁，可读性又很强的代码，让人大爱。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
-    
-      <category term="CoffeeScript" scheme="http://geekplux.com/categories/Web/CoffeeScript/"/>
-    
-    
-      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
-    
-      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
-    
-      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
-    
-      <category term="CoffeeScript" scheme="http://geekplux.com/tags/CoffeeScript/"/>
     
   </entry>
   
