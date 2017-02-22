@@ -4,8 +4,38 @@
 
     
   <url>
+    <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
+    <lastmod>2017-02-22T16:55:31.000Z</lastmod>
+    <data>
+        <display>
+        <title>写文章的小技巧</title>
+        <pubTime>2015-10-28T10:24:11.000Z</pubTime>
+        
+        <tag>Blog</tag>
+         
+        <tag>Thought</tag>
+         
+        <tag>思考</tag>
+         
+        <tag>Skill</tag>
+         
+        <tag>Writing</tag>
+         
+        <tag>写文章</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</loc>
-    <lastmod>2017-01-13T16:39:05.000Z</lastmod>
+    <lastmod>2017-02-22T16:05:01.000Z</lastmod>
     <data>
         <display>
         <title>我获取信息的渠道</title>
@@ -182,9 +212,9 @@
          
         <tag>工具</tag>
          
-        <tag>Vim</tag>
-         
         <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
          
         <tag>IDE</tag>
          
@@ -249,9 +279,9 @@
          
         <tag>工具</tag>
          
-        <tag>Vim</tag>
-         
         <tag>Emacs</tag>
+         
+        <tag>Vim</tag>
          
         <tag>IDE</tag>
          
@@ -423,34 +453,6 @@
     </url>
 
     
-    
-  <url>
-    <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
-    <lastmod>2016-06-02T13:46:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>写文章的小技巧</title>
-        <pubTime>2015-10-28T10:24:11.000Z</pubTime>
-        
-        <tag>Blog</tag>
-         
-        <tag>Thought</tag>
-         
-        <tag>Skill</tag>
-         
-        <tag>Writing</tag>
-         
-        <tag>写文章</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://geekplux.com/2016/02/15/two-years-after-graduated.html</loc>
@@ -748,13 +750,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>开发环境</tag>
-         
-        <tag>Development Environment</tag>
-         
         <tag>Tool</tag>
          
         <tag>工具</tag>
+         
+        <tag>开发环境</tag>
+         
+        <tag>Development Environment</tag>
          
         <tag>Mac</tag>
          
