@@ -4,6 +4,7 @@
 
     
     
+    
   <url>
     <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
     <lastmod>2017-02-22T16:55:31.000Z</lastmod>
@@ -70,10 +71,6 @@
         <title>数据可视化基础——可视化流程</title>
         <pubTime>2017-01-01T09:35:36.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -89,6 +86,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -116,10 +117,6 @@
         <title>数据可视化基础——视觉编码</title>
         <pubTime>2017-01-03T12:02:52.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -135,6 +132,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -162,10 +163,6 @@
         <title>数据可视化基础——数据模型</title>
         <pubTime>2017-01-02T04:01:48.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -181,6 +178,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -199,7 +200,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
@@ -750,13 +750,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          
@@ -996,11 +996,11 @@
         <title>Android开发如何入门</title>
         <pubTime>2013-09-02T08:34:30.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Android</tag>
          
         <tag>Development</tag>
          
