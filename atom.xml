@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-04-12T02:45:49.000Z</updated>
+  <updated>2017-04-14T03:06:15.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -20,10 +20,13 @@
     <link href="http://geekplux.com/2017/04/12/text-data-visualization-wordle.html"/>
     <id>http://geekplux.com/2017/04/12/text-data-visualization-wordle.html</id>
     <published>2017-04-12T02:44:01.000Z</published>
-    <updated>2017-04-12T02:45:49.000Z</updated>
+    <updated>2017-04-14T03:06:15.000Z</updated>
     
-    <content type="html"><![CDATA[<p>看到题目，你可能一脸懵逼，什么是 wordle？下面这幅图就是：</p>
-<p><img src="https://ooo.0o0.ooo/2017/03/19/58cd69cf5cddf.png" alt=""></p>
+    <content type="html"><![CDATA[<blockquote>
+<p>本文首发于：<a href="https://zhuanlan.zhihu.com/p/26306683" target="_blank" rel="external">GraphiCon 知乎专栏-文本数据可视化（上）——从 Wordle 谈起</a></p>
+</blockquote>
+<p>看到题目，你可能一脸懵逼，什么是 wordle？下面这幅图就是：</p>
+<p><img src="https://ooo.0o0.ooo/2017/04/14/58f0320078efe.png" alt=""></p>
 <p>是不是很熟悉？大到宣传海报，小到个人名片，Wordle 如今随处可见。它可以轻松的展示出一段文字的关键词，让我们对这段话的内容一目了然。其实这属于数据可视化中的文本内容可视化，常用于社交网络中的内容分析，<em>还记得前几年微博有有个插件（现在似乎找不到了），用户可以一键生成自己的微博关键词，当时引起了大量转发，因为很多用户的关键词出乎意料，让自己都大吃一惊</em>。本文就从最简单的 Wordle 说起，说说文本内容可视化，以窥数据可视化一隅。</p>
 <h2 id="为什么要有-Wordle？"><a href="#为什么要有-Wordle？" class="headerlink" title="为什么要有 Wordle？"></a>为什么要有 Wordle？</h2><p>其实要回答这个问题就要回答为什么要做数据可视化。我们先看下面这段话：</p>
 <blockquote>
@@ -32,9 +35,9 @@
 <p>一眼扫过去，你可能能轻松地注意到 <strong>GraphiCon</strong> 出现了 4 次。而还有个关键词「<strong>图形</strong>」，虽然出现了 5 次，但显然没有 GraphiCon 醒目。平时阅读比较快的同学可能有一目十行的本领，其本质就是关键词提取。瞬间了解一段话的大意，进而判断要不要花时间去读。但这完全取决于你个人提取关键字的能力。如果换一种图形的形式，可能就会非常直观：</p>
 <p><img src="https://ooo.0o0.ooo/2017/04/04/58e35ca7a99a0.png" alt=""></p>
 <p>看这张图明显比看枯燥的文字要直观的多，而且<strong>还意外发现了「计算机图形学」这个词的频率竟然也挺高</strong>。它在原文中出现了两次，这是我们单纯看文字很难发现的。不过，这幅图还不是最好的效果，你可能也发现：除了词频高的词，其他关键词很小，根本看不清；而且整个布局很零散，空白太多，没有一种聚合的感觉。</p>
-<p><img src="https://ooo.0o0.ooo/2017/04/04/58e35ca8ef930.png" alt=""></p>
+<p><img src="https://ooo.0o0.ooo/2017/04/14/58f031f9367fa.png" alt=""></p>
 <p>这幅比上面的又稍美观了一点，同时对词的重要性也进行了重新统计，不再是单纯的根据词频。可能你觉得还不够美，那这样：</p>
-<p><img src="https://ooo.0o0.ooo/2017/04/04/58e380c3d1a57.png" alt=""><br><img src="https://ooo.0o0.ooo/2017/04/04/58e380c3d3825.png" alt=""><br><img src="https://ooo.0o0.ooo/2017/04/04/58e380c40e165.png" alt=""></p>
+<p><img src="https://ooo.0o0.ooo/2017/04/14/58f031f49a275.png" alt=""><br><img src="https://ooo.0o0.ooo/2017/04/14/58f031f5ad7e5.png" alt=""><br><img src="https://ooo.0o0.ooo/2017/04/14/58f031f75d220.png" alt=""></p>
 <p>哈哈，还有很多好玩的，不过例子中这段话的篇幅太短，关键词太少，所以显得不是很紧凑，很多更酷炫的样式也不适用了。</p>
 <p>至此，我们可以总结一下 Wordle 的作用：</p>
 <ul>
@@ -55,7 +58,7 @@
 <p><img src="http://i587.photobucket.com/albums/ss314/zhangdiwaa/my%20blog%20photo/20090621150654-1533987883.jpg" alt=""></p>
 <p>这种看似杂乱无章的排布，恰恰与人类的跳跃思维相契合，人脑的思绪随着视觉的跳动也跟着不断联想。</p>
 <p>而在计算机上，最早的文字可视化其实是「标签云」。当年博客爆发的时代，几乎每个博客里都有一个这样的插件：</p>
-<p><img src="https://ooo.0o0.ooo/2017/03/19/58cd69cdc4641.png" alt=""></p>
+<p><img src="https://ooo.0o0.ooo/2017/04/14/58f031f6bce01.png" alt=""></p>
 <p>它用文字的大小和颜色的深浅来表达了文字在文本中的重要性，比你单纯看一段文字要直观的多。但它的缺点也很多：从美的角度来说，它同一行如果有一个词字体特别大则直接导致行距变大，不仅造成了空间的浪费，还让整体看起来非常不整齐、不协调；从信息展现的角度来说，字体的深浅大小不能更好的体现差异，比如上图中 good 的权重是 50，而 life 的权重是 20，但它俩看起来的差别并不大。</p>
 <p>后来出现的 Wordle 针对这些缺点一一作了改进。首先它用字体的粗度来加深权重的展示，因为人的视觉对面积的感知比对饱和度的感知要强，所以加粗字体效果拔群；其次 Wordle 用紧凑的布局给人以美的享受，你甚至可以给定形状来生成不同的 Wordle。</p>
 <p><img src="https://ooo.0o0.ooo/2017/03/19/58cd69ce5724c.jpg" alt=""></p>
@@ -67,7 +70,7 @@
 <li>颜色意义不大。不过现在这个好像变成了优势，使它可以与不同图片结合。</li>
 </ul>
 <h2 id="除此之外"><a href="#除此之外" class="headerlink" title="除此之外"></a>除此之外</h2><p>Wordle 算是文本内容可视化中最经典的形式，除此之外还有一些更有趣的，比如下图的 DocuBurst [4]。它用环形布局巧妙地展示了文本的层级关系，外圈的单词是内圈单词的下一层。</p>
-<p><img src="https://ooo.0o0.ooo/2017/03/19/58cd69cf5cde7.png" alt=""></p>
+<p><img src="https://ooo.0o0.ooo/2017/04/14/58f031fe74aa3.png" alt=""></p>
 <p>正所谓“一图胜千言”，文本可视化把枯燥的文字变成有趣的图片帮助人们加深理解，可以说是功不可没。如果有兴趣继续了解可视化相关的内容，敬请期待下一期。</p>
 <ul>
 <li><a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">[1] 数据可视化基础——可视化流程</a></li>
@@ -82,18 +85,13 @@
     
     <summary type="html">
     
-      &lt;p&gt;看到题目，你可能一脸懵逼，什么是 wordle？下面这幅图就是：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://ooo.0o0.ooo/2017/03/19/58cd69cf5cddf.png&quot; alt=&quot;&quot;&gt;&lt;/p&gt;
-&lt;p&gt;是不是很熟悉？大到宣传海报，小到个人名片，W
+      &lt;blockquote&gt;
+&lt;p&gt;本文首发于：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/26306683&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GraphiCon 知乎专栏-文本数据可视化（上）——从 Wordle 谈起&lt;
     
     </summary>
     
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
@@ -110,6 +108,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -303,10 +305,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -322,6 +320,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -469,10 +471,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -488,6 +486,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -560,10 +562,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -579,6 +577,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
