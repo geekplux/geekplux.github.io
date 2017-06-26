@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-04-14T03:06:15.000Z</updated>
+  <updated>2017-06-26T06:00:33.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,150 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>文本数据可视化（下）——一图胜千言</title>
+    <link href="http://geekplux.com/2017/06/26/text-data-visualization.html"/>
+    <id>http://geekplux.com/2017/06/26/text-data-visualization.html</id>
+    <published>2017-06-26T05:57:41.000Z</published>
+    <updated>2017-06-26T06:00:33.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本文首发于：<a href="https://zhuanlan.zhihu.com/p/27449788" target="_blank" rel="external">GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言</a></p>
+</blockquote>
+<p>文字是传递信息最常用的载体。在当前这个信息爆炸的时代，人们接收信息的速度已经小于信息产生的速度，尤其是文本信息。当大段大段的文字摆在面前，已经很少有耐心去认真把它读完，经常是先找文中的图片来看。这一方面说明人们对图形的接受程度比枯燥的文字要高很多，另一方面说明人们急需一种更高效的信息接收方式，文本可视化正是解药良方。「一图胜千言」我们从小就有体会，教材里的解释图、自己笔记里总结的知识结构图，一直到现在经常用的思维导图等，其实都是简单、实用的文本可视化。本文将简单介绍文本可视化的基础概念，然后重点通过各类文本可视化的案例来阐述可视化之美（多图，不过为了学到知识这点流量不算什么）。</p>
+<h2 id="为什么要文本数据可视化"><a href="#为什么要文本数据可视化" class="headerlink" title="为什么要文本数据可视化"></a>为什么要文本数据可视化</h2><p>虽然一般这种讲必要性的段落很多人都略过不看，虽然文本可视化的必要性大家用脚趾头估计都能想到，但我还是稍微说一说吧。文本可视化的作用有以下四点：</p>
+<ol>
+<li><strong>理解</strong> - 理解主旨</li>
+<li><strong>组织</strong> - 组织、分类信息</li>
+<li><strong>比较</strong> - 对比文档信息</li>
+<li><strong>关联</strong> - 关联文本的 pattern 和其他信息</li>
+</ol>
+<p>简单来说就是让你更加直观迅速的获取、分析信息（所有可视化的作用都是这个）。举个例子，针对一篇文章，文本可视化能更快的告诉我们文章在讲什么；针对社交网络上的发言，文本可视化可以帮我们信息归类，情感分析；针对一个大新闻，文本可视化可以帮我们捋顺事情发展的脉络、每个人物的关系等等；针对一系列的文档，我们可以通过文本可视化来找到它们之间的联系等等。</p>
+<p>一般来说，情报分析人员、网络内容分析人员、情感分析或文学研究者等相关职业更需要文本可视化。不过随着信息图（例如图 1）等的普及，越来越多的人已经接受并善用文本可视化了。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5932f80b2d468.jpg" alt="图 1：一幅叫你怎么做信息图的信息图"></p>
+<h2 id="文本数据可视化的流程"><a href="#文本数据可视化的流程" class="headerlink" title="文本数据可视化的流程"></a>文本数据可视化的流程</h2><p>如图 2 所示，其实任何可视化的流程<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">[1]</a>都类似。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5932f85a02711.png" alt="图 2：文本可视化流程"></p>
+<p>一般把对文本的理解需求分成三级：词汇级（Lexical Level）、语法级（Syntactic Level）和语义级（Semantic Level）。不同级的信息挖掘方法也不同，词汇级当然是用各类分词算法，语法级用一些句法分析算法，语义级用主题抽取算法<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">[2]</a>。以上这些都在第二步文本信息挖掘中进行，其中文本数据预处理是将无效数据过滤，提取有效词等；文本特征抽取是指提取文本的关键词、词频分布、语法级的实体信息、语义级的主题等；文本特征的度量是指在多种环境或多个数据源所抽取的文本特征进行深层分析，如相似性、文本聚类等。这里就简单笼统地说一下文本分析的基础方法，有兴趣的同学可以自行搜索学习，我们把重点放在可视化设计上。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933efa249cfe.png" alt="Wordcount[3] 统计了通常用的86800个单词"></p>
+<h2 id="文本可视化类型"><a href="#文本可视化类型" class="headerlink" title="文本可视化类型"></a>文本可视化类型</h2><p>文本数据大致可分为三种：单文本、文档集合和时序文本数据。对应的文本可视化也可分为三类：</p>
+<ul>
+<li>文本内容的可视化</li>
+<li>文本关系的可视化</li>
+<li>文本多层面信息的可视化</li>
+</ul>
+<p>以下我们通过案例来一一介绍。</p>
+<h2 id="文本内容可视化"><a href="#文本内容可视化" class="headerlink" title="文本内容可视化"></a>文本内容可视化</h2><p>上篇文章所说的标签云和 Wordle <a href="https://zhuanlan.zhihu.com/p/26306683" target="_blank" rel="external">[4]</a>是目前研究领域和 Web 上最受欢迎的文本内容可视化方法了，它们都是基于关键词的文本内容可视化。</p>
+<h4 id="基于关键词的文本内容可视化"><a href="#基于关键词的文本内容可视化" class="headerlink" title="基于关键词的文本内容可视化"></a>基于关键词的文本内容可视化</h4><h5 id="DocuBurst"><a href="#DocuBurst" class="headerlink" title="DocuBurst"></a>DocuBurst</h5><p>文档散（DocuBurst [5]）也是基于关键词的文本可视化，不过它还通过径向布局体现了词的语义等级。如下图所示，外层的词是内层词的下义祠，颜色饱和度的深浅用来体现词频的高低。</p>
+<p><img src="https://ooo.0o0.ooo/2017/04/14/58f031fe74aa3.png" alt=""></p>
+<h5 id="Document-Cards"><a href="#Document-Cards" class="headerlink" title="Document Cards"></a>Document Cards</h5><p>文档卡片（Document Cards）[6]则是结合了文档中的关键词和关键图片进行可视化，布局在一张小卡片中。其中的关键图片是指采用智能算法抽取并根据颜色分类后的代表性图片。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933f0f44cf19.png" alt=""></p>
+<h4 id="时序文本内容可视化"><a href="#时序文本内容可视化" class="headerlink" title="时序文本内容可视化"></a>时序文本内容可视化</h4><p>时序数据是指具有时间或顺序特性的文本，例如一篇小说故事情节的变化，或一个新闻事件随时间的演化。</p>
+<h5 id="SparkClouds"><a href="#SparkClouds" class="headerlink" title="SparkClouds"></a>SparkClouds</h5><p>SparkClouds[7]是在标签云的基础上，在每个词下面增加了一条折线图，用以显示该词的词频随时间的演变。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933fed566376.png" alt="SparkCloud"></p>
+<h5 id="ThemeRiver"><a href="#ThemeRiver" class="headerlink" title="ThemeRiver"></a>ThemeRiver</h5><p>主题河流（ThemeRiver）[8]是一种经典的时序文本可视化方法。光阴似水，用河流来隐喻时间的变化几乎所有人都能非常好地理解。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933f323e5d43.png" alt="ThemeRiver"></p>
+<p>横轴表示时间，每一条不同颜色线条可视作一条河流，而每条河流则表示一个主题，河流的宽度代表其在当前时间点上的一个度量（如主题的强度）。这样既可以在宏观上看出多个主题的发展变化，又能看出在特定时间点上主题的分布。</p>
+<h5 id="TIARA"><a href="#TIARA" class="headerlink" title="TIARA"></a>TIARA</h5><p>TIARA[9]结合了标签云，通过主题分析技术（latent dirichlet allocation，LDA），将文本关键词根据时间点放置在每条色带上，并用词的大小来表示关键词在该时刻出现的频率。因此用TIARA就可以帮助用户快速分析文本具体内容随时间变化的规律，而不是仅仅一个度量带变化。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/593409c1dbde1.png" alt="TIARA"></p>
+<h5 id="TextFlow"><a href="#TextFlow" class="headerlink" title="TextFlow"></a>TextFlow</h5><p>TextFlow [10]也算是 ThemeRiver 的一种拓展，它不仅表达了主题的变化，还表达了各个主题随着时间的分裂与合并。如某个主题在某个时间分成了两个主题，或多个主题在某个时间合并成了一个主题。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/14/59412ad2d6548.png" alt="TextFlow"></p>
+<h5 id="HistoryFlow"><a href="#HistoryFlow" class="headerlink" title="HistoryFlow"></a>HistoryFlow</h5><p>HistoryFlow [11]则主要研究文档内容随时间的变化。下图以维基百科一篇词条的更新为例，纵轴表示文章的版本更新时间点，每一种颜色代表一个作者，在同一个时间轴上色块代表相应的作者所贡献的文字块，并且色块的位置代表该文字块在文章中的顺序。所以纵览全图就可以轻易看出文章的修改。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/14/59412ad31e48b.png" alt="HistoryFlow"></p>
+<h5 id="StoryFlow"><a href="#StoryFlow" class="headerlink" title="StoryFlow"></a>StoryFlow</h5><p>我们看电影或小说经常说到时间线、剧情线等，都能用 StoryFlow [12]来表示，它通过层次渲染的方式，生成一个 StoryLine 布局。每条线是一条人物线，当两人在剧情中有某种联系（同时出场或其他交集）时会在图中相交，横轴表示时间。</p>
+<p>StoryFlow 还允许用户实时交互，包括捆绑操作、删除、移动以及直线化等等。视频演示非常精彩，需科学上网：<a href="https://www.youtube.com/watch?v=yoq82mC30Iw" target="_blank" rel="external">https://www.youtube.com/watch?v=yoq82mC30Iw</a></p>
+<p><img src="https://ooo.0o0.ooo/2017/06/14/59412ad2c4740.png" alt="StoryFlow"></p>
+<h4 id="文本特征分布模式可视化"><a href="#文本特征分布模式可视化" class="headerlink" title="文本特征分布模式可视化"></a>文本特征分布模式可视化</h4><p>可视化也能很好的表现文本特征。</p>
+<h5 id="TextArc"><a href="#TextArc" class="headerlink" title="TextArc"></a>TextArc</h5><p>TextArc [13]用来可视化一个文档中的词频和词的分布情况。整个文档用一条螺线表示，文档的句子按文字的组织顺序布局在螺线上，螺线包围着的是文档中出现的单词，每个单词的位置由其在文本中的频率和出现位置决定，饱和度用来映射词频。所以全局出现频率越高的词越靠近中心，而局部出现频率越高的词越靠近其相应的螺线区域。选中某个单词后，自动用射线关联到它在文中出现的位置。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e89856682.png" alt="Textarc"></p>
+<h5 id="Literature-Fingerprinting"><a href="#Literature-Fingerprinting" class="headerlink" title="Literature Fingerprinting"></a>Literature Fingerprinting</h5><p>文献指纹（Literature Fingerprinting）[14]是体现全文特征分布的一项工作。一个像素块代表一段文本，一组像素块代表一本书。颜色映射的是文本特征，下图中是句子的平均长度。从图中明显看出两人的写作风格迥异。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e897d8434.png" alt="Literature Fingerprinting"></p>
+<h4 id="情感分析可视化"><a href="#情感分析可视化" class="headerlink" title="情感分析可视化"></a>情感分析可视化</h4><p>情感分析是指从文本中挖掘出心情、喜好、感觉等主观信息。现在人们把各类社交网络当作感情、观点的出口，所以分析这类文本就能掌握人们对于一个事件的观点或情感的发展。下图是基于矩阵视图的客户反馈信息的可视化工作[15]，其中的行是指文本（用户观点）的载体，列是用户的评价，颜色表达的是用户评价的倾向程度，红色代表消极，蓝色代表积极，每个方格内的小格子代表用户评价的人数，评价人数越多小格子越大。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e897ebec4.png" alt="情感分析"></p>
+<h2 id="文本关系可视化"><a href="#文本关系可视化" class="headerlink" title="文本关系可视化"></a>文本关系可视化</h2><p>顾名思义，文本关系可视化研究的是文本或文档集合中的关系信息，比如文本的相似性、互相引用的情况、链接等。说到关系布局，一般都是树或图。</p>
+<h4 id="文本内容关系可视化"><a href="#文本内容关系可视化" class="headerlink" title="文本内容关系可视化"></a>文本内容关系可视化</h4><h5 id="Word-Tree"><a href="#Word-Tree" class="headerlink" title="Word Tree"></a>Word Tree</h5><p>单词树（Word Tree）[16]很好理解，把文本中的句子按树形结构布局，可以很好的看出一个单词在文本中出现的频率和单词前后的联系。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e8980de0c.png" alt="Word Tree.png"></p>
+<h5 id="Phrase-Nets"><a href="#Phrase-Nets" class="headerlink" title="Phrase Nets"></a>Phrase Nets</h5><p>短语网络（Phrase Nets）[17]是经典的力导向图结构，图中的节点是从文本中挖掘出的词汇级或语法级的语义单元，边代表语义单元的联系，边的方向即短语的方向，边的宽度是短语在文本中出现的频率。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e897b8220.png" alt="Phrase Nets.png"></p>
+<h5 id="NewsMap"><a href="#NewsMap" class="headerlink" title="NewsMap"></a>NewsMap</h5><p>TreeMap 也是一种经典的可视化关系布局。NewsMap 就是基于 TreeMap 展示新闻，颜色用于区分新闻类型。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e89847efb.png" alt="Newsmap.png"></p>
+<h4 id="文档集合关系可视化"><a href="#文档集合关系可视化" class="headerlink" title="文档集合关系可视化"></a>文档集合关系可视化</h4><p>文档数量到一定量的时候，再针对文本做可视化就不现实了，所以通常是对单个文档定义一个特征向量，利用向量空间模型计算文档间的相似性，并采用相应的投影技术呈现文档集合的关系。</p>
+<h5 id="Galaxy-View"><a href="#Galaxy-View" class="headerlink" title="Galaxy View"></a>Galaxy View</h5><p>星系图（Galaxy View）[18]把一篇文档比作一颗星星，通过投影的方法把所有文档按照其主题的相似性投影为二维平面的点集，星星离的越近则代表文档越相似，因此一个星团可以非常直观地看出文档主题的紧凑和离散。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941f41b47937.png" alt="Galaxy View"></p>
+<h5 id="ThemeScape"><a href="#ThemeScape" class="headerlink" title="ThemeScape"></a>ThemeScape</h5><p>主题地貌（ThemeScape）[18]是对星系图的改进。地图中的等高线我相信大家都理解，把等高线加入投影的二维平面中，文档相似性相同的放在一个等高线内，再用颜色来编码文本分布的密集程度，把二维平面背景变成一幅地图，这样就把刚才星系图中的星团变成了一座座山丘。文档越相似，则分布约密集，这座山峰就越高，是不是一目了然？</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941f478ec87d.png" alt="ThemeScape"></p>
+<h5 id="Jigsaw"><a href="#Jigsaw" class="headerlink" title="Jigsaw"></a>Jigsaw</h5><p>Jigsaw [19]通过提供多种视图让用户交互分析文档间的关系。最下面是文档视图，里面是单个文档的内容，最上面列表图中每一行是文档中的一个实体，连线代表实体间的关系。中间部分，左面是一副节点-链接图，白色节点表示一篇文档，其他节点是文档中的实体，链接同样代表联系；右面的散点图中，一个菱形代表两个实体的联系。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941f45268950.png" alt="Jigsaw"></p>
+<h2 id="文本多层面信息可视化"><a href="#文本多层面信息可视化" class="headerlink" title="文本多层面信息可视化"></a>文本多层面信息可视化</h2><p>多层面或多维度是指从多个角度或提取多种特征对文本集合分析。</p>
+<h5 id="FaceAtlas"><a href="#FaceAtlas" class="headerlink" title="FaceAtlas"></a>FaceAtlas</h5><p>FaceAtlas [20]结合了气泡集和节点-链接图两种视图，用于表达文本各层面信息内部和外部的关联。每个节点表示一个实体，用 KDE 方法刻画出气泡图的轮廓，然后用线将同一层面的实体链接起来，一种颜色代表一种实体。下图是基于医疗健康文档，展示了病名、病因、症状、诊断方案等多层面的信息，两团分别代表糖尿病1号和2号，连线是指他俩之间的并发症。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941fc7386d50.png" alt="faceatlas.png"></p>
+<h5 id="Parallel-Tag-Clouds"><a href="#Parallel-Tag-Clouds" class="headerlink" title="Parallel Tag Clouds"></a>Parallel Tag Clouds</h5><p>平行标签云（Parallel Tag Clouds）[21]结合了平行坐标（该视图在多维数据可视化中经常使用）和标签云视图。每一列是一个层面的标签云，然后连接的折线展现了选中标签在多个层面的分布。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941fc7fd281e.png" alt="parallel_tag_clouds.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今天带大家看了这么多图，相信大家一定眼花缭乱了。要理解文本数据可视化，就要先了解文本数据的特点，如何从文本中挖掘出你想要的信息，如何设计数据结构，最后再如何映射出实用又美观的视图都是你需要思考的问题。目前文本可视分析已经开始运用在各行各业，直观的交互将人类的智慧引入到数据分析的过程中，帮助我们从浩瀚的文字中跳脱出来，避免一叶障目。希望我的文章能给大家带来一些微小的帮助。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1] <a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">数据可视化基础——可视化流程</a></li>
+<li>[2] <a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[3] <a href="http://www.wordcount.org/" target="_blank" rel="external">WordCount</a></li>
+<li>[4] <a href="https://zhuanlan.zhihu.com/p/26306683" target="_blank" rel="external">文本数据可视化（上）——从 Wordle 谈起</a></li>
+<li>[5] Collins C, Carpendale S, Penn G. Docuburst: Visualizing document content using language structure[C]//Computer graphics forum. Blackwell Publishing Ltd, 2009, 28(3): 1039-1046.</li>
+<li>[6] Strobelt H, Oelke D, Rohrdantz C, et al. Document cards: A top trumps visualization for documents[J]. IEEE Transactions on Visualization and Computer Graphics, 2009, 15(6): 1145-1152.</li>
+<li>[7] Lee B, Riche N H, Karlson A K, et al. Sparkclouds: Visualizing trends in tag clouds[J]. IEEE transactions on visualization and computer graphics, 2010, 16(6): 1182-1189.</li>
+<li>[8] Havre S, Hetzler E, Whitney P, et al. Themeriver: Visualizing thematic changes in large document collections[J]. IEEE transactions on visualization and computer graphics, 2002, 8(1): 9-20.</li>
+<li>[9] Wei F, Liu S, Song Y, et al. Tiara: a visual exploratory text analytic system[C]//Proceedings of the 16th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2010: 153-162.</li>
+<li>[10] Cui W, Liu S, Tan L, et al. Textflow: Towards better understanding of evolving topics in text[J]. IEEE transactions on visualization and computer graphics, 2011, 17(12): 2412-2421.</li>
+<li>[11] Wattenberg M, Viégas F B. Historyflow: visualizing dynamic, evolving documents and the interactions of multiple collaborating authors, A preliminary report[J]. IBM Research, Collaborative User Experience research group, 2003.</li>
+<li>[12] Liu S, Wu Y, Wei E, et al. Storyflow: Tracking the evolution of stories[J]. IEEE Transactions on Visualization and Computer Graphics, 2013, 19(12): 2436-2445.</li>
+<li>[13] Paley W B. TextArc: Showing word frequency and distribution in text[C]//Poster presented at IEEE Symposium on Information Visualization. 2002, 2002.</li>
+<li>[14] Keim D A, Oelke D. Literature fingerprinting: A new method for visual literary analysis[C]//Visual Analytics Science and Technology, 2007. VAST 2007. IEEE Symposium on. IEEE, 2007: 115-122.</li>
+<li>[15] Oelke D, Hao M, Rohrdantz C, et al. Visual opinion analysis of customer feedback data[C]//Visual Analytics Science and Technology, 2009. VAST 2009. IEEE Symposium on. IEEE, 2009: 187-194.</li>
+<li>[16] Wattenberg M, Viégas F B. The word tree, an interactive visual concordance[J]. IEEE transactions on visualization and computer graphics, 2008, 14(6).</li>
+<li>[17] Van Ham F, Wattenberg M, Viégas F B. Mapping text with phrase nets[J]. IEEE transactions on visualization and computer graphics, 2009, 15(6).</li>
+<li>[18] Wise J A. The ecological approach to text visualization[J]. Journal of the Association for Information Science and Technology, 1999, 50(13): 1224.</li>
+<li>[19] Stasko J, Görg C, Liu Z. Jigsaw: supporting investigative analysis through interactive visualization[J]. Information visualization, 2008, 7(2): 118-132.</li>
+<li>[20] Cao N, Sun J, Lin Y R, et al. Facetatlas: Multifaceted visualization for rich text corpora[J]. IEEE transactions on visualization and computer graphics, 2010, 16(6): 1172-1181.</li>
+<li>[21] Collins C, Viegas F B, Wattenberg M. Parallel tag clouds to explore and analyze faceted text corpora[C]//Visual Analytics Science and Technology, 2009. VAST 2009. IEEE Symposium on. IEEE, 2009: 91-98.</li>
+</ul>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文首发于：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27449788&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言&lt;/a&gt;&lt;/p
+    
+    </summary>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
+    
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="大数据" scheme="http://geekplux.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Big Data" scheme="http://geekplux.com/tags/Big-Data/"/>
+    
+      <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+  </entry>
   
   <entry>
     <title>文本数据可视化（上）——从 Wordle 谈起</title>
@@ -93,6 +237,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -108,10 +256,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -305,6 +449,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -320,10 +468,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -471,6 +615,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -486,10 +634,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -562,6 +706,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -577,10 +725,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -979,13 +1123,13 @@ vconcat([view1, view2, ...], resolve)
       <category term="Research" scheme="http://geekplux.com/categories/Research/"/>
     
     
-      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
-    
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
       <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
+      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
     
   </entry>
   
@@ -1132,11 +1276,11 @@ vconcat([view1, view2, ...], resolve)
       <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
     
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
       <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+    
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   
@@ -1535,7 +1679,7 @@ vconcat([view1, view2, ...], resolve)
     <link href="http://geekplux.com/2015/01/05/play-ukulele.html"/>
     <id>http://geekplux.com/2015/01/05/play-ukulele.html</id>
     <published>2015-01-05T15:54:00.000Z</published>
-    <updated>2016-07-25T07:51:12.000Z</updated>
+    <updated>2017-06-20T02:19:44.000Z</updated>
     
     <content type="html"><![CDATA[<p>每个人都幻想过自己拥有一身的艺术细菌，可以像各种钢琴王子一样在琴键上挥洒自如。但是由于某些不可抗力，从小到大一直没学什么乐器，或者是学了也没坚持下来。最尴尬的是选了一种鸡肋乐器，学有所成却不接地气，比如二胡（我真不是黑，因为我也学过那么两年），总不能在同学聚会激战正酣的时候拿出来即兴演奏吧……还是老老实实戴个圆框墨镜到地铁口来一曲二泉映月……</p>
 <p>人生苦短，为了圆我们的音（zhuang）乐（bi）梦，Ukulele 可以说是应运而生。本文将从 what、why、how 三方面介绍如何快速玩转 Ukulele，争取把我在学习过程中遇到的坑都写出来供大家参考。</p>
@@ -1569,6 +1713,9 @@ vconcat([view1, view2, ...], resolve)
 <h3 id="2-你得学会调音"><a href="#2-你得学会调音" class="headerlink" title="2.你得学会调音"></a>2.你得学会调音</h3><p>调音就是把每根弦的音调（diao）调（tiao）到它该发的调（diao）上。由于 Ukulele 的弦是尼龙弦而不是金属弦，所以弹着弹着容易音不准，要经常调校，有完美强迫症的人每次弹之前估计都得调一下。</p>
 <p>我是在某宝入的琴，店家送了调音器。把调音器夹在琴头上，然后依次波动每个琴弦，观察调音器上的音阶字母对应正确且显示为绿色即可。看这个视频一下就懂了：</p>
 <div class="video-container"><iframe src="http://player.youku.com/embed/XNDQ1NTgxNjg4" frameborder="0" allowfullscreen></iframe></div>
+<div class="video-container"><embed "415"="" "544"="" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=11414990&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></div>
+<embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=11414990&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
+
 <p>是不是非常简单∩_∩</p>
 <h3 id="3-姿势"><a href="#3-姿势" class="headerlink" title="3.姿势"></a>3.姿势</h3><p>Ukulele 小巧可爱，怎么抱着都能弹，你可以坐着弹，躺着弹，站着弹。<strong>但是越到后面越觉得姿势非常重要</strong>。基本的持琴姿势是这样的：</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/9.png" alt="持琴方法（图片来自《最易上手尤克里里弹唱超精选》）"></p>
@@ -1714,70 +1861,11 @@ vconcat([view1, view2, ...], resolve)
     
       <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
     
-      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
-    
       <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
     
       <category term="思考" scheme="http://geekplux.com/tags/%E6%80%9D%E8%80%83/"/>
     
-  </entry>
-  
-  <entry>
-    <title>双拼学习记</title>
-    <link href="http://geekplux.com/2014/07/06/learn_shuangpin.html"/>
-    <id>http://geekplux.com/2014/07/06/learn_shuangpin.html</id>
-    <published>2014-07-06T14:59:29.000Z</published>
-    <updated>2015-01-04T11:51:30.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>转移到<strong>双拼</strong>阵营差不多三个星期了。现在打字真的是「飞一般的感觉」。</p>
-<p>双拼是输入法的一种，绝大多数人都只听过<strong>全拼</strong>和<strong>五笔</strong>两种输入法。如果你不清楚你现在用的是什么输入法，那么基本上可以断定你用的是全拼。至于五笔，我们虽然如雷贯耳，但没有经过专门训练的话，实在是可望而不可及。双拼提供给我们一种折中的方案，使我们的<strong>学习成本和全拼一样，打字速度却和五笔一样</strong>。那么到底什么是双拼呢？维基百科这样解释：</p>
-<blockquote>
-<p>双拼是汉语拼音输入法的一种编码方案。相对于全拼而言，使用双拼输入汉字时只需输入一个代表声母的字母，一个代表韵母的字母，就可以打出任意一个中文单字了。</p>
-</blockquote>
-<p>大家都知道，我们伟大的汉字大部分都可以用一个<strong>声母</strong>加一个<strong>韵母</strong>拼出来<em>（少部分只有韵母构成，如 奥ao、而 er、偶 ou 等）</em>，所以用双拼输入一个汉字<strong>最多按两个字母键</strong>，而全拼可能要用两个以上。举例来说，用全拼输入「天真」，可能需要「tianzhen」这么多字母，而用双拼只需要「tmvf」，字数多了之后优势更加明显。</p>
-<p>由此可见，双拼的原理十分简单，而它学起来更简单。众所周知五笔打字速度很快，但是你从开始学起到最后熟练使用，中间需要几个月的时间，黄花菜都凉了。而<strong>双拼从学起到驾轻就熟只需要三周</strong>，输入量大的人一周都能炉火纯青。一般的学习流程是这样的：</p>
-<ol>
-<li>熟记键位</li>
-<li>使用即练习</li>
-<li>掌握双拼打字的节奏感</li>
-</ol>
-<a id="more"></a>
-<p>在以上步骤开始之前，我们需要选择一种<strong>双拼方案</strong>。双拼有很多种输入方案供你选择，你不用害怕，这些方案只是键位不同而已，并没有本质的区别。你可以参考知乎的回答<a href="http://www.zhihu.com/question/20191383" target="_blank" rel="external">「各双拼输入方案之间有明显的优劣之分吗？」</a>。大家各有所爱，我自己用的是<a href="http://www.flypy.com/" target="_blank" rel="external">小鹤双拼</a>。接下来你就可以记小鹤的键位了，我当时并没有真的刻意去背，只是把键位图抄了下来放在键盘旁，打字想不起来的时候瞄一眼键位图。<em>（这里有个技巧，大部分输入法，如搜狗，都有「双拼下同时使用全拼」的选项。勾选之后你就可以在双拼实在想不起来，或者是着急打字的时候用全拼，它可以帮你平滑过渡到完全使用双拼）</em>。</p>
-<p><img src="http://www.flypy.com/images/hejp.png" alt=""></p>
-<p>不出一两个小时键位你就记得差不多了，接着就是受折磨的一周……刚切换过来会很别扭，经常卡住，半天打不出一个字，和你聊天的妹纸总会埋怨你聊天不专心……忍了，我们应该庆幸，学习双拼的成本真的太低了，所有学习过程都在真正使用的场景中完成，不知不觉，简直是 learning by doing 的最佳典范。</p>
-<p>等你完全习惯用双拼的时候，会发现打字有一种节奏感。可能是因为我们用全拼时并不确定每个字得按几下键盘才能打出来，而用双拼，三下键盘一个字，习惯之后非常带感。从此全拼是路人……</p>
-<p>综上所述，学习双拼是一件极具性价比的事。</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;转移到&lt;strong&gt;双拼&lt;/strong&gt;阵营差不多三个星期了。现在打字真的是「飞一般的感觉」。&lt;/p&gt;
-&lt;p&gt;双拼是输入法的一种，绝大多数人都只听过&lt;strong&gt;全拼&lt;/strong&gt;和&lt;strong&gt;五笔&lt;/strong&gt;两种输入法。如果你不清楚你现在用的是什么输入法，那么基本上可以断定你用的是全拼。至于五笔，我们虽然如雷贯耳，但没有经过专门训练的话，实在是可望而不可及。双拼提供给我们一种折中的方案，使我们的&lt;strong&gt;学习成本和全拼一样，打字速度却和五笔一样&lt;/strong&gt;。那么到底什么是双拼呢？维基百科这样解释：&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;双拼是汉语拼音输入法的一种编码方案。相对于全拼而言，使用双拼输入汉字时只需输入一个代表声母的字母，一个代表韵母的字母，就可以打出任意一个中文单字了。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;大家都知道，我们伟大的汉字大部分都可以用一个&lt;strong&gt;声母&lt;/strong&gt;加一个&lt;strong&gt;韵母&lt;/strong&gt;拼出来&lt;em&gt;（少部分只有韵母构成，如 奥ao、而 er、偶 ou 等）&lt;/em&gt;，所以用双拼输入一个汉字&lt;strong&gt;最多按两个字母键&lt;/strong&gt;，而全拼可能要用两个以上。举例来说，用全拼输入「天真」，可能需要「tianzhen」这么多字母，而用双拼只需要「tmvf」，字数多了之后优势更加明显。&lt;/p&gt;
-&lt;p&gt;由此可见，双拼的原理十分简单，而它学起来更简单。众所周知五笔打字速度很快，但是你从开始学起到最后熟练使用，中间需要几个月的时间，黄花菜都凉了。而&lt;strong&gt;双拼从学起到驾轻就熟只需要三周&lt;/strong&gt;，输入量大的人一周都能炉火纯青。一般的学习流程是这样的：&lt;/p&gt;
-&lt;ol&gt;
-&lt;li&gt;熟记键位&lt;/li&gt;
-&lt;li&gt;使用即练习&lt;/li&gt;
-&lt;li&gt;掌握双拼打字的节奏感&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
-    
-    
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
-    
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="新技能" scheme="http://geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
-    
-      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
+      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
     
   </entry>
   

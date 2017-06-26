@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>文本数据可视化（下）——一图胜千言 | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文首发于：GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言
+
+文字是传递信息最常用的载体。在当前这个信息爆炸的时代，人们接收信息的速度已经小于信息产生的速度，尤其是文本信息。当大段大段的文字摆在面前，已经很少有耐心去认真把它读完，经常是先找文中的图片来看。这一方面说明人们对图形的接受程度比枯燥的文字要高很多，另一方面说明人们急需一种更高效的信息接收方式，文本可视化正是解药良方。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="文本数据可视化（下）——一图胜千言">
+<meta property="og:url" content="http://geekplux.com/2017/06/26/text-data-visualization.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="本文首发于：GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言
+
+文字是传递信息最常用的载体。在当前这个信息爆炸的时代，人们接收信息的速度已经小于信息产生的速度，尤其是文本信息。当大段大段的文字摆在面前，已经很少有耐心去认真把它读完，经常是先找文中的图片来看。这一方面说明人们对图形的接受程度比枯燥的文字要高很多，另一方面说明人们急需一种更高效的信息接收方式，文本可视化正是解药良方。">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/04/5932f80b2d468.jpg">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/04/5932f85a02711.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/04/5933efa249cfe.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/04/14/58f031fe74aa3.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/04/5933f0f44cf19.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/04/5933fed566376.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/04/5933f323e5d43.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/04/593409c1dbde1.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/14/59412ad2d6548.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/14/59412ad31e48b.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/14/59412ad2c4740.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941e89856682.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941e897d8434.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941e897ebec4.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941e8980de0c.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941e897b8220.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941e89847efb.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941f41b47937.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941f478ec87d.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941f45268950.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941fc7386d50.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/06/15/5941fc7fd281e.png">
+<meta property="og:updated_time" content="2017-06-26T06:00:33.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="文本数据可视化（下）——一图胜千言">
+<meta name="twitter:description" content="本文首发于：GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言
+
+文字是传递信息最常用的载体。在当前这个信息爆炸的时代，人们接收信息的速度已经小于信息产生的速度，尤其是文本信息。当大段大段的文字摆在面前，已经很少有耐心去认真把它读完，经常是先找文中的图片来看。这一方面说明人们对图形的接受程度比枯燥的文字要高很多，另一方面说明人们急需一种更高效的信息接收方式，文本可视化正是解药良方。">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/06/04/5932f80b2d468.jpg">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-text-data-visualization" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/wiki">Wiki</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/aboutme">关于</a>
+    
+      <a class="main-nav-link" href="/gab">扯淡集</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      文本数据可视化（下）——一图胜千言
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文首发于：<a href="https://zhuanlan.zhihu.com/p/27449788" target="_blank" rel="external">GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言</a></p>
+</blockquote>
+<p>文字是传递信息最常用的载体。在当前这个信息爆炸的时代，人们接收信息的速度已经小于信息产生的速度，尤其是文本信息。当大段大段的文字摆在面前，已经很少有耐心去认真把它读完，经常是先找文中的图片来看。这一方面说明人们对图形的接受程度比枯燥的文字要高很多，另一方面说明人们急需一种更高效的信息接收方式，文本可视化正是解药良方。「一图胜千言」我们从小就有体会，教材里的解释图、自己笔记里总结的知识结构图，一直到现在经常用的思维导图等，其实都是简单、实用的文本可视化。本文将简单介绍文本可视化的基础概念，然后重点通过各类文本可视化的案例来阐述可视化之美（多图，不过为了学到知识这点流量不算什么）。</p>
+<h2 id="为什么要文本数据可视化"><a href="#为什么要文本数据可视化" class="headerlink" title="为什么要文本数据可视化"></a>为什么要文本数据可视化</h2><p>虽然一般这种讲必要性的段落很多人都略过不看，虽然文本可视化的必要性大家用脚趾头估计都能想到，但我还是稍微说一说吧。文本可视化的作用有以下四点：</p>
+<ol>
+<li><strong>理解</strong> - 理解主旨</li>
+<li><strong>组织</strong> - 组织、分类信息</li>
+<li><strong>比较</strong> - 对比文档信息</li>
+<li><strong>关联</strong> - 关联文本的 pattern 和其他信息</li>
+</ol>
+<p>简单来说就是让你更加直观迅速的获取、分析信息（所有可视化的作用都是这个）。举个例子，针对一篇文章，文本可视化能更快的告诉我们文章在讲什么；针对社交网络上的发言，文本可视化可以帮我们信息归类，情感分析；针对一个大新闻，文本可视化可以帮我们捋顺事情发展的脉络、每个人物的关系等等；针对一系列的文档，我们可以通过文本可视化来找到它们之间的联系等等。</p>
+<p>一般来说，情报分析人员、网络内容分析人员、情感分析或文学研究者等相关职业更需要文本可视化。不过随着信息图（例如图 1）等的普及，越来越多的人已经接受并善用文本可视化了。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5932f80b2d468.jpg" alt="图 1：一幅叫你怎么做信息图的信息图"></p>
+<h2 id="文本数据可视化的流程"><a href="#文本数据可视化的流程" class="headerlink" title="文本数据可视化的流程"></a>文本数据可视化的流程</h2><p>如图 2 所示，其实任何可视化的流程<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">[1]</a>都类似。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5932f85a02711.png" alt="图 2：文本可视化流程"></p>
+<p>一般把对文本的理解需求分成三级：词汇级（Lexical Level）、语法级（Syntactic Level）和语义级（Semantic Level）。不同级的信息挖掘方法也不同，词汇级当然是用各类分词算法，语法级用一些句法分析算法，语义级用主题抽取算法<a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">[2]</a>。以上这些都在第二步文本信息挖掘中进行，其中文本数据预处理是将无效数据过滤，提取有效词等；文本特征抽取是指提取文本的关键词、词频分布、语法级的实体信息、语义级的主题等；文本特征的度量是指在多种环境或多个数据源所抽取的文本特征进行深层分析，如相似性、文本聚类等。这里就简单笼统地说一下文本分析的基础方法，有兴趣的同学可以自行搜索学习，我们把重点放在可视化设计上。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933efa249cfe.png" alt="Wordcount[3] 统计了通常用的86800个单词"></p>
+<h2 id="文本可视化类型"><a href="#文本可视化类型" class="headerlink" title="文本可视化类型"></a>文本可视化类型</h2><p>文本数据大致可分为三种：单文本、文档集合和时序文本数据。对应的文本可视化也可分为三类：</p>
+<ul>
+<li>文本内容的可视化</li>
+<li>文本关系的可视化</li>
+<li>文本多层面信息的可视化</li>
+</ul>
+<p>以下我们通过案例来一一介绍。</p>
+<h2 id="文本内容可视化"><a href="#文本内容可视化" class="headerlink" title="文本内容可视化"></a>文本内容可视化</h2><p>上篇文章所说的标签云和 Wordle <a href="https://zhuanlan.zhihu.com/p/26306683" target="_blank" rel="external">[4]</a>是目前研究领域和 Web 上最受欢迎的文本内容可视化方法了，它们都是基于关键词的文本内容可视化。</p>
+<h4 id="基于关键词的文本内容可视化"><a href="#基于关键词的文本内容可视化" class="headerlink" title="基于关键词的文本内容可视化"></a>基于关键词的文本内容可视化</h4><h5 id="DocuBurst"><a href="#DocuBurst" class="headerlink" title="DocuBurst"></a>DocuBurst</h5><p>文档散（DocuBurst [5]）也是基于关键词的文本可视化，不过它还通过径向布局体现了词的语义等级。如下图所示，外层的词是内层词的下义祠，颜色饱和度的深浅用来体现词频的高低。</p>
+<p><img src="https://ooo.0o0.ooo/2017/04/14/58f031fe74aa3.png" alt=""></p>
+<h5 id="Document-Cards"><a href="#Document-Cards" class="headerlink" title="Document Cards"></a>Document Cards</h5><p>文档卡片（Document Cards）[6]则是结合了文档中的关键词和关键图片进行可视化，布局在一张小卡片中。其中的关键图片是指采用智能算法抽取并根据颜色分类后的代表性图片。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933f0f44cf19.png" alt=""></p>
+<h4 id="时序文本内容可视化"><a href="#时序文本内容可视化" class="headerlink" title="时序文本内容可视化"></a>时序文本内容可视化</h4><p>时序数据是指具有时间或顺序特性的文本，例如一篇小说故事情节的变化，或一个新闻事件随时间的演化。</p>
+<h5 id="SparkClouds"><a href="#SparkClouds" class="headerlink" title="SparkClouds"></a>SparkClouds</h5><p>SparkClouds[7]是在标签云的基础上，在每个词下面增加了一条折线图，用以显示该词的词频随时间的演变。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933fed566376.png" alt="SparkCloud"></p>
+<h5 id="ThemeRiver"><a href="#ThemeRiver" class="headerlink" title="ThemeRiver"></a>ThemeRiver</h5><p>主题河流（ThemeRiver）[8]是一种经典的时序文本可视化方法。光阴似水，用河流来隐喻时间的变化几乎所有人都能非常好地理解。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/5933f323e5d43.png" alt="ThemeRiver"></p>
+<p>横轴表示时间，每一条不同颜色线条可视作一条河流，而每条河流则表示一个主题，河流的宽度代表其在当前时间点上的一个度量（如主题的强度）。这样既可以在宏观上看出多个主题的发展变化，又能看出在特定时间点上主题的分布。</p>
+<h5 id="TIARA"><a href="#TIARA" class="headerlink" title="TIARA"></a>TIARA</h5><p>TIARA[9]结合了标签云，通过主题分析技术（latent dirichlet allocation，LDA），将文本关键词根据时间点放置在每条色带上，并用词的大小来表示关键词在该时刻出现的频率。因此用TIARA就可以帮助用户快速分析文本具体内容随时间变化的规律，而不是仅仅一个度量带变化。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/04/593409c1dbde1.png" alt="TIARA"></p>
+<h5 id="TextFlow"><a href="#TextFlow" class="headerlink" title="TextFlow"></a>TextFlow</h5><p>TextFlow [10]也算是 ThemeRiver 的一种拓展，它不仅表达了主题的变化，还表达了各个主题随着时间的分裂与合并。如某个主题在某个时间分成了两个主题，或多个主题在某个时间合并成了一个主题。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/14/59412ad2d6548.png" alt="TextFlow"></p>
+<h5 id="HistoryFlow"><a href="#HistoryFlow" class="headerlink" title="HistoryFlow"></a>HistoryFlow</h5><p>HistoryFlow [11]则主要研究文档内容随时间的变化。下图以维基百科一篇词条的更新为例，纵轴表示文章的版本更新时间点，每一种颜色代表一个作者，在同一个时间轴上色块代表相应的作者所贡献的文字块，并且色块的位置代表该文字块在文章中的顺序。所以纵览全图就可以轻易看出文章的修改。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/14/59412ad31e48b.png" alt="HistoryFlow"></p>
+<h5 id="StoryFlow"><a href="#StoryFlow" class="headerlink" title="StoryFlow"></a>StoryFlow</h5><p>我们看电影或小说经常说到时间线、剧情线等，都能用 StoryFlow [12]来表示，它通过层次渲染的方式，生成一个 StoryLine 布局。每条线是一条人物线，当两人在剧情中有某种联系（同时出场或其他交集）时会在图中相交，横轴表示时间。</p>
+<p>StoryFlow 还允许用户实时交互，包括捆绑操作、删除、移动以及直线化等等。视频演示非常精彩，需科学上网：<a href="https://www.youtube.com/watch?v=yoq82mC30Iw" target="_blank" rel="external">https://www.youtube.com/watch?v=yoq82mC30Iw</a></p>
+<p><img src="https://ooo.0o0.ooo/2017/06/14/59412ad2c4740.png" alt="StoryFlow"></p>
+<h4 id="文本特征分布模式可视化"><a href="#文本特征分布模式可视化" class="headerlink" title="文本特征分布模式可视化"></a>文本特征分布模式可视化</h4><p>可视化也能很好的表现文本特征。</p>
+<h5 id="TextArc"><a href="#TextArc" class="headerlink" title="TextArc"></a>TextArc</h5><p>TextArc [13]用来可视化一个文档中的词频和词的分布情况。整个文档用一条螺线表示，文档的句子按文字的组织顺序布局在螺线上，螺线包围着的是文档中出现的单词，每个单词的位置由其在文本中的频率和出现位置决定，饱和度用来映射词频。所以全局出现频率越高的词越靠近中心，而局部出现频率越高的词越靠近其相应的螺线区域。选中某个单词后，自动用射线关联到它在文中出现的位置。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e89856682.png" alt="Textarc"></p>
+<h5 id="Literature-Fingerprinting"><a href="#Literature-Fingerprinting" class="headerlink" title="Literature Fingerprinting"></a>Literature Fingerprinting</h5><p>文献指纹（Literature Fingerprinting）[14]是体现全文特征分布的一项工作。一个像素块代表一段文本，一组像素块代表一本书。颜色映射的是文本特征，下图中是句子的平均长度。从图中明显看出两人的写作风格迥异。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e897d8434.png" alt="Literature Fingerprinting"></p>
+<h4 id="情感分析可视化"><a href="#情感分析可视化" class="headerlink" title="情感分析可视化"></a>情感分析可视化</h4><p>情感分析是指从文本中挖掘出心情、喜好、感觉等主观信息。现在人们把各类社交网络当作感情、观点的出口，所以分析这类文本就能掌握人们对于一个事件的观点或情感的发展。下图是基于矩阵视图的客户反馈信息的可视化工作[15]，其中的行是指文本（用户观点）的载体，列是用户的评价，颜色表达的是用户评价的倾向程度，红色代表消极，蓝色代表积极，每个方格内的小格子代表用户评价的人数，评价人数越多小格子越大。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e897ebec4.png" alt="情感分析"></p>
+<h2 id="文本关系可视化"><a href="#文本关系可视化" class="headerlink" title="文本关系可视化"></a>文本关系可视化</h2><p>顾名思义，文本关系可视化研究的是文本或文档集合中的关系信息，比如文本的相似性、互相引用的情况、链接等。说到关系布局，一般都是树或图。</p>
+<h4 id="文本内容关系可视化"><a href="#文本内容关系可视化" class="headerlink" title="文本内容关系可视化"></a>文本内容关系可视化</h4><h5 id="Word-Tree"><a href="#Word-Tree" class="headerlink" title="Word Tree"></a>Word Tree</h5><p>单词树（Word Tree）[16]很好理解，把文本中的句子按树形结构布局，可以很好的看出一个单词在文本中出现的频率和单词前后的联系。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e8980de0c.png" alt="Word Tree.png"></p>
+<h5 id="Phrase-Nets"><a href="#Phrase-Nets" class="headerlink" title="Phrase Nets"></a>Phrase Nets</h5><p>短语网络（Phrase Nets）[17]是经典的力导向图结构，图中的节点是从文本中挖掘出的词汇级或语法级的语义单元，边代表语义单元的联系，边的方向即短语的方向，边的宽度是短语在文本中出现的频率。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e897b8220.png" alt="Phrase Nets.png"></p>
+<h5 id="NewsMap"><a href="#NewsMap" class="headerlink" title="NewsMap"></a>NewsMap</h5><p>TreeMap 也是一种经典的可视化关系布局。NewsMap 就是基于 TreeMap 展示新闻，颜色用于区分新闻类型。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941e89847efb.png" alt="Newsmap.png"></p>
+<h4 id="文档集合关系可视化"><a href="#文档集合关系可视化" class="headerlink" title="文档集合关系可视化"></a>文档集合关系可视化</h4><p>文档数量到一定量的时候，再针对文本做可视化就不现实了，所以通常是对单个文档定义一个特征向量，利用向量空间模型计算文档间的相似性，并采用相应的投影技术呈现文档集合的关系。</p>
+<h5 id="Galaxy-View"><a href="#Galaxy-View" class="headerlink" title="Galaxy View"></a>Galaxy View</h5><p>星系图（Galaxy View）[18]把一篇文档比作一颗星星，通过投影的方法把所有文档按照其主题的相似性投影为二维平面的点集，星星离的越近则代表文档越相似，因此一个星团可以非常直观地看出文档主题的紧凑和离散。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941f41b47937.png" alt="Galaxy View"></p>
+<h5 id="ThemeScape"><a href="#ThemeScape" class="headerlink" title="ThemeScape"></a>ThemeScape</h5><p>主题地貌（ThemeScape）[18]是对星系图的改进。地图中的等高线我相信大家都理解，把等高线加入投影的二维平面中，文档相似性相同的放在一个等高线内，再用颜色来编码文本分布的密集程度，把二维平面背景变成一幅地图，这样就把刚才星系图中的星团变成了一座座山丘。文档越相似，则分布约密集，这座山峰就越高，是不是一目了然？</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941f478ec87d.png" alt="ThemeScape"></p>
+<h5 id="Jigsaw"><a href="#Jigsaw" class="headerlink" title="Jigsaw"></a>Jigsaw</h5><p>Jigsaw [19]通过提供多种视图让用户交互分析文档间的关系。最下面是文档视图，里面是单个文档的内容，最上面列表图中每一行是文档中的一个实体，连线代表实体间的关系。中间部分，左面是一副节点-链接图，白色节点表示一篇文档，其他节点是文档中的实体，链接同样代表联系；右面的散点图中，一个菱形代表两个实体的联系。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941f45268950.png" alt="Jigsaw"></p>
+<h2 id="文本多层面信息可视化"><a href="#文本多层面信息可视化" class="headerlink" title="文本多层面信息可视化"></a>文本多层面信息可视化</h2><p>多层面或多维度是指从多个角度或提取多种特征对文本集合分析。</p>
+<h5 id="FaceAtlas"><a href="#FaceAtlas" class="headerlink" title="FaceAtlas"></a>FaceAtlas</h5><p>FaceAtlas [20]结合了气泡集和节点-链接图两种视图，用于表达文本各层面信息内部和外部的关联。每个节点表示一个实体，用 KDE 方法刻画出气泡图的轮廓，然后用线将同一层面的实体链接起来，一种颜色代表一种实体。下图是基于医疗健康文档，展示了病名、病因、症状、诊断方案等多层面的信息，两团分别代表糖尿病1号和2号，连线是指他俩之间的并发症。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941fc7386d50.png" alt="faceatlas.png"></p>
+<h5 id="Parallel-Tag-Clouds"><a href="#Parallel-Tag-Clouds" class="headerlink" title="Parallel Tag Clouds"></a>Parallel Tag Clouds</h5><p>平行标签云（Parallel Tag Clouds）[21]结合了平行坐标（该视图在多维数据可视化中经常使用）和标签云视图。每一列是一个层面的标签云，然后连接的折线展现了选中标签在多个层面的分布。</p>
+<p><img src="https://ooo.0o0.ooo/2017/06/15/5941fc7fd281e.png" alt="parallel_tag_clouds.png"></p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>今天带大家看了这么多图，相信大家一定眼花缭乱了。要理解文本数据可视化，就要先了解文本数据的特点，如何从文本中挖掘出你想要的信息，如何设计数据结构，最后再如何映射出实用又美观的视图都是你需要思考的问题。目前文本可视分析已经开始运用在各行各业，直观的交互将人类的智慧引入到数据分析的过程中，帮助我们从浩瀚的文字中跳脱出来，避免一叶障目。希望我的文章能给大家带来一些微小的帮助。</p>
+<h2 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h2><ul>
+<li>[1] <a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">数据可视化基础——可视化流程</a></li>
+<li>[2] <a href="https://book.douban.com/subject/25760272/" target="_blank" rel="external">陈为 沈则潜 陶煜波. 数据可视化[M]. 电子工业出版社, 2013.</a></li>
+<li>[3] <a href="http://www.wordcount.org/" target="_blank" rel="external">WordCount</a></li>
+<li>[4] <a href="https://zhuanlan.zhihu.com/p/26306683" target="_blank" rel="external">文本数据可视化（上）——从 Wordle 谈起</a></li>
+<li>[5] Collins C, Carpendale S, Penn G. Docuburst: Visualizing document content using language structure[C]//Computer graphics forum. Blackwell Publishing Ltd, 2009, 28(3): 1039-1046.</li>
+<li>[6] Strobelt H, Oelke D, Rohrdantz C, et al. Document cards: A top trumps visualization for documents[J]. IEEE Transactions on Visualization and Computer Graphics, 2009, 15(6): 1145-1152.</li>
+<li>[7] Lee B, Riche N H, Karlson A K, et al. Sparkclouds: Visualizing trends in tag clouds[J]. IEEE transactions on visualization and computer graphics, 2010, 16(6): 1182-1189.</li>
+<li>[8] Havre S, Hetzler E, Whitney P, et al. Themeriver: Visualizing thematic changes in large document collections[J]. IEEE transactions on visualization and computer graphics, 2002, 8(1): 9-20.</li>
+<li>[9] Wei F, Liu S, Song Y, et al. Tiara: a visual exploratory text analytic system[C]//Proceedings of the 16th ACM SIGKDD international conference on Knowledge discovery and data mining. ACM, 2010: 153-162.</li>
+<li>[10] Cui W, Liu S, Tan L, et al. Textflow: Towards better understanding of evolving topics in text[J]. IEEE transactions on visualization and computer graphics, 2011, 17(12): 2412-2421.</li>
+<li>[11] Wattenberg M, Viégas F B. Historyflow: visualizing dynamic, evolving documents and the interactions of multiple collaborating authors, A preliminary report[J]. IBM Research, Collaborative User Experience research group, 2003.</li>
+<li>[12] Liu S, Wu Y, Wei E, et al. Storyflow: Tracking the evolution of stories[J]. IEEE Transactions on Visualization and Computer Graphics, 2013, 19(12): 2436-2445.</li>
+<li>[13] Paley W B. TextArc: Showing word frequency and distribution in text[C]//Poster presented at IEEE Symposium on Information Visualization. 2002, 2002.</li>
+<li>[14] Keim D A, Oelke D. Literature fingerprinting: A new method for visual literary analysis[C]//Visual Analytics Science and Technology, 2007. VAST 2007. IEEE Symposium on. IEEE, 2007: 115-122.</li>
+<li>[15] Oelke D, Hao M, Rohrdantz C, et al. Visual opinion analysis of customer feedback data[C]//Visual Analytics Science and Technology, 2009. VAST 2009. IEEE Symposium on. IEEE, 2009: 187-194.</li>
+<li>[16] Wattenberg M, Viégas F B. The word tree, an interactive visual concordance[J]. IEEE transactions on visualization and computer graphics, 2008, 14(6).</li>
+<li>[17] Van Ham F, Wattenberg M, Viégas F B. Mapping text with phrase nets[J]. IEEE transactions on visualization and computer graphics, 2009, 15(6).</li>
+<li>[18] Wise J A. The ecological approach to text visualization[J]. Journal of the Association for Information Science and Technology, 1999, 50(13): 1224.</li>
+<li>[19] Stasko J, Görg C, Liu Z. Jigsaw: supporting investigative analysis through interactive visualization[J]. Information visualization, 2008, 7(2): 118-132.</li>
+<li>[20] Cao N, Sun J, Lin Y R, et al. Facetatlas: Multifaceted visualization for rich text corpora[J]. IEEE transactions on visualization and computer graphics, 2010, 16(6): 1172-1181.</li>
+<li>[21] Collins C, Viegas F B, Wattenberg M. Parallel tag clouds to explore and analyze faceted text corpora[C]//Visual Analytics Science and Technology, 2009. VAST 2009. IEEE Symposium on. IEEE, 2009: 91-98.</li>
+</ul>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/06/26/text-data-visualization.html" class="article-date">
+  <time datetime="2017-06-26T05:57:41.000Z" itemprop="datePublished">2017-06-26</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Visualization/">Visualization</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-Data/">Big Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Visualization/">Data Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Guide/">Guide</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Summary/">Summary</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Visualization/">Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/入门/">入门</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/可视化/">可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据/">数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2017/04/12/text-data-visualization-wordle.html" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">文本数据可视化（上）——从 Wordle 谈起</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   var disqus_url = 'http://geekplux.com/2017/06/26/text-data-visualization.html';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>
