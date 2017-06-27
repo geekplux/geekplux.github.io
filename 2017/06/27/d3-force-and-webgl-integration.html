@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>D3 force layout and WebGL integration | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看代码。
+
+做数据可视化时，必然会考虑性能的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题">
+<meta property="og:type" content="article">
+<meta property="og:title" content="D3 force layout and WebGL integration">
+<meta property="og:url" content="http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看代码。
+
+做数据可视化时，必然会考虑性能的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/09/59610ee72e616.png">
+<meta property="og:image" content="https://ooo.0o0.ooo/2017/07/09/59610ee4d02d5.png">
+<meta property="og:updated_time" content="2017-06-27T17:04:24.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="D3 force layout and WebGL integration">
+<meta name="twitter:description" content="D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看代码。
+
+做数据可视化时，必然会考虑性能的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题">
+<meta name="twitter:image" content="https://ooo.0o0.ooo/2017/07/09/59610ee72e616.png">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-d3-force-and-webgl-integration" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/wiki">Wiki</a>
+    
+      <a class="main-nav-link" href="/presentation">Presentation</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/aboutme">关于</a>
+    
+      <a class="main-nav-link" href="/gab">扯淡集</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      D3 force layout and WebGL integration
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <blockquote>
+<p>D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">D3 的力导向图</a> 和 <a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">Three.js</a> 和 <a href="https://github.com/pixijs/pixi.js" target="_blank" rel="external">PixiJS</a> 结合。全文阅读完大概 5 分钟，因为你重点应该看<a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">代码</a>。</p>
+</blockquote>
+<p>做数据可视化时，必然会考虑<strong>性能</strong>的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题成了大多数可视化的局限，尤其是在三维可视化，或数据量特别大的时候。现在主流的 Web 可视化技术为三种：SVG、Canvas 和 WebGL，难易程度和性能如下图：</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/09/59610ee72e616.png" alt="Web visualization tech"></p>
+<p>SVG 的优点很多，编辑简单，交互便捷，灵活性极高，业内成熟的可视化工具（如 d3）都是用的 SVG。但是每个 SVG 都是一个 DOM 元素，随着它的数量上来之后，交互开始慢的难以忍受。这是因为每当修改一个 DOM 对象，只要这个对象在文档里，接着在浏览器里就会发生两个动作，一个叫 <strong>Reflow（重排，就是重新排版）</strong>，另一个叫 <strong>Repaint（重绘，就是重新渲染页面）</strong>。这两个动作不一定都会发生，但如果被修改的 DOM 当前可见的话，那么就会先重排，后重绘。绘制性能上 canvas 和 SVG（DOM 元素）应该差不多，但前者可以省掉重排过程，因此性能更高。然而，WebGL 的性能更胜一筹，因为 WebGL 使用 GPU 加速渲染，GPU 在大规模计算方面有绝对优势（图像处理、深度学习都在用，显卡已经卖疯了）。例子：用 WebGL 绘制 200000 个点的动画(<a href="http://rickyreusser.com/smoothly-animating-points-with-regl/" target="_blank" rel="external">http://rickyreusser.com/smoothly-animating-points-with-regl/</a>)</p>
+<p>WebGL 虽然威力无穷，但是写起来比较痛苦，画个三角形大致要 100 行代码。所以很多人对 WebGL 进行了封装。上面图中提到的两个 <a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">Three.js</a> 和 <a href="https://github.com/pixijs/pixi.js" target="_blank" rel="external">PixiJS</a> 是目前最流行的两款 WebGL 库，当然还有新兴的 <a href="https://github.com/regl-project/regl" target="_blank" rel="external">regl</a> 在今年的 <a href="https://openvisconf.com/" target="_blank" rel="external">OpenVis</a> 上大放异彩。本文尝试用前两者和 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a> 结合（<a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">项目代码在此</a>），后面如果有时间的话，我会把使用 regl 和原生 WebGL 的例子也补充进去（我知道这是个 flag）。</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>首先我们要知道什么是<strong>力导向图</strong>和如何使用 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a>。d3 4.0 之后，作者将其模块化，force 这个模块是基于 <a href="https://en.wikipedia.org/wiki/Verlet_integration" target="_blank" rel="external">velocity Verlet</a> 实现了物理粒子之间的作用力的仿真，常用于网络或关系结构数据。即你把网络中的节点想象成一个个粒子，它们之间互相有作用力，所以不停的拉扯，直到趋于一个稳定状态，具体可以看我 <a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">demo</a> 中可视化出来的样子。</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/09/59610ee4d02d5.png" alt="Demo 效果图"></p>
+<p>仔细看 <a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">demo</a> 中的源码可以发现，用 <a href="https://github.com/geekplux/d3-force-webgl-integration/blob/master/src/three.js" target="_blank" rel="external">three.js</a> 和用 <a href="https://github.com/geekplux/d3-force-webgl-integration/blob/master/src/pixi.js" target="_blank" rel="external">pixi.js</a> 实现起来非常类似，其中有关力导向图的关键代码是下面几句：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> simulation = d3.forceSimulation() <span class="comment">// 创建一个作用力的仿真，但此时还没启动</span></div><div class="line">  .force(<span class="string">'link'</span>, d3.forceLink().id((d) =&gt; d.id)) <span class="comment">// 为边之间添加 Link 型作用力</span></div><div class="line">  .force(<span class="string">'charge'</span>, d3.forceManyBody()) <span class="comment">// 指定节点间的作用力类型为 Many-Body 型</span></div><div class="line">  .force(<span class="string">'center'</span>, d3.forceCenter(width / <span class="number">2</span>, height / <span class="number">2</span>)) <span class="comment">// Centering 作用力指定布局围绕的中心</span></div></pre></td></tr></table></figure>
+<p><a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a> 提供了五种作用力，分别是 Centering、Collision、Links、Many-Body、Positioning。此时我们已经创建好带有各种力的仿真器了，接下来需要启动它：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">simulation</div><div class="line">  .nodes(data.nodes) <span class="comment">// 根据 data.nodes 数组来计算点之间的作用力，相当于不停计算节点的 xy 坐标</span></div><div class="line">  .on(<span class="string">'tick'</span>, ticked) <span class="comment">// 每次 tick 调用 ticked</span></div><div class="line"></div><div class="line">simulation.force(<span class="string">'link'</span>)</div><div class="line">  .links(data.links) <span class="comment">// 根据 data.links 数据计算边之间的作用力</span></div></pre></td></tr></table></figure>
+<p>至此一个力导向图的仿真就开始了，那么怎么把这些节点和边显示出来呢？让我们继续看源码，以 three.js 为例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene()</div><div class="line"><span class="keyword">const</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">0</span>, width, height, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1000</span>)</div><div class="line"><span class="keyword">const</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;alpha: <span class="literal">true</span>&#125;)</div><div class="line">renderer.setSize(width, height)</div><div class="line">container.appendChild(renderer.domElement) <span class="comment">// container 这里是 document.body</span></div></pre></td></tr></table></figure>
+<p>在 Three.js 中展示场景需要具备三要素：<strong>场景、照相机、渲染器</strong>。照相机就相当于我们的眼睛，它对着渲染好的场景就相当于把场景成像到了相机中，这里的照相机我们用的是平行投影相机，渲染器我们使用的是 WebGL 渲染器。设置好渲染器的大小，把它添加到页面的元素上，相当于添加了一个 <code>&lt;canvas&gt;</code> 元素。接下来，我们生成每个节点和边的样子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">data.nodes.forEach((node) =&gt; &#123;</div><div class="line">  node.geometry = <span class="keyword">new</span> THREE.CircleBufferGeometry(<span class="number">5</span>, <span class="number">32</span>)</div><div class="line">  node.material = <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123; color: colour(node.id) &#125;)</div><div class="line">  node.circle = <span class="keyword">new</span> THREE.Mesh(node.geometry, node.material)</div><div class="line">  scene.add(node.circle)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">data.links.forEach((link) =&gt; &#123;</div><div class="line">  link.material = <span class="keyword">new</span> THREE.LineBasicMaterial(&#123; color: <span class="number">0xAAAAAA</span> &#125;)</div><div class="line">  link.geometry = <span class="keyword">new</span> THREE.Geometry()</div><div class="line">  link.line = <span class="keyword">new</span> THREE.Line(link.geometry, link.material)</div><div class="line">  scene.add(link.line)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>套路都一样，都是先建一个几何体，然后设置材质的样式，添加到场景中就好了。接下来只要在刚才提到的 ticked 这个回调函数中把节点和边的坐标更新一下就好了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ticked</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  data.nodes.forEach((node) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> &#123; x, y, circle &#125; = node</div><div class="line">    circle.position.set(x, y, <span class="number">0</span>)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  data.links.forEach((link) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> &#123; source, target, line &#125; = link</div><div class="line">    line.geometry.verticesNeedUpdate = <span class="literal">true</span></div><div class="line">    line.geometry.vertices[<span class="number">0</span>] = <span class="keyword">new</span> THREE.Vector3(source.x, source.y, <span class="number">-1</span>)</div><div class="line">    line.geometry.vertices[<span class="number">1</span>] = <span class="keyword">new</span> THREE.Vector3(target.x, target.y, <span class="number">-1</span>)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  render(scene, camera)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>是不是比想象的简单多了？如果以上有什么地方看不懂，说明你可能对 Three.js 不是很了解，不过没关系，它的文档写的很好，入门很快。希望这篇文章能给你带来一些帮助，做了点微小的贡献，很惭愧 :)</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/06/27/d3-force-and-webgl-integration.html" class="article-date">
+  <time datetime="2017-06-27T11:57:37.000Z" itemprop="datePublished">2017-06-27</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Visualization/">Visualization</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Big-Data/">Big Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data/">Data</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Data-Visualization/">Data Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Summer-of-Code/">Google Summer of Code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Note/">Note</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Visualization/">Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Web/">Web</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/WebGL/">WebGL</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/d3/">d3</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/pixi-js/">pixi.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/three-js/">three.js</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/可视化/">可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/大数据/">大数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/尝试/">尝试</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据/">数据</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据可视化/">数据可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/笔记/">笔记</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2017/06/26/text-data-visualization.html" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">文本数据可视化（下）——一图胜千言</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   var disqus_url = 'http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+
+
+
+
+    </div>
+  </body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-06-26T06:00:33.000Z</updated>
+  <updated>2017-06-27T17:04:24.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,81 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>D3 force layout and WebGL integration</title>
+    <link href="http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html"/>
+    <id>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</id>
+    <published>2017-06-27T11:57:37.000Z</published>
+    <updated>2017-06-27T17:04:24.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">D3 的力导向图</a> 和 <a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">Three.js</a> 和 <a href="https://github.com/pixijs/pixi.js" target="_blank" rel="external">PixiJS</a> 结合。全文阅读完大概 5 分钟，因为你重点应该看<a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">代码</a>。</p>
+</blockquote>
+<p>做数据可视化时，必然会考虑<strong>性能</strong>的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题成了大多数可视化的局限，尤其是在三维可视化，或数据量特别大的时候。现在主流的 Web 可视化技术为三种：SVG、Canvas 和 WebGL，难易程度和性能如下图：</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/09/59610ee72e616.png" alt="Web visualization tech"></p>
+<p>SVG 的优点很多，编辑简单，交互便捷，灵活性极高，业内成熟的可视化工具（如 d3）都是用的 SVG。但是每个 SVG 都是一个 DOM 元素，随着它的数量上来之后，交互开始慢的难以忍受。这是因为每当修改一个 DOM 对象，只要这个对象在文档里，接着在浏览器里就会发生两个动作，一个叫 <strong>Reflow（重排，就是重新排版）</strong>，另一个叫 <strong>Repaint（重绘，就是重新渲染页面）</strong>。这两个动作不一定都会发生，但如果被修改的 DOM 当前可见的话，那么就会先重排，后重绘。绘制性能上 canvas 和 SVG（DOM 元素）应该差不多，但前者可以省掉重排过程，因此性能更高。然而，WebGL 的性能更胜一筹，因为 WebGL 使用 GPU 加速渲染，GPU 在大规模计算方面有绝对优势（图像处理、深度学习都在用，显卡已经卖疯了）。例子：用 WebGL 绘制 200000 个点的动画(<a href="http://rickyreusser.com/smoothly-animating-points-with-regl/" target="_blank" rel="external">http://rickyreusser.com/smoothly-animating-points-with-regl/</a>)</p>
+<p>WebGL 虽然威力无穷，但是写起来比较痛苦，画个三角形大致要 100 行代码。所以很多人对 WebGL 进行了封装。上面图中提到的两个 <a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">Three.js</a> 和 <a href="https://github.com/pixijs/pixi.js" target="_blank" rel="external">PixiJS</a> 是目前最流行的两款 WebGL 库，当然还有新兴的 <a href="https://github.com/regl-project/regl" target="_blank" rel="external">regl</a> 在今年的 <a href="https://openvisconf.com/" target="_blank" rel="external">OpenVis</a> 上大放异彩。本文尝试用前两者和 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a> 结合（<a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">项目代码在此</a>），后面如果有时间的话，我会把使用 regl 和原生 WebGL 的例子也补充进去（我知道这是个 flag）。</p>
+<h3 id="正文"><a href="#正文" class="headerlink" title="正文"></a>正文</h3><p>首先我们要知道什么是<strong>力导向图</strong>和如何使用 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a>。d3 4.0 之后，作者将其模块化，force 这个模块是基于 <a href="https://en.wikipedia.org/wiki/Verlet_integration" target="_blank" rel="external">velocity Verlet</a> 实现了物理粒子之间的作用力的仿真，常用于网络或关系结构数据。即你把网络中的节点想象成一个个粒子，它们之间互相有作用力，所以不停的拉扯，直到趋于一个稳定状态，具体可以看我 <a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">demo</a> 中可视化出来的样子。</p>
+<p><img src="https://ooo.0o0.ooo/2017/07/09/59610ee4d02d5.png" alt="Demo 效果图"></p>
+<p>仔细看 <a href="https://github.com/geekplux/d3-force-webgl-integration" target="_blank" rel="external">demo</a> 中的源码可以发现，用 <a href="https://github.com/geekplux/d3-force-webgl-integration/blob/master/src/three.js" target="_blank" rel="external">three.js</a> 和用 <a href="https://github.com/geekplux/d3-force-webgl-integration/blob/master/src/pixi.js" target="_blank" rel="external">pixi.js</a> 实现起来非常类似，其中有关力导向图的关键代码是下面几句：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> simulation = d3.forceSimulation() <span class="comment">// 创建一个作用力的仿真，但此时还没启动</span></div><div class="line">  .force(<span class="string">'link'</span>, d3.forceLink().id((d) =&gt; d.id)) <span class="comment">// 为边之间添加 Link 型作用力</span></div><div class="line">  .force(<span class="string">'charge'</span>, d3.forceManyBody()) <span class="comment">// 指定节点间的作用力类型为 Many-Body 型</span></div><div class="line">  .force(<span class="string">'center'</span>, d3.forceCenter(width / <span class="number">2</span>, height / <span class="number">2</span>)) <span class="comment">// Centering 作用力指定布局围绕的中心</span></div></pre></td></tr></table></figure>
+<p><a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a> 提供了五种作用力，分别是 Centering、Collision、Links、Many-Body、Positioning。此时我们已经创建好带有各种力的仿真器了，接下来需要启动它：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">simulation</div><div class="line">  .nodes(data.nodes) <span class="comment">// 根据 data.nodes 数组来计算点之间的作用力，相当于不停计算节点的 xy 坐标</span></div><div class="line">  .on(<span class="string">'tick'</span>, ticked) <span class="comment">// 每次 tick 调用 ticked</span></div><div class="line"></div><div class="line">simulation.force(<span class="string">'link'</span>)</div><div class="line">  .links(data.links) <span class="comment">// 根据 data.links 数据计算边之间的作用力</span></div></pre></td></tr></table></figure>
+<p>至此一个力导向图的仿真就开始了，那么怎么把这些节点和边显示出来呢？让我们继续看源码，以 three.js 为例：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">const</span> scene = <span class="keyword">new</span> THREE.Scene()</div><div class="line"><span class="keyword">const</span> camera = <span class="keyword">new</span> THREE.OrthographicCamera(<span class="number">0</span>, width, height, <span class="number">0</span>, <span class="number">1</span>, <span class="number">1000</span>)</div><div class="line"><span class="keyword">const</span> renderer = <span class="keyword">new</span> THREE.WebGLRenderer(&#123;alpha: <span class="literal">true</span>&#125;)</div><div class="line">renderer.setSize(width, height)</div><div class="line">container.appendChild(renderer.domElement) <span class="comment">// container 这里是 document.body</span></div></pre></td></tr></table></figure>
+<p>在 Three.js 中展示场景需要具备三要素：<strong>场景、照相机、渲染器</strong>。照相机就相当于我们的眼睛，它对着渲染好的场景就相当于把场景成像到了相机中，这里的照相机我们用的是平行投影相机，渲染器我们使用的是 WebGL 渲染器。设置好渲染器的大小，把它添加到页面的元素上，相当于添加了一个 <code>&lt;canvas&gt;</code> 元素。接下来，我们生成每个节点和边的样子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div></pre></td><td class="code"><pre><div class="line">data.nodes.forEach((node) =&gt; &#123;</div><div class="line">  node.geometry = <span class="keyword">new</span> THREE.CircleBufferGeometry(<span class="number">5</span>, <span class="number">32</span>)</div><div class="line">  node.material = <span class="keyword">new</span> THREE.MeshBasicMaterial(&#123; color: colour(node.id) &#125;)</div><div class="line">  node.circle = <span class="keyword">new</span> THREE.Mesh(node.geometry, node.material)</div><div class="line">  scene.add(node.circle)</div><div class="line">&#125;)</div><div class="line"></div><div class="line">data.links.forEach((link) =&gt; &#123;</div><div class="line">  link.material = <span class="keyword">new</span> THREE.LineBasicMaterial(&#123; color: <span class="number">0xAAAAAA</span> &#125;)</div><div class="line">  link.geometry = <span class="keyword">new</span> THREE.Geometry()</div><div class="line">  link.line = <span class="keyword">new</span> THREE.Line(link.geometry, link.material)</div><div class="line">  scene.add(link.line)</div><div class="line">&#125;)</div></pre></td></tr></table></figure>
+<p>套路都一样，都是先建一个几何体，然后设置材质的样式，添加到场景中就好了。接下来只要在刚才提到的 ticked 这个回调函数中把节点和边的坐标更新一下就好了：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">ticked</span> (<span class="params"></span>) </span>&#123;</div><div class="line">  data.nodes.forEach((node) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> &#123; x, y, circle &#125; = node</div><div class="line">    circle.position.set(x, y, <span class="number">0</span>)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  data.links.forEach((link) =&gt; &#123;</div><div class="line">    <span class="keyword">const</span> &#123; source, target, line &#125; = link</div><div class="line">    line.geometry.verticesNeedUpdate = <span class="literal">true</span></div><div class="line">    line.geometry.vertices[<span class="number">0</span>] = <span class="keyword">new</span> THREE.Vector3(source.x, source.y, <span class="number">-1</span>)</div><div class="line">    line.geometry.vertices[<span class="number">1</span>] = <span class="keyword">new</span> THREE.Vector3(target.x, target.y, <span class="number">-1</span>)</div><div class="line">  &#125;)</div><div class="line"></div><div class="line">  render(scene, camera)</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>是不是比想象的简单多了？如果以上有什么地方看不懂，说明你可能对 Three.js 不是很了解，不过没关系，它的文档写的很好，入门很快。希望这篇文章能给你带来一些帮助，做了点微小的贡献，很惭愧 :)</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 &lt;a href=&quot;https://github.com/d3/d3-force/&quot; target=&quot;_
+    
+    </summary>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
+    
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="大数据" scheme="http://geekplux.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Big Data" scheme="http://geekplux.com/tags/Big-Data/"/>
+    
+      <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="尝试" scheme="http://geekplux.com/tags/%E5%B0%9D%E8%AF%95/"/>
+    
+      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
+    
+      <category term="WebGL" scheme="http://geekplux.com/tags/WebGL/"/>
+    
+      <category term="d3" scheme="http://geekplux.com/tags/d3/"/>
+    
+      <category term="three.js" scheme="http://geekplux.com/tags/three-js/"/>
+    
+      <category term="pixi.js" scheme="http://geekplux.com/tags/pixi-js/"/>
+    
+      <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
+    
+  </entry>
   
   <entry>
     <title>文本数据可视化（下）——一图胜千言</title>
@@ -1800,72 +1875,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="Instrument" scheme="http://geekplux.com/tags/Instrument/"/>
     
       <category term="Ukulele" scheme="http://geekplux.com/tags/Ukulele/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>告别社交网络有多难</title>
-    <link href="http://geekplux.com/2014/08/02/farewell_social_network.html"/>
-    <id>http://geekplux.com/2014/08/02/farewell_social_network.html</id>
-    <published>2014-08-02T12:50:46.000Z</published>
-    <updated>2015-01-04T11:58:13.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我猜 QQ 空间最初应该是作为和新浪博客竞争才出现的，当时我还在初中，不会写什么 Blog，所以空间出来正迎合了我们这些学生的需求。随后「非主流」、「火星文」开始火，又是抓住了青春期学生的叛逆心理。不过我当时对非主流不是太感冒，一直很用心的经营着空间，犹记得当年幼稚的我还写了篇文章宣称空间是我的心灵归宿（正如现在矫情的我写这篇应该退出社交网络的文章）。所以从初中开始我的喜怒哀乐全在空间里，文章写了上百篇，照片更是几千张。</p>
-<p>尽管后来开始沉迷微博、豆瓣、知乎等，空间一直是我割舍不下的一块，因为那里有旧友，有牵绊，这是一份长久以来捆绑着我的数据库。然而，随着认知的渐渐成熟，我越来越觉得<strong>人应该远离社交网络</strong>，不止是空间。理由也是在一次次和所谓羁绊的牵扯过程中感悟出来的：</p>
-<h3 id="输出"><a href="#输出" class="headerlink" title="输出"></a>输出</h3><p>刚开始我天真的以为社交网络是用来分享的，后来发现并不是。社交网络沦为了一个表演的舞台，每个人在上面表演，把想展示给别人的一面展示出来。发表一段状态，分享一篇文章或视频，并不是共享他的感受，也不是觉得这段信息真的有价值，而是在传递一种他<strong>自以为很重要的自我展示的信息</strong>，翻看朋友圈或其他的 timeline，随便找一条仔细分析一下就会发现他并不是在描述他的感受，而是在展现一些信息，或者直接说是炫耀。自从「逼格」一词横空出现，更是很好的定义了这种社交网站的分享行为其实就是为了<strong>彰显逼格</strong>。收到的评论，互相的交流根本无足轻重，因为这本身就不是输入，而是变相地输出。人们渐渐的带上了面具，因为社交网站上的你，并不是真正的你，而是<strong>你想让别人看到的你</strong>。</p>
-<a id="more"></a>
-<h3 id="偏见"><a href="#偏见" class="headerlink" title="偏见"></a>偏见</h3><p>每个社交网络都有它的特点。微博烹饪着毫无营养的段子只供一乐；豆瓣是文艺青年的温床；空间：不转不是中国人……在很久很久以前，社交网络分享还存在价值的时候（可能是当时认知浅薄觉得什么都很吸引人），我竟然还有过信息焦虑，生怕错过什么重要的信息。但焦虑很快就没了，接踵而至的是厌烦。社交网络里开始充斥着软文。软文还是好的，更甚者是赤裸的代购广告、谣言和虚假信息。我很是怀疑转发这些信息的同学的分辨能力，实在受不了就屏蔽掉（现在看来，果然 QQ 空间里我屏蔽的人最多）。随着屏蔽人数的上升，我质疑过自己的这种行为：屏蔽的人多了，剩下的都是和我价值观差不多的，减少了信息获取渠道，是不是更容易形成我固有的偏见？后来发现正好相反，因为：</p>
-<ul>
-<li>偏见一旦形成就不是很容易修正了。</li>
-<li>多读书、多游历才是减少偏见的良方。</li>
-<li>其实屏蔽的这些人很少有掷地有声的见解。垃圾信息还是屏蔽了好。</li>
-</ul>
-<h3 id="好友"><a href="#好友" class="headerlink" title="好友"></a>好友</h3><p>其实放不下社交网络，最多的理由都是因为那里还有自己的很多老友，如果不玩社交网络，如何得知他们的近况，如何能保持联系？这个确实是一个问题，我只说说我自己的看法：</p>
-<p>刚进大学的第一年，我参加了很多学生工作和活动，认识了很多朋友，渐渐的认识到<strong>人和人的社交，本质上是一种价值交换</strong>。你和他作朋友，可能是你身上的某一点值得他利用，他身上的某一点值得你利用，你们可以互相交换自身的价值。（虽然「利用」这个词有点消极，可确实是利用，当然有的利用也可以是积极的，比如互相学习。）想通这个之后，就感觉一下子看清了朋友间的各种复杂关系，你自己的价值越大，能提供给别人的越多，那你就越受欢迎。这就像一个市场，每一次的社交活动，你都可以看成是一场交易。你请客他办事，或者是你们互相帮对方办一件事等等，所谓「人情」就是交易的货币。价值相等的两个人，往往关系会比较稳定。这里就不多扯了，我们把这种类型的朋友称为<strong>「浅交」</strong>。你可能觉得这样说朋友之间的关系有点现实了，但我们要在认清本质的基础上，保有一颗相信爱的心。这类朋友和你有互相认同的价值观，你们彼此付出过，倾注过真实的情感，这类朋友可以叫<strong>「挚友」</strong>。</p>
-<p>我们的社交网络上，多是「浅交」，而非「挚友」。浅交的状态其实你根本没必要去关心，他去哪旅游了，和谁分手了，对你来说意义又有多少呢？简短的评论似乎也不会增进感情。只要你的<strong>价值</strong>还在，你们的关系就不会断，即使断了……你活到现在，生命中的过客恐怕有的已忘得一干二净了吧……所以，我们没必要刻意去关心这些信息，真正需要关心的是挚友。而我们关心挚友更好的方式是一封 Email，一通电话。想象一下你接到老友电话或是收到远方寄来明信片的兴奋程度吧。</p>
-<p>说了这么多，我觉得不论对方是谁，我们都要以诚相待。相信爱的存在，珍惜出现在生命中的每个人。</p>
-<h3 id="道理"><a href="#道理" class="headerlink" title="道理"></a>道理</h3><p>在网络上游荡时，总会有读到一段话或一篇文章，忽然如醍醐灌顶般顿悟的时刻。比如：</p>
-<blockquote>
-<p>人们的痛苦都是源于对于自己无能的愤怒。   ——王小波</p>
-</blockquote>
-<p>或是：</p>
-<blockquote>
-<p>你的问题主要是读书不多而想得太多    ——杨绛</p>
-</blockquote>
-<p>等等。我把这些叫做「人生经验」。我们被击中原因可能是我们还停留在<strong>「能理解，但是还不能体会的情况」</strong>。就是说我们确实能明白这句话，也了解这句话的重要性，但是下次我们遇到类似的事情还是照旧，这句话完全记不起来。</p>
-<p>很多道理、人生经验我们会从别人文章读到，会从别人嘴里听得。但无论听到还是读到，这都还不是我们的，我们无法领悟。确切的说是体会。因为只有我们经历过同样的事情，体验过类似的情形我们才能真正懂得，真正领悟。「吃一堑长一智」就是这个理。</p>
-<p>因此在社交网络上看到这类信息，可以记下来，但不用放在心上。等到了该懂的时候自然会懂。</p>
-<h3 id="发泄"><a href="#发泄" class="headerlink" title="发泄"></a>发泄</h3><p>其实社交网络并不只是分（zhuang）享（bi），还是一个发泄的出口。不吐不快的时候，社交网络的确是一个很好的平台，你吐槽出来，大家会一起跟着吐，从而找到心理上的认同感。但是发泄的渠道很多，没必要在社交网络上：</p>
-<ul>
-<li>不一定所有人和你的想法一样，万一他跟你唱反调怎么办。</li>
-<li>消极思想和负能量最好是不要影响到他人，因为在自己心里认为天大的事在别人那里微不足道。</li>
-<li>发泄还是找一个健康的方式吧，囧。</li>
-</ul>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>综上所述，我觉得我们更应该专注于自己的内心，更加注重现实中的情感，而不是虚拟中的互动。在这个信息繁杂的社会，增加自己独处的时间，反而能发现更大的世界。</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;我猜 QQ 空间最初应该是作为和新浪博客竞争才出现的，当时我还在初中，不会写什么 Blog，所以空间出来正迎合了我们这些学生的需求。随后「非主流」、「火星文」开始火，又是抓住了青春期学生的叛逆心理。不过我当时对非主流不是太感冒，一直很用心的经营着空间，犹记得当年幼稚的我还写了篇文章宣称空间是我的心灵归宿（正如现在矫情的我写这篇应该退出社交网络的文章）。所以从初中开始我的喜怒哀乐全在空间里，文章写了上百篇，照片更是几千张。&lt;/p&gt;
-&lt;p&gt;尽管后来开始沉迷微博、豆瓣、知乎等，空间一直是我割舍不下的一块，因为那里有旧友，有牵绊，这是一份长久以来捆绑着我的数据库。然而，随着认知的渐渐成熟，我越来越觉得&lt;strong&gt;人应该远离社交网络&lt;/strong&gt;，不止是空间。理由也是在一次次和所谓羁绊的牵扯过程中感悟出来的：&lt;/p&gt;
-&lt;h3 id=&quot;输出&quot;&gt;&lt;a href=&quot;#输出&quot; class=&quot;headerlink&quot; title=&quot;输出&quot;&gt;&lt;/a&gt;输出&lt;/h3&gt;&lt;p&gt;刚开始我天真的以为社交网络是用来分享的，后来发现并不是。社交网络沦为了一个表演的舞台，每个人在上面表演，把想展示给别人的一面展示出来。发表一段状态，分享一篇文章或视频，并不是共享他的感受，也不是觉得这段信息真的有价值，而是在传递一种他&lt;strong&gt;自以为很重要的自我展示的信息&lt;/strong&gt;，翻看朋友圈或其他的 timeline，随便找一条仔细分析一下就会发现他并不是在描述他的感受，而是在展现一些信息，或者直接说是炫耀。自从「逼格」一词横空出现，更是很好的定义了这种社交网站的分享行为其实就是为了&lt;strong&gt;彰显逼格&lt;/strong&gt;。收到的评论，互相的交流根本无足轻重，因为这本身就不是输入，而是变相地输出。人们渐渐的带上了面具，因为社交网站上的你，并不是真正的你，而是&lt;strong&gt;你想让别人看到的你&lt;/strong&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
-    
-    
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-      <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
-    
-      <category term="感想" scheme="http://geekplux.com/tags/%E6%84%9F%E6%83%B3/"/>
-    
-      <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
-    
-      <category term="思考" scheme="http://geekplux.com/tags/%E6%80%9D%E8%80%83/"/>
     
   </entry>
   
