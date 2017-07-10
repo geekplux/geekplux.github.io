@@ -5,7 +5,7 @@
     
   <url>
     <loc>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</loc>
-    <lastmod>2017-07-08T17:24:01.000Z</lastmod>
+    <lastmod>2017-07-09T10:29:56.000Z</lastmod>
     <data>
         <display>
         <title>D3 force layout and WebGL integration</title>
@@ -55,10 +55,9 @@
     </url>
 
     
-    
   <url>
     <loc>http://geekplux.com/2017/06/26/text-data-visualization.html</loc>
-    <lastmod>2017-06-26T06:00:33.000Z</lastmod>
+    <lastmod>2017-07-09T10:29:54.000Z</lastmod>
     <data>
         <display>
         <title>文本数据可视化（下）——一图胜千言</title>
@@ -101,6 +100,7 @@
     </data>
     </url>
 
+    
     
   <url>
     <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
@@ -552,13 +552,13 @@
         <title>如何阅读一篇学术论文</title>
         <pubTime>2016-05-31T12:49:56.000Z</pubTime>
         
-        <tag>Research</tag>
-         
-        <tag>方法论</tag>
-         
         <tag>学习</tag>
          
         <tag>Learning</tag>
+         
+        <tag>方法论</tag>
+         
+        <tag>Research</tag>
          
          
            
@@ -660,11 +660,11 @@
         <title>建立索引式的学习方法</title>
         <pubTime>2015-12-08T13:53:27.000Z</pubTime>
         
-        <tag>方法论</tag>
-         
         <tag>学习</tag>
          
         <tag>Learning</tag>
+         
+        <tag>方法论</tag>
          
          
            
@@ -896,13 +896,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          
