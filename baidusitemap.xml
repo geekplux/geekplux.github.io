@@ -31,9 +31,9 @@
          
         <tag>笔记</tag>
          
-        <tag>尝试</tag>
-         
         <tag>Web</tag>
+         
+        <tag>尝试</tag>
          
         <tag>WebGL</tag>
          
@@ -552,13 +552,13 @@
         <title>如何阅读一篇学术论文</title>
         <pubTime>2016-05-31T12:49:56.000Z</pubTime>
         
-        <tag>学习</tag>
-         
-        <tag>Learning</tag>
+        <tag>Research</tag>
          
         <tag>方法论</tag>
          
-        <tag>Research</tag>
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
          
          
            
@@ -660,11 +660,11 @@
         <title>建立索引式的学习方法</title>
         <pubTime>2015-12-08T13:53:27.000Z</pubTime>
         
+        <tag>方法论</tag>
+         
         <tag>学习</tag>
          
         <tag>Learning</tag>
-         
-        <tag>方法论</tag>
          
          
            
