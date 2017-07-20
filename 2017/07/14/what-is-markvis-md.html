@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>Markvis - 在 markdown 中生成可视化图表 | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="本文首发于「GraphiCon图形控」公众号，微信号 GraphiCon，原文地址：http://t.cn/RKmrRn9
+
+今天在这里给大家分享一个 markdown-it 插件，能让你在markdown 中通过几行代码就生成一个可视化图表📊。
+
+项目主页： https://markvis.js.org/
+在线编辑器体验一下： https://markvis-editor.js.org/
+源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Markvis - 在 markdown 中生成可视化图表">
+<meta property="og:url" content="http://geekplux.com/2017/07/14/what-is-markvis-md.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="本文首发于「GraphiCon图形控」公众号，微信号 GraphiCon，原文地址：http://t.cn/RKmrRn9
+
+今天在这里给大家分享一个 markdown-it 插件，能让你在markdown 中通过几行代码就生成一个可视化图表📊。
+
+项目主页： https://markvis.js.org/
+在线编辑器体验一下： https://markvis-editor.js.org/
+源">
+<meta property="og:image" content="https://i.loli.net/2017/07/14/59687d0c743bd.jpeg">
+<meta property="og:image" content="https://i.loli.net/2017/07/13/5966c9acb6509.png">
+<meta property="og:image" content="https://i.loli.net/2017/07/14/59687cd46241d.png">
+<meta property="og:updated_time" content="2017-07-20T03:10:32.000Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Markvis - 在 markdown 中生成可视化图表">
+<meta name="twitter:description" content="本文首发于「GraphiCon图形控」公众号，微信号 GraphiCon，原文地址：http://t.cn/RKmrRn9
+
+今天在这里给大家分享一个 markdown-it 插件，能让你在markdown 中通过几行代码就生成一个可视化图表📊。
+
+项目主页： https://markvis.js.org/
+在线编辑器体验一下： https://markvis-editor.js.org/
+源">
+<meta name="twitter:image" content="https://i.loli.net/2017/07/14/59687d0c743bd.jpeg">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-what-is-markvis-md" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/wiki">Wiki</a>
+    
+      <a class="main-nav-link" href="/presentation">Presentation</a>
+    
+      <a class="main-nav-link" href="/project">Project</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/aboutme">关于</a>
+    
+      <a class="main-nav-link" href="/gab">扯淡集</a>
+    
+  </nav>
+  <nav id="sub-nav">
+    
+      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Markvis - 在 markdown 中生成可视化图表
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <blockquote>
+<p>本文首发于「GraphiCon图形控」公众号，微信号 GraphiCon，原文地址：<a href="http://t.cn/RKmrRn9" target="_blank" rel="external">http://t.cn/RKmrRn9</a></p>
+</blockquote>
+<p>今天在这里给大家分享一个 markdown-it 插件，能让你在markdown 中通过几行代码就生成一个可视化图表📊。</p>
+<ul>
+<li>项目主页： <a href="https://markvis.js.org/" target="_blank" rel="external">https://markvis.js.org/</a></li>
+<li>在线编辑器体验一下： <a href="https://markvis-editor.js.org/" target="_blank" rel="external">https://markvis-editor.js.org/</a></li>
+<li>源码： <a href="https://github.com/geekplux/markvis" target="_blank" rel="external">https://github.com/geekplux/markvis</a></li>
+</ul>
+<p><img src="https://i.loli.net/2017/07/14/59687d0c743bd.jpeg" alt="home"></p>
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>Markdown 现在被越来越多的人熟悉，它是一个标记语言，只要你在每句话之前加一些符号，编辑器就能自动排版。markdown-it 是一个 markdown 的解析器，易扩展，很多人给它写插件，比如有个插件是让它支持可爱的 emoji 表情。markvis 也是一个插件，通过两行代码就能生成条形图折线图等，如下图：</p>
+<p><img src="https://i.loli.net/2017/07/13/5966c9acb6509.png" alt="preview"></p>
+<h2 id="为什么要做这个工具"><a href="#为什么要做这个工具" class="headerlink" title="为什么要做这个工具"></a>为什么要做这个工具</h2><p>有时候写文章需要插入一些数据来增强说服力，但是单纯的数字又不直观，所以可视化图表是必须的。紧接着就会出现一个问题：如何把图表添加到文章中。通常的做法是用一些现成的工具生成图片，然后把图片贴到文章中。这样一来就非常繁琐，尤其是用markdown写作时你还得把图片先上传到一个图床中。另一方面，访客阅读文章时，图片的加载比网页元素肯定更耗时。一旦加载过慢就会给阅读造成非常不好的体验。</p>
+<p>Markvis 相当于抓住了这个痛点，开发出了直接在 Markdown 中生成图表的插件，省去写作人员的很多步骤。</p>
+<h2 id="Markvis-的优势"><a href="#Markvis-的优势" class="headerlink" title="Markvis 的优势"></a>Markvis 的优势</h2><p>Markvis 设计的语法简单，而且拥有非常灵活的 API。</p>
+<h3 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h3><p>短短一天，Markvis 已经在 GitHub 上收获了 300+ 的 star 数，并且成功挤上了 Trending 榜前 10，连 Producthunt 的盆友都夸，相信将来在开发和维护上会有不少的优势。</p>
+<p><img src="https://i.loli.net/2017/07/14/59687cd46241d.png" alt="comment"></p>
+<h3 id="自定义图表"><a href="#自定义图表" class="headerlink" title="自定义图表"></a>自定义图表</h3><p>Markvis 目前提供三种最常用的图表：<a href="https://github.com/geekplux/markvis-bar" target="_blank" rel="external">条形图</a>，<a href="https://github.com/geekplux/markvis-line" target="_blank" rel="external">折线图</a>和<a href="https://github.com/geekplux/markvis-pie" target="_blank" rel="external">饼状图</a> 的布局。但是请不要担心，你可以通过 API 来自定义新的图表。只要你会一点 d3，就都可以轻松开发出一个新的图表布局。D3 （<a href="https://d3js.org）" target="_blank" rel="external">https://d3js.org）</a> 是目前最流行的可视化前端库，让你可以自由操作 SVG 元素，生成各式各样的可视化结果。</p>
+<h3 id="自定义是引擎"><a href="#自定义是引擎" class="headerlink" title="自定义是引擎"></a>自定义是引擎</h3><p>目前 Markvis 是用 d3 来做底层的渲染，但实际上你可以直接把渲染引擎换掉，换成你想要的，比如 Vega-Lite，Echart 等。Vega-Lite 是 2016 年 IEEE VIS 的 best paper，提出了一种高级可视化语法，能直接用简单的 json 转换成一个可视化图表，并带有丰富的交互操作。Markvis 的下一步开发计划就是将其整合进来，这样 markvis 支持的图表类型和交互就极大的丰富起来。Echart 是国内百度开发的一款可视化库，也非常简单易用。</p>
+<p>刚才提到的 D3 和 Vega-lite 都来自同一个实验室——可视化界著名的华盛顿大学交互数据实验室，他们在可视化工具方面的探索非常超前。不过目前国内的可视化发展也是突飞猛进，像百度嗯 Echart，阿里的 DataV、G2 都是很赞的可视化库。欢迎感兴趣的小伙伴一起来学习可视化知识，开发有趣的可视化工具！</p>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>除了上文提到的优势，markvis 还可以慢慢对接所有主流的 markdown parser。或者给主流编辑器提供插件。</p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2017/07/14/what-is-markvis-md.html" class="article-date">
+  <time datetime="2017-07-14T12:56:40.000Z" itemprop="datePublished">2017-07-14</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Tool/">Tool</a>/<a class="article-category-link" href="/categories/Tool/Visualization/">Visualization</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Development/">Development</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markvis/">Markvis</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Tool/">Tool</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Visualization/">Visualization</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/markdown-it/">markdown-it</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/可视化/">可视化</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/工具/">工具</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/数据/">数据</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2017/06/27/d3-force-and-webgl-integration.html" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">D3 force layout and WebGL integration</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes to open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   var disqus_url = 'http://geekplux.com/2017/07/14/what-is-markvis-md.html';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46481966-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+    </div>
+  </body>
+</html>

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-07-09T10:29:56.000Z</updated>
+  <updated>2017-07-20T03:10:32.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,70 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Markvis - 在 markdown 中生成可视化图表</title>
+    <link href="http://geekplux.com/2017/07/14/what-is-markvis-md.html"/>
+    <id>http://geekplux.com/2017/07/14/what-is-markvis-md.html</id>
+    <published>2017-07-14T12:56:40.000Z</published>
+    <updated>2017-07-20T03:10:32.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>本文首发于「GraphiCon图形控」公众号，微信号 GraphiCon，原文地址：<a href="http://t.cn/RKmrRn9" target="_blank" rel="external">http://t.cn/RKmrRn9</a></p>
+</blockquote>
+<p>今天在这里给大家分享一个 markdown-it 插件，能让你在markdown 中通过几行代码就生成一个可视化图表📊。</p>
+<ul>
+<li>项目主页： <a href="https://markvis.js.org/" target="_blank" rel="external">https://markvis.js.org/</a></li>
+<li>在线编辑器体验一下： <a href="https://markvis-editor.js.org/" target="_blank" rel="external">https://markvis-editor.js.org/</a></li>
+<li>源码： <a href="https://github.com/geekplux/markvis" target="_blank" rel="external">https://github.com/geekplux/markvis</a></li>
+</ul>
+<p><img src="https://i.loli.net/2017/07/14/59687d0c743bd.jpeg" alt="home"></p>
+<h2 id="背景介绍"><a href="#背景介绍" class="headerlink" title="背景介绍"></a>背景介绍</h2><p>Markdown 现在被越来越多的人熟悉，它是一个标记语言，只要你在每句话之前加一些符号，编辑器就能自动排版。markdown-it 是一个 markdown 的解析器，易扩展，很多人给它写插件，比如有个插件是让它支持可爱的 emoji 表情。markvis 也是一个插件，通过两行代码就能生成条形图折线图等，如下图：</p>
+<p><img src="https://i.loli.net/2017/07/13/5966c9acb6509.png" alt="preview"></p>
+<h2 id="为什么要做这个工具"><a href="#为什么要做这个工具" class="headerlink" title="为什么要做这个工具"></a>为什么要做这个工具</h2><p>有时候写文章需要插入一些数据来增强说服力，但是单纯的数字又不直观，所以可视化图表是必须的。紧接着就会出现一个问题：如何把图表添加到文章中。通常的做法是用一些现成的工具生成图片，然后把图片贴到文章中。这样一来就非常繁琐，尤其是用markdown写作时你还得把图片先上传到一个图床中。另一方面，访客阅读文章时，图片的加载比网页元素肯定更耗时。一旦加载过慢就会给阅读造成非常不好的体验。</p>
+<p>Markvis 相当于抓住了这个痛点，开发出了直接在 Markdown 中生成图表的插件，省去写作人员的很多步骤。</p>
+<h2 id="Markvis-的优势"><a href="#Markvis-的优势" class="headerlink" title="Markvis 的优势"></a>Markvis 的优势</h2><p>Markvis 设计的语法简单，而且拥有非常灵活的 API。</p>
+<h3 id="开源项目"><a href="#开源项目" class="headerlink" title="开源项目"></a>开源项目</h3><p>短短一天，Markvis 已经在 GitHub 上收获了 300+ 的 star 数，并且成功挤上了 Trending 榜前 10，连 Producthunt 的盆友都夸，相信将来在开发和维护上会有不少的优势。</p>
+<p><img src="https://i.loli.net/2017/07/14/59687cd46241d.png" alt="comment"></p>
+<h3 id="自定义图表"><a href="#自定义图表" class="headerlink" title="自定义图表"></a>自定义图表</h3><p>Markvis 目前提供三种最常用的图表：<a href="https://github.com/geekplux/markvis-bar" target="_blank" rel="external">条形图</a>，<a href="https://github.com/geekplux/markvis-line" target="_blank" rel="external">折线图</a>和<a href="https://github.com/geekplux/markvis-pie" target="_blank" rel="external">饼状图</a> 的布局。但是请不要担心，你可以通过 API 来自定义新的图表。只要你会一点 d3，就都可以轻松开发出一个新的图表布局。D3 （<a href="https://d3js.org）" target="_blank" rel="external">https://d3js.org）</a> 是目前最流行的可视化前端库，让你可以自由操作 SVG 元素，生成各式各样的可视化结果。</p>
+<h3 id="自定义是引擎"><a href="#自定义是引擎" class="headerlink" title="自定义是引擎"></a>自定义是引擎</h3><p>目前 Markvis 是用 d3 来做底层的渲染，但实际上你可以直接把渲染引擎换掉，换成你想要的，比如 Vega-Lite，Echart 等。Vega-Lite 是 2016 年 IEEE VIS 的 best paper，提出了一种高级可视化语法，能直接用简单的 json 转换成一个可视化图表，并带有丰富的交互操作。Markvis 的下一步开发计划就是将其整合进来，这样 markvis 支持的图表类型和交互就极大的丰富起来。Echart 是国内百度开发的一款可视化库，也非常简单易用。</p>
+<p>刚才提到的 D3 和 Vega-lite 都来自同一个实验室——可视化界著名的华盛顿大学交互数据实验室，他们在可视化工具方面的探索非常超前。不过目前国内的可视化发展也是突飞猛进，像百度嗯 Echart，阿里的 DataV、G2 都是很赞的可视化库。欢迎感兴趣的小伙伴一起来学习可视化知识，开发有趣的可视化工具！</p>
+<h2 id="Update"><a href="#Update" class="headerlink" title="Update"></a>Update</h2><p>除了上文提到的优势，markvis 还可以慢慢对接所有主流的 markdown parser。或者给主流编辑器提供插件。</p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;本文首发于「GraphiCon图形控」公众号，微信号 GraphiCon，原文地址：&lt;a href=&quot;http://t.cn/RKmrRn9&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;http://t.cn/RKmrRn9&lt;/
+    
+    </summary>
+    
+      <category term="Tool" scheme="http://geekplux.com/categories/Tool/"/>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Tool/Visualization/"/>
+    
+    
+      <category term="Development" scheme="http://geekplux.com/tags/Development/"/>
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Markvis" scheme="http://geekplux.com/tags/Markvis/"/>
+    
+      <category term="Markdown" scheme="http://geekplux.com/tags/Markdown/"/>
+    
+      <category term="markdown-it" scheme="http://geekplux.com/tags/markdown-it/"/>
+    
+  </entry>
   
   <entry>
     <title>D3 force layout and WebGL integration</title>
@@ -1750,135 +1814,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="Emacs" scheme="http://geekplux.com/tags/Emacs/"/>
     
       <category term="IDE" scheme="http://geekplux.com/tags/IDE/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>轻松玩转 Ukulele</title>
-    <link href="http://geekplux.com/2015/01/05/play-ukulele.html"/>
-    <id>http://geekplux.com/2015/01/05/play-ukulele.html</id>
-    <published>2015-01-05T15:54:00.000Z</published>
-    <updated>2017-06-20T02:19:44.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>每个人都幻想过自己拥有一身的艺术细菌，可以像各种钢琴王子一样在琴键上挥洒自如。但是由于某些不可抗力，从小到大一直没学什么乐器，或者是学了也没坚持下来。最尴尬的是选了一种鸡肋乐器，学有所成却不接地气，比如二胡（我真不是黑，因为我也学过那么两年），总不能在同学聚会激战正酣的时候拿出来即兴演奏吧……还是老老实实戴个圆框墨镜到地铁口来一曲二泉映月……</p>
-<p>人生苦短，为了圆我们的音（zhuang）乐（bi）梦，Ukulele 可以说是应运而生。本文将从 what、why、how 三方面介绍如何快速玩转 Ukulele，争取把我在学习过程中遇到的坑都写出来供大家参考。</p>
-<h2 id="What-什么是-Ukulele"><a href="#What-什么是-Ukulele" class="headerlink" title="What-什么是 Ukulele"></a>What-什么是 Ukulele</h2><p>Ukulele 翻译为夏威夷吉他、四弦琴，音译为乌克丽丽、悠可力力、尤克里里、优可乐乐，简称 Uku、Uke……没错，这么多名字都是在说一个玩意。不要纠结到底中文叫那个名字合适，你直接用 Ukulele 一词以蔽之。</p>
-<p>它是一种弦乐器，正常情况下长这样：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/1.jpg" alt="正常的 Ukulele（图片来自网络）"></p>
-<p>不正常情况下长这样：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/2.jpeg" alt="不正常的 Ukulele（图片来自网络）"></p>
-<p>还有各种奇形怪状的，都非常可爱。从图上可以看出它整体和吉他非常类似，唯一的不同是少了两根弦，这就大大降低了学习成本！而且它音色清脆入耳，弹起来节奏活泼畅快，可以说是居家旅行必备之良品。如果对它的起源或背景感兴趣，可以去<a href="http://baike.baidu.com/subview/3963326/10243259.htm" target="_blank" rel="external">百度百科-乌克丽丽</a>了解一下。</p>
-<a id="more"></a>
-<h2 id="Why-为什么要玩-Ukulele"><a href="#Why-为什么要玩-Ukulele" class="headerlink" title="Why-为什么要玩 Ukulele"></a>Why-为什么要玩 Ukulele</h2><ul>
-<li><p><strong>无入门门坎，学习成本极低</strong><br>只要10分钟，就可以弹出一首完整的曲子。如果你会吉他，更是拿起来就能弹。比吉他少了两根弦，学习成本直线下降，而其演奏效果却还和吉他差不多。不需要学习乐理，也不用系统学习，想唱啥歌，找个谱子开练即可。很多小正太小萝莉都能学得会，你当然不在话下。俗话说欲速则不达，Ukulele 却是真心可以速成的。</p>
-</li>
-<li><p><strong>对手指友好</strong><br>绝大多数 Ukulele 的弦是尼龙弦，按起来不疼，对手指特别友好。不像吉他那么难按，弹十分钟手指就疼的受不了。当然，等你练个一星期，就会发现指头上多了一层茧，怎么按都不会疼。</p>
-</li>
-<li><p><strong>小巧便携，各种场合都能来一手</strong><br>小巧也是针对吉他来说的，一个胳膊就能夹住，背个小包也根本不费事。同学聚餐来一首调动气氛；草坪边上来一曲深情款款；公司年会来一首技惊四座；调试代码的间隙也可以来一首陶冶情操；马路边，地铁口，放个碗……</p>
-</li>
-<li><p><strong>小清新，高逼格</strong><br>基本上文艺青年看见 Ukulele 就走不动道了。妹子们弹是这样的：<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/3.jpg" alt="妹纸弹 Uku（图片来自网络）"><br>也可能是这样的：<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/4.jpg" alt="Taylor Swift 弹唱会弹 Uku（图片来自网络）"><br>男青年的样子是这样的：<br><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/5.jpg" alt="大叔弹 Uku（图片来自网络）"><br>哈哈，是不是如沐春风！可装逼可接地气，更是勾搭文（wu）艺（zhi）女青年的神器。</p>
-</li>
-</ul>
-<ul>
-<li><strong>有趣！好玩！</strong><br>喜欢一件事物，必然是因为它有趣啊！我在认识 Ukulele 之后才知道它多有趣，不止是弹情歌，比如下面这位大牛（现在他已经长大了！）。别问我他弹的什么，你听了前三秒就知道！</li>
-</ul>
-<div class="video-container"><iframe src="http://player.youku.com/embed/XMjk2OTI3MjEy" frameborder="0" allowfullscreen></iframe></div>
-<h2 id="How-怎么快速玩转-Ukulele"><a href="#How-怎么快速玩转-Ukulele" class="headerlink" title="How-怎么快速玩转 Ukulele"></a>How-怎么快速玩转 Ukulele</h2><p>我当初是在上司的勾引下，入了这个坑的。把玩了他的琴两天，实在是爱不释手，就迫不及待地也入了一把，从此人生又多了一些欢乐，哈哈。以下从我的经历来说说怎么快速上手：</p>
-<h3 id="1-你要有把琴"><a href="#1-你要有把琴" class="headerlink" title="1.你要有把琴"></a>1.你要有把琴</h3><p>市面上的 Ukulele 可以分为三种：高音（Soprano）、中音（Concert）、次中音（Tenor），分别简称 S 型、C 型、T 型。其实还有一种 B 型，但是由于音太低，新手不宜考虑。</p>
-<p>S 型最小，琴身长 21 寸，音色最为清亮。可以给小盆友买用来玩耍，个子小的萌妹子也可以用。不过由于它比较小，所以适合弹唱，而不适合指弹（弹唱就是边弹边唱，指弹就是只弹不唱）。</p>
-<p>C 型适中，琴身长 23寸，指弹和弹唱都可以，女生非常适合这款，男生你得考虑下身高，个子高而用这把显得不是很协调。</p>
-<p>T 型最长，琴身长26寸，音色稍低，大部分男生选这款。</p>
-<p>我觉得新手可以只考虑型号就好了，剩下的共鸣、音准、琴弦、琴身材质等可以等进阶的时候再买。至于价钱，某宝上价格参差不齐，不过我建议<strong>买个在你承受范围内偏贵那么一小点的</strong>，这样你一方面会好好珍惜它，多练习，另一方面音色好弹出来的效果就好，容易有成就感，有成就感就会坚持下来。</p>
-<h3 id="2-你得学会调音"><a href="#2-你得学会调音" class="headerlink" title="2.你得学会调音"></a>2.你得学会调音</h3><p>调音就是把每根弦的音调（diao）调（tiao）到它该发的调（diao）上。由于 Ukulele 的弦是尼龙弦而不是金属弦，所以弹着弹着容易音不准，要经常调校，有完美强迫症的人每次弹之前估计都得调一下。</p>
-<p>我是在某宝入的琴，店家送了调音器。把调音器夹在琴头上，然后依次波动每个琴弦，观察调音器上的音阶字母对应正确且显示为绿色即可。看这个视频一下就懂了：</p>
-<div class="video-container"><iframe src="http://player.youku.com/embed/XNDQ1NTgxNjg4" frameborder="0" allowfullscreen></iframe></div>
-<div class="video-container"><embed "415"="" "544"="" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=11414990&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash"></div>
-<embed height="415" width="544" quality="high" allowfullscreen="true" type="application/x-shockwave-flash" src="//static.hdslb.com/miniloader.swf" flashvars="aid=11414990&page=1" pluginspage="//www.adobe.com/shockwave/download/download.cgi?P1_Prod_Version=ShockwaveFlash">
-
-<p>是不是非常简单∩_∩</p>
-<h3 id="3-姿势"><a href="#3-姿势" class="headerlink" title="3.姿势"></a>3.姿势</h3><p>Ukulele 小巧可爱，怎么抱着都能弹，你可以坐着弹，躺着弹，站着弹。<strong>但是越到后面越觉得姿势非常重要</strong>。基本的持琴姿势是这样的：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/9.png" alt="持琴方法（图片来自《最易上手尤克里里弹唱超精选》）"></p>
-<p>用右肘的内侧来夹住琴，让它在弹奏过程中不要乱跑，但又不能让你的右手失去灵活，总之这里需要一个巧劲，慢慢摸索。<br>左手也分两种，一种是用虎口托住琴，一种是虎口那悬空。如图：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/10.png" alt="左手姿势（图片来自《最易上手尤克里里弹唱超精选》）"></p>
-<p>以上左右手的姿势中的要点都是我的亲身体会，其他的地方，如按弦方法，是指肚按弦还是指尖按弦（推荐指尖），我觉得问题不大，怎么舒服怎么来。</p>
-<p>按弦的样子可以参考这张：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/13.jpg" alt="按弦姿势（图片来自网络）"></p>
-<p><strong>但我在练习过程中还遇到了一个大坑：</strong>那就是用拇指拨4弦或3弦时，总会碰到另一根。困扰了我很久，直到看到网上的这张图片：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/11.jpg" alt="错误的右手姿势（图片来自网络）"></p>
-<p>虽然这是吉他的右手，但对 Uku 同样适用。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/12.jpg" alt="正确的右手姿势（图片来自网络）"></p>
-<p>所以<strong>一开始最好力求姿势准确</strong>，可以避免后来的很多坑。为什么姿势很重要可以看看知乎上<a href="http://www.zhihu.com/question/23935947/answer/26247357" target="_blank" rel="external">如何快速地自学 Ukulele？</a>（这个问题也是我当初提的）。</p>
-<h3 id="4-无敌四和弦"><a href="#4-无敌四和弦" class="headerlink" title="4.无敌四和弦"></a>4.无敌四和弦</h3><p>和弦是啥？一般人玩一个乐器，第一句肯定问：这个哆在哪？ 没错，和弦就可以看作是哆唻咪等音符的组合，左手按住和弦，右手拨琴弦就会发出悦耳的声音了。我们的目的是快速上手，快速演奏出想唱的歌，所以这些细节没必要一开始搞懂，等学到瓶颈再来深入。</p>
-<p><strong>C  Am  F  G7</strong> 这四个和弦被称为无敌四和弦。之所以无敌，是因为掌握了它们就可以演奏很多歌曲，不信你去搜关键字「Ukulele 无敌四和弦」，就可以看到很多曲谱。其指法如下：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/7.jpg" alt="无敌四和弦（图片来自网络）"></p>
-<p>另外 <strong>G</strong> 和弦也是经常用，它和 <strong>G7</strong> 听起来差不多，所以前期如果按 <strong>G</strong> 吃力，就先用 <strong>G7</strong> 代替。我当初按 <strong>G</strong> 无名指怎么也够不着T_T，练了好久才习惯自如……总之，先用左手把这四个和弦练熟。</p>
-<p>接下来可以看一下主要的和弦图（不要怕，如果是弹唱则一首歌用到的很少）：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/8.jpg" alt="主要和弦图（图片来自网络）"></p>
-<h3 id="5-节奏型与扫弦"><a href="#5-节奏型与扫弦" class="headerlink" title="5.节奏型与扫弦"></a>5.节奏型与扫弦</h3><p>啥又是节奏型？其实就是节奏，动次打次，或者动动次打动打。。还是没必要搞懂它，我们每个人都会打拍子，除非是完全没乐感。会打拍子就可以直接来弹比较简单的节奏型。</p>
-<p>那右手怎么弹呢？答案并不是像吉他那样所有指头都上，而是<strong>一指禅</strong>！没错，只用食指！上下扫就行了！</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/14.png" alt="一指禅（图片来自《最易上手尤克里里弹唱超精选》）"></p>
-<p>知道如何扫弦，就可以来学习简单的节奏型了。我推荐新手看这位张松涛老师的视频，我就是看他的第五课学会了第一首歌《莫名我就喜欢你》：</p>
-<div class="video-container"><iframe src="http://player.youku.com/embed/XMzE2NjgzNjg4" frameborder="0" allowfullscreen></iframe></div>
-<p>接着看第六课把《You Are My Sunshine》学会（两首都是一样的最简单下下下下四拍和弦），基本上就可以宣告你的 Ukulele 旅程要开始了！</p>
-<p>非常推荐 <a href="http://v.youku.com/v_show/id_XNzU4MzA5NDYw.html" target="_blank" rel="external">这个系列视频</a>，介绍了17个常用节奏型，你到后期肯定会用到。</p>
-<h3 id="6-练"><a href="#6-练" class="headerlink" title="6.练"></a>6.练</h3><p>入门之后，你要做的就一个字：练！吃完饭练，Debug 期间练，起床之后练，无时不刻在练。你要找那种你特别想学会弹唱的曲子，这样学着会特别有动力，不一段时间你就会突飞猛进。如果你是偏向指弹的，那就不像弹唱这么简单了，弹唱可以用嗓音把你弹奏的瑕疵遮盖掉，而指弹单纯的靠拨弦发音，所以一首歌得无数次。</p>
-<p>我一般习惯浏览以下资源：</p>
-<ul>
-<li><a href="http://www.zhihu.com/question/23935947" target="_blank" rel="external">如何快速地自学 Ukulele？</a>这个是我当初在知乎提的问题，里面妹纸回答的很不错。</li>
-<li>我还买了《最易上手尤克里里弹唱超精选》这本书，不过感觉帮助不大，全是曲谱……</li>
-</ul>
-<p><strong>教程和曲谱：</strong></p>
-<ul>
-<li><a href="http://www.ukulelecn.com/forum.php" target="_blank" rel="external">Ukulelecn</a></li>
-<li><a href="http://www.ukulelefan.com/" target="_blank" rel="external">尤克里里 Fans</a></li>
-</ul>
-<p><strong>视频：</strong></p>
-<ul>
-<li>不得不提的 <a href="http://i.youku.com/shushuMa" target="_blank" rel="external">马叔叔</a></li>
-<li>刚才提到的 <a href="http://i.youku.com/ukulele" target="_blank" rel="external">优客伙计</a></li>
-<li><a href="http://i.youku.com/u/UNjI1NDI5NTEy" target="_blank" rel="external">广州弹吧小吉他教室</a></li>
-<li><a href="http://i.youku.com/zixunyq" target="_blank" rel="external">子熏乐器张SIR</a> 张 sir 很帅</li>
-<li><a href="http://i.youku.com/ukulelemm" target="_blank" rel="external">maixueguonian</a></li>
-</ul>
-<p>最后你可以膜拜一下公认的大神 <a href="http://baike.baidu.com/view/6195265.htm" target="_blank" rel="external">Jake Shimabukuro</a>，听过他的<a href="http://www.zhihu.com/question/20457612" target="_blank" rel="external">弹奏</a>才知道 Ukulele 也能玩到这种境界。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/6.jpg" alt="Jake Shimabukuro（图片来自网络）"></p>
-<h2 id="从玩-Ukulele-中学到的"><a href="#从玩-Ukulele-中学到的" class="headerlink" title="从玩 Ukulele 中学到的"></a>从玩 Ukulele 中学到的</h2><ol>
-<li>学一样东西的时候应该简单粗暴，掌握大体方向而不拘泥细节，直接实践做出效果，然后再从中找不足，查漏补缺，研究细枝末节。</li>
-<li>难是因为没有开始，开始了就不会难。</li>
-<li>学习新的技能，会为你的生活打开一扇窗。</li>
-<li>对于兴趣，一天进步一点点就好，没必要贪多，也不求速成。长年累月的积累会让量变达到质变。</li>
-<li>菜鸟有菜鸟的乐趣。</li>
-</ol>
-<p>虽然网上已经有很多入门教程了，但仍希望这篇文章能给你些许的帮助，谢谢:)</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;每个人都幻想过自己拥有一身的艺术细菌，可以像各种钢琴王子一样在琴键上挥洒自如。但是由于某些不可抗力，从小到大一直没学什么乐器，或者是学了也没坚持下来。最尴尬的是选了一种鸡肋乐器，学有所成却不接地气，比如二胡（我真不是黑，因为我也学过那么两年），总不能在同学聚会激战正酣的时候拿出来即兴演奏吧……还是老老实实戴个圆框墨镜到地铁口来一曲二泉映月……&lt;/p&gt;
-&lt;p&gt;人生苦短，为了圆我们的音（zhuang）乐（bi）梦，Ukulele 可以说是应运而生。本文将从 what、why、how 三方面介绍如何快速玩转 Ukulele，争取把我在学习过程中遇到的坑都写出来供大家参考。&lt;/p&gt;
-&lt;h2 id=&quot;What-什么是-Ukulele&quot;&gt;&lt;a href=&quot;#What-什么是-Ukulele&quot; class=&quot;headerlink&quot; title=&quot;What-什么是 Ukulele&quot;&gt;&lt;/a&gt;What-什么是 Ukulele&lt;/h2&gt;&lt;p&gt;Ukulele 翻译为夏威夷吉他、四弦琴，音译为乌克丽丽、悠可力力、尤克里里、优可乐乐，简称 Uku、Uke……没错，这么多名字都是在说一个玩意。不要纠结到底中文叫那个名字合适，你直接用 Ukulele 一词以蔽之。&lt;/p&gt;
-&lt;p&gt;它是一种弦乐器，正常情况下长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/1.jpg&quot; alt=&quot;正常的 Ukulele（图片来自网络）&quot;&gt;&lt;/p&gt;
-&lt;p&gt;不正常情况下长这样：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7b1evr.com1.z0.glb.clouddn.com/illustration/play-ukulele/2.jpeg&quot; alt=&quot;不正常的 Ukulele（图片来自网络）&quot;&gt;&lt;/p&gt;
-&lt;p&gt;还有各种奇形怪状的，都非常可爱。从图上可以看出它整体和吉他非常类似，唯一的不同是少了两根弦，这就大大降低了学习成本！而且它音色清脆入耳，弹起来节奏活泼畅快，可以说是居家旅行必备之良品。如果对它的起源或背景感兴趣，可以去&lt;a href=&quot;http://baike.baidu.com/subview/3963326/10243259.htm&quot;&gt;百度百科-乌克丽丽&lt;/a&gt;了解一下。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Ukulele" scheme="http://geekplux.com/categories/Ukulele/"/>
-    
-    
-      <category term="新技能" scheme="http://geekplux.com/tags/%E6%96%B0%E6%8A%80%E8%83%BD/"/>
-    
-      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
-    
-      <category term="乐器" scheme="http://geekplux.com/tags/%E4%B9%90%E5%99%A8/"/>
-    
-      <category term="Instrument" scheme="http://geekplux.com/tags/Instrument/"/>
-    
-      <category term="Ukulele" scheme="http://geekplux.com/tags/Ukulele/"/>
     
   </entry>
   

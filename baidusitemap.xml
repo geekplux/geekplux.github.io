@@ -4,6 +4,45 @@
 
     
   <url>
+    <loc>http://geekplux.com/2017/07/14/what-is-markvis-md.html</loc>
+    <lastmod>2017-07-20T03:10:32.000Z</lastmod>
+    <data>
+        <display>
+        <title>Markvis - 在 markdown 中生成可视化图表</title>
+        <pubTime>2017-07-14T12:56:40.000Z</pubTime>
+        
+        <tag>Development</tag>
+         
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Markvis</tag>
+         
+        <tag>Markdown</tag>
+         
+        <tag>markdown-it</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Tool/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</loc>
     <lastmod>2017-07-09T10:29:56.000Z</lastmod>
     <data>
