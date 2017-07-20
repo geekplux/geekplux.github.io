@@ -4,6 +4,78 @@
 
     
   <url>
+    <loc>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</loc>
+    <lastmod>2017-07-20T03:29:29.000Z</lastmod>
+    <data>
+        <display>
+        <title>如何在 GitHub 上获得数百 stars</title>
+        <pubTime>2017-07-20T03:16:16.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>Promotion</tag>
+         
+        <tag>推广</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Skill</tag>
+         
+        <tag>Markvis</tag>
+         
+        <tag>Markdown</tag>
+         
+        <tag>GitHub</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+             
+              <breadCrumb title="Promotion" url="http://geekplux.com/categories/Thought/Promotion/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2013/07/26/change_wechat_push_mode.html</loc>
+    <lastmod>2017-07-20T03:22:58.000Z</lastmod>
+    <data>
+        <display>
+        <title>尝试改变微信公众账号消息的推送方式</title>
+        <pubTime>2013-07-26T09:50:37.000Z</pubTime>
+        
+        <tag>微信公众平台</tag>
+         
+        <tag>尝试</tag>
+         
+        <tag>运营</tag>
+         
+        <tag>Promotion</tag>
+         
+        <tag>推广</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+             
+              <breadCrumb title="Promotion" url="http://geekplux.com/categories/Thought/Promotion/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2017/07/14/what-is-markvis-md.html</loc>
     <lastmod>2017-07-20T03:10:32.000Z</lastmod>
     <data>
@@ -11,13 +83,13 @@
         <title>Markvis - 在 markdown 中生成可视化图表</title>
         <pubTime>2017-07-14T12:56:40.000Z</pubTime>
         
-        <tag>Development</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
          
         <tag>数据</tag>
+         
+        <tag>Development</tag>
          
         <tag>Tool</tag>
          
@@ -102,10 +174,6 @@
         <title>文本数据可视化（下）——一图胜千言</title>
         <pubTime>2017-06-26T05:57:41.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -121,6 +189,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -149,9 +221,9 @@
         <title>轻松玩转 Ukulele</title>
         <pubTime>2015-01-05T15:54:00.000Z</pubTime>
         
-        <tag>新技能</tag>
-         
         <tag>Skill</tag>
+         
+        <tag>新技能</tag>
          
         <tag>乐器</tag>
          
@@ -177,10 +249,6 @@
         <title>文本数据可视化（上）——从 Wordle 谈起</title>
         <pubTime>2017-04-12T02:44:01.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -196,6 +264,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -284,10 +356,6 @@
         <title>数据可视化基础——可视化流程</title>
         <pubTime>2017-01-01T09:35:36.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -303,6 +371,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -330,10 +402,6 @@
         <title>数据可视化基础——视觉编码</title>
         <pubTime>2017-01-03T12:02:52.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -349,6 +417,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -376,10 +448,6 @@
         <title>数据可视化基础——数据模型</title>
         <pubTime>2017-01-02T04:01:48.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -395,6 +463,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -716,30 +788,6 @@
 
     
   <url>
-    <loc>http://geekplux.com/2013/07/26/change_wechat_push_mode.html</loc>
-    <lastmod>2015-11-11T10:40:41.000Z</lastmod>
-    <data>
-        <display>
-        <title>尝试改变微信公众账号消息的推送方式</title>
-        <pubTime>2013-07-26T09:50:37.000Z</pubTime>
-        
-        <tag>微信公众平台</tag>
-         
-        <tag>尝试</tag>
-         
-        <tag>运营</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2013/08/08/write_blog_by_farbox.html</loc>
     <lastmod>2015-08-04T09:00:32.000Z</lastmod>
     <data>
@@ -935,13 +983,13 @@
         <title>菜鸟级 Mac 配置（二）</title>
         <pubTime>2014-03-03T05:50:50.000Z</pubTime>
         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>开发环境</tag>
          
         <tag>Development Environment</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Mac</tag>
          
@@ -1181,11 +1229,11 @@
         <title>Android开发如何入门</title>
         <pubTime>2013-09-02T08:34:30.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Android</tag>
          
         <tag>Development</tag>
          
@@ -1461,9 +1509,9 @@
          
         <tag>工具</tag>
          
-        <tag>新技能</tag>
-         
         <tag>Skill</tag>
+         
+        <tag>新技能</tag>
          
          
            
