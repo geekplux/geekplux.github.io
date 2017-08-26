@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-07-20T03:29:29.000Z</updated>
+  <updated>2017-08-26T14:51:13.000Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,96 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>netjsongraph.js – Google Summer of Code (GSoC) 2017 summary</title>
+    <link href="http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html"/>
+    <id>http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html</id>
+    <published>2017-08-26T14:45:52.000Z</published>
+    <updated>2017-08-26T14:51:13.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Throughout the last three months, I was quite fortunate to work for <a href="https://freifunk.net/" target="_blank" rel="external">Freifunk</a> on <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> under the guidance of my mentor <a href="https://github.com/nemesisdesign" target="_blank" rel="external">Federico Capoano</a>. Thanks for this invaluable experience that I learned a lot of knowledge and use them in a practical project. Here is a summary of the work I have done during the Google Summer of Code (GSoC) 2017.</p>
+<p><img src="http://ovad4r7yz.bkt.gdipper.com/gsocScreen%20Shot%202017-08-26%20at%2017.27.46.png" alt="Google Summer of Code project page"></p>
+<h2 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h2><p><a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> is a visualization library for <a href="http://netjson.org/docs/what.html#what-is-netjson" target="_blank" rel="external">NetJSON</a>, a network topology data format. The main goal of <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> may be concluded in below three lines (more details you can see in <a href="https://blog.freifunk.net/2017/05/30/gsoc-2017-netjsongraph-js-visualization-netjson-data/" target="_blank" rel="external">GSoC 2017-netjsongraph.js: visualization of NetJSON data</a>):</p>
+<ul>
+<li>Apply the modern front-end development tools and add tests workflow (<a href="https://github.com/netjson/netjsongraph.js/issues/1" target="_blank" rel="external">#1</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/45" target="_blank" rel="external">#45</a>)</li>
+<li>Rewrite it with WebGL (<a href="https://github.com/netjson/netjsongraph.js/issues/11" target="_blank" rel="external">#11</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/29" target="_blank" rel="external">#29</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/39" target="_blank" rel="external">#39</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/42" target="_blank" rel="external">#42</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/47" target="_blank" rel="external">#47</a>)</li>
+<li>Improve the performance (<a href="https://github.com/netjson/netjsongraph.js/issues/41" target="_blank" rel="external">#41</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/44" target="_blank" rel="external">#44</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/46" target="_blank" rel="external">#46</a>)</li>
+</ul>
+<h2 id="Achievement"><a href="#Achievement" class="headerlink" title="Achievement"></a>Achievement</h2><blockquote>
+<h4 id="Github-Repository-https-github-com-netjson-netjsongraph-js"><a href="#Github-Repository-https-github-com-netjson-netjsongraph-js" class="headerlink" title="Github Repository : https://github.com/netjson/netjsongraph.js"></a>Github Repository : <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">https://github.com/netjson/netjsongraph.js</a></h4><h4 id="Examples-on-GitHub-pages-https-netjson-github-io-netjsongraph-js"><a href="#Examples-on-GitHub-pages-https-netjson-github-io-netjsongraph-js" class="headerlink" title="Examples on GitHub pages: https://netjson.github.io/netjsongraph.js/"></a>Examples on GitHub pages: <a href="https://netjson.github.io/netjsongraph.js/" target="_blank" rel="external">https://netjson.github.io/netjsongraph.js/</a></h4></blockquote>
+<p>You can browse all examples on GitHub pages. Some screen shots of the application:</p>
+<p><img src="http://ovad4r7yz.bkt.gdipper.com/Artboard%201.png" alt="basic example"></p>
+<p><img src="http://ovad4r7yz.bkt.gdipper.com/Screen%20Shot%202017-08-26%20at%2017.33.36.png" alt="performance example"></p>
+<p>The force-directed layout is usually used to visualize network data. It offers insights on the relationships between nodes and links. The previous version of <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> is implemented by <a href="https://d3js.org/" target="_blank" rel="external">d3</a> and it’s rendered using SVG. It would be very slow if there were thousands or ten of thousands nodes or links. So I have to embrace the WebGL speeded up by GPU to have a better performance.</p>
+<p>I have recorded my work in the blog every milestone:</p>
+<ul>
+<li><a href="https://blog.freifunk.net/2017/06/29/gsoc-2017-netjsongraph-js-milestone-1/" target="_blank" rel="external">GSoC 2017-netjsongraph.js milestone 1</a></li>
+<li><a href="https://blog.freifunk.net/2017/07/26/gsoc-2017-netjsongraph-js-milestone-2/" target="_blank" rel="external">GSoC 2017-netjsongraph.js milestone 2</a></li>
+</ul>
+<p><em>BTW, It’s a great management method to make members submit weekly reports and blog posts in <a href="https://freifunk.net/" target="_blank" rel="external">Freifunk</a>.</em></p>
+<p>During the three months, there have been <strong>116 commits</strong> from me. I created a big Pull Request include them:</p>
+<p><img src="http://ovad4r7yz.bkt.gdipper.com/Screen%20Shot%202017-08-26%20at%2016.28.07.png" alt="netjsongraph.js #48"></p>
+<p><img src="http://ovad4r7yz.bkt.gdipper.com/Screen%20Shot%202017-08-26%20at%2016.26.46.png" alt="netjsongraph.js project panels"></p>
+<p>Almost all goals have achieved:</p>
+<ul>
+<li>Published a minor version</li>
+<li>Improved development workflow</li>
+<li>Tests Added</li>
+<li>Refactored visualization by <a href="https://threejs.org/" target="_blank" rel="external">Three.js</a> and <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a></li>
+<li>Added more interaction like hover (show nodes tooltips), click (show nodes or links information panel), pan and zoom</li>
+<li>Improved performance</li>
+</ul>
+<p>Especially on performance aspect, it runs efficiently on Chrome reached <strong>60FPS</strong> under <em>5k nodes and 10k links</em>. And if you don’t wanna animation, you can choose the static rendering layout.</p>
+<h2 id="Challenges"><a href="#Challenges" class="headerlink" title="Challenges"></a>Challenges</h2><p>I also encounter some challenges I never met before.</p>
+<h4 id="Event-binding-and-handling"><a href="#Event-binding-and-handling" class="headerlink" title="Event binding and handling"></a>Event binding and handling</h4><p>As you know, WebGL renders all objects in one canvas tag. How to bind events on every geometry? You should use the <a href="https://en.wikipedia.org/wiki/Ray_casting" target="_blank" rel="external">Ray casting</a>. Raycasting is used for mouse picking (working out what objects in the 3d space the mouse is over) amongst other things. So you can know which geometry your mouse over and add some interaction effect.</p>
+<p>There are thousands of objects and every object has several events you should handle, I had to develop an event controller to manage it.</p>
+<h4 id="Performance"><a href="#Performance" class="headerlink" title="Performance"></a>Performance</h4><p>The bottleneck in this visualizer is performance(<a href="https://github.com/netjson/netjsongraph.js/issues/41" target="_blank" rel="external">#41</a>). I tried many methods to improve it include:</p>
+<h5 id="Reuse-geometry-and-material"><a href="#Reuse-geometry-and-material" class="headerlink" title="Reuse geometry and material"></a>Reuse geometry and material</h5><p>However, the color of every node is different and the one link should highlight itself when it hovered, so the material should be independent and can not use in common.</p>
+<h5 id="Combine-the-mesh"><a href="#Combine-the-mesh" class="headerlink" title="Combine the mesh"></a>Combine the mesh</h5><p>Same problem with above. It’s not flexible to combine them to one mesh, different nodes and links should have different positions.</p>
+<h5 id="Static-rendering"><a href="#Static-rendering" class="headerlink" title="Static rendering"></a>Static rendering</h5><p>Make calculation before rendering, so there is no animation and repaint.</p>
+<h5 id="Using-Web-Worker"><a href="#Using-Web-Worker" class="headerlink" title="Using Web Worker"></a>Using Web Worker</h5><p>Web Workers is a simple means for web content to run scripts in background threads. The worker thread can perform tasks without interfering with the user interface. So put static layout calculation into it will be efficient.</p>
+<h4 id="Force-directed-algorithm"><a href="#Force-directed-algorithm" class="headerlink" title="Force-directed algorithm"></a>Force-directed algorithm</h4><p>There are different complexity and cost in the different force-directed algorithm. The <a href="http://journals.plos.org/plosone/article?id=10.1371/journal.pone.0098679" target="_blank" rel="external">Force-Atlas2 algorithm</a> has some benefits over the force layout implemented in <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">d3-force</a>. So current version may be refactored by an advanced algorithm in the future.</p>
+<h2 id="What-is-left-to-be-done"><a href="#What-is-left-to-be-done" class="headerlink" title="What is left to be done"></a>What is left to be done</h2><ul>
+<li>Add optional geographic map (<a href="https://github.com/netjson/netjsongraph.js/issues/40" target="_blank" rel="external">#40</a>)</li>
+<li>Using Force-Atlas2 algorithm</li>
+</ul>
+<p>More interactions and features should be added, and performance may be optimized by using new algorithm. I’d like to continue developing this project after GSoC.</p>
+<p>In the end, thanks for the great patience and guidance from my mentors. Thanks for Google to provide me with this rare chance to contribute to an open source community together with awesome members from all over the world. I really appreciate this invaluable experience accumulated this summer and I believe it will have the profound impact on my career and life.</p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Throughout the last three months, I was quite fortunate to work for &lt;a href=&quot;https://freifunk.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Freifu
+    
+    </summary>
+    
+      <category term="Code" scheme="http://geekplux.com/categories/Code/"/>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Code/Visualization/"/>
+    
+      <category term="Life" scheme="http://geekplux.com/categories/Code/Visualization/Life/"/>
+    
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+      <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
+    
+      <category term="GSoC" scheme="http://geekplux.com/tags/GSoC/"/>
+    
+  </entry>
   
   <entry>
     <title>如何在 GitHub 上获得数百 stars</title>
@@ -99,13 +189,13 @@
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
-      <category term="Promotion" scheme="http://geekplux.com/tags/Promotion/"/>
-    
-      <category term="推广" scheme="http://geekplux.com/tags/%E6%8E%A8%E5%B9%BF/"/>
-    
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Promotion" scheme="http://geekplux.com/tags/Promotion/"/>
+    
+      <category term="推广" scheme="http://geekplux.com/tags/%E6%8E%A8%E5%B9%BF/"/>
     
       <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
@@ -161,13 +251,13 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Tool/Visualization/"/>
     
     
+      <category term="Development" scheme="http://geekplux.com/tags/Development/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
       <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="Development" scheme="http://geekplux.com/tags/Development/"/>
     
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
@@ -374,6 +464,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -389,10 +483,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -482,6 +572,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -497,10 +591,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -603,7 +693,7 @@
     <link href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html"/>
     <id>http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</id>
     <published>2017-01-03T12:02:52.000Z</published>
-    <updated>2017-01-10T05:02:04.000Z</updated>
+    <updated>2017-08-18T03:44:45.000Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本系列「数据可视化基础」文章共三篇，介绍可视化中最基础、最重要的一些概念、理论。这篇为第三篇，主要介绍<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">视觉编码</a>，另两篇则主讲<a href="http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html">可视化流程</a>和<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>，建议从可视化流程看起。<br>原文地址：<a href="http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html">http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</a></p>
@@ -652,7 +742,7 @@
 <h3 id="视觉通道的三个性质"><a href="#视觉通道的三个性质" class="headerlink" title="视觉通道的三个性质"></a>视觉通道的三个性质</h3><p>上一篇<a href="http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html">数据模型</a>讲解了可视化中数据分为三类：<strong>类别型</strong>、<strong>有序型</strong>、<strong>数值型</strong>。</p>
 <ol>
 <li><strong>定性性质</strong>（或叫分类性质）。适用于类别型数据。比如形状或颜色，这两个视觉通道，非常容易被人眼识别。从一堆正方形中识别出一个三角形，或看万绿丛中一点红，都是我们眼睛拿手好戏。</li>
-<li><strong>定量性质或定序性质</strong>。适用于有序型和类别型数据。比如长度、大小特别适合于编码数值/量的大小。</li>
+<li><strong>定量性质或定序性质</strong>。适用于有序型和数值型数据。比如长度、大小特别适合于编码数值/量的大小。</li>
 <li><strong>分组性质</strong>。具有相同视觉通道的数据，人眼也能很快识别出来，将其归为一组。</li>
 </ol>
 <p>总结一下视觉通道与数据类型的对应关系，如下图所示：</p>
@@ -694,6 +784,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -709,10 +803,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -860,6 +950,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -875,10 +969,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -951,6 +1041,10 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -966,10 +1060,6 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
-    
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -1753,79 +1843,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Backbone View 之间通信的三种方式</title>
-    <link href="http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html"/>
-    <id>http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</id>
-    <published>2015-07-04T12:49:33.000Z</published>
-    <updated>2015-07-04T13:52:50.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 Backbone View 之间通信的三种方式讲的清晰明了。译文如下（已拿到授权）：</p>
-<hr>
-<p>我正在开发的这个网页主要有两部分，分别是 document 和 sidebar。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/backbone-application.png" alt="Backbone Application"></p>
-<p>如上图所示，我设立了三个视图 (view) :</p>
-<p><code>ApplicationView</code> - 作为最外层视图来包含下级视图<br><code>DocumentView</code> - 展示正在编辑或浏览的内容<br><code>SidebarView</code> - 展示一些和 document 相关的信息</p>
-<p><code>DocumentView</code> 和 <code>SidebarView</code> 作为 <code>ApplicationView</code> 的子视图，所以整体的视图结构如下图所示：</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/backbone-view-structure.png" alt="Backbone View Structure"></p>
-<p>用户在任意一个子视图进行操作，另一个子视图都需要随之变化。但由于两个子视图之间并不能直接通知对方（也就是说，它们的作用域没有直接联系，不像父视图，可以包含它所有子视图的作用域），所以，我需要一个事件机制。</p>
-<p>在我谷歌和参考其他人的方法之后，我总结出了如下三种不同的通信方式。</p>
-<a id="more"></a>
-<h3 id="1-通过父视图传递事件"><a href="#1-通过父视图传递事件" class="headerlink" title="1. 通过父视图传递事件"></a>1. 通过父视图传递事件</h3><p>我通过父视图 (<code>ApplicationView</code>) 来为它的两个子视图传递事件。因为父视图包含它所有子视图的作用域，因此用它作为事件传递的媒介最好不过。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/backbone-view-event-relay.png" alt="Backbone View Event Relay"></p>
-<p>JavaScript 代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> ApplicationView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  initialize : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.documentView = <span class="keyword">new</span> DocumentView(&#123;parent:<span class="keyword">this</span>&#125;);</div><div class="line">    <span class="keyword">this</span>.sidebarView = <span class="keyword">new</span> SidebarView(&#123;parent:<span class="keyword">this</span>&#125;);</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.documentView.on(<span class="string">'edit'</span>, <span class="keyword">this</span>.documentEdited, <span class="keyword">this</span>);</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  documentEdited : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">// do some stuff</span></div><div class="line">    <span class="keyword">this</span>.sidebarView.trigger(<span class="string">'documentEdit'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> DocumentView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  onEdit : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.trigger(<span class="string">'edit'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> SidebarView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  initialize : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.on(<span class="string">'documentEdit'</span>, <span class="keyword">this</span>.onDocumentEdit, <span class="keyword">this</span>);</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  onDocumentEdit : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">// react to document edit.</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="string">`</span></div></pre></td></tr></table></figure>
-<p>但是，这种方法并不高效。因为我需要在 <code>ApplicationView</code> 中添加一个额外的事件处理函数 <code>documentEdited()</code> 。如果子视图有一堆事件传过来，则在父视图中会不断触发事件处理函数，导致它不堪重负。</p>
-<p>那么来看看第二种方法。</p>
-<h3 id="2-通过-EventBus-在视图间通信"><a href="#2-通过-EventBus-在视图间通信" class="headerlink" title="2. 通过 EventBus 在视图间通信"></a>2. 通过 EventBus 在视图间通信</h3><p>我通过继承 <strong>Backbone.Events</strong> 来创建一个全局对象 <code>EventBus</code>。把它注入到各个子视图中，用来广播事件。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/backbone-views-event-bus.png" alt="Backbone Views Event Bus"></p>
-<p>JavaScript 代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div><div class="line">39</div><div class="line">40</div><div class="line">41</div><div class="line">42</div></pre></td><td class="code"><pre><div class="line"></div><div class="line"><span class="keyword">var</span> ApplicationView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  initialize : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.eventBus = _.extend(&#123;&#125;, Backbone.Events);</div><div class="line"></div><div class="line">    <span class="keyword">this</span>.documentView = <span class="keyword">new</span> DocumentView(&#123;</div><div class="line">      eventBus : <span class="keyword">this</span>.eventBus</div><div class="line">    &#125;);</div><div class="line">    <span class="keyword">this</span>.sidebarView = <span class="keyword">new</span> SidebarView(&#123;</div><div class="line">      eventBus : <span class="keyword">this</span>.eventBus</div><div class="line">    &#125;);</div><div class="line"></div><div class="line">  &#125;,</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> DocumentView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  initialize : <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.eventBus = options.eventBus;</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  onEdit : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.eventBus.trigger(<span class="string">'documentEdit'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> SidebarView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  initialize : <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.eventBus = options.eventBus;</div><div class="line">    <span class="keyword">this</span>.eventBus.on(<span class="string">'documentEdit'</span>, <span class="keyword">this</span>.onDocumentEdit, <span class="keyword">this</span>);</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  onDocumentEdit : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">// react to document edit.</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<p>在这个方法中，我把 <code>EventBus</code> 作为一个全局对象用来注册事件。如果我想在各个视图之间通信，只需要在视图中注入 <code>EventBus</code>，就可以通过它方便地触发或监听事件了。</p>
-<p><strong>注意</strong>：如果你不想要创建全局对象，你仍然可以创建模块 (module) 或视图 (view) 级别的 <code>EventBus</code> 用来通信。</p>
-<p>这个方法已经明显优于第一种方法了。但是需要我们手动的在子视图中引入 <code>EventBus</code>，说明还有可以改进的空间，那么，来看看第三种方法。</p>
-<h3 id="3-直接用-Backbone-作为事件注册机"><a href="#3-直接用-Backbone-作为事件注册机" class="headerlink" title="3. 直接用 Backbone 作为事件注册机"></a>3. 直接用 Backbone 作为事件注册机</h3><p>在第二种方法中，我创建了一个单独的 <code>EventBus</code>，继承自 <code>Backbone.Events</code>。但最近我悟到 <code>Backbone</code> 对象本身就是一个混合了 <code>Events</code> 的对象，所以我直接用 <code>Backbone</code> 广播事件，就无需单另创建的 <code>EventBus</code> 了。</p>
-<p>而且 Backbone 对象可以直接调用，这样我就不必在每个子视图中手动注入它了。</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/backbone-views-backbone-event-bus.png" alt="Backbone as EventBus"></p>
-<p>JavaScript 代码如下：</p>
-<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> ApplicationView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  initialize : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="keyword">this</span>.documentView = <span class="keyword">new</span> DocumentView();</div><div class="line">    <span class="keyword">this</span>.sidebarView = <span class="keyword">new</span> SidebarView();</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> DocumentView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  onEdit : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    Backbone.trigger(<span class="string">'documentEdit'</span>);</div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;);</div><div class="line"></div><div class="line"><span class="keyword">var</span> SidebarView = Backbone.View.extend(&#123;</div><div class="line"></div><div class="line">  initialize : <span class="function"><span class="keyword">function</span>(<span class="params">options</span>)</span>&#123;</div><div class="line">    Backbone.on(<span class="string">'documentEdit'</span>, <span class="keyword">this</span>.onDocumentEdit, <span class="keyword">this</span>);</div><div class="line">  &#125;,</div><div class="line"></div><div class="line">  onDocumentEdit : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    <span class="comment">// react to document edit.</span></div><div class="line">  &#125;</div><div class="line"></div><div class="line">&#125;);</div></pre></td></tr></table></figure>
-<h3 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h3><p>我最终在我的项目中使用了第三种方法。而且在我看来，虽然它直接依赖了全局的 <code>Backbone</code> 对象，但是用起来却异常简洁。</p>
-<p>如果有比这更好的方法，欢迎分享交流。</p>
-<p>（译文完）</p>
-<hr>
-<p><strong>原文地址</strong>：<a href="http://veerasundar.com/blog/2013/04/communicating-between-views-in-backbone/" target="_blank" rel="external">Communicating between views in Backbone</a><br><strong>译文地址</strong>：<a href="http://www.geekplux.com/2015/07/04/communicating-between-views-in-backbone.html" target="_blank" rel="external">Backbone View 之间通信的三种方式</a></p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 Backbone View 之间通信的三种方式讲的清晰明了。译文如下（已拿到授权）：&lt;/p&gt;
-&lt;hr&gt;
-&lt;p&gt;我正在开发的这个网页主要有两部分，分别是 document 和 sidebar。&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7b1evr.com1.z0.glb.clouddn.com/backbone-application.png&quot; alt=&quot;Backbone Application&quot;&gt;&lt;/p&gt;
-&lt;p&gt;如上图所示，我设立了三个视图 (view) :&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;ApplicationView&lt;/code&gt; - 作为最外层视图来包含下级视图&lt;br&gt;&lt;code&gt;DocumentView&lt;/code&gt; - 展示正在编辑或浏览的内容&lt;br&gt;&lt;code&gt;SidebarView&lt;/code&gt; - 展示一些和 document 相关的信息&lt;/p&gt;
-&lt;p&gt;&lt;code&gt;DocumentView&lt;/code&gt; 和 &lt;code&gt;SidebarView&lt;/code&gt; 作为 &lt;code&gt;ApplicationView&lt;/code&gt; 的子视图，所以整体的视图结构如下图所示：&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;http://7b1evr.com1.z0.glb.clouddn.com/backbone-view-structure.png&quot; alt=&quot;Backbone View Structure&quot;&gt;&lt;/p&gt;
-&lt;p&gt;用户在任意一个子视图进行操作，另一个子视图都需要随之变化。但由于两个子视图之间并不能直接通知对方（也就是说，它们的作用域没有直接联系，不像父视图，可以包含它所有子视图的作用域），所以，我需要一个事件机制。&lt;/p&gt;
-&lt;p&gt;在我谷歌和参考其他人的方法之后，我总结出了如下三种不同的通信方式。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Web" scheme="http://geekplux.com/categories/Web/"/>
-    
-    
-      <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
-    
-      <category term="译文" scheme="http://geekplux.com/tags/%E8%AF%91%E6%96%87/"/>
-    
-      <category term="Translation" scheme="http://geekplux.com/tags/Translation/"/>
-    
-      <category term="Backbone" scheme="http://geekplux.com/tags/Backbone/"/>
     
   </entry>
   
