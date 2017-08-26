@@ -3,6 +3,7 @@
 
 
     
+    
   <url>
     <loc>http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html</loc>
     <lastmod>2017-08-26T14:51:13.000Z</lastmod>
@@ -297,7 +298,6 @@
     </data>
     </url>
 
-    
     
   <url>
     <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
@@ -703,13 +703,13 @@
         <title>如何阅读一篇学术论文</title>
         <pubTime>2016-05-31T12:49:56.000Z</pubTime>
         
-        <tag>Research</tag>
-         
-        <tag>方法论</tag>
-         
         <tag>学习</tag>
          
         <tag>Learning</tag>
+         
+        <tag>方法论</tag>
+         
+        <tag>Research</tag>
          
          
            
@@ -811,11 +811,11 @@
         <title>建立索引式的学习方法</title>
         <pubTime>2015-12-08T13:53:27.000Z</pubTime>
         
-        <tag>方法论</tag>
-         
         <tag>学习</tag>
          
         <tag>Learning</tag>
+         
+        <tag>方法论</tag>
          
          
            

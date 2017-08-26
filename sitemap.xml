@@ -2,6 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://geekplux.com/presentation/index.html</loc>
+    
+    <lastmod>2017-08-26T14:55:17.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html</loc>
     
     <lastmod>2017-08-26T14:51:13.000Z</lastmod>
@@ -47,13 +54,6 @@
     <loc>http://geekplux.com/2017/06/26/text-data-visualization.html</loc>
     
     <lastmod>2017-07-09T10:29:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/presentation/index.html</loc>
-    
-    <lastmod>2017-06-26T06:43:57.000Z</lastmod>
     
   </url>
   
