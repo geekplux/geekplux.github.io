@@ -43,6 +43,7 @@ CoffeeScript Cookbook
     <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" href="/css/typing.css">
+  
 </head>
 
   
@@ -72,11 +73,6 @@ CoffeeScript Cookbook
       <a class="main-nav-link" href="/gab">扯淡集</a>
     
   </nav>
-  <nav id="sub-nav">
-    
-      <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
-    
-  </nav>
 </header>
 
   <hr/>
@@ -85,7 +81,7 @@ CoffeeScript Cookbook
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Ccoffeescript_note2012-09-18-coffeescript.jpg" rel="gallery_cj6tfhz5m000gsdhv1adp2fmj">
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Ccoffeescript_note2012-09-18-coffeescript.jpg" rel="gallery_cj7lv6esk000ilahvojxsm1oa">
         <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Ccoffeescript_note2012-09-18-coffeescript.jpg" itemprop="image">
       </a>
     
@@ -311,6 +307,12 @@ CoffeeScript Cookbook
 
 
   <section id="comments" class="comments">
+    <div id="gitment_container"></div>
+  </section>
+
+
+
+  <section id="comments" class="comments">
     <div id="disqus_thread">
       <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
     </div>
@@ -321,6 +323,51 @@ CoffeeScript Cookbook
       </div>
       
     <footer id="footer" class="post-footer footer">
+      <ul class="footer-links">
+        
+          <li>
+	    
+	      <a href="/archives">Blog</a>
+	    
+          </li>
+        
+          <li>
+	    
+	      <a href="/wiki">Wiki</a>
+	    
+          </li>
+        
+          <li>
+	    
+	      <a href="https://github.com/geekplux">GitHub</a>
+	    
+          </li>
+        
+          <li>
+	    
+	      <a href="https://www.instagram.com/geekplux">Instagram</a>
+	    
+          </li>
+        
+          <li>
+	    
+	      <a href="https://twitter.com/geekplux">Twitter</a>
+	    
+          </li>
+        
+          <li>
+	    
+	      <a href="/about">About</a>
+	    
+          </li>
+        
+          <li>
+	    
+	      <a href="/aboutme">关于</a>
+	    
+          </li>
+        
+      </ul>
       <hr/>
       <div id="footerContent" class="footer-content">
         <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes to open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
@@ -343,6 +390,22 @@ CoffeeScript Cookbook
      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
    })();
   </script>
+
+
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: 'geekplux',
+    repo: 'geekplux.github.io',
+    oauth: {
+      client_id: 'e4281103bd71a2aba965',
+      client_secret: '2e02d473f5caa239f841e81fdf7feabd7a91c73e'
+    }
+  })
+  gitment.render('gitment_container')
+</script>
 
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>

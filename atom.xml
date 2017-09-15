@@ -1458,13 +1458,13 @@ vconcat([view1, view2, ...], resolve)
       <category term="Research" scheme="http://geekplux.com/categories/Research/"/>
     
     
-      <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
+      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
     
       <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
-      <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
+      <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+      <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
     
   </entry>
   
@@ -1611,11 +1611,11 @@ vconcat([view1, view2, ...], resolve)
       <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
     
     
+      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
+    
       <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
     
       <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
-    
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
     
   </entry>
   

@@ -2,6 +2,20 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://geekplux.com/gab/index.html</loc>
+    
+    <lastmod>2017-09-15T12:29:46.000Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/aboutme/index.html</loc>
+    
+    <lastmod>2017-09-15T12:28:52.000Z</lastmod>
+    
+  </url>
+  
+  <url>
     <loc>http://geekplux.com/presentation/index.html</loc>
     
     <lastmod>2017-08-26T14:55:17.000Z</lastmod>
@@ -75,20 +89,6 @@
     <loc>http://geekplux.com/about/index.html</loc>
     
     <lastmod>2017-03-27T06:29:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/aboutme/index.html</loc>
-    
-    <lastmod>2017-02-27T13:58:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/gab/index.html</loc>
-    
-    <lastmod>2017-02-23T09:32:40.000Z</lastmod>
     
   </url>
   
