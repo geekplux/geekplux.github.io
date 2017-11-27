@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-11-27T12:53:00.716Z</updated>
+  <updated>2017-11-27T16:24:21.547Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,20 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>augmented-reality-development-tech-in-web-frontend</title>
+    <link href="http://geekplux.com/2017/11/28/augmented-reality-development-tech-in-web-frontend.html"/>
+    <id>http://geekplux.com/2017/11/28/augmented-reality-development-tech-in-web-frontend.html</id>
+    <published>2017-11-27T16:24:21.000Z</published>
+    <updated>2017-11-27T16:24:21.547Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
   
   <entry>
     <title>netjsongraph.js – Google Summer of Code (GSoC) 2017 summary</title>
@@ -189,13 +203,13 @@
       <category term="Promotion" scheme="http://geekplux.com/categories/Thought/Promotion/"/>
     
     
-      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
-    
-      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
-    
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
       <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
       <category term="Promotion" scheme="http://geekplux.com/tags/Promotion/"/>
     
@@ -257,15 +271,15 @@
     
       <category term="Development" scheme="http://geekplux.com/tags/Development/"/>
     
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
       <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
-    
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="Markvis" scheme="http://geekplux.com/tags/Markvis/"/>
     
@@ -1269,13 +1283,13 @@ vconcat([view1, view2, ...], resolve)
       <category term="Visualization" scheme="http://geekplux.com/categories/Research/Visualization/"/>
     
     
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
       <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
-    
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
       <category term="Research" scheme="http://geekplux.com/tags/Research/"/>
     
@@ -1788,65 +1802,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
     
       <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何管理好自己的密码</title>
-    <link href="http://geekplux.com/2015/09/24/password-management.html"/>
-    <id>http://geekplux.com/2015/09/24/password-management.html</id>
-    <published>2015-09-24T09:08:59.000Z</published>
-    <updated>2016-11-02T10:20:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近 Xcode Ghost 席卷三大平台，有预谋有组织有纪律。很多人看到这个消息纷纷修改常用密码，但我觉得密码管理其实功在平时，一个好的密码可以大幅提升你账户的安全系数。</p>
-<p>而且，现在基本上每个网站都需要注册才能享用全部服务，我自己注册了上百个网站，意味者我有上百个账号密码需要记，用脑子记根本记不住（没办法，记忆力差）。后来我慢慢摸索出自己的一套策略用来管理密码，感觉实用且不算复杂。</p>
-<h2 id="设计方法"><a href="#设计方法" class="headerlink" title="设计方法"></a>设计方法</h2><ol>
-<li>首先要对账号和密码进行<strong>分级分类</strong>。根据重要性、产品使用频率、产品应用场景来分。我自己分为五类：银行卡类、涉及支付类、社交账号、涉及数据存储类（各种云存储、云服务等）、其他。</li>
-<li>银行卡类：<strong>单独</strong>设6位数字，每张银行卡都有各自的密码（规则自己定：比如前三位是自己想的，后三位是卡号的某几位）。</li>
-<li>涉及支付类：<strong>单独</strong>设密码，方法参考5、6两点。</li>
-<li>社交账号类、涉及数据存储类：<strong>着重对待</strong>，方法同样参考5、6两点。</li>
-<li>密码设计方法：单独想出一句话，用这句话每个字的<strong>首字母</strong>构成密码最基本的部分。大小写和符号自己<strong>有规律</strong>地加。</li>
-<li><strong>排列组合</strong>：密码太多记不住很正常。可以用两组（或多组）短语排列组合成整套密码。</li>
-<li>银行、涉及支付类、重度使用产品均<strong>定期更换</strong>密码。一般密码位数不低于15位（不要以为15位很长）。</li>
-</ol>
-<a id="more"></a>
-<h2 id="密码存储"><a href="#密码存储" class="headerlink" title="密码存储"></a>密码存储</h2><p>那么密码设计出来，要存到哪里去呢？</p>
-<ul>
-<li><strong>全部用脑子记住</strong>。这种最安全也是最高效的方法，但是需要记忆力。</li>
-<li>用 1Password, Lastpass 等密码管理软件记。我觉得这个适用于上文提到的「其他类」。</li>
-<li>用文本笔记、表格记录。这个也没什么不可以，但是你一定要保存好这份文件，否则后果很严重。这里有个小技巧，你可以把密码全记录到一个 excel 文件中，然后把文件后缀改为 <code>.avi</code>，以此类推。</li>
-</ul>
-<p>以上就是我全部的方法了。之所以分成五类主要是因为涉及钱的账号密码，一旦泄密损失的是自己，而社交账号和数据泄密损失的是他人。</p>
-<p>一般人可能会觉得自己的数据没什么价值，而且朋友们也都很机智。但是在特定情况下，你的数据会有可怕的功用。想象一下，一个人如果拥有你的绝大部分数据，同时又拥有你所有的人际关系。那么他就可以轻易的运用数据去模仿出你的样子，从而获取他人的信任。一旦获得对方的完全信任，注意，是完全信任，那对方就会沦为待宰的羔羊，任人摆布。</p>
-<p>总之，密码和我们的生活息息相关，管理好自己的密码说不定还会有意外的收获：<br><a href="http://www.jianshu.com/p/a1220fd27e2f" target="_blank" rel="external">一个密码改变了我的人生</a></p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近 Xcode Ghost 席卷三大平台，有预谋有组织有纪律。很多人看到这个消息纷纷修改常用密码，但我觉得密码管理其实功在平时，一个好的密码可以大幅提升你账户的安全系数。&lt;/p&gt;
-&lt;p&gt;而且，现在基本上每个网站都需要注册才能享用全部服务，我自己注册了上百个网站，意味者我有上百个账号密码需要记，用脑子记根本记不住（没办法，记忆力差）。后来我慢慢摸索出自己的一套策略用来管理密码，感觉实用且不算复杂。&lt;/p&gt;
-&lt;h2 id=&quot;设计方法&quot;&gt;&lt;a href=&quot;#设计方法&quot; class=&quot;headerlink&quot; title=&quot;设计方法&quot;&gt;&lt;/a&gt;设计方法&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;首先要对账号和密码进行&lt;strong&gt;分级分类&lt;/strong&gt;。根据重要性、产品使用频率、产品应用场景来分。我自己分为五类：银行卡类、涉及支付类、社交账号、涉及数据存储类（各种云存储、云服务等）、其他。&lt;/li&gt;
-&lt;li&gt;银行卡类：&lt;strong&gt;单独&lt;/strong&gt;设6位数字，每张银行卡都有各自的密码（规则自己定：比如前三位是自己想的，后三位是卡号的某几位）。&lt;/li&gt;
-&lt;li&gt;涉及支付类：&lt;strong&gt;单独&lt;/strong&gt;设密码，方法参考5、6两点。&lt;/li&gt;
-&lt;li&gt;社交账号类、涉及数据存储类：&lt;strong&gt;着重对待&lt;/strong&gt;，方法同样参考5、6两点。&lt;/li&gt;
-&lt;li&gt;密码设计方法：单独想出一句话，用这句话每个字的&lt;strong&gt;首字母&lt;/strong&gt;构成密码最基本的部分。大小写和符号自己&lt;strong&gt;有规律&lt;/strong&gt;地加。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;排列组合&lt;/strong&gt;：密码太多记不住很正常。可以用两组（或多组）短语排列组合成整套密码。&lt;/li&gt;
-&lt;li&gt;银行、涉及支付类、重度使用产品均&lt;strong&gt;定期更换&lt;/strong&gt;密码。一般密码位数不低于15位（不要以为15位很长）。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
-    
-    
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
-    
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
