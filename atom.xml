@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-08-26T14:51:13.000Z</updated>
+  <updated>2017-11-27T12:53:00.716Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html"/>
     <id>http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html</id>
     <published>2017-08-26T14:45:52.000Z</published>
-    <updated>2017-08-26T14:51:13.000Z</updated>
+    <updated>2017-11-27T12:53:00.716Z</updated>
     
     <content type="html"><![CDATA[<p>Throughout the last three months, I was quite fortunate to work for <a href="https://freifunk.net/" target="_blank" rel="external">Freifunk</a> on <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> under the guidance of my mentor <a href="https://github.com/nemesisdesign" target="_blank" rel="external">Federico Capoano</a>. Thanks for this invaluable experience that I learned a lot of knowledge and use them in a practical project. Here is a summary of the work I have done during the Google Summer of Code (GSoC) 2017.</p>
 <p><img src="http://ovad4r7yz.bkt.gdipper.com/gsocScreen%20Shot%202017-08-26%20at%2017.27.46.png" alt="Google Summer of Code project page"></p>
@@ -31,7 +31,11 @@
 <li>Improve the performance (<a href="https://github.com/netjson/netjsongraph.js/issues/41" target="_blank" rel="external">#41</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/44" target="_blank" rel="external">#44</a>, <a href="https://github.com/netjson/netjsongraph.js/issues/46" target="_blank" rel="external">#46</a>)</li>
 </ul>
 <h2 id="Achievement"><a href="#Achievement" class="headerlink" title="Achievement"></a>Achievement</h2><blockquote>
-<h4 id="Github-Repository-https-github-com-netjson-netjsongraph-js"><a href="#Github-Repository-https-github-com-netjson-netjsongraph-js" class="headerlink" title="Github Repository : https://github.com/netjson/netjsongraph.js"></a>Github Repository : <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">https://github.com/netjson/netjsongraph.js</a></h4><h4 id="Examples-on-GitHub-pages-https-netjson-github-io-netjsongraph-js"><a href="#Examples-on-GitHub-pages-https-netjson-github-io-netjsongraph-js" class="headerlink" title="Examples on GitHub pages: https://netjson.github.io/netjsongraph.js/"></a>Examples on GitHub pages: <a href="https://netjson.github.io/netjsongraph.js/" target="_blank" rel="external">https://netjson.github.io/netjsongraph.js/</a></h4></blockquote>
+<ul>
+<li><h5 id="Github-Repository-https-github-com-netjson-netjsongraph-js"><a href="#Github-Repository-https-github-com-netjson-netjsongraph-js" class="headerlink" title="Github Repository : https://github.com/netjson/netjsongraph.js"></a>Github Repository : <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">https://github.com/netjson/netjsongraph.js</a></h5></li>
+<li><h5 id="Examples-on-GitHub-pages-https-netjson-github-io-netjsongraph-js"><a href="#Examples-on-GitHub-pages-https-netjson-github-io-netjsongraph-js" class="headerlink" title="Examples on GitHub pages: https://netjson.github.io/netjsongraph.js/"></a>Examples on GitHub pages: <a href="https://netjson.github.io/netjsongraph.js/" target="_blank" rel="external">https://netjson.github.io/netjsongraph.js/</a></h5></li>
+</ul>
+</blockquote>
 <p>You can browse all examples on GitHub pages. Some screen shots of the application:</p>
 <p><img src="http://ovad4r7yz.bkt.gdipper.com/Artboard%201.png" alt="basic example"></p>
 <p><img src="http://ovad4r7yz.bkt.gdipper.com/Screen%20Shot%202017-08-26%20at%2017.33.36.png" alt="performance example"></p>
