@@ -46,6 +46,7 @@
     <link rel="icon" href="/favicon.ico">
   
   <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
   
 </head>
 
@@ -115,6 +116,23 @@
 <p align="left"><br>  <img width="250" src="http://7b1evr.com1.z0.glb.clouddn.com/qrcode_for_gh_2df3b33e3297_258.jpg" style="margin-left: 0"><br></p>
 
       
+      <div id="donate" class="donate">
+        <a id="github" href="https://github.com/geekplux" target="_blank" class="pos-f tr3" title="Github"></a>
+	      <div id="DonateText" class="tr3">Donate</div>
+	      <ul id="donateBox" class="list pos-f tr3">
+		      <li id="PayPal"><a href="https://www.paypal.me/geekplux" target="_blank">PayPal</a></li>
+		      <li id="BTC" data-footnote="Copy addres and show QRCod"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li>
+		      <li id="AliPay">AliPay</li>
+		      <li id="WeChat">WeChat</li>
+	      </ul>
+	      <div id="QRBox" class="pos-f left-100">
+		      <div id="BTCQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/bitcoin.png)"></div>
+		      <div id="AliPayQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/alipayQR.jpg)"></div>
+		      <div id="WeChatQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/wechatQR.jpg)"></div>
+	      </div>
+	      <!-- Bitcoin 账号 -->
+	      <input id="btc-key" type="text" value="1AVngxh56oLvAzXsEFnzccUohZdHswjC7j" readonly="readonly">
+      </div>
     </div>
     <footer class="article-footer">
       <ul class="article-meta">
@@ -197,6 +215,7 @@
 
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
 
 
   <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
@@ -234,13 +253,6 @@ ga('send', 'pageview');
 
 
 
-<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<script>
-  (adsbygoogle = window.adsbygoogle || []).push({
-    google_ad_client: "ca-pub-9721564868409404",
-    enable_page_level_ads: true
-  });
-</script>
 
     </div>
   </body>
