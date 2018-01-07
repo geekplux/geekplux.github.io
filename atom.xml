@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2018-01-07T15:23:20.820Z</updated>
+  <updated>2018-01-07T15:40:16.152Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -20,7 +20,7 @@
     <link href="http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html"/>
     <id>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</id>
     <published>2018-01-07T08:13:23.000Z</published>
-    <updated>2018-01-07T15:23:20.820Z</updated>
+    <updated>2018-01-07T15:40:16.152Z</updated>
     
     <content type="html"><![CDATA[<p>Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。</p>
 <h2 id="什么是-Google-Summer-of-Code？它值得参加么？"><a href="#什么是-Google-Summer-of-Code？它值得参加么？" class="headerlink" title="什么是 Google Summer of Code？它值得参加么？"></a>什么是 Google Summer of Code？它值得参加么？</h2><p>这个问题可以参考<a href="https://zhuanlan.zhihu.com/p/27330699" target="_blank" rel="external">Google 编程之夏(GSoC)：海量优质项目，丰厚报酬，你竟然还不知道？</a>这篇文章，里面介绍的非常详细，还客观的论述了为什么 GSoC 值得参加。不过在此我还是简单科普一下：</p>
@@ -53,6 +53,8 @@
 </ul>
 <h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>人生艰难，作为象牙塔里的学生都能感到压力。如果你想利用暑假的大好时光来增加一点人生的经验，GSoC 可能是你不可多得的机会。享受一线互联网公司实习的待遇还能在 GitHub 上刷经验值，何乐不为？最重要的是，这可能是你开启另一种生活方式的一个机会，也可能是改变你编程生涯的机会（有的人成了大型开源组织的 core team member），更是一个跳出你舒适区的机会。</p>
 <p>我时常担心自己变成温水里的青蛙，所以非常期待人生中的各种际遇，也想要体验各种各样的生活，在此共勉，加油朋友！</p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
 ]]></content>
     
     <summary type="html">
@@ -65,8 +67,6 @@
       <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
     
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
     
       <category term="GSoC" scheme="http://geekplux.com/tags/GSoC/"/>
@@ -74,6 +74,8 @@
       <category term="Experience" scheme="http://geekplux.com/tags/Experience/"/>
     
       <category term="体验" scheme="http://geekplux.com/tags/%E4%BD%93%E9%AA%8C/"/>
+    
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   
@@ -406,6 +408,8 @@
     
       <category term="Web" scheme="http://geekplux.com/tags/Web/"/>
     
+      <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
+    
       <category term="WebGL" scheme="http://geekplux.com/tags/WebGL/"/>
     
       <category term="d3" scheme="http://geekplux.com/tags/d3/"/>
@@ -413,8 +417,6 @@
       <category term="three.js" scheme="http://geekplux.com/tags/three-js/"/>
     
       <category term="pixi.js" scheme="http://geekplux.com/tags/pixi-js/"/>
-    
-      <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
     
   </entry>
   
