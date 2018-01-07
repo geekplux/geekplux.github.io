@@ -4,25 +4,27 @@
 
     
   <url>
-    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
-    <lastmod>2017-12-01T08:39:57.271Z</lastmod>
+    <loc>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</loc>
+    <lastmod>2018-01-07T15:23:20.820Z</lastmod>
     <data>
         <display>
-        <title>如何阅读一篇学术论文</title>
-        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
+        <title>参加 Google Summer of Code 的体验</title>
+        <pubTime>2018-01-07T08:13:23.000Z</pubTime>
         
-        <tag>Research</tag>
+        <tag>生活</tag>
          
-        <tag>方法论</tag>
+        <tag>Google Summer of Code</tag>
          
-        <tag>学习</tag>
+        <tag>GSoC</tag>
          
-        <tag>Learning</tag>
+        <tag>Experience</tag>
+         
+        <tag>体验</tag>
          
          
            
              
-              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
           
         </display>
     </data>
@@ -31,7 +33,7 @@
     
   <url>
     <loc>http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html</loc>
-    <lastmod>2017-11-27T16:39:12.918Z</lastmod>
+    <lastmod>2018-01-07T14:46:49.397Z</lastmod>
     <data>
         <display>
         <title>netjsongraph.js – Google Summer of Code (GSoC) 2017 summary</title>
@@ -69,58 +71,9 @@
     </url>
 
     
-    
-    
-    
-  <url>
-    <loc>http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</loc>
-    <lastmod>2017-08-18T03:44:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>数据可视化基础——视觉编码</title>
-        <pubTime>2017-01-03T12:02:52.000Z</pubTime>
-        
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
-        <tag>Visualization</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>数据可视化</tag>
-         
-        <tag>数据</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Big Data</tag>
-         
-        <tag>Data</tag>
-         
-        <tag>Data Visualization</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-         
-           
-             
-              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
   <url>
     <loc>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</loc>
-    <lastmod>2017-07-20T03:29:29.000Z</lastmod>
+    <lastmod>2017-12-29T08:13:33.595Z</lastmod>
     <data>
         <display>
         <title>如何在 GitHub 上获得数百 stars</title>
@@ -130,13 +83,13 @@
          
         <tag>可视化</tag>
          
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
         <tag>Promotion</tag>
          
         <tag>推广</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
          
         <tag>Skill</tag>
          
@@ -153,6 +106,109 @@
           
              
               <breadCrumb title="Promotion" url="http://geekplux.com/categories/Thought/Promotion/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
+    <lastmod>2017-12-09T08:45:55.012Z</lastmod>
+    <data>
+        <display>
+        <title>轻松玩转 Ukulele</title>
+        <pubTime>2015-01-05T15:54:00.000Z</pubTime>
+        
+        <tag>Skill</tag>
+         
+        <tag>新技能</tag>
+         
+        <tag>乐器</tag>
+         
+        <tag>Instrument</tag>
+         
+        <tag>Ukulele</tag>
+         
+         
+           
+             
+              <breadCrumb title="Ukulele" url="http://geekplux.com/categories/Ukulele/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
+    <lastmod>2017-12-01T08:39:57.271Z</lastmod>
+    <data>
+        <display>
+        <title>如何阅读一篇学术论文</title>
+        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
+        
+        <tag>Research</tag>
+         
+        <tag>方法论</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+    
+    
+  <url>
+    <loc>http://geekplux.com/2017/01/03/basics-of-data-visualization-visual-encoding-principles.html</loc>
+    <lastmod>2017-08-18T03:44:45.000Z</lastmod>
+    <data>
+        <display>
+        <title>数据可视化基础——视觉编码</title>
+        <pubTime>2017-01-03T12:02:52.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
           
         </display>
     </data>
@@ -198,13 +254,13 @@
         <title>Markvis - 在 markdown 中生成可视化图表</title>
         <pubTime>2017-07-14T12:56:40.000Z</pubTime>
         
-        <tag>Development</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
          
         <tag>数据</tag>
+         
+        <tag>Development</tag>
          
         <tag>Tool</tag>
          
@@ -289,10 +345,6 @@
         <title>文本数据可视化（下）——一图胜千言</title>
         <pubTime>2017-06-26T05:57:41.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -308,6 +360,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -328,34 +384,6 @@
 
     
   <url>
-    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
-    <lastmod>2017-06-20T02:19:44.000Z</lastmod>
-    <data>
-        <display>
-        <title>轻松玩转 Ukulele</title>
-        <pubTime>2015-01-05T15:54:00.000Z</pubTime>
-        
-        <tag>Skill</tag>
-         
-        <tag>新技能</tag>
-         
-        <tag>乐器</tag>
-         
-        <tag>Instrument</tag>
-         
-        <tag>Ukulele</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ukulele" url="http://geekplux.com/categories/Ukulele/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2017/04/12/text-data-visualization-wordle.html</loc>
     <lastmod>2017-04-14T03:06:15.000Z</lastmod>
     <data>
@@ -363,10 +391,6 @@
         <title>文本数据可视化（上）——从 Wordle 谈起</title>
         <pubTime>2017-04-12T02:44:01.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -382,6 +406,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -468,10 +496,6 @@
         <title>数据可视化基础——可视化流程</title>
         <pubTime>2017-01-01T09:35:36.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -487,6 +511,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -514,10 +542,6 @@
         <title>数据可视化基础——数据模型</title>
         <pubTime>2017-01-02T04:01:48.000Z</pubTime>
         
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
         <tag>Visualization</tag>
          
         <tag>可视化</tag>
@@ -533,6 +557,10 @@
         <tag>Data</tag>
          
         <tag>Data Visualization</tag>
+         
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
          
         <tag>Note</tag>
          
@@ -1269,11 +1297,11 @@
         <title>Android开发如何入门</title>
         <pubTime>2013-09-02T08:34:30.000Z</pubTime>
         
-        <tag>Android</tag>
-         
         <tag>Guide</tag>
          
         <tag>入门</tag>
+         
+        <tag>Android</tag>
          
         <tag>Development</tag>
          

@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2017-11-27T16:39:12.918Z</updated>
+  <updated>2018-01-07T15:23:20.820Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -16,13 +16,78 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title>参加 Google Summer of Code 的体验</title>
+    <link href="http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html"/>
+    <id>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</id>
+    <published>2018-01-07T08:13:23.000Z</published>
+    <updated>2018-01-07T15:23:20.820Z</updated>
+    
+    <content type="html"><![CDATA[<p>Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。</p>
+<h2 id="什么是-Google-Summer-of-Code？它值得参加么？"><a href="#什么是-Google-Summer-of-Code？它值得参加么？" class="headerlink" title="什么是 Google Summer of Code？它值得参加么？"></a>什么是 Google Summer of Code？它值得参加么？</h2><p>这个问题可以参考<a href="https://zhuanlan.zhihu.com/p/27330699" target="_blank" rel="external">Google 编程之夏(GSoC)：海量优质项目，丰厚报酬，你竟然还不知道？</a>这篇文章，里面介绍的非常详细，还客观的论述了为什么 GSoC 值得参加。不过在此我还是简单科普一下：</p>
+<p>简言之，<strong>GSoC 是一年一度谷歌组织的、全球性的学生编程活动。学生利用暑假时间给开源社区贡献代码，谷歌支付报酬给学生</strong>。</p>
+<p>将 GSoC 的特点提炼一下就是：</p>
+<ul>
+<li><strong>针对学生</strong>。只有学生身份才能申请参加（包括本科、硕士、博士）</li>
+<li><strong>一年一度</strong>。每年都能申请，3 月末开始（建议早点开始套磁）</li>
+<li><strong>全球性</strong>。你可能会和世界各地的学生一起工作</li>
+<li><strong>开源社区</strong>。你是为开源社区贡献代码，大部分组织在 GitHub 上，所以你的贡献都是开源的，谁都能看到</li>
+<li><strong>暑假期间</strong>。6 月正式开始工作，到 9 月</li>
+<li><strong>报酬</strong>。谷歌支付报酬，中国区为 3600 刀，比大厂实习工资都高</li>
+<li><strong>远程工作</strong>。这点在刚才的概念介绍中没提到，你可以在你想呆的任何地方写代码，不用去办公室</li>
+<li><strong>导师指导</strong>。每个项目会给你配一个导师，有的导师非常负责且是大牛，你可以跟他学到很多</li>
+</ul>
+<p>我相信这些点已经足够吸引一个在校学生了。</p>
+<h2 id="GSoC-怎么申请？"><a href="#GSoC-怎么申请？" class="headerlink" title="GSoC 怎么申请？"></a>GSoC 怎么申请？</h2><p>这个问题参考<a href="https://zhuanlan.zhihu.com/p/27823910" target="_blank" rel="external">Google Summer of Code 学生申请指南</a>。其实很简单，就是一篇 proposal，通过就可以参加当年的 GSoC 了。其他的参考资料可以看 <a href="https://github.com/gsoc-cn/gsoc-cn" target="_blank" rel="external">gsoc-cn</a>。</p>
+<h2 id="正文-参加-GSoC-的体验"><a href="#正文-参加-GSoC-的体验" class="headerlink" title="正文 - 参加 GSoC 的体验"></a>正文 - 参加 GSoC 的体验</h2><h3 id="申请"><a href="#申请" class="headerlink" title="申请"></a>申请</h3><p>我是在 2017 年的 2 月份开始关注当年的 GSoC 申请。虽然每年各组织是在 2 月末公布自己的项目，但它们组织内部会在 1 月份甚至更早就开始谋划今年 GSoC 的项目计划，而且一般会公布在组织的主页上。我当时搜索到一些已经公布的项目，筛选了 3 个和我技能相匹配并且自己也想参加的项目，直接发了邮件过去。自我介绍了一番，并把自己针对这个项目的简单想法阐述了一下，其中有一个项目的 mentor（导师）非常热情，来回几番交流也十分愉快，算是理清了这个组织在做什么，他们这个项目想达到的效果。另外两个只是回复了我邮件便直接索要我的 proposal 了。说实话在不了解项目需求的情况下很难写一篇令人满意的 proposal，所以我也对这两个项目没怎么上心。</p>
+<p>GSoC 的流程是 2 月末公布项目 idea，3 月末学生申请，所以有 1 个月的时间准备。但是早起的鸟儿有虫吃，有的人是 1 月份或上一年的 12 月就开始给项目贡献 PR(pull request) 了，所以他们申请的优势相当大。我的建议是越早准备越好，因为邮件的沟通没有 IM 频繁，再加上时区问题，交流的时间跨度会拉的很长。</p>
+<p>我当时由于自己在参与一个科研投稿项目，分身乏术，几乎对申请上 GSoC 不抱什么希望了。但是在申请 deadline 前的几天，那个之前和我频繁交流的导师来询问我的 proposal，他督促我赶紧提交一份，即使不完美，提交了总比放弃好。我被他鼓励之后，立马连夜赶了一份出来提交了，虽然写的简单草率，但也是达到了一份合格 proposal 的要求：把需求、自己的解决办法、时间规划都写清楚了。deadline 前一天导师还对我进行了视频面试，幸运的是最后通过了审核，在学生生涯的最后一年赶上了 GSoC 的末班车。</p>
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p>虽然 GSoC 是针对学生的，但我们不能以学生的心态面对这件事，而应该抱以雇员的态度。申请通过后，5 月整个月是暖身期，你可以熟悉组织里代码的提交流程，和组织里其他人聊聊天吹吹水搞搞关系，和导师多沟通一下之后暑假里的时间安排。比如你暑假有两周想去旅游，可以把这两周的工作提前完成。所以参加 GSoC 很自由，但要负责。</p>
+<p>主要的工作流程全在 GitHub 上完成，从提 issue，到最后的 Pull Request 和 Code Review，日常交流是用 IRC 和 Gitter，文档管理用 Google doc。我的导师是意大利人，除了带我，还要带 4 个人，分别来自印度、牙买加、瑞士和俄罗斯。大家时区不同，每天 IRC 里的 Good morning 出现在各个时段。聊天都用英语，都是书面交流，所以口语差也没关系。</p>
+<p>6 月正式开工，当时我是要用 WebGL 去重写一个大概 2 万节点，10 万条边的图结构可视化项目，前期工作不算一马平川，但也算走的稳当。到了中期，如何在 WebGL 中做交互成了一大难题，到了后期则是性能的优化。最终到 9 月份的时候我在 proposal 中提到的差不多有 90% 完成了，除了性能问题还有待提高。</p>
+<p>3 个月中，我除了参加 GSoC 还需要水一篇论文，所以时间特别紧张，几乎是两班倒。导师问我进度的时候就各种解释，然后加班加点赶进度。每个月底会有一次评估，导师会针对你这个月的表现来决定你能不能继续参加，我每次都是低空飘过。最后项目结束我觉得我可能没达到导师的预期，但也算完成了工作。虽然总体上我觉得不是很出色，不过导师在 final evaluation 还是写了不错的评价。所有的工作总结在我之前的博文<a href="http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html">netjsongraph.js — Google Summer of Code (GSoC) 2017 summary</a>中。</p>
+<h3 id="体验"><a href="#体验" class="headerlink" title="体验"></a>体验</h3><ul>
+<li><strong>代码水平有所提高</strong>。我参加的项目当时我导师他对前端可能没我熟，不过对代码风格、commit message 规范的要求还是很高的，在邮件中曾不止一次强调。另外他还推荐书单让我们阅读，他认为编程有很多是非常核心的、稳定的和通用的，学这部分才是关键。</li>
+<li><strong>对开源有了全新认识</strong>。之前可能觉得开源只是一些个人开发者或组织把自认为不错的代码公布出来供大家交流。参加 GSoC 之后才发现很多开源组织非常庞大，组织架构都很多层，有自己的一套工作流程和方式、俨然一家公司模样，有自己的盈利方式，甚至有自己的基金。它们的目标不止是开发者，还可能是国家的基础设施建设等。再从个人开发者的角度来说，你可能由于参加 GSoC 而更加热爱开源，因为你发现开源社区的人都非常的热心和认真。</li>
+<li><strong>和不同国家人工作的沟通成本很高</strong>。一方面是因为时区问题，大部分沟通，延迟回复都没什么问题，但一旦你提的 issue 是个紧急的 bug，而他这时候却在睡觉时间就很尴尬。另一方面是语言问题，尽管大家都用英语，但水平参差不齐，习惯不一，很多时候得多说两三次互相才能彻底理解对方的意思。不过认识新朋友看他们的 Twitter 和 Instagram 还是很有意思的。</li>
+<li><strong>学会包装自己</strong>。这方面我们隔壁的印度朋友简直是典范，纵观他们的 proposal 和最后的总结都写的非常「浮夸」，平时的交流，他们也是非常频繁，活跃在各个平台。他们不是语言上浮夸，是内心上认为自己确实做到了他们叙述的效果。总之其他国家的同学比我们都高调一点，也很抱团，所以我们还是要学习一个。</li>
+</ul>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>人生艰难，作为象牙塔里的学生都能感到压力。如果你想利用暑假的大好时光来增加一点人生的经验，GSoC 可能是你不可多得的机会。享受一线互联网公司实习的待遇还能在 GitHub 上刷经验值，何乐不为？最重要的是，这可能是你开启另一种生活方式的一个机会，也可能是改变你编程生涯的机会（有的人成了大型开源组织的 core team member），更是一个跳出你舒适区的机会。</p>
+<p>我时常担心自己变成温水里的青蛙，所以非常期待人生中的各种际遇，也想要体验各种各样的生活，在此共勉，加油朋友！</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。&lt;/p&gt;
+&lt;h2 id=&quot;什么是-Google-S
+    
+    </summary>
+    
+      <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
+    
+    
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
+    
+      <category term="GSoC" scheme="http://geekplux.com/tags/GSoC/"/>
+    
+      <category term="Experience" scheme="http://geekplux.com/tags/Experience/"/>
+    
+      <category term="体验" scheme="http://geekplux.com/tags/%E4%BD%93%E9%AA%8C/"/>
+    
+  </entry>
+  
+  <entry>
     <title>netjsongraph.js – Google Summer of Code (GSoC) 2017 summary</title>
     <link href="http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html"/>
     <id>http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html</id>
     <published>2017-08-26T14:45:52.000Z</published>
-    <updated>2017-11-27T16:39:12.918Z</updated>
+    <updated>2018-01-07T14:46:49.397Z</updated>
     
-    <content type="html"><![CDATA[<p>Throughout the last three months, I was quite fortunate to work for <a href="https://freifunk.net/" target="_blank" rel="external">Freifunk</a> on <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> under the guidance of my mentor <a href="https://github.com/nemesisdesign" target="_blank" rel="external">Federico Capoano</a>. Thanks for this invaluable experience that I learned a lot of knowledge and use them in a practical project. Here is a summary of the work I have done during the Google Summer of Code (GSoC) 2017.</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>Posted in medium: <a href="https://medium.com/@GeekPlux/netjsongraph-js-google-summer-of-code-gsoc-2017-summary-b0239f4eb8a9" target="_blank" rel="external">https://medium.com/@GeekPlux/netjsongraph-js-google-summer-of-code-gsoc-2017-summary-b0239f4eb8a9</a></p>
+</blockquote>
+<p>Throughout the last three months, I was quite fortunate to work for <a href="https://freifunk.net/" target="_blank" rel="external">Freifunk</a> on <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> under the guidance of my mentor <a href="https://github.com/nemesisdesign" target="_blank" rel="external">Federico Capoano</a>. Thanks for this invaluable experience that I learned a lot of knowledge and use them in a practical project. Here is a summary of the work I have done during the Google Summer of Code (GSoC) 2017.</p>
 <p><img src="http://ovad4r7yz.bkt.gdipper.com/gsocScreen%20Shot%202017-08-26%20at%2017.27.46.png" alt="Google Summer of Code project page"></p>
 <h2 id="Goal"><a href="#Goal" class="headerlink" title="Goal"></a>Goal</h2><p><a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> is a visualization library for <a href="http://netjson.org/docs/what.html#what-is-netjson" target="_blank" rel="external">NetJSON</a>, a network topology data format. The main goal of <a href="https://github.com/netjson/netjsongraph.js" target="_blank" rel="external">netjsongraph.js</a> may be concluded in below three lines (more details you can see in <a href="https://blog.freifunk.net/2017/05/30/gsoc-2017-netjsongraph-js-visualization-netjson-data/" target="_blank" rel="external">GSoC 2017-netjsongraph.js: visualization of NetJSON data</a>):</p>
 <ul>
@@ -80,7 +145,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;Throughout the last three months, I was quite fortunate to work for &lt;a href=&quot;https://freifunk.net/&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;Freifu
+      &lt;blockquote&gt;
+&lt;p&gt;Posted in medium: &lt;a href=&quot;https://medium.com/@GeekPlux/netjsongraph-js-google-summer-of-code-gsoc-2017-summary-b0239f4eb8a9
     
     </summary>
     
@@ -114,7 +180,7 @@
     <link href="http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html"/>
     <id>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</id>
     <published>2017-07-20T03:16:16.000Z</published>
-    <updated>2017-07-20T03:29:29.000Z</updated>
+    <updated>2017-12-29T08:13:33.595Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
 <p>本文首发于「<a href="https://juejin.im/post/59701b61518825412f27a0b1" target="_blank" rel="external">掘金专栏</a>」，地址：<a href="https://juejin.im/post/59701b61518825412f27a0b1" target="_blank" rel="external">https://juejin.im/post/59701b61518825412f27a0b1</a>。<br>本文写在 <a href="https://markvis.js.org" target="_blank" rel="external">markvis</a> 发布后的一周，总结了在推广个人项目方面的一些经验。阅读时长 10 分钟。</p>
@@ -193,13 +259,13 @@
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
-    
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
       <category term="Promotion" scheme="http://geekplux.com/tags/Promotion/"/>
     
       <category term="推广" scheme="http://geekplux.com/tags/%E6%8E%A8%E5%B9%BF/"/>
+    
+      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
+    
+      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
     
       <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
     
@@ -255,13 +321,13 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Tool/Visualization/"/>
     
     
-      <category term="Development" scheme="http://geekplux.com/tags/Development/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
     
       <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Development" scheme="http://geekplux.com/tags/Development/"/>
     
       <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
     
@@ -468,10 +534,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -487,6 +549,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -576,10 +642,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -595,6 +657,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -788,10 +854,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -807,6 +869,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -954,10 +1020,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -973,6 +1035,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -1045,10 +1111,6 @@
       <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
     
     
-      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
-    
-      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
-    
       <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
     
       <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
@@ -1064,6 +1126,10 @@
       <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
     
       <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="入门" scheme="http://geekplux.com/tags/%E5%85%A5%E9%97%A8/"/>
     
       <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
     
@@ -1789,65 +1855,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
     
       <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>如何管理好自己的密码</title>
-    <link href="http://geekplux.com/2015/09/24/password-management.html"/>
-    <id>http://geekplux.com/2015/09/24/password-management.html</id>
-    <published>2015-09-24T09:08:59.000Z</published>
-    <updated>2016-11-02T10:20:26.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>最近 Xcode Ghost 席卷三大平台，有预谋有组织有纪律。很多人看到这个消息纷纷修改常用密码，但我觉得密码管理其实功在平时，一个好的密码可以大幅提升你账户的安全系数。</p>
-<p>而且，现在基本上每个网站都需要注册才能享用全部服务，我自己注册了上百个网站，意味者我有上百个账号密码需要记，用脑子记根本记不住（没办法，记忆力差）。后来我慢慢摸索出自己的一套策略用来管理密码，感觉实用且不算复杂。</p>
-<h2 id="设计方法"><a href="#设计方法" class="headerlink" title="设计方法"></a>设计方法</h2><ol>
-<li>首先要对账号和密码进行<strong>分级分类</strong>。根据重要性、产品使用频率、产品应用场景来分。我自己分为五类：银行卡类、涉及支付类、社交账号、涉及数据存储类（各种云存储、云服务等）、其他。</li>
-<li>银行卡类：<strong>单独</strong>设6位数字，每张银行卡都有各自的密码（规则自己定：比如前三位是自己想的，后三位是卡号的某几位）。</li>
-<li>涉及支付类：<strong>单独</strong>设密码，方法参考5、6两点。</li>
-<li>社交账号类、涉及数据存储类：<strong>着重对待</strong>，方法同样参考5、6两点。</li>
-<li>密码设计方法：单独想出一句话，用这句话每个字的<strong>首字母</strong>构成密码最基本的部分。大小写和符号自己<strong>有规律</strong>地加。</li>
-<li><strong>排列组合</strong>：密码太多记不住很正常。可以用两组（或多组）短语排列组合成整套密码。</li>
-<li>银行、涉及支付类、重度使用产品均<strong>定期更换</strong>密码。一般密码位数不低于15位（不要以为15位很长）。</li>
-</ol>
-<a id="more"></a>
-<h2 id="密码存储"><a href="#密码存储" class="headerlink" title="密码存储"></a>密码存储</h2><p>那么密码设计出来，要存到哪里去呢？</p>
-<ul>
-<li><strong>全部用脑子记住</strong>。这种最安全也是最高效的方法，但是需要记忆力。</li>
-<li>用 1Password, Lastpass 等密码管理软件记。我觉得这个适用于上文提到的「其他类」。</li>
-<li>用文本笔记、表格记录。这个也没什么不可以，但是你一定要保存好这份文件，否则后果很严重。这里有个小技巧，你可以把密码全记录到一个 excel 文件中，然后把文件后缀改为 <code>.avi</code>，以此类推。</li>
-</ul>
-<p>以上就是我全部的方法了。之所以分成五类主要是因为涉及钱的账号密码，一旦泄密损失的是自己，而社交账号和数据泄密损失的是他人。</p>
-<p>一般人可能会觉得自己的数据没什么价值，而且朋友们也都很机智。但是在特定情况下，你的数据会有可怕的功用。想象一下，一个人如果拥有你的绝大部分数据，同时又拥有你所有的人际关系。那么他就可以轻易的运用数据去模仿出你的样子，从而获取他人的信任。一旦获得对方的完全信任，注意，是完全信任，那对方就会沦为待宰的羔羊，任人摆布。</p>
-<p>总之，密码和我们的生活息息相关，管理好自己的密码说不定还会有意外的收获：<br><a href="http://www.jianshu.com/p/a1220fd27e2f" target="_blank" rel="external">一个密码改变了我的人生</a></p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;最近 Xcode Ghost 席卷三大平台，有预谋有组织有纪律。很多人看到这个消息纷纷修改常用密码，但我觉得密码管理其实功在平时，一个好的密码可以大幅提升你账户的安全系数。&lt;/p&gt;
-&lt;p&gt;而且，现在基本上每个网站都需要注册才能享用全部服务，我自己注册了上百个网站，意味者我有上百个账号密码需要记，用脑子记根本记不住（没办法，记忆力差）。后来我慢慢摸索出自己的一套策略用来管理密码，感觉实用且不算复杂。&lt;/p&gt;
-&lt;h2 id=&quot;设计方法&quot;&gt;&lt;a href=&quot;#设计方法&quot; class=&quot;headerlink&quot; title=&quot;设计方法&quot;&gt;&lt;/a&gt;设计方法&lt;/h2&gt;&lt;ol&gt;
-&lt;li&gt;首先要对账号和密码进行&lt;strong&gt;分级分类&lt;/strong&gt;。根据重要性、产品使用频率、产品应用场景来分。我自己分为五类：银行卡类、涉及支付类、社交账号、涉及数据存储类（各种云存储、云服务等）、其他。&lt;/li&gt;
-&lt;li&gt;银行卡类：&lt;strong&gt;单独&lt;/strong&gt;设6位数字，每张银行卡都有各自的密码（规则自己定：比如前三位是自己想的，后三位是卡号的某几位）。&lt;/li&gt;
-&lt;li&gt;涉及支付类：&lt;strong&gt;单独&lt;/strong&gt;设密码，方法参考5、6两点。&lt;/li&gt;
-&lt;li&gt;社交账号类、涉及数据存储类：&lt;strong&gt;着重对待&lt;/strong&gt;，方法同样参考5、6两点。&lt;/li&gt;
-&lt;li&gt;密码设计方法：单独想出一句话，用这句话每个字的&lt;strong&gt;首字母&lt;/strong&gt;构成密码最基本的部分。大小写和符号自己&lt;strong&gt;有规律&lt;/strong&gt;地加。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;排列组合&lt;/strong&gt;：密码太多记不住很正常。可以用两组（或多组）短语排列组合成整套密码。&lt;/li&gt;
-&lt;li&gt;银行、涉及支付类、重度使用产品均&lt;strong&gt;定期更换&lt;/strong&gt;密码。一般密码位数不低于15位（不要以为15位很长）。&lt;/li&gt;
-&lt;/ol&gt;
-    
-    </summary>
-    
-      <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
-    
-    
-      <category term="Tool" scheme="http://geekplux.com/tags/Tool/"/>
-    
-      <category term="工具" scheme="http://geekplux.com/tags/%E5%B7%A5%E5%85%B7/"/>
-    
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
   </entry>
   

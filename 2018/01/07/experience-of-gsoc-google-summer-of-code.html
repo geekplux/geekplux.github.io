@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  
+  <title>参加 Google Summer of Code 的体验 | GeekPlux</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。
+什么是 Google Summer of Code？它值得参加么？这个问题可以参考Google 编程之夏(GSoC)：海量优质项目，丰厚报酬，你竟然还不知道？这篇文章，里面介">
+<meta property="og:type" content="article">
+<meta property="og:title" content="参加 Google Summer of Code 的体验">
+<meta property="og:url" content="http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html">
+<meta property="og:site_name" content="GeekPlux">
+<meta property="og:description" content="Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。
+什么是 Google Summer of Code？它值得参加么？这个问题可以参考Google 编程之夏(GSoC)：海量优质项目，丰厚报酬，你竟然还不知道？这篇文章，里面介">
+<meta property="og:updated_time" content="2018-01-07T15:23:20.820Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="参加 Google Summer of Code 的体验">
+<meta name="twitter:description" content="Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。
+什么是 Google Summer of Code？它值得参加么？这个问题可以参考Google 编程之夏(GSoC)：海量优质项目，丰厚报酬，你竟然还不知道？这篇文章，里面介">
+<meta name="twitter:creator" content="@GeekPlux">
+  
+    <link rel="alternate" href="/atom.xml" title="GeekPlux" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.ico">
+  
+  <link rel="stylesheet" href="/css/typing.css">
+  <link rel="stylesheet" href="/css/donate.css">
+  
+</head>
+
+  
+    
+      <body>
+    
+  
+      <div id="container" class="container">
+        <article id="post-experience-of-gsoc-google-summer-of-code" class="article article-type-post" itemscope itemprop="blogPost">
+  <header id="header" class="header">
+  <nav id="main-nav" class="main-nav">
+    
+      <a class="main-nav-link" href="/">Home</a>
+    
+      <a class="main-nav-link" href="/archives">Archives</a>
+    
+      <a class="main-nav-link" href="/wiki">Wiki</a>
+    
+      <a class="main-nav-link" href="/presentation">Presentation</a>
+    
+      <a class="main-nav-link" href="/project">Project</a>
+    
+      <a class="main-nav-link" href="/about">About</a>
+    
+      <a class="main-nav-link" href="/aboutme">关于</a>
+    
+      <a class="main-nav-link" href="/gab">扯淡集</a>
+    
+  </nav>
+</header>
+
+  <hr/>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      参加 Google Summer of Code 的体验
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry typo" itemprop="articleBody">
+      
+        <p>Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。</p>
+<h2 id="什么是-Google-Summer-of-Code？它值得参加么？"><a href="#什么是-Google-Summer-of-Code？它值得参加么？" class="headerlink" title="什么是 Google Summer of Code？它值得参加么？"></a>什么是 Google Summer of Code？它值得参加么？</h2><p>这个问题可以参考<a href="https://zhuanlan.zhihu.com/p/27330699" target="_blank" rel="external">Google 编程之夏(GSoC)：海量优质项目，丰厚报酬，你竟然还不知道？</a>这篇文章，里面介绍的非常详细，还客观的论述了为什么 GSoC 值得参加。不过在此我还是简单科普一下：</p>
+<p>简言之，<strong>GSoC 是一年一度谷歌组织的、全球性的学生编程活动。学生利用暑假时间给开源社区贡献代码，谷歌支付报酬给学生</strong>。</p>
+<p>将 GSoC 的特点提炼一下就是：</p>
+<ul>
+<li><strong>针对学生</strong>。只有学生身份才能申请参加（包括本科、硕士、博士）</li>
+<li><strong>一年一度</strong>。每年都能申请，3 月末开始（建议早点开始套磁）</li>
+<li><strong>全球性</strong>。你可能会和世界各地的学生一起工作</li>
+<li><strong>开源社区</strong>。你是为开源社区贡献代码，大部分组织在 GitHub 上，所以你的贡献都是开源的，谁都能看到</li>
+<li><strong>暑假期间</strong>。6 月正式开始工作，到 9 月</li>
+<li><strong>报酬</strong>。谷歌支付报酬，中国区为 3600 刀，比大厂实习工资都高</li>
+<li><strong>远程工作</strong>。这点在刚才的概念介绍中没提到，你可以在你想呆的任何地方写代码，不用去办公室</li>
+<li><strong>导师指导</strong>。每个项目会给你配一个导师，有的导师非常负责且是大牛，你可以跟他学到很多</li>
+</ul>
+<p>我相信这些点已经足够吸引一个在校学生了。</p>
+<h2 id="GSoC-怎么申请？"><a href="#GSoC-怎么申请？" class="headerlink" title="GSoC 怎么申请？"></a>GSoC 怎么申请？</h2><p>这个问题参考<a href="https://zhuanlan.zhihu.com/p/27823910" target="_blank" rel="external">Google Summer of Code 学生申请指南</a>。其实很简单，就是一篇 proposal，通过就可以参加当年的 GSoC 了。其他的参考资料可以看 <a href="https://github.com/gsoc-cn/gsoc-cn" target="_blank" rel="external">gsoc-cn</a>。</p>
+<h2 id="正文-参加-GSoC-的体验"><a href="#正文-参加-GSoC-的体验" class="headerlink" title="正文 - 参加 GSoC 的体验"></a>正文 - 参加 GSoC 的体验</h2><h3 id="申请"><a href="#申请" class="headerlink" title="申请"></a>申请</h3><p>我是在 2017 年的 2 月份开始关注当年的 GSoC 申请。虽然每年各组织是在 2 月末公布自己的项目，但它们组织内部会在 1 月份甚至更早就开始谋划今年 GSoC 的项目计划，而且一般会公布在组织的主页上。我当时搜索到一些已经公布的项目，筛选了 3 个和我技能相匹配并且自己也想参加的项目，直接发了邮件过去。自我介绍了一番，并把自己针对这个项目的简单想法阐述了一下，其中有一个项目的 mentor（导师）非常热情，来回几番交流也十分愉快，算是理清了这个组织在做什么，他们这个项目想达到的效果。另外两个只是回复了我邮件便直接索要我的 proposal 了。说实话在不了解项目需求的情况下很难写一篇令人满意的 proposal，所以我也对这两个项目没怎么上心。</p>
+<p>GSoC 的流程是 2 月末公布项目 idea，3 月末学生申请，所以有 1 个月的时间准备。但是早起的鸟儿有虫吃，有的人是 1 月份或上一年的 12 月就开始给项目贡献 PR(pull request) 了，所以他们申请的优势相当大。我的建议是越早准备越好，因为邮件的沟通没有 IM 频繁，再加上时区问题，交流的时间跨度会拉的很长。</p>
+<p>我当时由于自己在参与一个科研投稿项目，分身乏术，几乎对申请上 GSoC 不抱什么希望了。但是在申请 deadline 前的几天，那个之前和我频繁交流的导师来询问我的 proposal，他督促我赶紧提交一份，即使不完美，提交了总比放弃好。我被他鼓励之后，立马连夜赶了一份出来提交了，虽然写的简单草率，但也是达到了一份合格 proposal 的要求：把需求、自己的解决办法、时间规划都写清楚了。deadline 前一天导师还对我进行了视频面试，幸运的是最后通过了审核，在学生生涯的最后一年赶上了 GSoC 的末班车。</p>
+<h3 id="工作"><a href="#工作" class="headerlink" title="工作"></a>工作</h3><p>虽然 GSoC 是针对学生的，但我们不能以学生的心态面对这件事，而应该抱以雇员的态度。申请通过后，5 月整个月是暖身期，你可以熟悉组织里代码的提交流程，和组织里其他人聊聊天吹吹水搞搞关系，和导师多沟通一下之后暑假里的时间安排。比如你暑假有两周想去旅游，可以把这两周的工作提前完成。所以参加 GSoC 很自由，但要负责。</p>
+<p>主要的工作流程全在 GitHub 上完成，从提 issue，到最后的 Pull Request 和 Code Review，日常交流是用 IRC 和 Gitter，文档管理用 Google doc。我的导师是意大利人，除了带我，还要带 4 个人，分别来自印度、牙买加、瑞士和俄罗斯。大家时区不同，每天 IRC 里的 Good morning 出现在各个时段。聊天都用英语，都是书面交流，所以口语差也没关系。</p>
+<p>6 月正式开工，当时我是要用 WebGL 去重写一个大概 2 万节点，10 万条边的图结构可视化项目，前期工作不算一马平川，但也算走的稳当。到了中期，如何在 WebGL 中做交互成了一大难题，到了后期则是性能的优化。最终到 9 月份的时候我在 proposal 中提到的差不多有 90% 完成了，除了性能问题还有待提高。</p>
+<p>3 个月中，我除了参加 GSoC 还需要水一篇论文，所以时间特别紧张，几乎是两班倒。导师问我进度的时候就各种解释，然后加班加点赶进度。每个月底会有一次评估，导师会针对你这个月的表现来决定你能不能继续参加，我每次都是低空飘过。最后项目结束我觉得我可能没达到导师的预期，但也算完成了工作。虽然总体上我觉得不是很出色，不过导师在 final evaluation 还是写了不错的评价。所有的工作总结在我之前的博文<a href="http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html">netjsongraph.js — Google Summer of Code (GSoC) 2017 summary</a>中。</p>
+<h3 id="体验"><a href="#体验" class="headerlink" title="体验"></a>体验</h3><ul>
+<li><strong>代码水平有所提高</strong>。我参加的项目当时我导师他对前端可能没我熟，不过对代码风格、commit message 规范的要求还是很高的，在邮件中曾不止一次强调。另外他还推荐书单让我们阅读，他认为编程有很多是非常核心的、稳定的和通用的，学这部分才是关键。</li>
+<li><strong>对开源有了全新认识</strong>。之前可能觉得开源只是一些个人开发者或组织把自认为不错的代码公布出来供大家交流。参加 GSoC 之后才发现很多开源组织非常庞大，组织架构都很多层，有自己的一套工作流程和方式、俨然一家公司模样，有自己的盈利方式，甚至有自己的基金。它们的目标不止是开发者，还可能是国家的基础设施建设等。再从个人开发者的角度来说，你可能由于参加 GSoC 而更加热爱开源，因为你发现开源社区的人都非常的热心和认真。</li>
+<li><strong>和不同国家人工作的沟通成本很高</strong>。一方面是因为时区问题，大部分沟通，延迟回复都没什么问题，但一旦你提的 issue 是个紧急的 bug，而他这时候却在睡觉时间就很尴尬。另一方面是语言问题，尽管大家都用英语，但水平参差不齐，习惯不一，很多时候得多说两三次互相才能彻底理解对方的意思。不过认识新朋友看他们的 Twitter 和 Instagram 还是很有意思的。</li>
+<li><strong>学会包装自己</strong>。这方面我们隔壁的印度朋友简直是典范，纵观他们的 proposal 和最后的总结都写的非常「浮夸」，平时的交流，他们也是非常频繁，活跃在各个平台。他们不是语言上浮夸，是内心上认为自己确实做到了他们叙述的效果。总之其他国家的同学比我们都高调一点，也很抱团，所以我们还是要学习一个。</li>
+</ul>
+<h2 id="最后"><a href="#最后" class="headerlink" title="最后"></a>最后</h2><p>人生艰难，作为象牙塔里的学生都能感到压力。如果你想利用暑假的大好时光来增加一点人生的经验，GSoC 可能是你不可多得的机会。享受一线互联网公司实习的待遇还能在 GitHub 上刷经验值，何乐不为？最重要的是，这可能是你开启另一种生活方式的一个机会，也可能是改变你编程生涯的机会（有的人成了大型开源组织的 core team member），更是一个跳出你舒适区的机会。</p>
+<p>我时常担心自己变成温水里的青蛙，所以非常期待人生中的各种际遇，也想要体验各种各样的生活，在此共勉，加油朋友！</p>
+
+      
+      <div id="donate" class="donate">
+        <a id="github" href="https://github.com/geekplux" target="_blank" class="pos-f tr3" title="Github"></a>
+	      <div id="DonateText" class="tr3">Donate</div>
+	      <ul id="donateBox" class="list pos-f tr3">
+		      <li id="PayPal"><a href="https://www.paypal.me/geekplux" target="_blank">PayPal</a></li>
+		      <li id="BTC" data-footnote="Copy addres and show QRCode"><button id="BTCBn"  data-clipboard-target="#btc-key" alt="Copy to clipboard">Bitcoin</button></li>
+		      <li id="AliPay">AliPay</li>
+		      <li id="WeChat">WeChat</li>
+	      </ul>
+	      <div id="QRBox" class="pos-f left-100">
+		      <div id="BTCQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/bitcoin.png)"></div>
+		      <div id="AliPayQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/alipayQR.jpg)"></div>
+		      <div id="WeChatQR" class="MainBox" style="background-image: url(http://7b1evr.com1.z0.glb.clouddn.com/donate/wechatQR.jpg)"></div>
+	      </div>
+	      <!-- Bitcoin 账号 -->
+	      <input id="btc-key" type="text" value="1AVngxh56oLvAzXsEFnzccUohZdHswjC7j" readonly="readonly">
+      </div>
+    </div>
+    <footer class="article-footer">
+      <ul class="article-meta">
+        <li>
+          <span class="label">Published Date:</span>
+          <a href="/2018/01/07/experience-of-gsoc-google-summer-of-code.html" class="article-date">
+  <time datetime="2018-01-07T08:13:23.000Z" itemprop="datePublished">2018-01-07</time>
+</a>
+
+        </li>
+        
+          <li>
+            <span class="label">Category:</span>
+            
+  <div class="article-category">
+    <a class="article-category-link" href="/categories/Life/">Life</a>
+  </div>
+
+
+          </li>
+        
+        
+          <li>
+            <span class="label">Tag:</span>
+            
+  <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Experience/">Experience</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/GSoC/">GSoC</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Google-Summer-of-Code/">Google Summer of Code</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/体验/">体验</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/生活/">生活</a></li></ul>
+
+
+          </li>
+        
+        <hr/>
+      </ul>
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav" class="article-nav">
+  
+    <span id="article-nav-newer" class="article-nav-link-wrap newer"></span>
+  
+  
+    <a href="/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html" id="article-nav-older" class="article-nav-link-wrap older">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">netjsongraph.js – Google Summer of Code (GSoC) 2017 summary</div>
+    </a>
+  
+</nav>
+
+
+  
+</article>
+
+
+  <section id="comments" class="comments">
+    <div id="gitment_container"></div>
+  </section>
+
+
+
+  <section id="comments" class="comments">
+    <div id="disqus_thread">
+      <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    </div>
+  </section>
+
+
+
+      </div>
+      
+    <footer id="footer" class="post-footer footer">
+      
+      <hr/>
+      <div id="footerContent" class="footer-content">
+        <p>I’m <strong><a href="/about">GeekPlux</a></strong>, a web developer who contributes to open-source projects. You are reading my <a href="http://geekplux.com">blog</a> powered by <a href="https://hexo.io">Hexo</a> and <a href="https://github.com/geekplux/hexo-theme-typing">Typing</a>. All articles are under <a href="https://creativecommons.org/licenses/by-nc-nd/4.0/">CC BY-NC-ND 4.0</a>. Follow me on <a href="https://twitter.com/geekplux">Twitter</a> for communicating, <a href="https://github.com/geekplux">GitHub</a> for code, and <a href="https://www.instagram.com/geekplux">Instagram</a> for daily.</p>
+
+
+      </div>
+    </footer>
+
+      
+  <script>
+   var disqus_shortname = 'geekplux';
+   
+   var disqus_url = 'http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html';
+   
+   (function(){
+     var dsq = document.createElement('script');
+     dsq.type = 'text/javascript';
+     dsq.async = true;
+     dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+     (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+   })();
+  </script>
+
+
+
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    owner: 'geekplux',
+    repo: 'geekplux.github.io',
+    oauth: {
+      client_id: 'e4281103bd71a2aba965',
+      client_secret: '2e02d473f5caa239f841e81fdf7feabd7a91c73e'
+    }
+  })
+  gitment.render('gitment_container')
+</script>
+
+
+<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/1.5.10/clipboard.min.js"></script>
+
+
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  <script src="/fancybox/jquery.fancybox.pack.js"></script>
+
+
+<script src="/js/typing.js"></script>
+<!--[if lt IE 9]><script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/3.7/html5shiv.min.js"></script><![endif]-->
+
+<script>
+var _hmt = _hmt || [];
+(function() {
+  var hm = document.createElement("script");
+  hm.src = "//hm.baidu.com/hm.js?f3122f4261e8b3074f848be04f62f0c0";
+  var s = document.getElementsByTagName("script")[0];
+  s.parentNode.insertBefore(hm, s);
+})();
+</script>
+
+
+
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-46481966-2', 'auto');
+ga('send', 'pageview');
+
+</script>
+<!-- End Google Analytics -->
+
+
+
+
+
+    </div>
+  </body>
+</html>
