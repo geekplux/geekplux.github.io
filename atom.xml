@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2018-01-17T17:33:18.386Z</updated>
+  <updated>2018-01-18T02:08:47.699Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -20,10 +20,10 @@
     <link href="http://geekplux.com/2018/01/18/augmented-reality-development-tech-in-web-frontend.html"/>
     <id>http://geekplux.com/2018/01/18/augmented-reality-development-tech-in-web-frontend.html</id>
     <published>2018-01-17T16:24:21.000Z</published>
-    <updated>2018-01-17T17:33:18.386Z</updated>
+    <updated>2018-01-18T02:08:47.699Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文作者 <a href="http://geekplux.com/">GeekPlux</a>，首发于<a href="">前端外刊评论-Web 前端中的增强现实（AR）开发技术</a>，博客地址：<a href="http://geekplux.com/2018/01/16/augmented-reality-development-tech-in-web-frontend.html">http://geekplux.com/2018/01/18/augmented-reality-development-tech-in-web-frontend.html</a>。注明作者和地址即可转载。</p>
+<p>本文作者 <a href="http://geekplux.com/">GeekPlux</a>，首发于<a href="https://qianduan.group/posts/5a5f89cb0cf6b624d2239c65" target="_blank" rel="external">前端外刊评论-Web 前端中的增强现实（AR）开发技术</a>，博客地址：<a href="http://geekplux.com/2018/01/16/augmented-reality-development-tech-in-web-frontend.html">http://geekplux.com/2018/01/18/augmented-reality-development-tech-in-web-frontend.html</a>。注明作者和地址即可转载。</p>
 </blockquote>
 <p>增强现实（以下简称 AR）浪潮正滚滚而来，Web 浏览器作为人们最唾手可得的人机交互终端，正在大力发展 AR 技术。很多 Web 前端工程师也在寻求职业转型，于是我把我近半年的相关调研结果在此汇结成文。本文力求把目前前端方向的 AR 技术都罗列一遍，细节不赘述（<em>保证文章篇幅不过长</em>），只做概括和科普（<em>因此文章中的链接很多</em>），零零散散写了一个多月（拖延症），欢迎已经在从事该领域或研究的道友前来纠正补充。</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/screenshot-nexus9.png" alt="Web AR 初音未来"></p>
@@ -84,7 +84,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;本文作者 &lt;a href=&quot;http://geekplux.com/&quot;&gt;GeekPlux&lt;/a&gt;，首发于&lt;a href=&quot;&quot;&gt;前端外刊评论-Web 前端中的增强现实（AR）开发技术&lt;/a&gt;，博客地址：&lt;a href=&quot;http://geekplux
+&lt;p&gt;本文作者 &lt;a href=&quot;http://geekplux.com/&quot;&gt;GeekPlux&lt;/a&gt;，首发于&lt;a href=&quot;https://qianduan.group/posts/5a5f89cb0cf6b624d2239c65&quot; target=&quot;
     
     </summary>
     
@@ -163,9 +163,9 @@
       <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
     
-      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
-    
       <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
+    
+      <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="GSoC" scheme="http://geekplux.com/tags/GSoC/"/>
     
