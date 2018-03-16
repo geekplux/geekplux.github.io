@@ -4,6 +4,84 @@
 
     
   <url>
+    <loc>http://geekplux.com/2014/04/25/several_core_concepts_of_css.html</loc>
+    <lastmod>2018-03-16T16:15:38.792Z</lastmod>
+    <data>
+        <display>
+        <title>CSS 最核心的几个概念</title>
+        <pubTime>2014-04-25T12:28:33.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="http://geekplux.com/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html</loc>
+    <lastmod>2018-03-16T16:12:12.826Z</lastmod>
+    <data>
+        <display>
+        <title>如何在不规则多边形内均匀撒点的算法</title>
+        <pubTime>2018-03-16T15:55:25.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>Algorithm</tag>
+         
+        <tag>算法</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+             
+              <breadCrumb title="Algorithm" url="http://geekplux.com/categories/Visualization/Algorithm/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2018/01/18/augmented-reality-development-tech-in-web-frontend.html</loc>
     <lastmod>2018-01-18T02:08:47.699Z</lastmod>
     <data>
@@ -48,9 +126,9 @@
         <title>参加 Google Summer of Code 的体验</title>
         <pubTime>2018-01-07T08:13:23.000Z</pubTime>
         
-        <tag>Google Summer of Code</tag>
-         
         <tag>生活</tag>
+         
+        <tag>Google Summer of Code</tag>
          
         <tag>GSoC</tag>
          
@@ -919,39 +997,6 @@
           
              
               <breadCrumb title="FarBox" url="http://geekplux.com/categories/Tool/FarBox/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2014/04/25/several_core_concepts_of_css.html</loc>
-    <lastmod>2015-08-04T09:00:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>CSS 最核心的几个概念</title>
-        <pubTime>2014-04-25T12:28:33.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>CSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
-          
-             
-              <breadCrumb title="CSS" url="http://geekplux.com/categories/Web/CSS/"/>
           
         </display>
     </data>

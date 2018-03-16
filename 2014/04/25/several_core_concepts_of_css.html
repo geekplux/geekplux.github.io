@@ -25,7 +25,7 @@
 两者的区别在于以下三点">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Cthree_core_concepts_of_cssD65A4E60-A213-481C-86D6-A3929A0A8D28.png">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Cthree_core_concepts_of_css2012-08-14-59d1deed94-70c5-48bb-b2ff-8421d516a981.gif">
-<meta property="og:updated_time" content="2015-08-04T09:00:26.000Z">
+<meta property="og:updated_time" content="2018-03-16T16:15:38.792Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS 最核心的几个概念">
 <meta name="twitter:description" content="本文将讲述 CSS 中最核心的几个概念，包括：盒模型、position、float等。这些是 CSS 的基础，也是最常用的几个属性，它们之间看似独立却又相辅相成。为了掌握它们，有必要写出来探讨一下，如有错误欢迎指正。
@@ -111,7 +111,7 @@
 <ol>
 <li>块级元素会独占一行（即无法与其他元素显示在同一行内，除非你显式修改元素的 display 属性），而内联元素则都会在一行内显示。</li>
 <li>块级元素可以设置 width、height 属性，而内联元素设置无效。</li>
-<li>块级元素的 width 默认为 100%，而内联元素则是根据其自身的内容或子元素来决定其宽度。</li>
+<li>块级元素的 width 默认为 <code>auto</code>，而内联元素则是根据其自身的内容或子元素来决定其宽度。</li>
 </ol>
 <p><em>最常见块级元素应该是 <code>&lt;div&gt;</code> 吧，内联元素有 <code>&lt;span&gt;</code> <code>&lt;a&gt;</code> <code>&lt;img&gt;</code> 等等，完整的元素列表可以谷歌一下。</em></p>
 <p>具体来说一下吧,</p>
@@ -127,14 +127,14 @@
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5Cthree_core_concepts_of_cssD65A4E60-A213-481C-86D6-A3929A0A8D28.png" alt=""></p>
 <p>可以显而易见的看出盒模型由 4 部分组成。从内到外分别是：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">content -&gt; padding -&gt; border -&gt; margin</div></pre></td></tr></table></figure>
-<p>按理来说一个元素的宽度（高度以此类推）应该这样计算：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">总宽度 = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</div></pre></td></tr></table></figure>
-<p>但是不同浏览器（你没有猜错，就是那个与众不同的浏览器）对宽度的诠释不一样。符合 W3C 标准的浏览器认为一个元素的宽度只等于其 content 的宽度，其余都要额外算。于是你规定一个元素：</p>
+<p>按理来说一个元素的 width（height 以此类推）应该这样计算：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">总 width = margin-left + border-left + padding-left + width + padding-right + border-right + margin-right</div></pre></td></tr></table></figure>
+<p>但是不同浏览器（你没有猜错，就是那个与众不同的浏览器）对 width 的诠释不一样。符合 W3C 标准的浏览器认为一个元素的 width 只等于其 content 的 width，其余都要额外算。于是你规定一个元素：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="selector-class">.example</span> &#123;</div><div class="line">    <span class="attribute">width</span>: <span class="number">200px</span>;</div><div class="line">    <span class="attribute">padding</span>: <span class="number">10px</span>;</div><div class="line">    <span class="attribute">border</span>: <span class="number">5px</span> solid <span class="number">#000</span>;</div><div class="line">    <span class="attribute">margin</span>: <span class="number">20px</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
-<p>则他最终的宽度应为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">宽度 = width(200px) + padding(10px * 2) + border(5px * 2) + margin(20px * 2) = 270px;</div></pre></td></tr></table></figure>
+<p>则他最终的 width 应为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">width = width(200px) + padding(10px * 2) + border(5px * 2) + margin(20px * 2) = 270px;</div></pre></td></tr></table></figure>
 <p>而在 IE（低于IE9） 下，最终宽度为：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">宽度 = width(200px) + margin(20px * 2) = 240px;</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">width = width(200px) + margin(20px * 2) = 240px;</div></pre></td></tr></table></figure>
 <p>我个人觉得 IE 的更符合人类思维，毕竟 padding 叫内边距，边框算作额外的宽度也说不下去。W3C 最后为了解决这个问题，在 CSS3 中加了 box-sizing 这个属性。当我们设置 <code>box-sizing: border-box;</code> 时，border 和 padding 就被包含在了宽高之内，和 IE 之前的标准是一样的。所以，为了避免你同一份 css 在不同浏览器下表现不同，最好加上：</p>
 <figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">*, *<span class="selector-pseudo">:before</span>, *<span class="selector-pseudo">:after</span> &#123;</div><div class="line">  <span class="attribute">-moz-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">-webkit-box-sizing</span>: border-box;</div><div class="line">  <span class="attribute">box-sizing</span>: border-box;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
 <p>这里还有两种特殊情况：</p>

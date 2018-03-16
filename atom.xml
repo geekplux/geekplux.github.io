@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2018-01-18T02:08:47.699Z</updated>
+  <updated>2018-03-16T16:12:12.826Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -14,6 +14,82 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>如何在不规则多边形内均匀撒点的算法</title>
+    <link href="http://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html"/>
+    <id>http://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html</id>
+    <published>2018-03-16T15:55:25.000Z</published>
+    <updated>2018-03-16T16:12:12.826Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>给定一个不规则的多边形（可能是凹多边形，可能是凸多边形），在其中要显示拓扑网络数据，要求节点不重合、不超出边界。</p>
+</blockquote>
+<h2 id="该问题出现的场景："><a href="#该问题出现的场景：" class="headerlink" title="该问题出现的场景："></a>该问题出现的场景：</h2><ul>
+<li>在地图上撒点</li>
+<li>在未知画布上生成初始的拓扑布局</li>
+</ul>
+<h2 id="解决方案："><a href="#解决方案：" class="headerlink" title="解决方案："></a>解决方案：</h2><h3 id="方法一-随机撒点"><a href="#方法一-随机撒点" class="headerlink" title="方法一 随机撒点"></a>方法一 随机撒点</h3><p>取凸多边形的外接矩形，在矩形中<strong>随机撒点</strong>，如果落在凸多边形外，再次随机撒点，直至落在凸多边形内。<br>这个方法比较<strong>暴力</strong>，可以通过计算期望来控制撒点次数，撒点次数应该符合泊松分布。</p>
+<h3 id="方法二-把不规则多边形切割成若干三角形"><a href="#方法二-把不规则多边形切割成若干三角形" class="headerlink" title="方法二 把不规则多边形切割成若干三角形"></a>方法二 把不规则多边形切割成若干三角形</h3><p>可以看作方法一的改进。切成多个三角形之后，问题转化为了如何在多个三角形内撒点。</p>
+<p>参考：<a href="https://beta.observablehq.com/@scarysize/finding-random-points-in-a-polygon" target="_blank" rel="external">https://beta.observablehq.com/@scarysize/finding-random-points-in-a-polygon</a><br>切割库：<a href="https://github.com/mapbox/earcut" target="_blank" rel="external">https://github.com/mapbox/earcut</a></p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/picking-points/d21d62d4-7411-4ec9-8b33-99357ee16c12.png" alt="earcut 切割效果"></p>
+<p>三角形是凸多边形，如何在三角形内均匀撒点可参考：<a href="http://mathworld.wolfram.com/TrianglePointPicking.html" target="_blank" rel="external">http://mathworld.wolfram.com/TrianglePointPicking.html</a></p>
+<p>算法步骤：</p>
+<ol>
+<li>随机选取任意一三角形</li>
+<li>在三角形内撒点</li>
+<li>重复12，直到点撒完</li>
+</ol>
+<p><strong>这里有个问题*</strong>：每个三角形被选取的概率相同，但三角形面积不同。这就可能出现小面积三角形中的点和大面积三角形中的点个数差不多，从而造成总体上看起来点集中在小面积三角形中的情况。<br>所以要<strong>保证三角形被选取的概率跟它的面积成正比</strong>。</p>
+<h3 id="方法三-用力导向迭代"><a href="#方法三-用力导向迭代" class="headerlink" title="方法三 用力导向迭代"></a>方法三 用力导向迭代</h3><p>可以看作是 方法二 的改进。给随机撒好的点设置相同的电荷力，使其不停迭代到稳定状态，即形成下图状态，达到尽量“均匀”。</p>
+<p>参考：<a href="https://bl.ocks.org/mbostock/1b64ec067fcfc51e7471d944f51f1611" target="_blank" rel="external">https://bl.ocks.org/mbostock/1b64ec067fcfc51e7471d944f51f1611</a></p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/picking-points/792ca119-0d62-4f24-94bc-db219491392e.png" alt="力导向迭代效果"></p>
+<h3 id="方法四-用四叉树生成点"><a href="#方法四-用四叉树生成点" class="headerlink" title="方法四 用四叉树生成点"></a>方法四 用四叉树生成点</h3><p>和前三种方法无关。用四叉树将二维空间切割成相等大小的正方形，然后用正方形图心撒点。</p>
+<p>参考：<a href="https://www.phase2technology.com/blog/using-d3-quadtrees-power-interactive-map-bonnier-corporation" target="_blank" rel="external">https://www.phase2technology.com/blog/using-d3-quadtrees-power-interactive-map-bonnier-corporation</a></p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/picking-points/22c8a130-0a60-4004-966c-1264903bee6c.png" alt="四叉树效果"><br><img src="http://7b1evr.com1.z0.glb.clouddn.com/picking-points/fe26c3c9-3e1e-4702-9773-22b86e193986.png" alt="四叉树效果"></p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;给定一个不规则的多边形（可能是凹多边形，可能是凸多边形），在其中要显示拓扑网络数据，要求节点不重合、不超出边界。&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h2 id=&quot;该问题出现的场景：&quot;&gt;&lt;a href=&quot;#该问题出现的场景：&quot; class=&quot;he
+    
+    </summary>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
+    
+      <category term="Algorithm" scheme="http://geekplux.com/categories/Visualization/Algorithm/"/>
+    
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="大数据" scheme="http://geekplux.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Big Data" scheme="http://geekplux.com/tags/Big-Data/"/>
+    
+      <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+      <category term="Note" scheme="http://geekplux.com/tags/Note/"/>
+    
+      <category term="笔记" scheme="http://geekplux.com/tags/%E7%AC%94%E8%AE%B0/"/>
+    
+      <category term="Algorithm" scheme="http://geekplux.com/tags/Algorithm/"/>
+    
+      <category term="算法" scheme="http://geekplux.com/tags/%E7%AE%97%E6%B3%95/"/>
+    
+  </entry>
   
   <entry>
     <title>Web 前端中的增强现实（AR）开发技术</title>
@@ -163,9 +239,9 @@
       <category term="Life" scheme="http://geekplux.com/categories/Life/"/>
     
     
-      <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
-    
       <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
+    
+      <category term="Google Summer of Code" scheme="http://geekplux.com/tags/Google-Summer-of-Code/"/>
     
       <category term="GSoC" scheme="http://geekplux.com/tags/GSoC/"/>
     
@@ -1832,73 +1908,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="情感" scheme="http://geekplux.com/tags/%E6%83%85%E6%84%9F/"/>
     
       <category term="代码" scheme="http://geekplux.com/tags/%E4%BB%A3%E7%A0%81/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>写文章的小技巧</title>
-    <link href="http://geekplux.com/2015/10/28/writing-skills.html"/>
-    <id>http://geekplux.com/2015/10/28/writing-skills.html</id>
-    <published>2015-10-28T10:24:11.000Z</published>
-    <updated>2017-02-22T16:55:31.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>既然是小技巧，那么就不敢班门弄斧，只简单说说自己平时遵循的几条写作原则：</p>
-<h2 id="尽量用短句"><a href="#尽量用短句" class="headerlink" title="尽量用短句"></a>尽量用短句</h2><ul>
-<li>写作以表达清晰为首要宗旨，所以 <strong>尽量用短句</strong> 。长句会增加理解成本，尤其是对于中文来说。中文的定语是放在被修饰词前面的，不像英语通常放在后面，用从句很容易扩展。中文你要用从句，还 <strong>不如直接另起一句话</strong> 。</li>
-</ul>
-<p>而且能一句话说清楚的，不要绕来绕去解释。</p>
-<ul>
-<li>在句语句之间 <strong>多用连接词</strong> ，一方面表明其联系，一方面增强连贯性。</li>
-<li><strong>不要用晦涩难懂的词</strong> 。我们不是在写高考作文。</li>
-<li><strong>对标点的使用要尽量规范。</strong> 尽量少用感叹号。</li>
-</ul>
-<h2 id="文章逻辑要清晰"><a href="#文章逻辑要清晰" class="headerlink" title="文章逻辑要清晰"></a>文章逻辑要清晰</h2><h3 id="分段、分点说明"><a href="#分段、分点说明" class="headerlink" title="分段、分点说明"></a>分段、分点说明</h3><p>众所周知，我们现在看到长篇大论的文章都难以下咽。但如果在文中加几个段落标题，效果就大大不同。<br>同样的，在遇到排列句的时候，每句单独成行，比一整段要清晰的多。</p>
-<p>这些措施一方面是在排版上进行改进，提升了阅读体验。更重要的一方面是这样使你的文章逻辑更加清晰。<br><strong>写文章和做数学证明题一模一样。每一段都证明一个小问题，下一段的证明，依赖于上一段的结论。</strong> 所以每段有个主题，就比胡乱写强很多。</p>
-<a id="more"></a>
-<h3 id="要有重点"><a href="#要有重点" class="headerlink" title="要有重点"></a>要有重点</h3><p>无论说话还是写作，都最忌没有重点。如果读完一篇文章，你不知道这篇文章的主旨是什么；读完一段话，你不知道这段话是在讲什么。那这篇文章就太失败了。<br>用粗体把重点标注出来，很容易吸引眼球。</p>
-<h2 id="随时记录"><a href="#随时记录" class="headerlink" title="随时记录"></a>随时记录</h2><p>想题目恐怕是世界上最难的事情了。其实日常生活中，很多时刻会有想写的冲动。尤其是发呆的时候，脑子里估计都写了一大段了，但一被打断，又忘得一干二净。等真正要写文章的时候，只能拔剑四顾心茫然。<br>所以我们 <strong>平时一旦有点小思路，就拿手机记下来</strong> 。反正手机不离身，记东西很方便。不用记太细，记些关键字也行，整个过程耗时不会超过一分钟。</p>
-<h2 id="立即动笔（键盘）"><a href="#立即动笔（键盘）" class="headerlink" title="立即动笔（键盘）"></a>立即动笔（键盘）</h2><p>题目定好以后，很多人会觉得，自己才想好了文章的前两点，后面都不知道怎么写。所以还是等彻底想好再提笔吧。<br>我以前也这样，后来发现自己真是大错特错，因为 <strong>写作可以帮助我们更好的思考</strong> 。为什么我们脑子里只想到一两点，因为我们的脑子暂时被这两点占满了。你想来想去，思路在脑子里兜圈子，怎么也绕不出这两点。<br>此时如果你写下来，把这两点「释放」到书面上，脑子放空之后自然能想到三四五点。如果把大脑比作 CPU 的话，文章就是缓存。我们把计算出的数据暂时存放在缓存中，才能更好的计算。</p>
-<p>具体为什么写作能让你更好的思考，可参考这篇 <a href="http://mindhacks.cn/2009/02/09/writing-is-better-thinking" target="_blank" rel="external">书写是为了更好的思考</a> 文章。</p>
-<p>综上所述，想到一点就立即动笔。我这篇在写之前，就只想到了目前篇幅的三分之一。</p>
-<hr>
-<p>好了，今天要说的就是这么多。另外有的童鞋说昨天的文章有种戛然而止的感觉，确实，主要是因为我在最后一段提了个问句的原因。所以今天这篇就算作昨天那个问题的补充吧。</p>
-<p>欢迎关注我的公众号：haoqihaisimao_weixin</p>
-<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/qrcode_for_gh_2df3b33e3297_258.jpg" alt=""></p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;既然是小技巧，那么就不敢班门弄斧，只简单说说自己平时遵循的几条写作原则：&lt;/p&gt;
-&lt;h2 id=&quot;尽量用短句&quot;&gt;&lt;a href=&quot;#尽量用短句&quot; class=&quot;headerlink&quot; title=&quot;尽量用短句&quot;&gt;&lt;/a&gt;尽量用短句&lt;/h2&gt;&lt;ul&gt;
-&lt;li&gt;写作以表达清晰为首要宗旨，所以 &lt;strong&gt;尽量用短句&lt;/strong&gt; 。长句会增加理解成本，尤其是对于中文来说。中文的定语是放在被修饰词前面的，不像英语通常放在后面，用从句很容易扩展。中文你要用从句，还 &lt;strong&gt;不如直接另起一句话&lt;/strong&gt; 。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;p&gt;而且能一句话说清楚的，不要绕来绕去解释。&lt;/p&gt;
-&lt;ul&gt;
-&lt;li&gt;在句语句之间 &lt;strong&gt;多用连接词&lt;/strong&gt; ，一方面表明其联系，一方面增强连贯性。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;不要用晦涩难懂的词&lt;/strong&gt; 。我们不是在写高考作文。&lt;/li&gt;
-&lt;li&gt;&lt;strong&gt;对标点的使用要尽量规范。&lt;/strong&gt; 尽量少用感叹号。&lt;/li&gt;
-&lt;/ul&gt;
-&lt;h2 id=&quot;文章逻辑要清晰&quot;&gt;&lt;a href=&quot;#文章逻辑要清晰&quot; class=&quot;headerlink&quot; title=&quot;文章逻辑要清晰&quot;&gt;&lt;/a&gt;文章逻辑要清晰&lt;/h2&gt;&lt;h3 id=&quot;分段、分点说明&quot;&gt;&lt;a href=&quot;#分段、分点说明&quot; class=&quot;headerlink&quot; title=&quot;分段、分点说明&quot;&gt;&lt;/a&gt;分段、分点说明&lt;/h3&gt;&lt;p&gt;众所周知，我们现在看到长篇大论的文章都难以下咽。但如果在文中加几个段落标题，效果就大大不同。&lt;br&gt;同样的，在遇到排列句的时候，每句单独成行，比一整段要清晰的多。&lt;/p&gt;
-&lt;p&gt;这些措施一方面是在排版上进行改进，提升了阅读体验。更重要的一方面是这样使你的文章逻辑更加清晰。&lt;br&gt;&lt;strong&gt;写文章和做数学证明题一模一样。每一段都证明一个小问题，下一段的证明，依赖于上一段的结论。&lt;/strong&gt; 所以每段有个主题，就比胡乱写强很多。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
-    
-    
-      <category term="Blog" scheme="http://geekplux.com/tags/Blog/"/>
-    
-      <category term="Thought" scheme="http://geekplux.com/tags/Thought/"/>
-    
-      <category term="思考" scheme="http://geekplux.com/tags/%E6%80%9D%E8%80%83/"/>
-    
-      <category term="Skill" scheme="http://geekplux.com/tags/Skill/"/>
-    
-      <category term="Writing" scheme="http://geekplux.com/tags/Writing/"/>
-    
-      <category term="写文章" scheme="http://geekplux.com/tags/%E5%86%99%E6%96%87%E7%AB%A0/"/>
     
   </entry>
   
