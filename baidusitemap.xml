@@ -4,6 +4,32 @@
 
     
   <url>
+    <loc>http://geekplux.com/2018/05/16/the-summary-of-graduate-career.html</loc>
+    <lastmod>2018-05-15T16:34:39.039Z</lastmod>
+    <data>
+        <display>
+        <title>研究生生涯总结</title>
+        <pubTime>2018-05-15T16:07:52.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>生活</tag>
+         
+        <tag>Life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2014/04/25/several_core_concepts_of_css.html</loc>
     <lastmod>2018-05-09T15:54:05.229Z</lastmod>
     <data>
@@ -126,9 +152,9 @@
         <title>参加 Google Summer of Code 的体验</title>
         <pubTime>2018-01-07T08:13:23.000Z</pubTime>
         
-        <tag>生活</tag>
-         
         <tag>Google Summer of Code</tag>
+         
+        <tag>生活</tag>
          
         <tag>GSoC</tag>
          
@@ -198,13 +224,13 @@
          
         <tag>可视化</tag>
          
-        <tag>Promotion</tag>
-         
-        <tag>推广</tag>
-         
         <tag>Tool</tag>
          
         <tag>工具</tag>
+         
+        <tag>Promotion</tag>
+         
+        <tag>推广</tag>
          
         <tag>Skill</tag>
          
