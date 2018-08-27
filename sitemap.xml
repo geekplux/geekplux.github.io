@@ -2,30 +2,226 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://geekplux.com/aboutme/index.html</loc>
+    <loc>http://geekplux.com/2018/08/28/how-to-implement-sankey-diagram.html</loc>
     
-    <lastmod>2018-05-16T13:51:36.245Z</lastmod>
+    <lastmod>2018-08-27T16:26:10.237Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://geekplux.com/2018/05/16/the-summary-of-graduate-career.html</loc>
+    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
     
-    <lastmod>2018-05-15T16:34:39.039Z</lastmod>
+    <lastmod>2018-08-27T16:23:00.983Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/02/02/goodbye_my_university.html</loc>
+    
+    <lastmod>2018-08-27T16:14:04.488Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/02/20/css_written_principles.html</loc>
+    
+    <lastmod>2018-08-27T16:13:42.066Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/03/14/collapsing_margins.html</loc>
+    
+    <lastmod>2018-08-27T16:13:04.186Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/03/21/understand_tdd.html</loc>
+    
+    <lastmod>2018-08-27T16:12:46.300Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</loc>
+    
+    <lastmod>2018-08-27T16:12:16.095Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://geekplux.com/2014/04/25/several_core_concepts_of_css.html</loc>
     
-    <lastmod>2018-05-09T15:54:05.229Z</lastmod>
+    <lastmod>2018-08-27T16:10:57.593Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/05/15/coffeescript_note.html</loc>
+    
+    <lastmod>2018-08-27T16:10:14.024Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/07/06/learn_shuangpin.html</loc>
+    
+    <lastmod>2018-08-27T16:09:38.603Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2014/08/02/farewell_social_network.html</loc>
+    
+    <lastmod>2018-08-27T16:09:21.434Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
+    
+    <lastmod>2018-08-27T16:06:26.072Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</loc>
+    
+    <lastmod>2018-08-27T16:06:00.249Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
+    
+    <lastmod>2018-08-27T16:05:30.857Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
+    
+    <lastmod>2018-08-27T16:05:05.834Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
+    
+    <lastmod>2018-08-27T16:04:43.254Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
+    
+    <lastmod>2018-08-27T16:03:42.106Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2015/12/08/learning-by-index.html</loc>
+    
+    <lastmod>2018-08-27T16:03:20.444Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2016/02/15/two-years-after-graduated.html</loc>
+    
+    <lastmod>2018-08-27T16:03:05.733Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
+    
+    <lastmod>2018-08-27T16:02:40.123Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</loc>
+    
+    <lastmod>2018-08-27T16:02:23.291Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
+    
+    <lastmod>2018-08-27T16:02:00.529Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
+    
+    <lastmod>2018-08-27T16:01:25.928Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</loc>
+    
+    <lastmod>2018-08-27T16:00:37.602Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2017/04/12/text-data-visualization-wordle.html</loc>
+    
+    <lastmod>2018-08-27T16:00:27.416Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2017/06/26/text-data-visualization.html</loc>
+    
+    <lastmod>2018-08-27T16:00:01.413Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</loc>
+    
+    <lastmod>2018-08-27T15:58:59.023Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</loc>
+    
+    <lastmod>2018-08-27T15:58:17.908Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</loc>
+    
+    <lastmod>2018-08-27T15:57:52.639Z</lastmod>
     
   </url>
   
   <url>
     <loc>http://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html</loc>
     
-    <lastmod>2018-03-16T16:12:12.826Z</lastmod>
+    <lastmod>2018-08-27T15:57:27.505Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/2018/06/01/the-summary-of-graduate-career.html</loc>
+    
+    <lastmod>2018-08-27T15:56:19.489Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>http://geekplux.com/aboutme/index.html</loc>
+    
+    <lastmod>2018-05-16T13:51:36.245Z</lastmod>
     
   </url>
   
@@ -37,37 +233,9 @@
   </url>
   
   <url>
-    <loc>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</loc>
-    
-    <lastmod>2018-01-09T15:35:07.774Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://geekplux.com/2017/08/26/netjsongraph-js-google-summer-code-gsoc-2017-summary.html</loc>
     
     <lastmod>2018-01-07T14:46:49.397Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</loc>
-    
-    <lastmod>2017-12-29T08:13:33.595Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
-    
-    <lastmod>2017-12-09T08:45:55.012Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
-    
-    <lastmod>2017-12-01T08:39:57.271Z</lastmod>
     
   </url>
   
@@ -107,44 +275,9 @@
   </url>
   
   <url>
-    <loc>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</loc>
-    
-    <lastmod>2017-07-09T10:29:56.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2017/06/26/text-data-visualization.html</loc>
-    
-    <lastmod>2017-07-09T10:29:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2017/04/12/text-data-visualization-wordle.html</loc>
-    
-    <lastmod>2017-04-14T03:06:15.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://geekplux.com/about/index.html</loc>
     
     <lastmod>2017-03-27T06:29:24.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
-    
-    <lastmod>2017-02-22T16:55:31.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</loc>
-    
-    <lastmod>2017-02-22T16:05:01.000Z</lastmod>
     
   </url>
   
@@ -159,76 +292,6 @@
     <loc>http://geekplux.com/2017/01/02/basics-of-data-visualization-data-model.html</loc>
     
     <lastmod>2017-01-10T05:01:58.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
-    
-    <lastmod>2016-12-04T07:25:55.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
-    
-    <lastmod>2016-12-03T10:29:32.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
-    
-    <lastmod>2016-12-03T10:13:21.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
-    
-    <lastmod>2016-11-02T10:20:26.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
-    
-    <lastmod>2016-11-02T10:20:06.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
-    
-    <lastmod>2016-11-02T10:19:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</loc>
-    
-    <lastmod>2016-11-02T10:17:59.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2016/02/15/two-years-after-graduated.html</loc>
-    
-    <lastmod>2016-02-15T17:15:36.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2014/02/02/goodbye_my_university.html</loc>
-    
-    <lastmod>2016-02-13T07:55:54.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2015/12/08/learning-by-index.html</loc>
-    
-    <lastmod>2016-02-03T07:52:45.000Z</lastmod>
     
   </url>
   
@@ -282,30 +345,9 @@
   </url>
   
   <url>
-    <loc>http://geekplux.com/2014/02/20/css_written_principles.html</loc>
-    
-    <lastmod>2015-08-04T08:59:28.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://geekplux.com/2013/10/17/create_cocos2d-x_project.html</loc>
     
     <lastmod>2015-08-04T08:59:19.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2014/03/14/collapsing_margins.html</loc>
-    
-    <lastmod>2015-08-04T08:59:10.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2014/05/15/coffeescript_note.html</loc>
-    
-    <lastmod>2015-08-04T08:59:03.000Z</lastmod>
     
   </url>
   
@@ -331,30 +373,9 @@
   </url>
   
   <url>
-    <loc>http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</loc>
-    
-    <lastmod>2015-07-04T13:52:50.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://geekplux.com/2012/01/30/twenty_years_old_gab.html</loc>
     
     <lastmod>2015-02-08T05:09:45.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2014/03/21/understand_tdd.html</loc>
-    
-    <lastmod>2015-01-04T12:01:30.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</loc>
-    
-    <lastmod>2015-01-04T11:59:54.000Z</lastmod>
     
   </url>
   
@@ -373,13 +394,6 @@
   </url>
   
   <url>
-    <loc>http://geekplux.com/2014/08/02/farewell_social_network.html</loc>
-    
-    <lastmod>2015-01-04T11:58:13.000Z</lastmod>
-    
-  </url>
-  
-  <url>
     <loc>http://geekplux.com/2012/10/25/plan_or_not.html</loc>
     
     <lastmod>2015-01-04T11:56:52.000Z</lastmod>
@@ -390,13 +404,6 @@
     <loc>http://geekplux.com/2013/04/10/love_like_water.html</loc>
     
     <lastmod>2015-01-04T11:52:05.000Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://geekplux.com/2014/07/06/learn_shuangpin.html</loc>
-    
-    <lastmod>2015-01-04T11:51:30.000Z</lastmod>
     
   </url>
   

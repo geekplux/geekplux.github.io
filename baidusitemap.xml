@@ -3,14 +3,81 @@
 
 
     
-    
   <url>
-    <loc>http://geekplux.com/2018/05/16/the-summary-of-graduate-career.html</loc>
-    <lastmod>2018-05-15T16:34:39.039Z</lastmod>
+    <loc>http://geekplux.com/2018/08/28/how-to-implement-sankey-diagram.html</loc>
+    <lastmod>2018-08-27T16:26:10.237Z</lastmod>
     <data>
         <display>
-        <title>研究生生涯总结</title>
-        <pubTime>2018-05-15T16:07:52.000Z</pubTime>
+        <title>数据可视化之 Sankey 桑基图的实现</title>
+        <pubTime>2018-08-27T16:17:17.000Z</pubTime>
+        
+        <tag>Guide</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
+    <lastmod>2018-08-27T16:23:00.983Z</lastmod>
+    <data>
+        <display>
+        <title>轻松玩转 Ukulele</title>
+        <pubTime>2015-01-05T15:54:00.000Z</pubTime>
+        
+        <tag>Skill</tag>
+         
+        <tag>新技能</tag>
+         
+        <tag>乐器</tag>
+         
+        <tag>Instrument</tag>
+         
+        <tag>Ukulele</tag>
+         
+         
+           
+             
+              <breadCrumb title="Ukulele" url="http://geekplux.com/categories/Ukulele/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2014/02/02/goodbye_my_university.html</loc>
+    <lastmod>2018-08-27T16:14:04.488Z</lastmod>
+    <data>
+        <display>
+        <title>Goodbye，我的大学</title>
+        <pubTime>2014-02-02T12:22:22.000Z</pubTime>
         
         <tag>总结</tag>
          
@@ -31,8 +98,124 @@
 
     
   <url>
+    <loc>http://geekplux.com/2014/02/20/css_written_principles.html</loc>
+    <lastmod>2018-08-27T16:13:42.066Z</lastmod>
+    <data>
+        <display>
+        <title>CSS编写原则</title>
+        <pubTime>2014-02-20T05:57:32.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="http://geekplux.com/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2014/03/14/collapsing_margins.html</loc>
+    <lastmod>2018-08-27T16:13:04.186Z</lastmod>
+    <data>
+        <display>
+        <title>Collapsing margins——合并的外边距</title>
+        <pubTime>2014-03-14T13:10:19.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>CSS</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CSS" url="http://geekplux.com/categories/Web/CSS/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2014/03/21/understand_tdd.html</loc>
+    <lastmod>2018-08-27T16:12:46.300Z</lastmod>
+    <data>
+        <display>
+        <title>初识 TDD</title>
+        <pubTime>2014-03-20T16:20:09.000Z</pubTime>
+        
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>Agile Development</tag>
+         
+         
+           
+             
+              <breadCrumb title="Agile Development" url="http://geekplux.com/categories/Agile-Development/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</loc>
+    <lastmod>2018-08-27T16:12:16.095Z</lastmod>
+    <data>
+        <display>
+        <title>响应式设计简易指南（译）</title>
+        <pubTime>2014-04-06T14:54:42.000Z</pubTime>
+        
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>Web</tag>
+         
+        <tag>译文</tag>
+         
+        <tag>Translation</tag>
+         
+        <tag>Responsive Design</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2014/04/25/several_core_concepts_of_css.html</loc>
-    <lastmod>2018-05-09T15:54:05.229Z</lastmod>
+    <lastmod>2018-08-27T16:10:57.593Z</lastmod>
     <data>
         <display>
         <title>CSS 最核心的几个概念</title>
@@ -64,8 +247,663 @@
 
     
   <url>
+    <loc>http://geekplux.com/2014/05/15/coffeescript_note.html</loc>
+    <lastmod>2018-08-27T16:10:14.024Z</lastmod>
+    <data>
+        <display>
+        <title>CoffeeScript 笔记</title>
+        <pubTime>2014-05-15T11:06:09.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>CoffeeScript</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
+          
+             
+              <breadCrumb title="CoffeeScript" url="http://geekplux.com/categories/Web/CoffeeScript/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2014/07/06/learn_shuangpin.html</loc>
+    <lastmod>2018-08-27T16:09:38.603Z</lastmod>
+    <data>
+        <display>
+        <title>双拼学习记</title>
+        <pubTime>2014-07-06T14:59:29.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Skill</tag>
+         
+        <tag>新技能</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2014/08/02/farewell_social_network.html</loc>
+    <lastmod>2018-08-27T16:09:21.434Z</lastmod>
+    <data>
+        <display>
+        <title>告别社交网络有多难</title>
+        <pubTime>2014-08-02T12:50:46.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+        <tag>Life</tag>
+         
+        <tag>感想</tag>
+         
+        <tag>Thought</tag>
+         
+        <tag>思考</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
+    <lastmod>2018-08-27T16:06:26.072Z</lastmod>
+    <data>
+        <display>
+        <title>Vim - 适合自己的，才是最好的</title>
+        <pubTime>2015-06-06T12:28:21.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>Emacs</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</loc>
+    <lastmod>2018-08-27T16:06:00.249Z</lastmod>
+    <data>
+        <display>
+        <title>Backbone View 之间通信的三种方式</title>
+        <pubTime>2015-07-04T12:49:33.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>译文</tag>
+         
+        <tag>Translation</tag>
+         
+        <tag>Backbone</tag>
+         
+         
+           
+             
+              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
+    <lastmod>2018-08-27T16:05:30.857Z</lastmod>
+    <data>
+        <display>
+        <title>如何管理好自己的密码</title>
+        <pubTime>2015-09-24T09:08:59.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>生活</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
+    <lastmod>2018-08-27T16:05:05.834Z</lastmod>
+    <data>
+        <display>
+        <title>为什么文章写得好的人都很厉害</title>
+        <pubTime>2015-10-27T14:22:22.000Z</pubTime>
+        
+        <tag>感想</tag>
+         
+        <tag>Writing</tag>
+         
+        <tag>写文章</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
+    <lastmod>2018-08-27T16:04:43.254Z</lastmod>
+    <data>
+        <display>
+        <title>写文章的小技巧</title>
+        <pubTime>2015-10-28T10:24:11.000Z</pubTime>
+        
+        <tag>Blog</tag>
+         
+        <tag>Thought</tag>
+         
+        <tag>思考</tag>
+         
+        <tag>Skill</tag>
+         
+        <tag>Writing</tag>
+         
+        <tag>写文章</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
+    <lastmod>2018-08-27T16:03:42.106Z</lastmod>
+    <data>
+        <display>
+        <title>为什么我喜欢写代码</title>
+        <pubTime>2015-11-13T15:04:22.000Z</pubTime>
+        
+        <tag>生活</tag>
+         
+        <tag>感想</tag>
+         
+        <tag>情感</tag>
+         
+        <tag>代码</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2015/12/08/learning-by-index.html</loc>
+    <lastmod>2018-08-27T16:03:20.444Z</lastmod>
+    <data>
+        <display>
+        <title>建立索引式的学习方法</title>
+        <pubTime>2015-12-08T13:53:27.000Z</pubTime>
+        
+        <tag>方法论</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/02/15/two-years-after-graduated.html</loc>
+    <lastmod>2018-08-27T16:03:05.733Z</lastmod>
+    <data>
+        <display>
+        <title>毕业后的两年</title>
+        <pubTime>2016-02-15T15:03:27.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>生活</tag>
+         
+        <tag>Life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
+    <lastmod>2018-08-27T16:02:40.123Z</lastmod>
+    <data>
+        <display>
+        <title>如何阅读一篇学术论文</title>
+        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
+        
+        <tag>Research</tag>
+         
+        <tag>方法论</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+         
+           
+             
+              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</loc>
+    <lastmod>2018-08-27T16:02:23.291Z</lastmod>
+    <data>
+        <display>
+        <title>如何搭建一个私人网盘</title>
+        <pubTime>2016-10-25T14:13:11.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>ownCloud</tag>
+         
+        <tag>docker</tag>
+         
+        <tag>网盘</tag>
+         
+        <tag>云</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
+    <lastmod>2018-08-27T16:02:00.529Z</lastmod>
+    <data>
+        <display>
+        <title>Vega-Lite: A Grammar of Interactive Graphics</title>
+        <pubTime>2016-11-02T08:16:16.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>Research</tag>
+         
+        <tag>交互</tag>
+         
+        <tag>Graphics</tag>
+         
+        <tag>Vega</tag>
+         
+        <tag>Vega-Lite</tag>
+         
+         
+           
+             
+              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
+          
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Research/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
+    <lastmod>2018-08-27T16:01:25.928Z</lastmod>
+    <data>
+        <display>
+        <title>为什么要用 Emacs</title>
+        <pubTime>2016-12-03T07:22:17.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Vim</tag>
+         
+        <tag>Emacs</tag>
+         
+        <tag>IDE</tag>
+         
+         
+           
+             
+              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</loc>
+    <lastmod>2018-08-27T16:00:37.602Z</lastmod>
+    <data>
+        <display>
+        <title>我获取信息的渠道</title>
+        <pubTime>2017-01-13T16:10:52.000Z</pubTime>
+        
+        <tag>Tool</tag>
+         
+        <tag>学习</tag>
+         
+        <tag>Learning</tag>
+         
+        <tag>Read</tag>
+         
+        <tag>阅读</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/04/12/text-data-visualization-wordle.html</loc>
+    <lastmod>2018-08-27T16:00:27.416Z</lastmod>
+    <data>
+        <display>
+        <title>文本数据可视化（上）——从 Wordle 谈起</title>
+        <pubTime>2017-04-12T02:44:01.000Z</pubTime>
+        
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/06/26/text-data-visualization.html</loc>
+    <lastmod>2018-08-27T16:00:01.413Z</lastmod>
+    <data>
+        <display>
+        <title>文本数据可视化（下）——一图胜千言</title>
+        <pubTime>2017-06-26T05:57:41.000Z</pubTime>
+        
+        <tag>Guide</tag>
+         
+        <tag>入门</tag>
+         
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</loc>
+    <lastmod>2018-08-27T15:58:59.023Z</lastmod>
+    <data>
+        <display>
+        <title>D3 force layout and WebGL integration</title>
+        <pubTime>2017-06-27T11:57:37.000Z</pubTime>
+        
+        <tag>Web</tag>
+         
+        <tag>WebGL</tag>
+         
+        <tag>three.js</tag>
+         
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>数据可视化</tag>
+         
+        <tag>数据</tag>
+         
+        <tag>大数据</tag>
+         
+        <tag>Big Data</tag>
+         
+        <tag>Data</tag>
+         
+        <tag>Data Visualization</tag>
+         
+        <tag>Note</tag>
+         
+        <tag>笔记</tag>
+         
+        <tag>尝试</tag>
+         
+        <tag>d3</tag>
+         
+        <tag>pixi.js</tag>
+         
+        <tag>Google Summer of Code</tag>
+         
+         
+           
+             
+              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</loc>
+    <lastmod>2018-08-27T15:58:17.908Z</lastmod>
+    <data>
+        <display>
+        <title>如何在 GitHub 上获得数百 stars</title>
+        <pubTime>2017-07-20T03:16:16.000Z</pubTime>
+        
+        <tag>Visualization</tag>
+         
+        <tag>可视化</tag>
+         
+        <tag>Tool</tag>
+         
+        <tag>工具</tag>
+         
+        <tag>Promotion</tag>
+         
+        <tag>推广</tag>
+         
+        <tag>Skill</tag>
+         
+        <tag>Markvis</tag>
+         
+        <tag>Markdown</tag>
+         
+        <tag>GitHub</tag>
+         
+         
+           
+             
+              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
+          
+             
+              <breadCrumb title="Promotion" url="http://geekplux.com/categories/Thought/Promotion/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</loc>
+    <lastmod>2018-08-27T15:57:52.639Z</lastmod>
+    <data>
+        <display>
+        <title>参加 Google Summer of Code 的体验</title>
+        <pubTime>2018-01-07T08:13:23.000Z</pubTime>
+        
+        <tag>Google Summer of Code</tag>
+         
+        <tag>生活</tag>
+         
+        <tag>GSoC</tag>
+         
+        <tag>Experience</tag>
+         
+        <tag>体验</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
     <loc>http://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html</loc>
-    <lastmod>2018-03-16T16:12:12.826Z</lastmod>
+    <lastmod>2018-08-27T15:57:27.505Z</lastmod>
     <data>
         <display>
         <title>如何在不规则多边形内均匀撒点的算法</title>
@@ -109,6 +947,33 @@
 
     
   <url>
+    <loc>http://geekplux.com/2018/06/01/the-summary-of-graduate-career.html</loc>
+    <lastmod>2018-08-27T15:56:19.489Z</lastmod>
+    <data>
+        <display>
+        <title>研究生生涯总结</title>
+        <pubTime>2018-05-31T16:07:52.000Z</pubTime>
+        
+        <tag>总结</tag>
+         
+        <tag>Summary</tag>
+         
+        <tag>生活</tag>
+         
+        <tag>Life</tag>
+         
+         
+           
+             
+              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
+          
+        </display>
+    </data>
+    </url>
+
+    
+    
+  <url>
     <loc>http://geekplux.com/2018/01/18/augmented-reality-development-tech-in-web-frontend.html</loc>
     <lastmod>2018-01-18T02:08:47.699Z</lastmod>
     <data>
@@ -139,34 +1004,6 @@
           
              
               <breadCrumb title="Augmented Reality" url="http://geekplux.com/categories/Web/Augmented-Reality/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</loc>
-    <lastmod>2018-01-09T15:35:07.774Z</lastmod>
-    <data>
-        <display>
-        <title>参加 Google Summer of Code 的体验</title>
-        <pubTime>2018-01-07T08:13:23.000Z</pubTime>
-        
-        <tag>Google Summer of Code</tag>
-         
-        <tag>生活</tag>
-         
-        <tag>GSoC</tag>
-         
-        <tag>Experience</tag>
-         
-        <tag>体验</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
           
         </display>
     </data>
@@ -207,101 +1044,6 @@
           
              
               <breadCrumb title="Life" url="http://geekplux.com/categories/Code/Visualization/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</loc>
-    <lastmod>2017-12-29T08:13:33.595Z</lastmod>
-    <data>
-        <display>
-        <title>如何在 GitHub 上获得数百 stars</title>
-        <pubTime>2017-07-20T03:16:16.000Z</pubTime>
-        
-        <tag>Visualization</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>Promotion</tag>
-         
-        <tag>推广</tag>
-         
-        <tag>Skill</tag>
-         
-        <tag>Markvis</tag>
-         
-        <tag>Markdown</tag>
-         
-        <tag>GitHub</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-             
-              <breadCrumb title="Promotion" url="http://geekplux.com/categories/Thought/Promotion/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/01/05/play-ukulele.html</loc>
-    <lastmod>2017-12-09T08:45:55.012Z</lastmod>
-    <data>
-        <display>
-        <title>轻松玩转 Ukulele</title>
-        <pubTime>2015-01-05T15:54:00.000Z</pubTime>
-        
-        <tag>Skill</tag>
-         
-        <tag>新技能</tag>
-         
-        <tag>乐器</tag>
-         
-        <tag>Instrument</tag>
-         
-        <tag>Ukulele</tag>
-         
-         
-           
-             
-              <breadCrumb title="Ukulele" url="http://geekplux.com/categories/Ukulele/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</loc>
-    <lastmod>2017-12-01T08:39:57.271Z</lastmod>
-    <data>
-        <display>
-        <title>如何阅读一篇学术论文</title>
-        <pubTime>2016-05-31T12:49:56.000Z</pubTime>
-        
-        <tag>Research</tag>
-         
-        <tag>方法论</tag>
-         
-        <tag>学习</tag>
-         
-        <tag>Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
           
         </display>
     </data>
@@ -426,208 +1168,6 @@
     </url>
 
     
-  <url>
-    <loc>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</loc>
-    <lastmod>2017-07-09T10:29:56.000Z</lastmod>
-    <data>
-        <display>
-        <title>D3 force layout and WebGL integration</title>
-        <pubTime>2017-06-27T11:57:37.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>WebGL</tag>
-         
-        <tag>three.js</tag>
-         
-        <tag>Visualization</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>数据可视化</tag>
-         
-        <tag>数据</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Big Data</tag>
-         
-        <tag>Data</tag>
-         
-        <tag>Data Visualization</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>尝试</tag>
-         
-        <tag>d3</tag>
-         
-        <tag>pixi.js</tag>
-         
-        <tag>Google Summer of Code</tag>
-         
-         
-           
-             
-              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2017/06/26/text-data-visualization.html</loc>
-    <lastmod>2017-07-09T10:29:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>文本数据可视化（下）——一图胜千言</title>
-        <pubTime>2017-06-26T05:57:41.000Z</pubTime>
-        
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-        <tag>Visualization</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>数据可视化</tag>
-         
-        <tag>数据</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Big Data</tag>
-         
-        <tag>Data</tag>
-         
-        <tag>Data Visualization</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2017/04/12/text-data-visualization-wordle.html</loc>
-    <lastmod>2017-04-14T03:06:15.000Z</lastmod>
-    <data>
-        <display>
-        <title>文本数据可视化（上）——从 Wordle 谈起</title>
-        <pubTime>2017-04-12T02:44:01.000Z</pubTime>
-        
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-        <tag>Visualization</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>数据可视化</tag>
-         
-        <tag>数据</tag>
-         
-        <tag>大数据</tag>
-         
-        <tag>Big Data</tag>
-         
-        <tag>Data</tag>
-         
-        <tag>Data Visualization</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-         
-           
-             
-              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-    
-  <url>
-    <loc>http://geekplux.com/2015/10/28/writing-skills.html</loc>
-    <lastmod>2017-02-22T16:55:31.000Z</lastmod>
-    <data>
-        <display>
-        <title>写文章的小技巧</title>
-        <pubTime>2015-10-28T10:24:11.000Z</pubTime>
-        
-        <tag>Blog</tag>
-         
-        <tag>Thought</tag>
-         
-        <tag>思考</tag>
-         
-        <tag>Skill</tag>
-         
-        <tag>Writing</tag>
-         
-        <tag>写文章</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</loc>
-    <lastmod>2017-02-22T16:05:01.000Z</lastmod>
-    <data>
-        <display>
-        <title>我获取信息的渠道</title>
-        <pubTime>2017-01-13T16:10:52.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>学习</tag>
-         
-        <tag>Learning</tag>
-         
-        <tag>Read</tag>
-         
-        <tag>阅读</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
     
   <url>
     <loc>http://geekplux.com/2017/01/01/basics-of-data-visualization-the-process-model.html</loc>
@@ -715,281 +1255,6 @@
            
              
               <breadCrumb title="Visualization" url="http://geekplux.com/categories/Visualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2016/12/03/why-use-emacs.html</loc>
-    <lastmod>2016-12-04T07:25:55.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么要用 Emacs</title>
-        <pubTime>2016-12-03T07:22:17.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>Vim</tag>
-         
-        <tag>Emacs</tag>
-         
-        <tag>IDE</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</loc>
-    <lastmod>2016-12-03T10:29:32.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vega-Lite: A Grammar of Interactive Graphics</title>
-        <pubTime>2016-11-02T08:16:16.000Z</pubTime>
-        
-        <tag>Visualization</tag>
-         
-        <tag>可视化</tag>
-         
-        <tag>数据</tag>
-         
-        <tag>Tool</tag>
-         
-        <tag>Research</tag>
-         
-        <tag>交互</tag>
-         
-        <tag>Graphics</tag>
-         
-        <tag>Vega</tag>
-         
-        <tag>Vega-Lite</tag>
-         
-         
-           
-             
-              <breadCrumb title="Research" url="http://geekplux.com/categories/Research/"/>
-          
-             
-              <breadCrumb title="Visualization" url="http://geekplux.com/categories/Research/Visualization/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/06/06/vim-those-fit-yourself-are-the-best.html</loc>
-    <lastmod>2016-12-03T10:13:21.000Z</lastmod>
-    <data>
-        <display>
-        <title>Vim - 适合自己的，才是最好的</title>
-        <pubTime>2015-06-06T12:28:21.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>Vim</tag>
-         
-        <tag>Emacs</tag>
-         
-        <tag>IDE</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/09/24/password-management.html</loc>
-    <lastmod>2016-11-02T10:20:26.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何管理好自己的密码</title>
-        <pubTime>2015-09-24T09:08:59.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>生活</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/10/27/why-those-who-write-great-articles-is-so-powerful.html</loc>
-    <lastmod>2016-11-02T10:20:06.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么文章写得好的人都很厉害</title>
-        <pubTime>2015-10-27T14:22:22.000Z</pubTime>
-        
-        <tag>感想</tag>
-         
-        <tag>Writing</tag>
-         
-        <tag>写文章</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/11/13/why-i-like-coding.html</loc>
-    <lastmod>2016-11-02T10:19:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>为什么我喜欢写代码</title>
-        <pubTime>2015-11-13T15:04:22.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-        <tag>感想</tag>
-         
-        <tag>情感</tag>
-         
-        <tag>代码</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</loc>
-    <lastmod>2016-11-02T10:17:59.000Z</lastmod>
-    <data>
-        <display>
-        <title>如何搭建一个私人网盘</title>
-        <pubTime>2016-10-25T14:13:11.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>ownCloud</tag>
-         
-        <tag>docker</tag>
-         
-        <tag>网盘</tag>
-         
-        <tag>云</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2016/02/15/two-years-after-graduated.html</loc>
-    <lastmod>2016-02-15T17:15:36.000Z</lastmod>
-    <data>
-        <display>
-        <title>毕业后的两年</title>
-        <pubTime>2016-02-15T15:03:27.000Z</pubTime>
-        
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-        <tag>生活</tag>
-         
-        <tag>Life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2014/02/02/goodbye_my_university.html</loc>
-    <lastmod>2016-02-13T07:55:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>Goodbye，我的大学</title>
-        <pubTime>2014-02-02T12:22:22.000Z</pubTime>
-        
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-        <tag>生活</tag>
-         
-        <tag>Life</tag>
-         
-         
-           
-             
-              <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2015/12/08/learning-by-index.html</loc>
-    <lastmod>2016-02-03T07:52:45.000Z</lastmod>
-    <data>
-        <display>
-        <title>建立索引式的学习方法</title>
-        <pubTime>2015-12-08T13:53:27.000Z</pubTime>
-        
-        <tag>方法论</tag>
-         
-        <tag>学习</tag>
-         
-        <tag>Learning</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
           
         </display>
     </data>
@@ -1210,39 +1475,6 @@
 
     
   <url>
-    <loc>http://geekplux.com/2014/02/20/css_written_principles.html</loc>
-    <lastmod>2015-08-04T08:59:28.000Z</lastmod>
-    <data>
-        <display>
-        <title>CSS编写原则</title>
-        <pubTime>2014-02-20T05:57:32.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>总结</tag>
-         
-        <tag>Summary</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>CSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
-          
-             
-              <breadCrumb title="CSS" url="http://geekplux.com/categories/Web/CSS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2013/10/17/create_cocos2d-x_project.html</loc>
     <lastmod>2015-08-04T08:59:19.000Z</lastmod>
     <data>
@@ -1264,64 +1496,6 @@
            
              
               <breadCrumb title="Cocos2d-x" url="http://geekplux.com/categories/Cocos2d-x/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2014/03/14/collapsing_margins.html</loc>
-    <lastmod>2015-08-04T08:59:10.000Z</lastmod>
-    <data>
-        <display>
-        <title>Collapsing margins——合并的外边距</title>
-        <pubTime>2014-03-14T13:10:19.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>CSS</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
-          
-             
-              <breadCrumb title="CSS" url="http://geekplux.com/categories/Web/CSS/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2014/05/15/coffeescript_note.html</loc>
-    <lastmod>2015-08-04T08:59:03.000Z</lastmod>
-    <data>
-        <display>
-        <title>CoffeeScript 笔记</title>
-        <pubTime>2014-05-15T11:06:09.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>CoffeeScript</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
-          
-             
-              <breadCrumb title="CoffeeScript" url="http://geekplux.com/categories/Web/CoffeeScript/"/>
           
         </display>
     </data>
@@ -1424,32 +1598,6 @@
 
     
   <url>
-    <loc>http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</loc>
-    <lastmod>2015-07-04T13:52:50.000Z</lastmod>
-    <data>
-        <display>
-        <title>Backbone View 之间通信的三种方式</title>
-        <pubTime>2015-07-04T12:49:33.000Z</pubTime>
-        
-        <tag>Web</tag>
-         
-        <tag>译文</tag>
-         
-        <tag>Translation</tag>
-         
-        <tag>Backbone</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2012/01/30/twenty_years_old_gab.html</loc>
     <lastmod>2015-02-08T05:09:45.000Z</lastmod>
     <data>
@@ -1471,60 +1619,6 @@
            
              
               <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2014/03/21/understand_tdd.html</loc>
-    <lastmod>2015-01-04T12:01:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>初识 TDD</title>
-        <pubTime>2014-03-20T16:20:09.000Z</pubTime>
-        
-        <tag>Note</tag>
-         
-        <tag>笔记</tag>
-         
-        <tag>Agile Development</tag>
-         
-         
-           
-             
-              <breadCrumb title="Agile Development" url="http://geekplux.com/categories/Agile-Development/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2014/04/06/simple_guide_to_responsive_design.html</loc>
-    <lastmod>2015-01-04T11:59:54.000Z</lastmod>
-    <data>
-        <display>
-        <title>响应式设计简易指南（译）</title>
-        <pubTime>2014-04-06T14:54:42.000Z</pubTime>
-        
-        <tag>Guide</tag>
-         
-        <tag>入门</tag>
-         
-        <tag>Web</tag>
-         
-        <tag>译文</tag>
-         
-        <tag>Translation</tag>
-         
-        <tag>Responsive Design</tag>
-         
-         
-           
-             
-              <breadCrumb title="Web" url="http://geekplux.com/categories/Web/"/>
           
         </display>
     </data>
@@ -1588,34 +1682,6 @@
 
     
   <url>
-    <loc>http://geekplux.com/2014/08/02/farewell_social_network.html</loc>
-    <lastmod>2015-01-04T11:58:13.000Z</lastmod>
-    <data>
-        <display>
-        <title>告别社交网络有多难</title>
-        <pubTime>2014-08-02T12:50:46.000Z</pubTime>
-        
-        <tag>生活</tag>
-         
-        <tag>Life</tag>
-         
-        <tag>感想</tag>
-         
-        <tag>Thought</tag>
-         
-        <tag>思考</tag>
-         
-         
-           
-             
-              <breadCrumb title="Thought" url="http://geekplux.com/categories/Thought/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
     <loc>http://geekplux.com/2012/10/25/plan_or_not.html</loc>
     <lastmod>2015-01-04T11:56:52.000Z</lastmod>
     <data>
@@ -1667,32 +1733,6 @@
            
              
               <breadCrumb title="Life" url="http://geekplux.com/categories/Life/"/>
-          
-        </display>
-    </data>
-    </url>
-
-    
-  <url>
-    <loc>http://geekplux.com/2014/07/06/learn_shuangpin.html</loc>
-    <lastmod>2015-01-04T11:51:30.000Z</lastmod>
-    <data>
-        <display>
-        <title>双拼学习记</title>
-        <pubTime>2014-07-06T14:59:29.000Z</pubTime>
-        
-        <tag>Tool</tag>
-         
-        <tag>工具</tag>
-         
-        <tag>Skill</tag>
-         
-        <tag>新技能</tag>
-         
-         
-           
-             
-              <breadCrumb title="Tool" url="http://geekplux.com/categories/Tool/"/>
           
         </display>
     </data>

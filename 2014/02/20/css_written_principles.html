@@ -5,32 +5,26 @@
   
   <title>CSS编写原则 | GeekPlux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。
-权重CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：
+  <meta name="description" content="原文地址：https://geekplux.com/2014/02/20/css_written_principles.html
 
-id选择器
-class选择器
-标签选择器">
+CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。
+权重CSS中我个人觉得权重是个很需要掌握的概念。它决定">
 <meta property="og:type" content="article">
 <meta property="og:title" content="CSS编写原则">
 <meta property="og:url" content="http://geekplux.com/2014/02/20/css_written_principles.html">
 <meta property="og:site_name" content="GeekPlux">
-<meta property="og:description" content="CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。
-权重CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：
+<meta property="og:description" content="原文地址：https://geekplux.com/2014/02/20/css_written_principles.html
 
-id选择器
-class选择器
-标签选择器">
+CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。
+权重CSS中我个人觉得权重是个很需要掌握的概念。它决定">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg">
-<meta property="og:updated_time" content="2015-08-04T08:59:28.000Z">
+<meta property="og:updated_time" content="2018-08-27T16:13:42.066Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="CSS编写原则">
-<meta name="twitter:description" content="CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。
-权重CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：
+<meta name="twitter:description" content="原文地址：https://geekplux.com/2014/02/20/css_written_principles.html
 
-id选择器
-class选择器
-标签选择器">
+CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。
+权重CSS中我个人觉得权重是个很需要掌握的概念。它决定">
 <meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg">
 <meta name="twitter:creator" content="@GeekPlux">
   
@@ -89,7 +83,7 @@ class选择器
 <div class="article-gallery">
   <div class="article-gallery-photos">
     
-      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cji21akju000xhy9cfeha9tzg">
+      <a class="article-gallery-img fancybox" href="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" rel="gallery_cjlchxbd3000yskhvxxqy0y71">
         <img src="http://7b1evr.com1.z0.glb.clouddn.com/illustration%5CCSS%E7%BC%96%E5%86%99%E5%8E%9F%E5%88%99%5C81e55a6b-c725-49c7-a351-b02121a72be1.jpg" itemprop="image">
       </a>
     
@@ -109,7 +103,10 @@ class选择器
     
     <div class="article-entry typo" itemprop="articleBody">
       
-        <p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
+        <blockquote>
+<p>原文地址：<a href="https://geekplux.com/2014/02/20/css_written_principles.html">https://geekplux.com/2014/02/20/css_written_principles.html</a></p>
+</blockquote>
+<p>CSS写的好可以让网页瞬间高大上，但是再高大上的网站如果效率很低也不行，尤其是在近几年「用户体验」这个词烂大街以后。前两天自己写了几个页面的CSS，顺便拜读了很多关于CSS如何写的更好的文章，现在动手总结一下。</p>
 <h2 id="权重"><a href="#权重" class="headerlink" title="权重"></a>权重</h2><p>CSS中我个人觉得权重是个很需要掌握的概念。它决定哪一条样式将被应用在元素上，哪一条样式将被覆盖掉。众所周知，CSS选择器，最基本的有三种：</p>
 <ul>
 <li>id选择器</li>

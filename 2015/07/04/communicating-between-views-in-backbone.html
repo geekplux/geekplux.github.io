@@ -5,21 +5,27 @@
   
   <title>Backbone View 之间通信的三种方式 | GeekPlux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 B">
+  <meta name="description" content="原文地址：https://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html
+
+掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 B">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Backbone View 之间通信的三种方式">
 <meta property="og:url" content="http://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html">
 <meta property="og:site_name" content="GeekPlux">
-<meta property="og:description" content="掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 B">
+<meta property="og:description" content="原文地址：https://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html
+
+掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 B">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/backbone-application.png">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/backbone-view-structure.png">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/backbone-view-event-relay.png">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/backbone-views-event-bus.png">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/backbone-views-backbone-event-bus.png">
-<meta property="og:updated_time" content="2015-07-04T13:52:50.000Z">
+<meta property="og:updated_time" content="2018-08-27T16:06:00.249Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Backbone View 之间通信的三种方式">
-<meta name="twitter:description" content="掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 B">
+<meta name="twitter:description" content="原文地址：https://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html
+
+掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 B">
 <meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/backbone-application.png">
 <meta name="twitter:creator" content="@GeekPlux">
   
@@ -88,7 +94,10 @@
     
     <div class="article-entry typo" itemprop="articleBody">
       
-        <p>掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 Backbone View 之间通信的三种方式讲的清晰明了。译文如下（已拿到授权）：</p>
+        <blockquote>
+<p>原文地址：<a href="https://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html">https://geekplux.com/2015/07/04/communicating-between-views-in-backbone.html</a></p>
+</blockquote>
+<p>掌握一个 MVC 框架，最关键的一节就是掌握如何在各个 View 之间通信。之前用 Angular 时，觉得基于事件的通信方式 ($on, $emit, $boardcast) 或者 基于 service 的方式都非常好用。转战 Backbone 之后，由于对 Backbone 的事件机制理解不够且使用非常灵活，一直没找到一个好的通信方式。直到看见这篇文章，作者通过一个简单的例子，层层深入，把 Backbone View 之间通信的三种方式讲的清晰明了。译文如下（已拿到授权）：</p>
 <hr>
 <p>我正在开发的这个网页主要有两部分，分别是 document 和 sidebar。</p>
 <p><img src="http://7b1evr.com1.z0.glb.clouddn.com/backbone-application.png" alt="Backbone Application"></p>

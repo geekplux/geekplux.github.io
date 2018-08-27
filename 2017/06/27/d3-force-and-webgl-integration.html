@@ -5,24 +5,21 @@
   
   <title>D3 force layout and WebGL integration | GeekPlux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看代码。
-
-做数据可视化时，必然会考虑性能的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题">
+  <meta name="description" content="原文地址：https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html
+D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看">
 <meta property="og:type" content="article">
 <meta property="og:title" content="D3 force layout and WebGL integration">
 <meta property="og:url" content="http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html">
 <meta property="og:site_name" content="GeekPlux">
-<meta property="og:description" content="D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看代码。
-
-做数据可视化时，必然会考虑性能的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题">
+<meta property="og:description" content="原文地址：https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html
+D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/09/59610ee72e616.png">
 <meta property="og:image" content="https://ooo.0o0.ooo/2017/07/09/59610ee4d02d5.png">
-<meta property="og:updated_time" content="2017-07-09T10:29:56.000Z">
+<meta property="og:updated_time" content="2018-08-27T15:58:59.023Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="D3 force layout and WebGL integration">
-<meta name="twitter:description" content="D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看代码。
-
-做数据可视化时，必然会考虑性能的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题">
+<meta name="twitter:description" content="原文地址：https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html
+D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 D3 的力导向图 和 Three.js 和 PixiJS 结合。全文阅读完大概 5 分钟，因为你重点应该看">
 <meta name="twitter:image" content="https://ooo.0o0.ooo/2017/07/09/59610ee72e616.png">
 <meta name="twitter:creator" content="@GeekPlux">
   
@@ -92,6 +89,7 @@
     <div class="article-entry typo" itemprop="articleBody">
       
         <blockquote>
+<p>原文地址：<a href="https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html">https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</a></p>
 <p>D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">D3 的力导向图</a> 和 <a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">Three.js</a> 和 <a href="https://github.com/pixijs/pixi.js" target="_blank" rel="external">PixiJS</a> 结合。全文阅读完大概 5 分钟，因为你重点应该看<a href="https://github.com/geekplux/d3-force-webgl-integration-demo" target="_blank" rel="external">代码</a>。</p>
 </blockquote>
 <p>做数据可视化时，必然会考虑<strong>性能</strong>的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题成了大多数可视化的局限，尤其是在三维可视化，或数据量特别大的时候。现在主流的 Web 可视化技术为三种：SVG、Canvas 和 WebGL，难易程度和性能如下图：</p>

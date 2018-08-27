@@ -5,26 +5,23 @@
   
   <title>如何搭建一个私人网盘 | GeekPlux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。
+  <meta name="description" content="文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。原文地址：https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html
 
-前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，还面对严苛的内容审查和隐私保护，虽然于用户来说提供了便利，但于公司来说实在是一件出力不讨好的事情。
-之前的网盘方案国外的网盘我一直是三家一起用">
+前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="如何搭建一个私人网盘">
 <meta property="og:url" content="http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html">
 <meta property="og:site_name" content="GeekPlux">
-<meta property="og:description" content="文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。
+<meta property="og:description" content="文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。原文地址：https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html
 
-前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，还面对严苛的内容审查和隐私保护，虽然于用户来说提供了便利，但于公司来说实在是一件出力不讨好的事情。
-之前的网盘方案国外的网盘我一直是三家一起用">
+前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，">
 <meta property="og:image" content="http://7b1evr.com1.z0.glb.clouddn.com/docker-owncloud-1.png">
-<meta property="og:updated_time" content="2016-11-02T10:17:59.000Z">
+<meta property="og:updated_time" content="2018-08-27T16:02:23.291Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="如何搭建一个私人网盘">
-<meta name="twitter:description" content="文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。
+<meta name="twitter:description" content="文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。原文地址：https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html
 
-前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，还面对严苛的内容审查和隐私保护，虽然于用户来说提供了便利，但于公司来说实在是一件出力不讨好的事情。
-之前的网盘方案国外的网盘我一直是三家一起用">
+前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，">
 <meta name="twitter:image" content="http://7b1evr.com1.z0.glb.clouddn.com/docker-owncloud-1.png">
 <meta name="twitter:creator" content="@GeekPlux">
   
@@ -94,7 +91,7 @@
     <div class="article-entry typo" itemprop="articleBody">
       
         <blockquote>
-<p>文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。</p>
+<p>文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。原文地址：<a href="https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html">https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</a></p>
 </blockquote>
 <p>前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，还面对严苛的内容审查和隐私保护，虽然于用户来说提供了便利，但于公司来说实在是一件出力不讨好的事情。</p>
 <h2 id="之前的网盘方案"><a href="#之前的网盘方案" class="headerlink" title="之前的网盘方案"></a>之前的网盘方案</h2><p>国外的网盘我一直是三家一起用，分别是 Dropbox 存储代码和一些重要或私密文件；Google Drive 存储一些大文件和私密文件；OneDrive 存储一些电子书（同步太慢了）。国内的网盘我之前只用两家，一是坚果云，放一些个人常用的小文件，包括一些文档和软件配置文件；另一个是百毒云，放一些各处转存来的大文件、自己的照片和学习资料，一方面因其空间大，另一方面因其同步流畅。然而，百毒云前段时间把我的网盘<strong>全面封掉</strong>了，丢失了很多大学时的照片（其它文件要不不重要，要不有备份），申诉无果，实属无奈。</p>

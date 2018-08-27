@@ -5,7 +5,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://geekplux.com/"/>
-  <updated>2018-05-15T16:34:39.039Z</updated>
+  <updated>2018-08-27T16:26:10.237Z</updated>
   <id>http://geekplux.com/</id>
   
   <author>
@@ -16,13 +16,136 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>研究生生涯总结</title>
-    <link href="http://geekplux.com/2018/05/16/the-summary-of-graduate-career.html"/>
-    <id>http://geekplux.com/2018/05/16/the-summary-of-graduate-career.html</id>
-    <published>2018-05-15T16:07:52.000Z</published>
-    <updated>2018-05-15T16:34:39.039Z</updated>
+    <title>数据可视化之 Sankey 桑基图的实现</title>
+    <link href="http://geekplux.com/2018/08/28/how-to-implement-sankey-diagram.html"/>
+    <id>http://geekplux.com/2018/08/28/how-to-implement-sankey-diagram.html</id>
+    <published>2018-08-27T16:17:17.000Z</published>
+    <updated>2018-08-27T16:26:10.237Z</updated>
     
-    <content type="html"><![CDATA[<p>距离上次的总结，已经时隔两年，其实早就想花时间认真总结一下自己的研究生生涯。虽然断断续续写了很久，但一直没有一个身心皆静的时间来梳理。今天得空，坐在西湖边的长椅上，思绪纷飞，将其整理成文。时间跨度比较大，不免有些啰嗦，其中每一个小标题都能写篇小议论文了。</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2018/08/28/how-to-implement-sankey-diagram.html">https://geekplux.com/2018/08/28/how-to-implement-sankey-diagram.html</a></p>
+</blockquote>
+<h2 id="什么是桑基图"><a href="#什么是桑基图" class="headerlink" title="什么是桑基图"></a>什么是桑基图</h2><p><img src="https://www.azavea.com/wp-content/uploads/2017/08/MA_Operations_2016_Sankey.png" alt=""></p>
+<p>Google 搜索桑基图，可以搜到一大堆定义。简而言之，桑基图是一种数据流图，展示了数据是如何从左到右流向最后的节点，每条边代表一条数据流，宽度代表数据流的大小。桑基图常用于流量分析，可以很清楚的看出数据是如何渐渐分流的。本文着重讲解如何实现，理论方面的东西各位可以自行了解。</p>
+<h2 id="实现桑基图的关键点"><a href="#实现桑基图的关键点" class="headerlink" title="实现桑基图的关键点"></a>实现桑基图的关键点</h2><p>关键点有两个：</p>
+<h4 id="1-坐标计算"><a href="#1-坐标计算" class="headerlink" title="1. 坐标计算"></a>1. 坐标计算</h4><p>桑基图要展现的数据流，算是图（拓扑类、网络型或关系型）数据的一种。实现一个数据可视化图，最重要的就是拆解元素。而实现一个图数据可视化，则最重要的是分清“节点”和“边”。</p>
+<p>拆解元素之后，最重要的便是坐标的计算，这里包括点和边的坐标。而图形中，任何的元素都可以看作是点连线而成，所以元素坐标的计算实际上就成了点坐标的计算。比如桑基图中，节点是一个矩形，那么只需计算两个点（左上和右下）的坐标<code>(x0, y0),(x1, y1)</code>便可确定；边是一个带形，需要计算四个端点才能确定，带形的弧度则可由简单的三次贝塞尔曲线计算得来。</p>
+<p>由此观之，实现桑基图的核心在于计算出以上的这些点坐标。其实实现任意一种可视化都是计算点的坐标。</p>
+<h4 id="2-减少边交叉"><a href="#2-减少边交叉" class="headerlink" title="2. 减少边交叉"></a>2. 减少边交叉</h4><p>当数据量到一定程度的时候，桑基图中的边会出现重叠现象，造成一定的视觉混乱。如何减少可以阅读本文第二节。</p>
+<h2 id="一、坐标计算的实现"><a href="#一、坐标计算的实现" class="headerlink" title="一、坐标计算的实现"></a>一、坐标计算的实现</h2><h3 id="准备工作"><a href="#准备工作" class="headerlink" title="准备工作"></a>准备工作</h3><h4 id="设计数据结构"><a href="#设计数据结构" class="headerlink" title="设计数据结构"></a>设计数据结构</h4><p>经典的图数据结构一般是邻接矩阵和邻接表，我们也可以自己设计。我在做拓扑数据可视化的时候，会先和后端或数据同学商定好我需要拿到的数据结构，通常是这个样子：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    nodes: [</div><div class="line">        &#123; foo: bar &#125;,</div><div class="line">        &#123; foo: baz &#125;,</div><div class="line">        ...</div><div class="line">    ],</div><div class="line">    links: [</div><div class="line">        &#123; source: <span class="number">0</span>, target: <span class="number">1</span>, value: <span class="number">100</span> &#125;,</div><div class="line">        &#123; source: <span class="number">1</span>, target: <span class="number">2</span>, value: <span class="number">10</span> &#125;,</div><div class="line">        ...</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>而我拿到之后要做的第一步就是先把 nodes 和 links 串联起来，这里每个 link 的 source 和 target 分别是 nodes 的下标，当然你也可以设置其他的引用（指针），总之通过引用讲两者串联起来，变成：</p>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div><div class="line">30</div><div class="line">31</div><div class="line">32</div><div class="line">33</div><div class="line">34</div><div class="line">35</div><div class="line">36</div><div class="line">37</div><div class="line">38</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    nodes: [</div><div class="line">        &#123;</div><div class="line">            foo: bar,</div><div class="line">            column: <span class="number">0</span>, <span class="comment">// 节点所在第几列</span></div><div class="line">            row: <span class="number">0</span>, <span class="comment">// 节点所在第几行</span></div><div class="line">            value: <span class="number">100</span>, <span class="comment">// 节点数据流大小</span></div><div class="line">            sourceLinks: [</div><div class="line">                &#123;</div><div class="line">                    source: <span class="number">0</span>,</div><div class="line">                    target: <span class="number">1</span>,</div><div class="line">                    ...</div><div class="line">                &#125;</div><div class="line">            ],</div><div class="line">            targetLinks: [</div><div class="line">                ...</div><div class="line">            ]</div><div class="line">        &#125;,</div><div class="line">        ...</div><div class="line">    ],</div><div class="line">    links: [</div><div class="line">        &#123;</div><div class="line">            source: <span class="number">0</span>,</div><div class="line">            target: <span class="number">1</span>,</div><div class="line">            value: <span class="number">100</span>,</div><div class="line">            sourceNode: &#123;</div><div class="line">                foo: bar,</div><div class="line">                column: <span class="number">0</span>,</div><div class="line">                row: <span class="number">0</span>,</div><div class="line">                ...</div><div class="line">            &#125;,</div><div class="line">            targetNode: &#123;</div><div class="line">                ...</div><div class="line">            &#125;</div><div class="line">        &#125;,</div><div class="line">        ...</div><div class="line">    ]</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>这样，对于某个节点来说，可以直接用 O(1) 的时间复杂度访问到它的任意相邻节点。</p>
+<h4 id="计算节点数据流大小"><a href="#计算节点数据流大小" class="headerlink" title="计算节点数据流大小"></a>计算节点数据流大小</h4><p>这里的计算方法可自己定，通常是取该节点入边和出边的数据流大小之和的最小值。</p>
+<h4 id="计算节点所在行列"><a href="#计算节点所在行列" class="headerlink" title="计算节点所在行列"></a>计算节点所在行列</h4><p>在桑基图的计算中，我们还需要进行一个关键的计算——计算节点在桑基图中的第几行第几列。</p>
+<p>第几列的计算，即为节点在图中的深度计算：</p>
+<ul>
+<li>入度为 0 的节点深度为 0，在第一列</li>
+<li>出度为 0 的节点深度最大，在最后一列</li>
+<li>其余节点的深度为他相连源节点的最大深度加 1</li>
+</ul>
+<p>第几行的计算，涉及到排序的问题，通常某一列中的节点都是按节点数据流大小，从大到小排序。</p>
+<h3 id="节点坐标计算"><a href="#节点坐标计算" class="headerlink" title="节点坐标计算"></a>节点坐标计算</h3><p>刚才我们说过，坐标计算可以分为两部分：节点和边。其中，边的坐标位置依赖于节点的坐标，所以应该先计算节点坐标。</p>
+<p>但在计算坐标之前，首先要明确一个问题：是否限定视图的宽高。这个问题引申出两种节点坐标的计算方式。</p>
+<h4 id="不限定视图宽高"><a href="#不限定视图宽高" class="headerlink" title="不限定视图宽高"></a>不限定视图宽高</h4><p>如果不限定宽高，那么节点坐标的计算步骤很简单：</p>
+<ul>
+<li>设置一个节点的宽度</li>
+<li>设置节点的水平间距</li>
+<li>从左至右，根据刚才计算出的节点所在第几列，计算出节点的横坐标（x0, x1)，初始的 x0 为 0</li>
+<li>设定一个比例尺函数（多大的数据流对应屏幕上的多少像素，通常是首先设定一个节点最小高度和一个节点最大高度，然后找出所有节点数据流的最小和最大值，映射成一个定义域为节点数据流大小，值域为节点高度的函数）</li>
+<li>通过比例尺计算出节点高度</li>
+<li>设置一个节点垂直间距</li>
+<li>从上至下，根据刚才计算出的节点所在第几行，计算出节点的纵坐标 (y0, y1)，初始的 y0 为 0</li>
+</ul>
+<p>大致是这个思路，横坐标的计算取决于两个值，<strong>节点宽度</strong>和 <strong>节点水平间距</strong>；纵坐标的计算取决于 <strong>节点的数据流大小</strong> 和 <strong>节点垂直间距</strong>。</p>
+<p>具体的计算代码，可根据你自己的数据结构来调整。</p>
+<h4 id="限定视图宽高"><a href="#限定视图宽高" class="headerlink" title="限定视图宽高"></a>限定视图宽高</h4><p>如果限定宽高，那么计算步骤需要换个思路：</p>
+<ul>
+<li>节点的宽度和节点的水平间距需要根据节点的列数和视图宽度来计算，你可以自己手动调整也可以设计个算法来算</li>
+<li>从左只有，根据节点宽度和节点水平间距，计算出节点横坐标</li>
+<li>设定一个比例尺函数，计算出节点的高度</li>
+<li>设置一个节点垂直间距</li>
+<li>通过<a href="https://en.wikipedia.org/wiki/Gauss%E2%80%93Seidel_method" target="_blank" rel="external">高斯－赛德尔迭代（Gauss–Seidel method）</a>计算出纵坐标（大致的思路是，先根据前两步的数值算出一个初始节点坐标，如果总体布局超出视图的下界，则节点高度和节点垂直间距都按比例缩小（如0.95），并同时上移 n 个像素，如果总体布局超出视图上界，则节点高度和垂直间距都按比例缩小，并同时下移 n 个像素，直到总体的桑基图布局适应一开始限定的视图宽高）</li>
+</ul>
+<p>这个思路是 <a href="https://github.com/d3/d3-sankey" target="_blank" rel="external">d3-sankey</a> 的实现思路。如果你有限定视图宽高的需求，那么可以直接使用 d3-sankey。</p>
+<h3 id="边的坐标计算"><a href="#边的坐标计算" class="headerlink" title="边的坐标计算"></a>边的坐标计算</h3><p>只要确定了节点坐标，边的坐标可以根据它源节点和目标节点的坐标来算出：</p>
+<ul>
+<li>对于一个节点，将它的出边和入边进行排序（排序方法通常是根据相连节点在第几行从上到下排，也可以通过一些其他排序方法减少边的交叉，具体在第二节介绍）</li>
+<li>计算每个节点中单位数据流占节点高度的比例</li>
+<li>根据出边入边的数据流大小，乘上一步计算出的比例，则可得到每条边左右两边的高度</li>
+<li>从上到下，计算每条边的纵坐标</li>
+<li>每条边四个端点的横坐标分别对应源节点和目标节点的横坐标</li>
+</ul>
+<p>以上操作可以通过遍历每个 node 的 sourceLinks 和 targetLinks 来计算。得到边的四个端点以后，就可以算出三次贝塞尔曲线的控制点了：</p>
+<p><img src="http://7b1evr.com1.z0.glb.clouddn.com/sankey_bezier.png" alt=""></p>
+<h2 id="二、如何减少交叉"><a href="#二、如何减少交叉" class="headerlink" title="二、如何减少交叉"></a>二、如何减少交叉</h2><p>通常要减少边的交叉，可以采用下面两种方法：</p>
+<ul>
+<li>均值排序</li>
+<li><a href="http://www.it.usyd.edu.au/~shhong/fab.pdf" target="_blank" rel="external">sugiyama 算法</a></li>
+</ul>
+<p>均值排序这个名字是我自己起的。。不过这个方法很实用有效。</p>
+<p>对于每个源节点来说，都有相连的目标节点。这里的“均值”指的是所有相连目标节点所在行数的平均值（所有目标节点的行数相加，除以目标节点个数），这个平均值可以大致描述该节点每个出边的位置。每条出边都有这样一个值，这个值越小，则说明该出边要连接的目标节点的位置越靠上，反之越靠下。所以可根据这个值，从小到大排出出边在该节点上从上到下的位置。</p>
+<h2 id="三、具体项目中的交互"><a href="#三、具体项目中的交互" class="headerlink" title="三、具体项目中的交互"></a>三、具体项目中的交互</h2><p>我参与的 <a href="https://uba.alibaba-inc.com" target="_blank" rel="external">UBA (User Behavior Analytics)</a> 项目中，正好用到了桑基图。除了上述的图形绘制之外，主要复杂的是交互。</p>
+<p><img src="http://ovad4r7yz.bkt.gdipper.com/2tayi-9gtn4.gif" alt=""><br><img src="http://7b1evr.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-22%20%E4%B8%8B%E5%8D%883.04.33.png" alt=""><br><img src="http://7b1evr.com1.z0.glb.clouddn.com/%E5%B1%8F%E5%B9%95%E5%BF%AB%E7%85%A7%202018-08-22%20%E4%B8%8B%E5%8D%883.05.06.png" alt=""></p>
+<p>如图所示，除了基本的 hover 交互之外，项目中主要还有</p>
+<ul>
+<li>minimap 拖拽和刷选</li>
+<li>主视图的拖拽和缩放</li>
+<li>左下角的过滤器</li>
+<li>点击交互，高亮只经过选中节点的路径，并且边上高亮的部分由最后一个选中节点懈怠的数据流值确定，其余部分半透明</li>
+</ul>
+<p>整个桑基图实现下来发现绘制只是一些计算，交互才是更难抽象和处理的部分。</p>
+<p>综上，桑基图是一个展现数据流非常好用的视图，感兴趣的同学可以自己实现一个试试。除了我文章中这些基本的桑基图布局，你还可以试试其他变种，另外交互方面也可以突破刚才我提到的那些，比如我之前实现过点击节点进行折叠/展开的交互。总体来说可视化还是一个比较有意思的方向。</p>
+<hr>
+<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2018/08/28/how-to-implement-sankey-diagram.html&quot;&gt;https://geekplux.com/2018/08/28/how-to-i
+    
+    </summary>
+    
+      <category term="Visualization" scheme="http://geekplux.com/categories/Visualization/"/>
+    
+    
+      <category term="Guide" scheme="http://geekplux.com/tags/Guide/"/>
+    
+      <category term="总结" scheme="http://geekplux.com/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Summary" scheme="http://geekplux.com/tags/Summary/"/>
+    
+      <category term="Visualization" scheme="http://geekplux.com/tags/Visualization/"/>
+    
+      <category term="可视化" scheme="http://geekplux.com/tags/%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据可视化" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE%E5%8F%AF%E8%A7%86%E5%8C%96/"/>
+    
+      <category term="数据" scheme="http://geekplux.com/tags/%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="大数据" scheme="http://geekplux.com/tags/%E5%A4%A7%E6%95%B0%E6%8D%AE/"/>
+    
+      <category term="Big Data" scheme="http://geekplux.com/tags/Big-Data/"/>
+    
+      <category term="Data" scheme="http://geekplux.com/tags/Data/"/>
+    
+      <category term="Data Visualization" scheme="http://geekplux.com/tags/Data-Visualization/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>研究生生涯总结</title>
+    <link href="http://geekplux.com/2018/06/01/the-summary-of-graduate-career.html"/>
+    <id>http://geekplux.com/2018/06/01/the-summary-of-graduate-career.html</id>
+    <published>2018-05-31T16:07:52.000Z</published>
+    <updated>2018-08-27T15:56:19.489Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2018/05/16/the-summary-of-graduate-career.html">https://geekplux.com/2018/05/16/the-summary-of-graduate-career.html</a></p>
+</blockquote>
+<p>距离上次的总结，已经时隔两年，其实早就想花时间认真总结一下自己的研究生生涯。虽然断断续续写了很久，但一直没有一个身心皆静的时间来梳理。今天得空，坐在西湖边的长椅上，思绪纷飞，将其整理成文。时间跨度比较大，不免有些啰嗦，其中每一个小标题都能写篇小议论文了。</p>
 <p>如果说高中奠定了我的兴趣，大学塑造了我的三观，那么我对研究生学习的 <strong>期待</strong> 是能让我找到一个 <strong>想深入且值得研究的方向</strong>，像一片肥沃的土壤能让我这颗小苗扎根于此。两年半的青年时光，是个很大的成本，比起那些没有工作就直接升入研究生的同学，我内心多了些许压力。所幸我没有太荒废，毕业之时细数躺在 wunderlist 里的几个小目标，也实现的七七八八，对于我这个善于自我满足的人来说已经很满意了。</p>
 <p>我的研究生时光可以分为两个阶段，前半程在杭师大，浑浑噩噩，后半程在浙大，马不停蹄。</p>
 <h2 id="1-前半程"><a href="#1-前半程" class="headerlink" title="1. 前半程"></a>1. 前半程</h2><p>研一的一年，学校里是有课程的。工作过的我，对自己需要学什么非常明确，所以刚开始我觉得学校里的课程正好能加深我对软件工程的理解，蛮不错的。但看后来的实际情况，很多地方不尽如人意，甚至让人失望。这些情况我在入学之前都预想过，自己的选择也没必要后悔，但有时还是忍不住抱怨，<strong>退学的念头</strong>几乎是每周出现两三次。</p>
@@ -87,8 +210,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;距离上次的总结，已经时隔两年，其实早就想花时间认真总结一下自己的研究生生涯。虽然断断续续写了很久，但一直没有一个身心皆静的时间来梳理。今天得空，坐在西湖边的长椅上，思绪纷飞，将其整理成文。时间跨度比较大，不免有些啰嗦，其中每一个小标题都能写篇小议论文了。&lt;/p&gt;
-&lt;p&gt;如果
+      &lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2018/05/16/the-summary-of-graduate-career.html&quot;&gt;https://geekplux.com/2018/05/16/the-summa
     
     </summary>
     
@@ -110,9 +233,10 @@
     <link href="http://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html"/>
     <id>http://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html</id>
     <published>2018-03-16T15:55:25.000Z</published>
-    <updated>2018-03-16T16:12:12.826Z</updated>
+    <updated>2018-08-27T15:57:27.505Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html">https://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html</a></p>
 <p>给定一个不规则的多边形（可能是凹多边形，可能是凸多边形），在其中要显示拓扑网络数据，要求节点不重合、不超出边界。</p>
 </blockquote>
 <h2 id="该问题出现的场景："><a href="#该问题出现的场景：" class="headerlink" title="该问题出现的场景："></a>该问题出现的场景：</h2><ul>
@@ -144,9 +268,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;给定一个不规则的多边形（可能是凹多边形，可能是凸多边形），在其中要显示拓扑网络数据，要求节点不重合、不超出边界。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;h2 id=&quot;该问题出现的场景：&quot;&gt;&lt;a href=&quot;#该问题出现的场景：&quot; class=&quot;he
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2018/03/16/how-to-picking-uniform-points-in-irregular-polygon.html&quot;&gt;https://geekplux.com/
     
     </summary>
     
@@ -282,9 +404,12 @@
     <link href="http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html"/>
     <id>http://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</id>
     <published>2018-01-07T08:13:23.000Z</published>
-    <updated>2018-01-09T15:35:07.774Z</updated>
+    <updated>2018-08-27T15:57:52.639Z</updated>
     
-    <content type="html"><![CDATA[<p>Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html">https://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html</a></p>
+</blockquote>
+<p>Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。</p>
 <h2 id="什么是-Google-Summer-of-Code？它值得参加么？"><a href="#什么是-Google-Summer-of-Code？它值得参加么？" class="headerlink" title="什么是 Google Summer of Code？它值得参加么？"></a>什么是 Google Summer of Code？它值得参加么？</h2><p>这个问题可以参考<a href="https://zhuanlan.zhihu.com/p/27330699" target="_blank" rel="external">Google 编程之夏(GSoC)：海量优质项目，丰厚报酬，你竟然还不知道？</a>这篇文章，里面介绍的非常详细，还客观的论述了为什么 GSoC 值得参加。不过在此我还是简单科普一下：</p>
 <p>简言之，<strong>GSoC 是一年一度谷歌组织的、全球性的学生编程活动。学生利用暑假时间给开源社区贡献代码，谷歌支付报酬给学生</strong>。</p>
 <p>将 GSoC 的特点提炼一下就是：</p>
@@ -321,8 +446,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;Google Summer of Code （简称 GSoC）中文我叫它「谷歌编程夏令营」，是一年一度谷歌组织的类似暑期实习的编程活动。2018 年的申请马上就要开始了，在此我分享一下我参加 2017 年 GSoC 的体验。&lt;/p&gt;
-&lt;h2 id=&quot;什么是-Google-S
+      &lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2018/01/07/experience-of-gsoc-google-summer-of-code.html&quot;&gt;https://geekplux.com/2018/01/07
     
     </summary>
     
@@ -444,10 +569,10 @@
     <link href="http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html"/>
     <id>http://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</id>
     <published>2017-07-20T03:16:16.000Z</published>
-    <updated>2017-12-29T08:13:33.595Z</updated>
+    <updated>2018-08-27T15:58:17.908Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文首发于「<a href="https://juejin.im/post/59701b61518825412f27a0b1" target="_blank" rel="external">掘金专栏</a>」，地址：<a href="https://juejin.im/post/59701b61518825412f27a0b1" target="_blank" rel="external">https://juejin.im/post/59701b61518825412f27a0b1</a>。<br>本文写在 <a href="https://markvis.js.org" target="_blank" rel="external">markvis</a> 发布后的一周，总结了在推广个人项目方面的一些经验。阅读时长 10 分钟。</p>
+<p>本文首发于「<a href="https://juejin.im/post/59701b61518825412f27a0b1" target="_blank" rel="external">掘金专栏</a>」，地址：<a href="https://juejin.im/post/59701b61518825412f27a0b1" target="_blank" rel="external">https://juejin.im/post/59701b61518825412f27a0b1</a>。<br>本文写在 <a href="https://markvis.js.org" target="_blank" rel="external">markvis</a> 发布后的一周，总结了在推广个人项目方面的一些经验。阅读时长 10 分钟。原文地址：<a href="https://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html">https://geekplux.com/2017/07/20/how-to-get-hundreds-stars-on-github.html</a></p>
 </blockquote>
 <p>每个程序员都幻想过自己的代码运行在千家万户的电脑上，但如何让你的项目获得更多的关注却少有人去思考。我们把注意力放在对代码的钻研、对技术的提升，却少有人关注如何吸引别人参与你的项目。一个人的力量总是有限的，尤其是在开源社区，越多的人参与就意味着你的项目有越多的可能性。</p>
 <p>我的业余小项目 <a href="https://markvis.js.org" target="_blank" rel="external">markvis</a>(<a href="https://markvis.js.org" target="_blank" rel="external">https://markvis.js.org</a>) 发布一天之后，在 GitHub 收获了 200 stars，爬上了 Trending 榜前十，现在一周过去已经近 1000 stars。虽然这不算什么大的成就，但让我不得不重新思考<strong>推广</strong>的意义。</p>
@@ -610,9 +735,10 @@
     <link href="http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html"/>
     <id>http://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</id>
     <published>2017-06-27T11:57:37.000Z</published>
-    <updated>2017-07-09T10:29:56.000Z</updated>
+    <updated>2018-08-27T15:58:59.023Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html">https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html</a></p>
 <p>D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 <a href="https://github.com/d3/d3-force/" target="_blank" rel="external">D3 的力导向图</a> 和 <a href="https://github.com/mrdoob/three.js/" target="_blank" rel="external">Three.js</a> 和 <a href="https://github.com/pixijs/pixi.js" target="_blank" rel="external">PixiJS</a> 结合。全文阅读完大概 5 分钟，因为你重点应该看<a href="https://github.com/geekplux/d3-force-webgl-integration-demo" target="_blank" rel="external">代码</a>。</p>
 </blockquote>
 <p>做数据可视化时，必然会考虑<strong>性能</strong>的问题。早前数据可视化都是用 Qt 等 GUI，后来逐渐迁移到了迅猛发展的浏览器上展示，Web 的性能问题成了大多数可视化的局限，尤其是在三维可视化，或数据量特别大的时候。现在主流的 Web 可视化技术为三种：SVG、Canvas 和 WebGL，难易程度和性能如下图：</p>
@@ -639,7 +765,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;D3 是目前最流行的数据可视化库，WebGL 是目前 Web 端最快的绘制技术。由于性能问题的局限，将两者结合的尝试越来越多（如），本文将尝试用 &lt;a href=&quot;https://github.com/d3/d3-force/&quot; target=&quot;_
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2017/06/27/d3-force-and-webgl-integration.html&quot;&gt;https://geekplux.com/2017/06/27/d3-force-
     
     </summary>
     
@@ -687,10 +813,10 @@
     <link href="http://geekplux.com/2017/06/26/text-data-visualization.html"/>
     <id>http://geekplux.com/2017/06/26/text-data-visualization.html</id>
     <published>2017-06-26T05:57:41.000Z</published>
-    <updated>2017-07-09T10:29:54.000Z</updated>
+    <updated>2018-08-27T16:00:01.413Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文首发于：<a href="https://zhuanlan.zhihu.com/p/27449788" target="_blank" rel="external">GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言</a></p>
+<p>本文首发于：<a href="https://zhuanlan.zhihu.com/p/27449788" target="_blank" rel="external">GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言</a>。原文地址：<a href="https://geekplux.com/2017/06/26/text-data-visualization.html">https://geekplux.com/2017/06/26/text-data-visualization.html</a></p>
 </blockquote>
 <p>文字是传递信息最常用的载体。在当前这个信息爆炸的时代，人们接收信息的速度已经小于信息产生的速度，尤其是文本信息。当大段大段的文字摆在面前，已经很少有耐心去认真把它读完，经常是先找文中的图片来看。这一方面说明人们对图形的接受程度比枯燥的文字要高很多，另一方面说明人们急需一种更高效的信息接收方式，文本可视化正是解药良方。「一图胜千言」我们从小就有体会，教材里的解释图、自己笔记里总结的知识结构图，一直到现在经常用的思维导图等，其实都是简单、实用的文本可视化。本文将简单介绍文本可视化的基础概念，然后重点通过各类文本可视化的案例来阐述可视化之美（多图，不过为了学到知识这点流量不算什么）。</p>
 <h2 id="为什么要文本数据可视化"><a href="#为什么要文本数据可视化" class="headerlink" title="为什么要文本数据可视化"></a>为什么要文本数据可视化</h2><p>虽然一般这种讲必要性的段落很多人都略过不看，虽然文本可视化的必要性大家用脚趾头估计都能想到，但我还是稍微说一说吧。文本可视化的作用有以下四点：</p>
@@ -791,7 +917,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;本文首发于：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27449788&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言&lt;/a&gt;&lt;/p
+&lt;p&gt;本文首发于：&lt;a href=&quot;https://zhuanlan.zhihu.com/p/27449788&quot; target=&quot;_blank&quot; rel=&quot;external&quot;&gt;GraphiCon 知乎专栏-文本数据可视化（下）——一图胜千言&lt;/a&gt;。原文
     
     </summary>
     
@@ -833,10 +959,10 @@
     <link href="http://geekplux.com/2017/04/12/text-data-visualization-wordle.html"/>
     <id>http://geekplux.com/2017/04/12/text-data-visualization-wordle.html</id>
     <published>2017-04-12T02:44:01.000Z</published>
-    <updated>2017-04-14T03:06:15.000Z</updated>
+    <updated>2018-08-27T16:00:27.416Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文首发于：<a href="https://zhuanlan.zhihu.com/p/26306683" target="_blank" rel="external">GraphiCon 知乎专栏-文本数据可视化（上）——从 Wordle 谈起</a></p>
+<p>本文首发于：<a href="https://zhuanlan.zhihu.com/p/26306683" target="_blank" rel="external">GraphiCon 知乎专栏-文本数据可视化（上）——从 Wordle 谈起</a>。原文地址：<a href="https://geekplux.com/2017/04/12/text-data-visualization-wordle.html">https://geekplux.com/2017/04/12/text-data-visualization-wordle.html</a></p>
 </blockquote>
 <p>看到题目，你可能一脸懵逼，什么是 wordle？下面这幅图就是：</p>
 <p><img src="https://ooo.0o0.ooo/2017/04/14/58f0320078efe.png" alt=""></p>
@@ -941,9 +1067,12 @@
     <link href="http://geekplux.com/2017/01/14/the-ways-to-get-information.html"/>
     <id>http://geekplux.com/2017/01/14/the-ways-to-get-information.html</id>
     <published>2017-01-13T16:10:52.000Z</published>
-    <updated>2017-02-22T16:05:01.000Z</updated>
+    <updated>2018-08-27T16:00:37.602Z</updated>
     
-    <content type="html"><![CDATA[<p>互联网迅猛的浪潮抹平了信息的鸿沟，却也让优质的信息变得如沧海一粟。人们常言「信息不对等」，往往在感慨<strong>有价值的信息</strong>总是被人捷足先登。正因这些信息如此重要，催生了一代又一代、各式各样的信息获取工具。</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2017/01/14/the-ways-to-get-information.html">https://geekplux.com/2017/01/14/the-ways-to-get-information.html</a></p>
+</blockquote>
+<p>互联网迅猛的浪潮抹平了信息的鸿沟，却也让优质的信息变得如沧海一粟。人们常言「信息不对等」，往往在感慨<strong>有价值的信息</strong>总是被人捷足先登。正因这些信息如此重要，催生了一代又一代、各式各样的信息获取工具。</p>
 <h2 id="我阅读工具的演化史"><a href="#我阅读工具的演化史" class="headerlink" title="我阅读工具的演化史"></a>我阅读工具的演化史</h2><p>印象中，最早的信息聚合网站，应该是叫「<a href="https://en.wikipedia.org/wiki/Golden_Pages" target="_blank" rel="external">黄页</a>」，已经有 100 多年的历史，马云早期的创业项目就叫「中国黄页」。后来家里的 IE 首页变成了一些门户网站，这时候获取信息主要靠手动点击链接到各大网站。再之后，我接触到了 <strong>Google Reader</strong>，认识了 RSS，从此开启了一扇新的大门。</p>
 <p>之前获取信息的方式是自己主动探索，而现在只需要维护好自己的 RSS 订阅列表，就会有感兴趣的信息源源不断地流进来。犹记得当时我的订阅列表很长，每天点开都是几百上千的未读，<strong>快速扫一遍，把感兴趣的随手添加到 pocket（因为 pocket 可以离线阅读），抽碎片时间打开 pocket 阅读，遇到好文章再收藏到 Evernote</strong>，这个阅读流一直沿用了一两年。即使后来 Google Reader 被 Google 遗弃我也坚持用 RSS，只是频率比以前低了不少。</p>
 <p>再到后来，不少博客写手开始转战到了微信公众号，很多文章用微信直接阅读，体验也挺好，于是阅读公众号成了我当时新的阅读方式。然而好景不长，很快公众平台就被一堆营销号攻占，一些写手为了圈钱，写作质量也大幅下降。我开始慢慢取关公众号，并且意识到了一个问题：<strong>大多数的文章都是没有价值的，或者说远没有自己想象的有价值</strong>。很多文章都是东拼西凑来的，能引发思考的凤毛麟角。</p>
@@ -1002,8 +1131,8 @@
     
     <summary type="html">
     
-      &lt;p&gt;互联网迅猛的浪潮抹平了信息的鸿沟，却也让优质的信息变得如沧海一粟。人们常言「信息不对等」，往往在感慨&lt;strong&gt;有价值的信息&lt;/strong&gt;总是被人捷足先登。正因这些信息如此重要，催生了一代又一代、各式各样的信息获取工具。&lt;/p&gt;
-&lt;h2 id=&quot;我阅读工具的演化史&quot;
+      &lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2017/01/14/the-ways-to-get-information.html&quot;&gt;https://geekplux.com/2017/01/14/the-ways-to-
     
     </summary>
     
@@ -1410,10 +1539,10 @@
     <link href="http://geekplux.com/2016/12/03/why-use-emacs.html"/>
     <id>http://geekplux.com/2016/12/03/why-use-emacs.html</id>
     <published>2016-12-03T07:22:17.000Z</published>
-    <updated>2016-12-04T07:25:55.000Z</updated>
+    <updated>2018-08-27T16:01:25.928Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>本文仅从作者个人感受上谈一下自己使用 Emacs 的理由和感受，通篇无干货。</p>
+<p>本文仅从作者个人感受上谈一下自己使用 Emacs 的理由和感受，通篇无干货。原文地址：<a href="https://geekplux.com/2016/12/03/why-use-emacs.html">https://geekplux.com/2016/12/03/why-use-emacs.html</a></p>
 </blockquote>
 <p>Emacs 和 Vim 这两大编辑器，一直让前赴后继的工具党难以取舍。到底学哪一个？哪一个学了之后能如虎添翼？最初的我也是纠结了许久，仿佛本科时纠结到底该主学 C++ 还是主学 Java 一样。而事实上正如前辈们说的：<em>不要纠结学哪个，反正迟早都要学</em>。</p>
 <h2 id="使用-Emacs-的若干好处"><a href="#使用-Emacs-的若干好处" class="headerlink" title="使用 Emacs 的若干好处"></a>使用 Emacs 的若干好处</h2><p>从我个人的角度讲，我认为学习和使用 Emacs 有以下几个好处：</p>
@@ -1446,9 +1575,7 @@
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;本文仅从作者个人感受上谈一下自己使用 Emacs 的理由和感受，通篇无干货。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;Emacs 和 Vim 这两大编辑器，一直让前赴后继的工具党难以取舍。到底学哪一个？哪一个学了之后能如虎添翼？最初的我也是纠结了
+&lt;p&gt;本文仅从作者个人感受上谈一下自己使用 Emacs 的理由和感受，通篇无干货。原文地址：&lt;a href=&quot;https://geekplux.com/2016/12/03/why-use-emacs.html&quot;&gt;https://geekplux.com
     
     </summary>
     
@@ -1472,10 +1599,10 @@
     <link href="http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html"/>
     <id>http://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</id>
     <published>2016-11-02T08:16:16.000Z</published>
-    <updated>2016-12-03T10:29:32.000Z</updated>
+    <updated>2018-08-27T16:02:00.529Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>在 InfoVis 2016 上，<a href="http://idl.cs.washington.edu/" target="_blank" rel="external">UW 交互数据实验室</a> 提出了一种新的交互数据可视化语法——Vega-Lite，获得了今年的 best paper，本文将根据其论文从多个角度介绍 Vega-Lite。<a href="http://idl.cs.washington.edu/papers/vega-lite/" target="_blank" rel="external">论文地址</a></p>
+<p>在 InfoVis 2016 上，<a href="http://idl.cs.washington.edu/" target="_blank" rel="external">UW 交互数据实验室</a> 提出了一种新的交互数据可视化语法——Vega-Lite，获得了今年的 best paper，本文将根据其论文从多个角度介绍 Vega-Lite。<a href="http://idl.cs.washington.edu/papers/vega-lite/" target="_blank" rel="external">论文地址</a>。原文地址：<a href="https://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html">https://geekplux.com/2016/11/02/vega-lite-a-grammar-of-interactive-graphics.html</a></p>
 </blockquote>
 <h2 id="什么是-Vega-Lite"><a href="#什么是-Vega-Lite" class="headerlink" title="什么是 Vega-Lite"></a>什么是 Vega-Lite</h2><p>简而言之，<a href="https://vega.github.io/vega-lite/" target="_blank" rel="external">Vega-Lite</a> 是一种数据可视化的高级语法，能够快速定义一些基本的交互式数据可视化。</p>
 <p>如果你听说过 <a href="https://vega.github.io/vega/" target="_blank" rel="external">Vega</a>，那么光看 Vega-Lite 的名字就不难想到它们的关系。Vega-Lite 就是编译成 Vega 的更高级图形语法。</p>
@@ -1624,10 +1751,10 @@ vconcat([view1, view2, ...], resolve)
     <link href="http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html"/>
     <id>http://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</id>
     <published>2016-10-25T14:13:11.000Z</published>
-    <updated>2016-11-02T10:17:59.000Z</updated>
+    <updated>2018-08-27T16:02:23.291Z</updated>
     
     <content type="html"><![CDATA[<blockquote>
-<p>文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。</p>
+<p>文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。原文地址：<a href="https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html">https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html</a></p>
 </blockquote>
 <p>前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏。没办法，目前的现状是，网盘很难有大的盈利空间，还面对严苛的内容审查和隐私保护，虽然于用户来说提供了便利，但于公司来说实在是一件出力不讨好的事情。</p>
 <h2 id="之前的网盘方案"><a href="#之前的网盘方案" class="headerlink" title="之前的网盘方案"></a>之前的网盘方案</h2><p>国外的网盘我一直是三家一起用，分别是 Dropbox 存储代码和一些重要或私密文件；Google Drive 存储一些大文件和私密文件；OneDrive 存储一些电子书（同步太慢了）。国内的网盘我之前只用两家，一是坚果云，放一些个人常用的小文件，包括一些文档和软件配置文件；另一个是百毒云，放一些各处转存来的大文件、自己的照片和学习资料，一方面因其空间大，另一方面因其同步流畅。然而，百毒云前段时间把我的网盘<strong>全面封掉</strong>了，丢失了很多大学时的照片（其它文件要不不重要，要不有备份），申诉无果，实属无奈。</p>
@@ -1688,9 +1815,7 @@ vconcat([view1, view2, ...], resolve)
     <summary type="html">
     
       &lt;blockquote&gt;
-&lt;p&gt;文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;前两天，360 云盘宣布将停止个人服务。一石激起千层浪，关于如何选择网盘，如何应对网盘关闭的讨论一下子又变得此起彼伏
+&lt;p&gt;文章主要讲了为什么要搭建私有网盘，以及如何用 docker + ownCloud 搭建。原文地址：&lt;a href=&quot;https://geekplux.com/2016/10/25/how-to-setup-a-personal-cloud.html
     
     </summary>
     
@@ -1716,9 +1841,12 @@ vconcat([view1, view2, ...], resolve)
     <link href="http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html"/>
     <id>http://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</id>
     <published>2016-05-31T12:49:56.000Z</published>
-    <updated>2017-12-01T08:39:57.271Z</updated>
+    <updated>2018-08-27T16:02:40.123Z</updated>
     
-    <content type="html"><![CDATA[<p>这是一个<strong>知识过剩</strong>的时代。大量标榜为「干货」的文章每时每刻都在不断地产出，搜索引擎的便捷似乎也让我们离这些「知识」只有一步之遥。然而，随着多年在互联网上的浸淫，我发现<strong>越是容易得到的知识，价值越不大，留存的时间也越不长</strong>。所以，相对于那些东拼西凑组成的所谓干货，一本好书或一篇好的学术论文，才是知识的结晶（单从前后两者成文的时间上就可以很好的证明这点）。</p>
+    <content type="html"><![CDATA[<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2016/05/31/how-to-read-a-research-paper.html">https://geekplux.com/2016/05/31/how-to-read-a-research-paper.html</a></p>
+</blockquote>
+<p>这是一个<strong>知识过剩</strong>的时代。大量标榜为「干货」的文章每时每刻都在不断地产出，搜索引擎的便捷似乎也让我们离这些「知识」只有一步之遥。然而，随着多年在互联网上的浸淫，我发现<strong>越是容易得到的知识，价值越不大，留存的时间也越不长</strong>。所以，相对于那些东拼西凑组成的所谓干货，一本好书或一篇好的学术论文，才是知识的结晶（单从前后两者成文的时间上就可以很好的证明这点）。</p>
 <p>关于「如何阅读一本书」的讨论，已经盈千累万，而关于「如何阅读一篇学术论文」的似乎还凤毛麟角。所以这篇文章我打算写一写我在阅读论文过程中总结出的一些方法，希望能对你有帮助，当然如果你有其他更好的方法，欢迎补充。文章共分为四个部分，第一部分介绍读论文的核心要素，第二部分列出阅读单篇论文的具体步骤，第三部分是一些补充。方法论讲完之后，最后一部分将阐述为什么要阅读文献期刊。</p>
 <h2 id="一、阅读论文的核心要素"><a href="#一、阅读论文的核心要素" class="headerlink" title="一、阅读论文的核心要素"></a>一、阅读论文的核心要素</h2><p>根据每个人读论文的目的不同，阅读的侧重点也会有所不同，但都不外乎要获取知识、解决问题，所以无论你的目的是什么，有<strong>三个核心要素</strong>是你在阅读一篇论文时必须掌握的：</p>
 <ol>
@@ -1778,7 +1906,10 @@ vconcat([view1, view2, ...], resolve)
     
     <summary type="html">
     
-      &lt;p&gt;这是一个&lt;strong&gt;知识过剩&lt;/strong&gt;的时代。大量标榜为「干货」的文章每时每刻都在不断地产出，搜索引擎的便捷似乎也让我们离这些「知识」只有一步之遥。然而，随着多年在互联网上的浸淫，我发现&lt;strong&gt;越是容易得到的知识，价值越不大，留存的时间也越不长&lt;/strong&gt;。所以，相对于那些东拼西凑组成的所谓干货，一本好书或一篇好的学术论文，才是知识的结晶（单从前后两者成文的时间上就可以很好的证明这点）。&lt;/p&gt;
+      &lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2016/05/31/how-to-read-a-research-paper.html&quot;&gt;https://geekplux.com/2016/05/31/how-to-read-a-research-paper.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;这是一个&lt;strong&gt;知识过剩&lt;/strong&gt;的时代。大量标榜为「干货」的文章每时每刻都在不断地产出，搜索引擎的便捷似乎也让我们离这些「知识」只有一步之遥。然而，随着多年在互联网上的浸淫，我发现&lt;strong&gt;越是容易得到的知识，价值越不大，留存的时间也越不长&lt;/strong&gt;。所以，相对于那些东拼西凑组成的所谓干货，一本好书或一篇好的学术论文，才是知识的结晶（单从前后两者成文的时间上就可以很好的证明这点）。&lt;/p&gt;
 &lt;p&gt;关于「如何阅读一本书」的讨论，已经盈千累万，而关于「如何阅读一篇学术论文」的似乎还凤毛麟角。所以这篇文章我打算写一写我在阅读论文过程中总结出的一些方法，希望能对你有帮助，当然如果你有其他更好的方法，欢迎补充。文章共分为四个部分，第一部分介绍读论文的核心要素，第二部分列出阅读单篇论文的具体步骤，第三部分是一些补充。方法论讲完之后，最后一部分将阐述为什么要阅读文献期刊。&lt;/p&gt;
 &lt;h2 id=&quot;一、阅读论文的核心要素&quot;&gt;&lt;a href=&quot;#一、阅读论文的核心要素&quot; class=&quot;headerlink&quot; title=&quot;一、阅读论文的核心要素&quot;&gt;&lt;/a&gt;一、阅读论文的核心要素&lt;/h2&gt;&lt;p&gt;根据每个人读论文的目的不同，阅读的侧重点也会有所不同，但都不外乎要获取知识、解决问题，所以无论你的目的是什么，有&lt;strong&gt;三个核心要素&lt;/strong&gt;是你在阅读一篇论文时必须掌握的：&lt;/p&gt;
 &lt;ol&gt;
@@ -1808,10 +1939,13 @@ vconcat([view1, view2, ...], resolve)
     <link href="http://geekplux.com/2016/02/15/two-years-after-graduated.html"/>
     <id>http://geekplux.com/2016/02/15/two-years-after-graduated.html</id>
     <published>2016-02-15T15:03:27.000Z</published>
-    <updated>2016-02-15T17:15:36.000Z</updated>
+    <updated>2018-08-27T16:03:05.733Z</updated>
     
     <content type="html"><![CDATA[<iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width="330" height="86" src="http://music.163.com/outchain/player?type=2&id=16504268&auto=0&height=66"></iframe>
 
+<blockquote>
+<p>原文地址：<a href="https://geekplux.com/2016/02/15/two-years-after-graduated.html">https://geekplux.com/2016/02/15/two-years-after-graduated.html</a></p>
+</blockquote>
 <p>在我们 5 岁的时候，过一年相当于经历人生的 1/5，而到了 25 岁的时候，过一年却相当于只经历了人生的 1/25。时间的重要性似乎随着我们年龄的增长而变得越来越低。主观感受上我们觉得时间走的越来越快了，而实际上却是我们对时空的认知变得扭曲了。</p>
 <p>所以我们需要不断整理、回顾自己的人生，就像偶尔给自己留张自拍一样，说不定哪一天就忘记自己当时长什么样了。</p>
 <p>距离我上次大学毕业总结（<a href="http://geekplux.com/2014/02/02/goodbye_my_university.html">Goodbye，我的大学</a>）已经过去了两年。都说 20-25 岁的年纪是人生最不怕折腾的年纪，如今我躺在床上，闭眼回想自己这过去的两年，满是<strong>任性</strong>。</p>
@@ -1888,6 +2022,9 @@ vconcat([view1, view2, ...], resolve)
     
       &lt;iframe frameborder=&quot;no&quot; border=&quot;0&quot; marginwidth=&quot;0&quot; marginheight=&quot;0&quot; width=330 height=86 src=&quot;http://music.163.com/outchain/player?type=2&amp;id=16504268&amp;auto=0&amp;height=66&quot;&gt;&lt;/iframe&gt;
 
+&lt;blockquote&gt;
+&lt;p&gt;原文地址：&lt;a href=&quot;https://geekplux.com/2016/02/15/two-years-after-graduated.html&quot;&gt;https://geekplux.com/2016/02/15/two-years-after-graduated.html&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;p&gt;在我们 5 岁的时候，过一年相当于经历人生的 1/5，而到了 25 岁的时候，过一年却相当于只经历了人生的 1/25。时间的重要性似乎随着我们年龄的增长而变得越来越低。主观感受上我们觉得时间走的越来越快了，而实际上却是我们对时空的认知变得扭曲了。&lt;/p&gt;
 &lt;p&gt;所以我们需要不断整理、回顾自己的人生，就像偶尔给自己留张自拍一样，说不定哪一天就忘记自己当时长什么样了。&lt;/p&gt;
 &lt;p&gt;距离我上次大学毕业总结（&lt;a href=&quot;http://geekplux.com/2014/02/02/goodbye_my_university.html&quot;&gt;Goodbye，我的大学&lt;/a&gt;）已经过去了两年。都说 20-25 岁的年纪是人生最不怕折腾的年纪，如今我躺在床上，闭眼回想自己这过去的两年，满是&lt;strong&gt;任性&lt;/strong&gt;。&lt;/p&gt;
@@ -1906,51 +2043,6 @@ vconcat([view1, view2, ...], resolve)
       <category term="生活" scheme="http://geekplux.com/tags/%E7%94%9F%E6%B4%BB/"/>
     
       <category term="Life" scheme="http://geekplux.com/tags/Life/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>建立索引式的学习方法</title>
-    <link href="http://geekplux.com/2015/12/08/learning-by-index.html"/>
-    <id>http://geekplux.com/2015/12/08/learning-by-index.html</id>
-    <published>2015-12-08T13:53:27.000Z</published>
-    <updated>2016-02-03T07:52:45.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>学习方法的重要性不必多言，相信每个人都知道。然而，并不是掌握了好的学习方法，就可以让你事半功倍，而是要找到适合自己的学习方法。<strong>索引式</strong>的学习方法就很适合我。</p>
-<h2 id="何为索引式的学习方法"><a href="#何为索引式的学习方法" class="headerlink" title="何为索引式的学习方法"></a>何为索引式的学习方法</h2><p>索引式的学习方法是我自己起的名字，我不知道在别人那里叫什么。其要义是指<strong>在学习一项技能时，先不深究其细节，而是建立索引</strong>。这就像看书时先看目录一样，把目录多看几遍，对整本书的结构有所了解之后，再去看自己想看的章节。</p>
-<h2 id="为什么要建立索引式的学习方法"><a href="#为什么要建立索引式的学习方法" class="headerlink" title="为什么要建立索引式的学习方法"></a>为什么要建立索引式的学习方法</h2><h3 id="迅速建立知识框架"><a href="#迅速建立知识框架" class="headerlink" title="迅速建立知识框架"></a>迅速建立知识框架</h3><p>循序渐进，步步为营的学习方法已经不适合现在的节奏了。这我在上次的文章《入门为什么这么难》里已经提到过：<strong>掌握一项技能要迅速掌握其主干，其余的细枝末节都不去管</strong>。</p>
-<p>学习一项技能时，你不能保证你目前所在学的东西将来会用到。就算用到，也可能没有你现在所探究的这么深入。那么我们<strong>只需要知道有这个东西，在脑中建立这部分知识的索引，等用到他的时候再去查阅资料重新学习就好</strong>。</p>
-<a id="more"></a>
-<h3 id="专注突破，实践巩固"><a href="#专注突破，实践巩固" class="headerlink" title="专注突破，实践巩固"></a>专注突破，实践巩固</h3><p>建立索引之后，其他部分的知识可以暂时地抛诸脑后，而把<strong>精力专注在当前的节点</strong>，「集中优势兵力迅速突破」。</p>
-<p>表面上，因其不究细节，索引式的学习方法仿佛对知识的了解都浮于表面。但事实上，对于当前在学的、要用的它都力求扎实掌握，熟练运用。</p>
-<p>不仅如此，因为索引式的学习方法强调<strong>用时才学</strong>，这就保证你现在要学的，肯定是你即将要用到的。学完之后马上运用，相当于二次学习。<strong>实践会加深对知识的理解</strong>，就像中学时做题是概念的补充一样。</p>
-<h2 id="建立索引的核心方法"><a href="#建立索引的核心方法" class="headerlink" title="建立索引的核心方法"></a>建立索引的核心方法</h2><p>如何建立索引？首先要了解怎么样才算真正的把索引建立成功。</p>
-<p>建立成功索引的标准是你在<strong>遇到问题时能立马浮现出这是在运用哪一块的知识</strong>。比如需要抠图的时候，应该运用Photoshop的快速选择工具，需要去除水印的时候，应该运用Photoshop的仿制图章工具或者修补工具等等。</p>
-<p>所以建立索引的核心方法是<strong>要了解该技能（软件、工具）每一处知识点（功能）的用处是什么</strong>。它能解决什么问题，遇到什么问题的时候需要用到这块的知识。</p>
-<p>如果教材里没说，自己也看不懂，就记下这个名词，或者该章节提到的一些关键字。以便<strong>将来搜索时知道用什么关键字去搜，或者搜索结果中提到的关键字能让你联想到是在用哪部分的知识</strong>。</p>
-<p>建立索引的方式不拘一格，可以按照知识点去建，也可以按照用途、方向来建，亦或按照学习目的去建，随你喜欢。</p>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>听过那么多的道理，依然过不好一生。见过这么多的学习方法，依旧学不好。索引式的学习方法适合那种学得快忘得也快的人，所以自己多琢磨琢磨，针对自己特点总结出一套方法论才是最好的。尽量提升效益，而不是增加成本。个人愚见，请多指点。</p>
-<hr>
-<p>本作品采用<a href="http://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" rel="external">知识共享 署名-非商业性使用-禁止演绎 4.0 国际 许可协议</a>进行许可。</p>
-]]></content>
-    
-    <summary type="html">
-    
-      &lt;p&gt;学习方法的重要性不必多言，相信每个人都知道。然而，并不是掌握了好的学习方法，就可以让你事半功倍，而是要找到适合自己的学习方法。&lt;strong&gt;索引式&lt;/strong&gt;的学习方法就很适合我。&lt;/p&gt;
-&lt;h2 id=&quot;何为索引式的学习方法&quot;&gt;&lt;a href=&quot;#何为索引式的学习方法&quot; class=&quot;headerlink&quot; title=&quot;何为索引式的学习方法&quot;&gt;&lt;/a&gt;何为索引式的学习方法&lt;/h2&gt;&lt;p&gt;索引式的学习方法是我自己起的名字，我不知道在别人那里叫什么。其要义是指&lt;strong&gt;在学习一项技能时，先不深究其细节，而是建立索引&lt;/strong&gt;。这就像看书时先看目录一样，把目录多看几遍，对整本书的结构有所了解之后，再去看自己想看的章节。&lt;/p&gt;
-&lt;h2 id=&quot;为什么要建立索引式的学习方法&quot;&gt;&lt;a href=&quot;#为什么要建立索引式的学习方法&quot; class=&quot;headerlink&quot; title=&quot;为什么要建立索引式的学习方法&quot;&gt;&lt;/a&gt;为什么要建立索引式的学习方法&lt;/h2&gt;&lt;h3 id=&quot;迅速建立知识框架&quot;&gt;&lt;a href=&quot;#迅速建立知识框架&quot; class=&quot;headerlink&quot; title=&quot;迅速建立知识框架&quot;&gt;&lt;/a&gt;迅速建立知识框架&lt;/h3&gt;&lt;p&gt;循序渐进，步步为营的学习方法已经不适合现在的节奏了。这我在上次的文章《入门为什么这么难》里已经提到过：&lt;strong&gt;掌握一项技能要迅速掌握其主干，其余的细枝末节都不去管&lt;/strong&gt;。&lt;/p&gt;
-&lt;p&gt;学习一项技能时，你不能保证你目前所在学的东西将来会用到。就算用到，也可能没有你现在所探究的这么深入。那么我们&lt;strong&gt;只需要知道有这个东西，在脑中建立这部分知识的索引，等用到他的时候再去查阅资料重新学习就好&lt;/strong&gt;。&lt;/p&gt;
-    
-    </summary>
-    
-      <category term="Thought" scheme="http://geekplux.com/categories/Thought/"/>
-    
-    
-      <category term="方法论" scheme="http://geekplux.com/tags/%E6%96%B9%E6%B3%95%E8%AE%BA/"/>
-    
-      <category term="学习" scheme="http://geekplux.com/tags/%E5%AD%A6%E4%B9%A0/"/>
-    
-      <category term="Learning" scheme="http://geekplux.com/tags/Learning/"/>
     
   </entry>
   

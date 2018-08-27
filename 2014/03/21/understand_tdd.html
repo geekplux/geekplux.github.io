@@ -5,20 +5,23 @@
   
   <title>初识 TDD | GeekPlux</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。
-神马是 TDD维基百科上是这样说的：测试驱动开发（Test-d">
+  <meta name="description" content="原文地址：https://geekplux.com/2014/03/21/understand_tdd.html
+
+最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新">
 <meta property="og:type" content="article">
 <meta property="og:title" content="初识 TDD">
 <meta property="og:url" content="http://geekplux.com/2014/03/21/understand_tdd.html">
 <meta property="og:site_name" content="GeekPlux">
-<meta property="og:description" content="最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。
-神马是 TDD维基百科上是这样说的：测试驱动开发（Test-d">
+<meta property="og:description" content="原文地址：https://geekplux.com/2014/03/21/understand_tdd.html
+
+最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新">
 <meta property="og:image" content="http://upload.wikimedia.org/wikipedia/en/9/9c/Test-driven_development.PNG">
-<meta property="og:updated_time" content="2015-01-04T12:01:30.000Z">
+<meta property="og:updated_time" content="2018-08-27T16:12:46.300Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="初识 TDD">
-<meta name="twitter:description" content="最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。
-神马是 TDD维基百科上是这样说的：测试驱动开发（Test-d">
+<meta name="twitter:description" content="原文地址：https://geekplux.com/2014/03/21/understand_tdd.html
+
+最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新">
 <meta name="twitter:image" content="http://upload.wikimedia.org/wikipedia/en/9/9c/Test-driven_development.PNG">
 <meta name="twitter:creator" content="@GeekPlux">
   
@@ -87,11 +90,14 @@
     
     <div class="article-entry typo" itemprop="articleBody">
       
-        <p>最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。</p>
+        <blockquote>
+<p>原文地址：<a href="https://geekplux.com/2014/03/21/understand_tdd.html">https://geekplux.com/2014/03/21/understand_tdd.html</a></p>
+</blockquote>
+<p>最近团队进驻了 Innospace（一个创业孵化基地），感觉一切要走上正轨的节奏。每周 Innospace 会提供一些来自业内大牛的创业和技术方面的培训指导，活动也非常多。感谢我的实习团队，让我有机会可以学到更多的东西。今天的主题是 TDD（测试驱动开发），对我来说这个东西不仅是新鲜的，还是陌生的，所以我也是认真记了记，顺便整理成文。</p>
 <h1 id="神马是-TDD"><a href="#神马是-TDD" class="headerlink" title="神马是 TDD"></a>神马是 TDD</h1><p>维基百科上是这样说的：测试驱动开发（Test-driven development）是极限编程中倡导的程序开发方法，以其倡导<strong>先写测试程序，然后编码实现其功能</strong>得名。</p>
 <p>好吧，上面那段翻译的真是让人捉急，人家原文是这样的：</p>
 <blockquote>
-<p>Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards. </p>
+<p>Test-driven development (TDD) is a software development process that relies on the repetition of a very short development cycle: first the developer writes an (initially failing) automated test case that defines a desired improvement or new function, then produces the minimum amount of code to pass that test, and finally refactors the new code to acceptable standards.</p>
 </blockquote>
 <p>看完英文应该比较好理解。通俗点就是：<strong>先写测试，再写只能让测试通过的代码，然后不停的循环这两个步骤，直到重构出满足需求的代码</strong>。以每个测试来推动整个开发的进行，这样有助于编写简洁和高质量的代码，并加速开发过程。</p>
 <a id="more"></a>
